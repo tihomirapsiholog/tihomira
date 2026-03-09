@@ -303,7 +303,13 @@ const translations = {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
-  const [language, setLanguage] = useState('en');
+  const getLangFromURL = () => {
+  const params = new URLSearchParams(window.location.search);
+  const lang = params.get("lang");
+  return lang === "sr" ? "sr" : "en";
+};
+
+const [language, setLanguage] = useState(getLangFromURL());;
   const [menuOpen, setMenuOpen] = useState(false);
 
   const t = translations[language];
