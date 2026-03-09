@@ -470,21 +470,27 @@ const changeLanguage = (lang) => {
       </nav>
 
       <main className="pt-24">
-     <Routes>
-  <Route path="/en" element={<HomePage language="en" />} />
-  <Route path="/sr" element={<HomePage language="sr" />} />
+   <Routes>
+  <Route path="/" element={<Navigate to="/en" replace />} />
+  <Route
+    path="/en"
+    element={<HomePage setCurrentPage={(path) => navigate(path)} t={translations.en} />}
+  />
+  <Route
+    path="/sr"
+    element={<HomePage setCurrentPage={(path) => navigate(path)} t={translations.sr} />}
+  />
+  <Route path="/en/about" element={<AboutPage t={translations.en} />} />
+  <Route path="/sr/about" element={<AboutPage t={translations.sr} />} />
 
-  <Route path="/en/about" element={<AboutPage language="en" />} />
-  <Route path="/sr/about" element={<AboutPage language="sr" />} />
+  <Route path="/en/work" element={<WorkPage t={translations.en} />} />
+  <Route path="/sr/work" element={<WorkPage t={translations.sr} />} />
 
-  <Route path="/en/work" element={<WorkPage language="en" />} />
-  <Route path="/sr/work" element={<WorkPage language="sr" />} />
+  <Route path="/en/events" element={<EventsPage t={translations.en} />} />
+  <Route path="/sr/events" element={<EventsPage t={translations.sr} />} />
 
-  <Route path="/en/events" element={<EventsPage language="en" />} />
-  <Route path="/sr/events" element={<EventsPage language="sr" />} />
-
-  <Route path="/en/contact" element={<ContactPage language="en" />} />
-  <Route path="/sr/contact" element={<ContactPage language="sr" />} />
+  <Route path="/en/contact" element={<ContactPage t={translations.en} />} />
+  <Route path="/sr/contact" element={<ContactPage t={translations.sr} />} />
 </Routes>
       </main>
 
