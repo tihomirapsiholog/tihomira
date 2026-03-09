@@ -495,14 +495,21 @@ export default function App() {
 }
 
 function HomePage({ setCurrentPage, t }) {
+  const [offset, setOffset] = React.useState(0);
+React.useEffect(() => {
+  const onScroll = () => setOffset(window.scrollY);
+  window.addEventListener("scroll", onScroll);
+  return () => window.removeEventListener("scroll", onScroll);
+}, []);
   return (
     <div className="space-y-0">
       <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
         <img
-          src="/silhouette.jpg"
-          alt="Silhouette"
-          className="absolute inset-0 h-full w-full object-cover"
-           />
+        src="/silhouette.jpg"
+        alt="Silhouette"
+        className="absolute inset-0 h-full w-full object-cover"
+        style={{ transform: `translateY(${offset * 0.4}px)` }}
+        />
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/60"></div>
          <div className="absolute inset-0 bg-gradient-to-t from-[#0b1220] via-transparent to-[#0b1220]/40"></div>
 
