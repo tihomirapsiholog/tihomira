@@ -347,12 +347,10 @@ export default function App() {
     [t.nav.contact, '/contact'],
   ];
 
-  const changeLanguage = (lang) => {
-    setLanguage(lang);
-    const params = new URLSearchParams(window.location.search);
-    params.set('lang', lang);
-    navigate(`${location.pathname}?${params.toString()}`, { replace: true });
-  };
+const changeLanguage = (lang) => {
+  const pathWithoutLang = location.pathname.replace(/^\/(en|sr)/, '') || '/';
+  navigate(`/${lang}${pathWithoutLang}`);
+};
 
   const isActive = (path) => location.pathname === path;
 
@@ -430,7 +428,7 @@ export default function App() {
             {navItems.map(([label, path]) => (
               <Link
                 key={path}
-                to={`${path}?lang=${language}`}
+                to={`/${language}${path}`}
                 onClick={() => {
                   setMenuOpen(false);
                   window.scrollTo(0, 0);
@@ -472,13 +470,22 @@ export default function App() {
       </nav>
 
       <main className="pt-24">
-        <Routes>
-          <Route path="/" element={<HomePage setCurrentPage={(path) => navigate(`${path}?lang=${language}`)} t={t} />} />
-          <Route path="/about" element={<AboutPage t={t} />} />
-          <Route path="/work" element={<WorkPage t={t} />} />
-          <Route path="/events" element={<EventsPage t={t} />} />
-          <Route path="/contact" element={<ContactPage t={t} />} />
-        </Routes>
+     <Routes>
+  <Route path="/en" element={<HomePage language="en" />} />
+  <Route path="/sr" element={<HomePage language="sr" />} />
+
+  <Route path="/en/about" element={<AboutPage language="en" />} />
+  <Route path="/sr/about" element={<AboutPage language="sr" />} />
+
+  <Route path="/en/work" element={<WorkPage language="en" />} />
+  <Route path="/sr/work" element={<WorkPage language="sr" />} />
+
+  <Route path="/en/events" element={<EventsPage language="en" />} />
+  <Route path="/sr/events" element={<EventsPage language="sr" />} />
+
+  <Route path="/en/contact" element={<ContactPage language="en" />} />
+  <Route path="/sr/contact" element={<ContactPage language="sr" />} />
+</Routes>
       </main>
 
       <footer className="mt-20 border-t border-yellow-700/10 bg-[#090e18] text-slate-300">
