@@ -18,7 +18,7 @@ root.render(
 
 1. Click **"Add file"** → **"Upload files"**
 2. **Upload:** `tihomira-enhanced.jsx` from your computer
-3. **But before uploading**, you need to tell GitHub the path
+3. **But before uploading**, you need to tell GitHub the path;
 4. After selecting file, look for a **path field** and type: `src/App.jsx`
 5. **Commit:** "Add src/App.jsx"
 
