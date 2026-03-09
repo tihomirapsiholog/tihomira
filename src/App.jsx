@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Menu, X, Instagram, ArrowRight } from 'lucide-react';
-import { Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
+import { Routes, Route, Link, useLocation, useNavigate,  Navigate } from 'react-router-dom';
 
 const CONTACT_EMAIL = 'tihomira.psiholog@gmail.com';
 const INSTAGRAM_URL = 'https://instagram.com/';
