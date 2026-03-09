@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Menu, X, Instagram, ArrowRight } from 'lucide-react';
+import { Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 
 const CONTACT_EMAIL = 'tihomira.psiholog@gmail.com';
 const INSTAGRAM_URL = 'https://instagram.com/';
@@ -301,47 +302,70 @@ const translations = {
   },
 };
 
-export default function App() {
-  const [currentPage, setCurrentPage] = useState('home');
-  const getLangFromURL = () => {
+function getLangFromURL() {
   const params = new URLSearchParams(window.location.search);
-  const lang = params.get("lang");
-  return lang === "sr" ? "sr" : "en";
-};
+  const lang = params.get('lang');
 
-const [language, setLanguage] = useState(getLangFromURL());;
+  if (lang === 'sr' || lang === 'en') return lang;
+
+  const browserLang = navigator.language || navigator.userLanguage;
+  if (browserLang?.startsWith('sr')) return 'sr';
+
+  return 'en';
+}
+
+function usePageTitle(t) {
+  const location = useLocation();
+
+  useEffect(() => {
+    const titles = {
+      '/': `Tihomira | ${t.nav.home}`,
+      '/about': `Tihomira | ${t.nav.about}`,
+      '/work': `Tihomira | ${t.nav.work}`,
+      '/events': `Tihomira | ${t.nav.events}`,
+      '/contact': `Tihomira | ${t.nav.contact}`,
+    };
+
+    document.title = titles[location.pathname] || 'Tihomira';
+  }, [location.pathname, t]);
+}
+
+export default function App() {
+  const [language, setLanguage] = useState(getLangFromURL());
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const location = useLocation();
+  const navigate = useNavigate();
   const t = translations[language];
 
-  const pages = {
-    home: <HomePage setCurrentPage={setCurrentPage} t={t} />,
-    about: <AboutPage t={t} />,
-    work: <WorkPage t={t} />,
-    events: <EventsPage t={t} />,
-    contact: <ContactPage t={t} />,
-  };
+  usePageTitle(t);
 
   const navItems = [
-    [t.nav.home, 'home'],
-    [t.nav.about, 'about'],
-    [t.nav.work, 'work'],
-    [t.nav.events, 'events'],
-    [t.nav.contact, 'contact'],
+    [t.nav.home, '/'],
+    [t.nav.about, '/about'],
+    [t.nav.work, '/work'],
+    [t.nav.events, '/events'],
+    [t.nav.contact, '/contact'],
   ];
 
-  const goToPage = (page) => {
-    setCurrentPage(page);
-    setMenuOpen(false);
-    window.scrollTo(0, 0);
+  const changeLanguage = (lang) => {
+    setLanguage(lang);
+    const params = new URLSearchParams(window.location.search);
+    params.set('lang', lang);
+    navigate(`${location.pathname}?${params.toString()}`, { replace: true });
   };
+
+  const isActive = (path) => location.pathname === path;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0b1220] via-[#111827] to-[#0a0f1a] text-slate-100">
       <nav className="fixed top-0 z-50 w-full border-b border-yellow-700/20 bg-[#0c1322]/80 shadow-sm backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <button
-            onClick={() => goToPage('home')}
+          <Link
+            to={`/?lang=${language}`}
+            onClick={() => {
+              setMenuOpen(false);
+              window.scrollTo(0, 0);
+            }}
             className="flex items-center gap-3 text-xl font-serif text-white transition-colors hover:text-yellow-400"
           >
             <img
@@ -350,26 +374,27 @@ const [language, setLanguage] = useState(getLangFromURL());;
               className="h-8 w-8 rounded object-contain"
             />
             <span>Tihomira</span>
-          </button>
+          </Link>
 
           <div className="hidden items-center gap-8 md:flex">
-            {navItems.map(([label, page]) => (
-              <button
-                key={page}
-                onClick={() => goToPage(page)}
+            {navItems.map(([label, path]) => (
+              <Link
+                key={path}
+                to={`${path}?lang=${language}`}
+                onClick={() => window.scrollTo(0, 0)}
                 className={`text-sm transition-all ${
-                  currentPage === page
+                  isActive(path)
                     ? 'font-medium text-yellow-400'
                     : 'text-slate-300 hover:text-white'
                 }`}
               >
                 {label}
-              </button>
+              </Link>
             ))}
 
             <div className="ml-4 flex gap-2 border-l border-yellow-700/20 pl-4">
               <button
-                onClick={() => setLanguage('en')}
+                onClick={() => changeLanguage('en')}
                 className={`rounded px-2 py-1 text-xs transition-all ${
                   language === 'en'
                     ? 'bg-yellow-500 font-medium text-slate-950'
@@ -379,7 +404,7 @@ const [language, setLanguage] = useState(getLangFromURL());;
                 EN
               </button>
               <button
-                onClick={() => setLanguage('sr')}
+                onClick={() => changeLanguage('sr')}
                 className={`rounded px-2 py-1 text-xs transition-all ${
                   language === 'sr'
                     ? 'bg-yellow-500 font-medium text-slate-950'
@@ -402,26 +427,27 @@ const [language, setLanguage] = useState(getLangFromURL());;
 
         {menuOpen && (
           <div className="space-y-4 border-t border-yellow-700/20 bg-[#0c1322] p-4 md:hidden">
-            {navItems.map(([label, page]) => (
-              <button
-                key={page}
-                onClick={() => goToPage(page)}
+            {navItems.map(([label, path]) => (
+              <Link
+                key={path}
+                to={`${path}?lang=${language}`}
+                onClick={() => {
+                  setMenuOpen(false);
+                  window.scrollTo(0, 0);
+                }}
                 className={`block w-full text-left text-sm transition-all ${
-                  currentPage === page
+                  isActive(path)
                     ? 'font-medium text-yellow-400'
                     : 'text-slate-300 hover:text-white'
                 }`}
               >
                 {label}
-              </button>
+              </Link>
             ))}
 
             <div className="flex gap-2 border-t border-yellow-700/20 pt-4">
               <button
-                onClick={() => {
-                setLanguage('en');
-                window.history.replaceState({}, '', '?lang=en');
-                }}
+                onClick={() => changeLanguage('en')}
                 className={`flex-1 rounded px-3 py-2 text-xs transition-all ${
                   language === 'en'
                     ? 'bg-yellow-500 font-medium text-slate-950'
@@ -431,10 +457,7 @@ const [language, setLanguage] = useState(getLangFromURL());;
                 English
               </button>
               <button
-                onClick={() => {
-                  setLanguage('sr');
-                  window.history.replaceState({}, '', '?lang=sr');
-                  }}
+                onClick={() => changeLanguage('sr')}
                 className={`flex-1 rounded px-3 py-2 text-xs transition-all ${
                   language === 'sr'
                     ? 'bg-yellow-500 font-medium text-slate-950'
@@ -448,13 +471,20 @@ const [language, setLanguage] = useState(getLangFromURL());;
         )}
       </nav>
 
-      <main className="pt-24">{pages[currentPage]}</main>
+      <main className="pt-24">
+        <Routes>
+          <Route path="/" element={<HomePage setCurrentPage={(path) => navigate(`${path}?lang=${language}`)} t={t} />} />
+          <Route path="/about" element={<AboutPage t={t} />} />
+          <Route path="/work" element={<WorkPage t={t} />} />
+          <Route path="/events" element={<EventsPage t={t} />} />
+          <Route path="/contact" element={<ContactPage t={t} />} />
+        </Routes>
+      </main>
 
       <footer className="mt-20 border-t border-yellow-700/10 bg-[#090e18] text-slate-300">
         <div className="mx-auto max-w-6xl px-4 py-12 text-center text-sm sm:px-6 lg:px-8">
           <p className="mb-6">
-            <span className="font-serif text-yellow-400">{t.footer.brand}</span>{' '}
-            — {t.footer.desc}
+            <span className="font-serif text-yellow-400">{t.footer.brand}</span> — {t.footer.desc}
           </p>
           <p className="mb-6 text-slate-500">{t.footer.rights}</p>
           <p className="text-xs text-slate-600">{t.footer.tagline}</p>
@@ -573,7 +603,7 @@ function HomePage({ setCurrentPage, t }) {
             {t.home.inviteText}
           </p>
           <button
-            onClick={() => setCurrentPage('contact')}
+            onClick={() => setCurrentPage('/contact')}
             className="inline-flex items-center gap-2 rounded-full bg-yellow-500 px-8 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400"
           >
             {t.home.cta}
