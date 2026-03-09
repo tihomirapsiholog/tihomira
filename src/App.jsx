@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Menu, X, Instagram, ArrowRight } from 'lucide-react';
 
+const CONTACT_EMAIL = 'tihomira.psiholog@gmail.com';
+const INSTAGRAM_URL = 'https://instagram.com/';
+
 const translations = {
   en: {
     nav: {
@@ -43,7 +46,6 @@ const translations = {
       toolsTitle: 'Sound & Symbolic Tools',
       toolsText:
         'My practice incorporates instruments and symbolic objects that support the journey of transformation. Sound bowls, drums, and ritual elements create spaces where deeper awareness can emerge.',
-      toolsPlaceholder: 'Your instruments image will appear here',
     },
     about: {
       title: 'About My Work',
@@ -121,8 +123,6 @@ const translations = {
       noEvents: 'New gatherings and workshops are announced periodically.',
       stayConnected:
         'Stay connected for invitations to upcoming transformational experiences.',
-      joinEmail: 'Join the mailing list for announcements:',
-      notify: 'Notify Me',
       interested: 'Interested in bringing me to your community?',
       custom:
         'I offer custom facilitation for organizations, teams, and communities seeking transformational experiences.',
@@ -193,7 +193,6 @@ const translations = {
       toolsTitle: 'Zvučni i simbolički alati',
       toolsText:
         'U svom radu koristim instrumente i simboličke objekte koji podržavaju proces transformacije. Zvučne činije, bubnjevi i ritualni elementi stvaraju prostor u kome može da se pojavi dublja svesnost.',
-      toolsPlaceholder: 'Ovde će se pojaviti fotografija instrumenata',
     },
     about: {
       title: 'O mom radu',
@@ -248,7 +247,8 @@ const translations = {
       service2Feature2: 'Dinamika grupnog procesa',
       service2Feature3: 'Soul Theater i dramski rad',
       service2Feature4: 'Ritualni i simbolički elementi',
-      service2ForWho: 'Grupe koje traže dubinu, timovi, zajednice, organizacije',
+      service2ForWho:
+        'Grupe koje traže dubinu, timovi, zajednice, organizacije',
       service3Title: 'Zvučna i simbolička iskustva',
       service3Sub: 'Imerzivna telesna putovanja',
       service3Desc:
@@ -271,8 +271,6 @@ const translations = {
       noEvents: 'Nova okupljanja i radionice objavljuju se periodično.',
       stayConnected:
         'Ostanite povezani za pozive na predstojeća transformativna iskustva.',
-      joinEmail: 'Pridružite se mejling listi za objave:',
-      notify: 'Obavesti me',
       interested: 'Želite da me dovedete u svoju zajednicu?',
       custom:
         'Nudim prilagođenu facilitaciju za organizacije, timove i zajednice koje traže transformativna iskustva.',
@@ -303,7 +301,7 @@ const translations = {
   },
 };
 
-export default function TihomiraWebsite() {
+export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [language, setLanguage] = useState('en');
   const [menuOpen, setMenuOpen] = useState(false);
@@ -333,14 +331,19 @@ export default function TihomiraWebsite() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 font-sans text-slate-800">
-      <nav className="fixed top-0 z-50 w-full border-b border-yellow-600/20 bg-white/80 shadow-sm backdrop-blur-md">
+    <div className="min-h-screen bg-gradient-to-b from-[#0b1220] via-[#111827] to-[#0a0f1a] text-slate-100">
+      <nav className="fixed top-0 z-50 w-full border-b border-yellow-700/20 bg-[#0c1322]/80 shadow-sm backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <button
             onClick={() => goToPage('home')}
-            className="text-xl font-serif text-slate-900 transition-colors hover:text-yellow-600"
+            className="flex items-center gap-3 text-xl font-serif text-white transition-colors hover:text-yellow-400"
           >
-            Tihomira
+            <img
+              src="/logo-aurethra.png"
+              alt="Aurethra logo"
+              className="h-8 w-8 rounded object-contain"
+            />
+            <span>Tihomira</span>
           </button>
 
           <div className="hidden items-center gap-8 md:flex">
@@ -350,21 +353,21 @@ export default function TihomiraWebsite() {
                 onClick={() => goToPage(page)}
                 className={`text-sm transition-all ${
                   currentPage === page
-                    ? 'font-medium text-yellow-600'
-                    : 'text-slate-600 hover:text-slate-900'
+                    ? 'font-medium text-yellow-400'
+                    : 'text-slate-300 hover:text-white'
                 }`}
               >
                 {label}
               </button>
             ))}
 
-            <div className="ml-4 flex gap-2 border-l border-yellow-600/20 pl-4">
+            <div className="ml-4 flex gap-2 border-l border-yellow-700/20 pl-4">
               <button
                 onClick={() => setLanguage('en')}
                 className={`rounded px-2 py-1 text-xs transition-all ${
                   language === 'en'
-                    ? 'bg-yellow-600 font-medium text-white'
-                    : 'text-slate-500 hover:text-slate-700'
+                    ? 'bg-yellow-500 font-medium text-slate-950'
+                    : 'text-slate-400 hover:text-white'
                 }`}
               >
                 EN
@@ -373,8 +376,8 @@ export default function TihomiraWebsite() {
                 onClick={() => setLanguage('sr')}
                 className={`rounded px-2 py-1 text-xs transition-all ${
                   language === 'sr'
-                    ? 'bg-yellow-600 font-medium text-white'
-                    : 'text-slate-500 hover:text-slate-700'
+                    ? 'bg-yellow-500 font-medium text-slate-950'
+                    : 'text-slate-400 hover:text-white'
                 }`}
               >
                 SR
@@ -384,7 +387,7 @@ export default function TihomiraWebsite() {
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-slate-900 md:hidden"
+            className="text-white md:hidden"
             aria-label="Toggle menu"
           >
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -392,28 +395,28 @@ export default function TihomiraWebsite() {
         </div>
 
         {menuOpen && (
-          <div className="space-y-4 border-t border-yellow-600/20 bg-white p-4 md:hidden">
+          <div className="space-y-4 border-t border-yellow-700/20 bg-[#0c1322] p-4 md:hidden">
             {navItems.map(([label, page]) => (
               <button
                 key={page}
                 onClick={() => goToPage(page)}
                 className={`block w-full text-left text-sm transition-all ${
                   currentPage === page
-                    ? 'font-medium text-yellow-600'
-                    : 'text-slate-600 hover:text-slate-900'
+                    ? 'font-medium text-yellow-400'
+                    : 'text-slate-300 hover:text-white'
                 }`}
               >
                 {label}
               </button>
             ))}
 
-            <div className="flex gap-2 border-t border-yellow-600/20 pt-4">
+            <div className="flex gap-2 border-t border-yellow-700/20 pt-4">
               <button
                 onClick={() => setLanguage('en')}
                 className={`flex-1 rounded px-3 py-2 text-xs transition-all ${
                   language === 'en'
-                    ? 'bg-yellow-600 font-medium text-white'
-                    : 'border border-slate-200 text-slate-500 hover:text-slate-700'
+                    ? 'bg-yellow-500 font-medium text-slate-950'
+                    : 'border border-slate-700 text-slate-300 hover:text-white'
                 }`}
               >
                 English
@@ -422,8 +425,8 @@ export default function TihomiraWebsite() {
                 onClick={() => setLanguage('sr')}
                 className={`flex-1 rounded px-3 py-2 text-xs transition-all ${
                   language === 'sr'
-                    ? 'bg-yellow-600 font-medium text-white'
-                    : 'border border-slate-200 text-slate-500 hover:text-slate-700'
+                    ? 'bg-yellow-500 font-medium text-slate-950'
+                    : 'border border-slate-700 text-slate-300 hover:text-white'
                 }`}
               >
                 Srpski
@@ -435,14 +438,14 @@ export default function TihomiraWebsite() {
 
       <main className="pt-24">{pages[currentPage]}</main>
 
-      <footer className="mt-20 bg-slate-900 text-slate-200">
+      <footer className="mt-20 border-t border-yellow-700/10 bg-[#090e18] text-slate-300">
         <div className="mx-auto max-w-6xl px-4 py-12 text-center text-sm sm:px-6 lg:px-8">
           <p className="mb-6">
-            <span className="font-serif text-yellow-600">{t.footer.brand}</span>{' '}
+            <span className="font-serif text-yellow-400">{t.footer.brand}</span>{' '}
             — {t.footer.desc}
           </p>
-          <p className="mb-6 text-slate-400">{t.footer.rights}</p>
-          <p className="text-xs text-slate-500">{t.footer.tagline}</p>
+          <p className="mb-6 text-slate-500">{t.footer.rights}</p>
+          <p className="text-xs text-slate-600">{t.footer.tagline}</p>
         </div>
       </footer>
     </div>
@@ -452,122 +455,114 @@ export default function TihomiraWebsite() {
 function HomePage({ setCurrentPage, t }) {
   return (
     <div className="space-y-0">
-      <section className="relative flex h-96 items-center justify-center overflow-hidden sm:h-screen">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900" />
+      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
+        <img
+          src="/silhouette.jpg"
+          alt="Silhouette"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#08111f]/70 via-[#0b1220]/75 to-[#0a0f1a]/90" />
+        <div className="absolute inset-0 bg-black/30" />
+
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <p className="mb-4 text-sm uppercase tracking-widest text-yellow-600">
-              {t.home.welcome}
-            </p>
-            <h1 className="mb-6 font-serif text-5xl leading-tight text-white sm:text-7xl">
-              Tihomira Stanojević
-            </h1>
-            <p className="mb-8 whitespace-pre-line text-xl font-light italic text-slate-200 sm:text-2xl">
-              {t.home.tagline}
-            </p>
-          </div>
+          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-yellow-400">
+            {t.home.welcome}
+          </p>
+          <h1 className="mb-6 font-serif text-5xl leading-tight text-white sm:text-7xl">
+            Tihomira Stanojević
+          </h1>
+          <p className="mb-8 whitespace-pre-line text-xl font-light italic text-slate-200 sm:text-2xl">
+            {t.home.tagline}
+          </p>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-slate-300">
             {t.home.intro}
           </p>
         </div>
       </section>
 
-      <section className="bg-white py-20">
+      <section className="bg-[#0e1628] py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-4 text-center font-serif text-4xl text-slate-900">
+          <h2 className="mb-4 text-center font-serif text-4xl text-white">
             {t.home.howIWork}
           </h2>
-          <p className="mx-auto mb-16 max-w-2xl text-center text-lg text-slate-600">
+          <p className="mx-auto mb-16 max-w-2xl text-center text-lg text-slate-400">
             {t.home.workDescription}
           </p>
 
           <div className="grid gap-8 md:grid-cols-3">
             {[
-              {
-                icon: '↻',
-                title: t.home.pillar1Title,
-                desc: t.home.pillar1Desc,
-              },
-              {
-                icon: '◯',
-                title: t.home.pillar2Title,
-                desc: t.home.pillar2Desc,
-              },
-              {
-                icon: '✦',
-                title: t.home.pillar3Title,
-                desc: t.home.pillar3Desc,
-              },
+              { icon: '↻', title: t.home.pillar1Title, desc: t.home.pillar1Desc },
+              { icon: '◯', title: t.home.pillar2Title, desc: t.home.pillar2Desc },
+              { icon: '✦', title: t.home.pillar3Title, desc: t.home.pillar3Desc },
             ].map((item, i) => (
               <div
                 key={i}
-                className="group rounded-lg border border-yellow-600/20 bg-gradient-to-br from-slate-50 to-white p-8 transition-all hover:border-yellow-600/40 hover:shadow-lg"
+                className="rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8 transition-all hover:border-yellow-500/40 hover:shadow-xl"
               >
-                <div className="mb-4 text-4xl text-yellow-600 transition-transform group-hover:scale-110">
-                  {item.icon}
-                </div>
-                <h3 className="mb-3 text-xl font-serif text-slate-900">
-                  {item.title}
-                </h3>
-                <p className="leading-relaxed text-slate-600">{item.desc}</p>
+                <div className="mb-4 text-4xl text-yellow-400">{item.icon}</div>
+                <h3 className="mb-3 text-xl font-serif text-white">{item.title}</h3>
+                <p className="leading-relaxed text-slate-400">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-gradient-to-r from-slate-900/5 to-slate-900/5 py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-12 md:grid-cols-2">
-            <div>
-              <h2 className="mb-6 font-serif text-3xl text-slate-900">
-                {t.home.toolsTitle}
-              </h2>
-              <p className="mb-4 leading-relaxed text-slate-700">
-                {t.home.toolsText}
-              </p>
-            </div>
-            <div className="relative flex h-80 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-yellow-100 to-yellow-50 text-slate-400 shadow-2xl">
-              <div>{t.home.toolsPlaceholder}</div>
-            </div>
+      <section className="bg-[#0b1220] py-20">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div>
+            <h2 className="mb-6 font-serif text-3xl text-white">
+              {t.home.toolsTitle}
+            </h2>
+            <p className="mb-4 leading-relaxed text-slate-300">
+              {t.home.toolsText}
+            </p>
+          </div>
+
+          <div className="overflow-hidden rounded-2xl border border-yellow-700/20 shadow-2xl">
+            <img
+              src="/instruments.jpg"
+              alt="Instruments"
+              className="h-[420px] w-full object-cover"
+            />
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 className="mb-12 text-center font-serif text-3xl text-slate-900">
-          {t.home.offerings}
-        </h2>
+      <section className="bg-[#0e1628] py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <h2 className="mb-12 text-center font-serif text-3xl text-white">
+            {t.home.offerings}
+          </h2>
 
-        <div className="grid gap-8 md:grid-cols-2">
-          {[
-            { title: t.home.offering1, subtitle: t.home.offering1Sub },
-            { title: t.home.offering2, subtitle: t.home.offering2Sub },
-            { title: t.home.offering3, subtitle: t.home.offering3Sub },
-            { title: t.home.offering4, subtitle: t.home.offering4Sub },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="group cursor-pointer border-l-4 border-yellow-600/40 p-6 transition-colors hover:border-yellow-600/80 hover:pl-8"
-            >
-              <h3 className="text-lg font-serif text-slate-900 transition-colors group-hover:text-yellow-600">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-sm text-slate-500">{item.subtitle}</p>
-            </div>
-          ))}
+          <div className="grid gap-8 md:grid-cols-2">
+            {[
+              { title: t.home.offering1, subtitle: t.home.offering1Sub },
+              { title: t.home.offering2, subtitle: t.home.offering2Sub },
+              { title: t.home.offering3, subtitle: t.home.offering3Sub },
+              { title: t.home.offering4, subtitle: t.home.offering4Sub },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="rounded-xl border-l-4 border-yellow-500/50 bg-[#121c31] p-6 transition-all hover:border-yellow-400 hover:bg-[#16223b]"
+              >
+                <h3 className="text-lg font-serif text-white">{item.title}</h3>
+                <p className="mt-2 text-sm text-slate-400">{item.subtitle}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 py-20 text-white">
+      <section className="bg-gradient-to-r from-[#0a0f1a] via-[#111827] to-[#0a0f1a] py-20 text-white">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="mb-6 font-serif text-4xl">{t.home.ready}</h2>
-          <p className="mb-8 text-lg leading-relaxed text-slate-200">
+          <p className="mb-8 text-lg leading-relaxed text-slate-300">
             {t.home.inviteText}
           </p>
           <button
             onClick={() => setCurrentPage('contact')}
-            className="inline-flex items-center gap-2 rounded bg-yellow-600 px-8 py-3 font-medium text-white transition-colors hover:bg-yellow-700"
+            className="inline-flex items-center gap-2 rounded-full bg-yellow-500 px-8 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400"
           >
             {t.home.cta}
             <ArrowRight size={18} />
@@ -580,63 +575,62 @@ function HomePage({ setCurrentPage, t }) {
 
 function AboutPage({ t }) {
   return (
-    <div className="space-y-0">
-      <section className="relative flex h-96 items-center overflow-hidden bg-gradient-to-r from-slate-900 to-slate-800">
-        <div className="relative z-10 mx-auto max-w-4xl px-4 text-white sm:px-6 lg:px-8">
-          <h1 className="mb-4 font-serif text-5xl">{t.about.title}</h1>
-          <p className="text-xl italic text-slate-300">{t.about.intro}</p>
+    <div className="bg-[#0b1220]">
+      <section className="relative overflow-hidden py-20">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div>
+            <h1 className="mb-4 font-serif text-5xl text-white">{t.about.title}</h1>
+            <p className="text-xl italic text-slate-300">{t.about.intro}</p>
+          </div>
+
+          <div className="overflow-hidden rounded-2xl border border-yellow-700/20 shadow-2xl">
+            <img
+              src="/portrait.jpg"
+              alt="Portrait of Tihomira"
+              className="h-[520px] w-full object-cover"
+            />
+          </div>
         </div>
       </section>
 
-      <div className="mx-auto max-w-4xl space-y-12 px-4 py-20 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-4xl space-y-12 px-4 py-10 sm:px-6 lg:px-8">
         <div className="space-y-8 text-lg leading-relaxed">
-          <p className="text-slate-700">{t.about.para1}</p>
-          <p className="text-slate-700">{t.about.para2}</p>
+          <p className="text-slate-300">{t.about.para1}</p>
+          <p className="text-slate-300">{t.about.para2}</p>
 
-          <div className="border-l-4 border-yellow-600 bg-gradient-to-r from-yellow-50 to-yellow-50 p-8">
-            <h2 className="mb-4 font-serif text-3xl text-slate-900">
+          <div className="rounded-2xl border-l-4 border-yellow-500 bg-[#121c31] p-8">
+            <h2 className="mb-4 font-serif text-3xl text-white">
               {t.about.atCrossroads}
             </h2>
-            <p className="italic text-slate-700">{t.about.crossroadsText}</p>
+            <p className="italic text-slate-300">{t.about.crossroadsText}</p>
           </div>
 
-          <p className="text-slate-700">{t.about.para3}</p>
+          <p className="text-slate-300">{t.about.para3}</p>
 
-          <h2 className="pt-8 font-serif text-3xl text-slate-900">
+          <h2 className="pt-8 font-serif text-3xl text-white">
             {t.about.guidesWork}
           </h2>
 
           <div className="space-y-8 pt-4">
             {[
-              {
-                title: t.about.psychologyTitle,
-                text: t.about.psychologyText,
-              },
+              { title: t.about.psychologyTitle, text: t.about.psychologyText },
               { title: t.about.processTitle, text: t.about.processText },
-              {
-                title: t.about.embodiedTitle,
-                text: t.about.embodiedText,
-              },
-              {
-                title: t.about.symbolicTitle,
-                text: t.about.symbolicText,
-              },
+              { title: t.about.embodiedTitle, text: t.about.embodiedText },
+              { title: t.about.symbolicTitle, text: t.about.symbolicText },
             ].map((item, i) => (
-              <div key={i}>
-                <h3 className="mb-2 text-xl font-serif text-slate-900">
-                  {item.title}
-                </h3>
-                <p className="text-slate-600">{item.text}</p>
+              <div key={i} className="rounded-xl bg-[#121c31] p-6">
+                <h3 className="mb-2 text-xl font-serif text-white">{item.title}</h3>
+                <p className="text-slate-400">{item.text}</p>
               </div>
             ))}
           </div>
 
-          <div className="rounded-lg border border-yellow-600/20 bg-white p-8">
-            <h2 className="mb-4 font-serif text-3xl text-slate-900">
+          <div className="rounded-2xl border border-yellow-700/20 bg-[#10192c] p-8">
+            <h2 className="mb-4 font-serif text-3xl text-white">
               {t.about.archetype}
             </h2>
-            <p className="mb-4 text-slate-700">{t.about.archetypeText}</p>
-            <p className="text-slate-700">{t.about.archetypeText2}</p>
+            <p className="mb-4 text-slate-300">{t.about.archetypeText}</p>
+            <p className="text-slate-300">{t.about.archetypeText2}</p>
           </div>
         </div>
       </div>
@@ -685,72 +679,60 @@ function WorkPage({ t }) {
   ];
 
   return (
-    <div className="space-y-16">
+    <div className="space-y-16 bg-[#0b1220] py-8">
       <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <h1 className="mb-6 font-serif text-5xl text-slate-900">
-          {t.work.title}
-        </h1>
-        <p className="text-xl leading-relaxed text-slate-600">{t.work.intro}</p>
+        <h1 className="mb-6 font-serif text-5xl text-white">{t.work.title}</h1>
+        <p className="text-xl leading-relaxed text-slate-300">{t.work.intro}</p>
       </div>
 
       {services.map((service, i) => (
         <section
           key={i}
-          className={`py-16 ${i % 2 === 0 ? 'bg-white/50 backdrop-blur' : ''}`}
+          className={`py-12 ${i % 2 === 0 ? 'bg-[#10192c]' : 'bg-[#0b1220]'}`}
         >
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="mb-8">
-              <h2 className="mb-2 font-serif text-4xl text-slate-900">
-                {service.title}
-              </h2>
-              <p className="text-lg italic text-slate-500">
-                {service.subtitle}
-              </p>
+              <h2 className="mb-2 font-serif text-4xl text-white">{service.title}</h2>
+              <p className="text-lg italic text-slate-400">{service.subtitle}</p>
             </div>
 
-            <p className="mb-8 max-w-3xl text-lg leading-relaxed text-slate-700">
+            <p className="mb-8 max-w-3xl text-lg leading-relaxed text-slate-300">
               {service.description}
             </p>
 
             <div className="grid max-w-3xl gap-8 md:grid-cols-2">
-              <div>
-                <h3 className="mb-4 font-serif text-slate-900">
-                  {t.work.experience}
-                </h3>
+              <div className="rounded-xl bg-[#121c31] p-6">
+                <h3 className="mb-4 font-serif text-white">{t.work.experience}</h3>
                 <ul className="space-y-3">
                   {service.features.map((feature, j) => (
-                    <li key={j} className="flex gap-3 text-slate-700">
-                      <span className="mt-1 text-yellow-600">→</span>
+                    <li key={j} className="flex gap-3 text-slate-300">
+                      <span className="mt-1 text-yellow-400">→</span>
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div>
-                <h3 className="mb-4 font-serif text-slate-900">
-                  {t.work.forWhom}
-                </h3>
-                <p className="leading-relaxed text-slate-700">
-                  {service.forWho}
-                </p>
+              <div className="rounded-xl bg-[#121c31] p-6">
+                <h3 className="mb-4 font-serif text-white">{t.work.forWhom}</h3>
+                <p className="leading-relaxed text-slate-300">{service.forWho}</p>
               </div>
             </div>
           </div>
         </section>
       ))}
 
-      <section className="bg-gradient-to-r from-slate-900/5 to-slate-900/5 py-16">
+      <section className="bg-[#10192c] py-16">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="mb-6 font-serif text-3xl text-slate-900">
+          <h2 className="mb-6 font-serif text-3xl text-white">
             {t.work.questionsTitle}
           </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-slate-600">
+          <p className="mx-auto mb-8 max-w-2xl text-slate-300">
             {t.work.questionsText}
           </p>
           <a
-            href="mailto:hello@tihomira.com"
-            className="inline-flex items-center gap-2 rounded bg-yellow-600 px-8 py-3 font-medium text-white transition-colors hover:bg-yellow-700"
+            href={`mailto:${CONTACT_EMAIL}`}
+            className="inline-flex items-center gap-2 rounded-full bg-yellow-500 px-8 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400"
           >
             {t.work.reach}
             <ArrowRight size={18} />
@@ -763,24 +745,20 @@ function WorkPage({ t }) {
 
 function EventsPage({ t }) {
   return (
-    <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
-      <h1 className="mb-8 font-serif text-5xl text-slate-900">
-        {t.events.title}
-      </h1>
+    <div className="mx-auto max-w-4xl bg-[#0b1220] px-4 py-20 sm:px-6 lg:px-8">
+      <h1 className="mb-8 font-serif text-5xl text-white">{t.events.title}</h1>
 
-      <div className="rounded-lg border border-yellow-600/20 bg-gradient-to-br from-slate-50 to-white p-12 text-center">
-        <p className="mb-4 text-xl text-slate-600">{t.events.noEvents}</p>
-        <p className="text-slate-500">{t.events.stayConnected}</p>
+      <div className="rounded-2xl border border-yellow-700/20 bg-[#121c31] p-12 text-center">
+        <p className="mb-4 text-xl text-slate-300">{t.events.noEvents}</p>
+        <p className="text-slate-400">{t.events.stayConnected}</p>
       </div>
 
-      <div className="mt-16 rounded-lg border border-slate-200/50 bg-slate-900/5 p-8">
-        <h3 className="mb-4 font-serif text-slate-900">
-          {t.events.interested}
-        </h3>
-        <p className="mb-4 text-slate-700">{t.events.custom}</p>
+      <div className="mt-16 rounded-2xl border border-yellow-700/20 bg-[#10192c] p-8">
+        <h3 className="mb-4 font-serif text-white">{t.events.interested}</h3>
+        <p className="mb-4 text-slate-300">{t.events.custom}</p>
         <a
-          href="mailto:hello@tihomira.com"
-          className="font-medium text-yellow-600 transition-colors hover:text-yellow-700"
+          href={`mailto:${CONTACT_EMAIL}`}
+          className="font-medium text-yellow-400 transition-colors hover:text-yellow-300"
         >
           {t.events.customText}
         </a>
@@ -805,47 +783,39 @@ function ContactPage({ t }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const subject = encodeURIComponent(`Message from ${formData.name}`);
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
     );
-
-    window.location.href = `mailto:hello@tihomira.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   };
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
-      <h1 className="mb-6 font-serif text-5xl text-slate-900">
-        {t.contact.title}
-      </h1>
-      <p className="mb-12 text-lg leading-relaxed text-slate-600">
+    <div className="mx-auto max-w-3xl bg-[#0b1220] px-4 py-20 sm:px-6 lg:px-8">
+      <h1 className="mb-6 font-serif text-5xl text-white">{t.contact.title}</h1>
+      <p className="mb-12 text-lg leading-relaxed text-slate-300">
         {t.contact.intro}
       </p>
 
       <div className="grid gap-12 md:grid-cols-2">
         <div className="space-y-8">
           <div>
-            <h3 className="mb-2 font-serif text-slate-900">
-              {t.contact.email}
-            </h3>
+            <h3 className="mb-2 font-serif text-white">{t.contact.email}</h3>
             <a
-              href="mailto:hello@tihomira.com"
-              className="text-yellow-600 transition-colors hover:text-yellow-700"
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="text-yellow-400 transition-colors hover:text-yellow-300"
             >
-              hello@tihomira.com
+              {CONTACT_EMAIL}
             </a>
           </div>
 
           <div>
-            <h3 className="mb-3 font-serif text-slate-900">
-              {t.contact.follow}
-            </h3>
+            <h3 className="mb-3 font-serif text-white">{t.contact.follow}</h3>
             <a
-              href="https://instagram.com"
+              href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-yellow-600 transition-colors hover:text-yellow-700"
+              className="flex items-center gap-2 text-yellow-400 transition-colors hover:text-yellow-300"
             >
               <Instagram size={20} />
               Instagram
@@ -859,9 +829,9 @@ function ContactPage({ t }) {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6 rounded-2xl bg-[#121c31] p-6">
           <div>
-            <label className="mb-2 block text-sm font-medium text-slate-700">
+            <label className="mb-2 block text-sm font-medium text-slate-200">
               {t.contact.yourName}
             </label>
             <input
@@ -870,13 +840,13 @@ function ContactPage({ t }) {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full rounded border border-yellow-600/30 bg-white px-4 py-2 text-slate-800 placeholder-slate-400 transition-colors focus:border-yellow-600 focus:outline-none"
+              className="w-full rounded border border-slate-700 bg-[#0f172a] px-4 py-3 text-white placeholder-slate-500 transition-colors focus:border-yellow-500 focus:outline-none"
               placeholder={t.contact.namePlaceholder}
             />
           </div>
 
           <div>
-            <label className="mb-2 block text-sm font-medium text-slate-700">
+            <label className="mb-2 block text-sm font-medium text-slate-200">
               {t.contact.emailLabel}
             </label>
             <input
@@ -885,13 +855,13 @@ function ContactPage({ t }) {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full rounded border border-yellow-600/30 bg-white px-4 py-2 text-slate-800 placeholder-slate-400 transition-colors focus:border-yellow-600 focus:outline-none"
+              className="w-full rounded border border-slate-700 bg-[#0f172a] px-4 py-3 text-white placeholder-slate-500 transition-colors focus:border-yellow-500 focus:outline-none"
               placeholder={t.contact.emailPlaceholder}
             />
           </div>
 
           <div>
-            <label className="mb-2 block text-sm font-medium text-slate-700">
+            <label className="mb-2 block text-sm font-medium text-slate-200">
               {t.contact.message}
             </label>
             <textarea
@@ -900,14 +870,14 @@ function ContactPage({ t }) {
               onChange={handleChange}
               required
               rows={6}
-              className="w-full resize-none rounded border border-yellow-600/30 bg-white px-4 py-2 text-slate-800 placeholder-slate-400 transition-colors focus:border-yellow-600 focus:outline-none"
+              className="w-full resize-none rounded border border-slate-700 bg-[#0f172a] px-4 py-3 text-white placeholder-slate-500 transition-colors focus:border-yellow-500 focus:outline-none"
               placeholder={t.contact.messagePlaceholder}
             />
           </div>
 
           <button
             type="submit"
-            className="w-full rounded bg-yellow-600 px-6 py-3 font-medium text-white transition-colors hover:bg-yellow-700"
+            className="w-full rounded-full bg-yellow-500 px-6 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400"
           >
             {t.contact.send}
           </button>
