@@ -418,7 +418,10 @@ const [language, setLanguage] = useState(getLangFromURL());;
 
             <div className="flex gap-2 border-t border-yellow-700/20 pt-4">
               <button
-                onClick={() => setLanguage('en')}
+                onClick={() => {
+                setLanguage('en');
+                window.history.replaceState({}, '', '?lang=en');
+                }}
                 className={`flex-1 rounded px-3 py-2 text-xs transition-all ${
                   language === 'en'
                     ? 'bg-yellow-500 font-medium text-slate-950'
@@ -428,7 +431,10 @@ const [language, setLanguage] = useState(getLangFromURL());;
                 English
               </button>
               <button
-                onClick={() => setLanguage('sr')}
+                onClick={() => {
+                  setLanguage('sr');
+                  window.history.replaceState({}, '', '?lang=sr');
+                  }}
                 className={`flex-1 rounded px-3 py-2 text-xs transition-all ${
                   language === 'sr'
                     ? 'bg-yellow-500 font-medium text-slate-950'
