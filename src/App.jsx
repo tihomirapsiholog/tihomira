@@ -567,6 +567,7 @@ function HomePage({ setCurrentPage, t }) {
               alt="Instruments"
               className="h-[420px] w-full object-cover"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0b1220]/60 via-transparent to-transparent"></div>
           </div>
         </div>
       </section>
