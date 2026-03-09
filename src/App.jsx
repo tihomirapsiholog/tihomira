@@ -385,7 +385,7 @@ export default function App() {
                 className={`text-sm transition-all ${
                   isActive(path)
                     ? 'font-medium text-yellow-400'
-                    : 'text-slate-300 hover:text-white'
+                    : 'text-slate-300 hover:text-yellow-400 border-b border-transparent hover:border-yellow-400'
                 }`}
               >
                 {label}
