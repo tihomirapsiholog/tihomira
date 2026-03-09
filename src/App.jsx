@@ -331,7 +331,7 @@ function usePageTitle(t) {
 }
 
 export default function App() {
-  const [language, setLanguage] = useState(getLangFromURL());
+  const [language] = useState(getLangFromURL());
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
