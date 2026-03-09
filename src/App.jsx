@@ -1,59 +1,169 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import React, { useState } from 'react';
+import { Menu, X, Mail, Instagram, ArrowRight } from 'lucide-react';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-```
-
-4. **Commit:** "Add src/index.js"
-
----
-
-## **STEP 3: Add your website code to src/App.jsx**
-
-1. Click **"Add file"** → **"Upload files"**
-2. **Upload:** `tihomira-enhanced.jsx` from your computer
-3. **But before uploading**, you need to tell GitHub the path;
-4. After selecting file, look for a **path field** and type: `src/App.jsx`
-5. **Commit:** "Add src/App.jsx"
-
-**Alternative if upload doesn't work:**
-1. Click "Add file" → "Create new file"
-2. Filename: `src/App.jsx`
-3. Go to `/mnt/user-data/outputs/tihomira-enhanced.jsx`
-4. Open it, copy ALL the code
-5. Paste into GitHub
-6. Commit
-
----
-
-## **STEP 4: Move images to public folder**
-
-1. Delete the images from ROOT
-2. Re-upload them to public folder:
-   - Click "Add file" → "Upload files"
-   - Upload: instruments.jpg, logo-aurethra.png, portrait.jpg, silhouette.jpg
-   - Make sure they go in `public/` folder
-   - Commit: "Add images to public"
-
----
-
-## **FINAL STRUCTURE (should look like this):**
-```
-tihomira/
-├── public/
-│   ├── index.html          ✓
-│   ├── instruments.jpg     ✓
-│   ├── logo-aurethra.png   ✓
-│   ├── portrait.jpg        ✓
-│   └── silhouette.jpg      ✓
-├── src/
-│   ├── App.jsx             ✓
-│   └── index.js            ✓
-├── package.json            ✓
-└── README.md               ✓
+const translations = {
+  en: {
+    nav: {
+      home: 'Home',
+      about: 'About',
+      work: 'Work With Me',
+      events: 'Events',
+      contact: 'Contact',
+    },
+    home: {
+      welcome: 'Welcome',
+      tagline: '"I don\'t lead people to destinations.\nI help them find their path."',
+      intro: 'Life\'s most profound moments often occur at crossroads—when an old story ends and a new one begins. I support individuals and groups navigating these transitions with psychology, embodied awareness, and symbolic work. Together, we explore what wants to emerge.',
+      howIWork: 'How I Work',
+      workDescription: 'My work integrates psychology, process facilitation, embodied practices, and symbolic awareness to create spaces where transformation can unfold naturally.',
+      pillar1Title: 'Individual Sessions',
+      pillar1Desc: 'One-on-one work for personal transition, self-discovery, and finding clarity in moments of change.',
+      pillar2Title: 'Group Processes',
+      pillar2Desc: 'Experiential workshops and group facilitation, including Soul Theater and transformational group work.',
+      pillar3Title: 'Embodied & Symbolic Work',
+      pillar3Desc: 'Spaces combining sound, ritual elements, and embodied awareness for deeper integration.',
+      offerings: 'Offerings',
+      offering1: 'Individual Sessions',
+      offering1Sub: 'Private transformational work',
+      offering2: 'Group Workshops',
+      offering2Sub: 'Experiential collective processes',
+      offering3: 'Sound & Symbolic Experiences',
+      offering3Sub: 'Immersive embodied journeys',
+      offering4: 'Custom Facilitation',
+      offering4Sub: 'Tailored processes for organizations',
+      ready: 'Ready to explore?',
+      inviteText: 'Whether you\'re at a crossroads, seeking clarity, or ready for transformation, there\'s a path forward. Let\'s explore it together.',
+      cta: 'Get in Touch',
+    },
+    about: {
+      title: 'About My Work',
+      intro: 'My presence, my practice, my commitment to transformation',
+      para1: 'My journey began with a question: What helps people find themselves when they\'re lost? This curiosity led me to psychology, to group process work, and ultimately to the understanding that transformation happens not through instruction, but through creating the conditions for authentic discovery.',
+      para2: 'I\'ve spent years studying how people navigate change—the fear, the confusion, the moments of unexpected clarity. I\'ve learned that our bodies hold wisdom we\'ve forgotten, that symbols speak to us in ways words cannot, and that when we gather intentionally, something powerful emerges from the space between us.',
+      atCrossroads: 'At the Crossroads',
+      crossroadsText: '"Many important moments in life happen at crossroads—when an old story ends and a new one begins. These are not problems to be solved quickly. They are invitations to become more fully ourselves."',
+      para3: 'I\'ve dedicated my practice to supporting people in these liminal spaces. Whether you\'re questioning your direction, grieving what was, or sensing that something is asking to be born, my work is to help you find clarity not through answers I provide, but through awakening what you already know.',
+      guidesWork: 'What Guides My Work',
+      psychologyTitle: 'Psychology',
+      psychologyText: 'Understanding the human psyche—patterns, wounds, strengths, and untapped potential.',
+      processTitle: 'Group Process',
+      processText: 'The wisdom that emerges when people gather authentically, holding space for individual and collective transformation.',
+      embodiedTitle: 'Embodied Awareness',
+      embodiedText: 'Reconnecting with the body\'s knowing—breath, sensation, movement, presence.',
+      symbolicTitle: 'Symbolic & Artistic Work',
+      symbolicText: 'Engaging metaphor, image, sound, and ritual to access deeper layers of awareness and transformation.',
+      archetype: 'The Archetype of the Crossroads',
+      archetypeText: 'Many ancient cultures describe guides who appear at life\'s pivotal moments—those standing at the threshold between what was and what might be. The archetype of Aurethra represents this—a presence that illuminates the path forward, not by forcing direction, but by awakening your own inner knowing.',
+      archetypeText2: 'This is the spirit of my work: to be a steady presence as you navigate your own transformation, honoring both the depth of where you\'ve been and the potential of where you\'re going.',
+    },
+    work: {
+      title: 'Work With Me',
+      intro: 'I offer three primary ways to engage in transformational work. Each is designed to meet you where you are and support the unfolding of what wants to emerge.',
+      service1: 'Service 1',
+      service1Title: 'Individual Sessions',
+      service1Sub: 'One-on-One Transformational Work',
+      service1Desc: 'Private sessions for those navigating personal transition, questioning their direction, or seeking clarity in moments of change.',
+      service1Feature1: 'Psychological support and insight',
+      service1Feature2: 'Embodied awareness practices',
+      service1Feature3: 'Symbolic exploration',
+      service1Feature4: 'Personalized pacing and depth',
+      service1ForWho: 'People at crossroads, seekers, those in transition',
+      service2: 'Service 2',
+      service2Title: 'Group Workshops & Gatherings',
+      service2Sub: 'Experiential Collective Processes',
+      service2Desc: 'Facilitated group experiences including Soul Theater, transformational workshops, and gathering processes that create space for collective and individual transformation.',
+      service2Feature1: 'Shared exploration and witness',
+      service2Feature2: 'Group process dynamics',
+      service2Feature3: 'Soul Theater and dramatic work',
+      service2Feature4: 'Ritual and symbolic elements',
+      service2ForWho: 'Groups seeking depth, teams, communities, organizations',
+      service3: 'Service 3',
+      service3Title: 'Sound & Symbolic Experiences',
+      service3Sub: 'Immersive Embodied Journeys',
+      service3Desc: 'Carefully crafted experiences combining sound, movement, ritual, and symbolic awareness to facilitate integration and awakening.',
+      service3Feature1: 'Sonic immersion',
+      service3Feature2: 'Embodied movement',
+      service3Feature3: 'Symbolic and ritual work',
+      service3Feature4: 'Sensory integration',
+      service3ForWho: 'Those seeking immersive transformation, artistic practitioners, spiritual explorers',
+      experience: 'What You Experience',
+      forWhom: 'For Whom',
+      questionsTitle: 'Questions? Let\'s talk.',
+      questionsText: 'Each journey is unique. I\'m happy to discuss what might serve you best.',
+      reach: 'Reach Out',
+    },
+    events: {
+      title: 'Gatherings & Workshops',
+      noEvents: 'New gatherings and workshops are announced periodically.',
+      stayConnected: 'Stay connected for invitations to upcoming transformational experiences.',
+      joinEmail: 'Join the mailing list for announcements:',
+      notify: 'Notify Me',
+      interested: 'Interested in bringing me to your community?',
+      custom: 'I offer custom facilitation for organizations, teams, and communities seeking transformational experiences.',
+      customText: 'Get in touch about custom processes →',
+    },
+    contact: {
+      title: 'Get in Touch',
+      intro: 'Whether you\'re seeking individual sessions, interested in group work, or curious about what\'s possible, I\'m here to listen and support your journey.',
+      email: 'Email',
+      follow: 'Follow',
+      response: 'I typically respond to inquiries within 2-3 days. Thank you for reaching out.',
+      yourName: 'Your Name',
+      namePlaceholder: 'Your name',
+      emailLabel: 'Email',
+      emailPlaceholder: 'your@email.com',
+      message: 'Message',
+      messagePlaceholder: 'Tell me about what brings you here...',
+      send: 'Send Message',
+    },
+    footer: {
+      brand: 'Tiha Psiha',
+      desc: 'Transformational facilitation and psychology',
+      rights: '© 2024 Tihomira Stanojević. All rights reserved.',
+      tagline: 'A space for those seeking clarity at the crossroads.',
+    },
+  },
+  sr: {
+    nav: {
+      home: 'Početak',
+      about: 'O meni',
+      work: 'Radim sa mnom',
+      events: 'Događanja',
+      contact: 'Kontakt',
+    },
+    home: {
+      welcome: 'Dobrodošli',
+      tagline: '"Ne vodim ljude do odredišta.\nPomagam im da pronađu svoju putanju."',
+      intro: 'Najdublji momenti u životu često se dešavaju na raskršćima — kada jedna priča završi, a nova počinje. Podržavam pojedince i grupe dok kreću kroz ove prelaze primenom psihologije, telesne svesti i simboličkog rada. Zajedno istražujemo ono što se želi da izrazi.',
+      howIWork: 'Kako radim',
+      workDescription: 'Moj rad integrišu psihologiju, grupni proces, telesne prakse i simboličku svest da bi se stvorili prostori u kojima se transformacija prirodno može razvijati.',
+      pillar1Title: 'Individualne sesije',
+      pillar1Desc: 'Rad jedan-na-jedan za ličnu transformaciju, samootkrivanje i nalaženje jasnoće u trenucima promene.',
+      pillar2Title: 'Grupni procesi',
+      pillar2Desc: 'Empirijski radionici i grupne fasilitacije, uključujući Pozorište duše i transformacijski grupni rad.',
+      pillar3Title: 'Telesni i simbolični rad',
+      pillar3Desc: 'Prostori koji kombinuju zvuk, ritualne elemente i telesnu svest za dublju integraciju.',
+      offerings: 'Ponude',
+      offering1: 'Individualne sesije',
+      offering1Sub: 'Privatni transformacijski rad',
+      offering2: 'Grupni radionici',
+      offering2Sub: 'Empirijski kolektivni procesi',
+      offering3: 'Zvučne i simbolične iskustva',
+      offering3Sub: 'Imerzivna telesna putovanja',
+      offering4: 'Prilagođena fasilitacija',
+      offering4Sub: 'Procesi prilagođeni organizacijama',
+      ready: 'Spremni za istraživanje?',
+      inviteText: 'Bez obzira da li ste na raskršću, tražite jasnoću ili ste spremni za transformaciju, postoji put napred. Krećimo ga zajedno.',
+      cta: 'Stupite u kontakt',
+    },
+    about: {
+      title: 'O mom radu',
+      intro: 'Moja prisutnost, moja praksa, moja posvećenost transformaciji',
+      para1: 'Moja putanja je počela pitanjem: Šta pomaže ljudima da se pronađu kada su izgubljeni? Ta radoznalost me je odvela do psihologije, grupnog procesnog rada, i na kraju do razumevanja da se transformacija ne dešava kroz poučavanje, već kroz stvaranje uslova za autentično otkrivanje.',
+      para2: 'Godinama sam proučavala kako ljudи prolaze kroz promene — strah, zabunu, trenuci neočekivane jasnoće. Naučila sam da naša tela nose mudrost koju smo zaboravili, da simboli govore na način na koji reči ne mogu, i da kada se namerno skupimo, nešto moćno iznikne iz prostora između nas.',
+      atCrossroads: 'Na raskršću',
+      crossroadsText: '"Mnogi važni trenutci u životu se dešavaju na raskršćima — kada jedna priča završi, a nova počinje. To nisu problemi koji se brzo rešavaju. To su pozivi da postanemo potpunije sami sebi."',
+      para3: 'Svoju praksu sam posvetila podržavanju ljudi u ovim liminalnim prostorima. Bez obzira da li ispravaljte svoju smer, tugujete za onim što je bilo, ili osećate da nešto želi da se rodi, moj rad je da vam pomognem da pronađete jasnoću — ne kroz odgovore koje pružam, već kroz buđenje onog što već znate.',
+      guidesWork: 'Šta vodi moj rad',
+      psychologyTitle: 'Psihologija',
+      psychologyText: 'Razumevanje čovekove psihe — obrazaca, rana, snaga i neisplaćenog potencijala.',
