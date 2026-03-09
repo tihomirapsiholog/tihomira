@@ -502,18 +502,18 @@ function HomePage({ setCurrentPage, t }) {
           src="/silhouette.jpg"
           alt="Silhouette"
           className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#08111f]/70 via-[#0b1220]/75 to-[#0a0f1a]/90" />
-        <div className="absolute inset-0 bg-black/30" />
+           />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/60"></div>
+         <div className="absolute inset-0 bg-gradient-to-t from-[#0b1220] via-transparent to-[#0b1220]/40"></div>
 
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-yellow-400">
             {t.home.welcome}
           </p>
-          <h1 className="mb-6 font-serif text-5xl leading-tight text-white sm:text-7xl">
+          <h1 className="mb-6 font-serif text-5xl leading-tight text-yellow-100 sm:text-7xl">
             Tihomira Stanojević
           </h1>
-          <p className="mb-8 whitespace-pre-line text-xl font-light italic text-slate-200 sm:text-2xl">
+          <p className="mb-8 whitespace-pre-line text-xl font-light italic text-slate-100 sm:text-2xl">
             {t.home.tagline}
           </p>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-slate-300">
