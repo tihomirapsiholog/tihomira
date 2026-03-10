@@ -37,22 +37,45 @@ export default function HomePage({ setCurrentPage, t }) {
             {t.home.workDescription}
           </p>
 
-          <div className="grid gap-8 md:grid-cols-3">
+         <div className="grid gap-8 md:grid-cols-3">
             {[
-              { icon: '↻', title: t.home.pillar1Title, desc: t.home.pillar1Desc },
-              { icon: '◯', title: t.home.pillar2Title, desc: t.home.pillar2Desc },
-              { icon: '✦', title: t.home.pillar3Title, desc: t.home.pillar3Desc },
+              { icon: '↻', title: t.home.pillar1Title, desc: t.home.pillar1Desc, question: 'Da li osećaš da si zaglavljen/a u starim obrascima? Tražiš li jasnoću u trenutku promene?' },
+              { icon: '◯', title: t.home.pillar2Title, desc: t.home.pillar2Desc, question: 'Da li tvoja zajednica ili tim prolazi kroz transformaciju? Tražiš li prostor za kolektivno istraživanje?' },
+              { icon: '✦', title: t.home.pillar3Title, desc: t.home.pillar3Desc, question: 'Da li osećaš da reči nisu dovoljne? Tražiš li dublji jezik — kroz telo, zvuk i simbol?' },
             ].map((item, i) => (
               <div
                 key={i}
-                className="rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8 transition-all hover:border-yellow-500/40 hover:shadow-xl"
+                className="group h-64 cursor-pointer"
+                style={{ perspective: '1000px' }}
               >
-                <div className="mb-4 text-4xl text-yellow-400">{item.icon}</div>
-                <h3 className="mb-3 text-xl font-serif text-white">{item.title}</h3>
-                <p className="leading-relaxed text-slate-400">{item.desc}</p>
+                <div
+                  className="relative h-full w-full transition-transform duration-700"
+                  style={{ transformStyle: 'preserve-3d' }}
+                  onMouseEnter={e => e.currentTarget.style.transform = 'rotateY(180deg)'}
+                  onMouseLeave={e => e.currentTarget.style.transform = 'rotateY(0deg)'}
+                >
+                  {/* Prednja strana */}
+                  <div
+                    className="absolute inset-0 rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8 hover:border-yellow-500/40 hover:shadow-xl"
+                    style={{ backfaceVisibility: 'hidden' }}
+                  >
+                    <div className="mb-4 text-4xl text-yellow-400">{item.icon}</div>
+                    <h3 className="mb-3 font-serif text-xl text-white">{item.title}</h3>
+                    <p className="leading-relaxed text-slate-400">{item.desc}</p>
+                  </div>
+                  {/* Zadnja strana */}
+                  <div
+                    className="absolute inset-0 rounded-2xl border border-yellow-500/40 bg-[#1a2540] p-8 flex items-center justify-center"
+                    style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+                  >
+                    <p className="text-center text-lg italic leading-relaxed text-yellow-100">
+                      {item.question}
+                    </p>
+                  </div>
+                </div>
               </div>
             ))}
-          </div>
+         </div>
         </div>
       </section>
 
