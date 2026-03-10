@@ -50,7 +50,7 @@ export default function ContactPage({ t, language }) {
             <div key={i} className="rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8">
               <h3 className="mb-3 font-serif text-xl text-white">{item.title}</h3>
               <p className="mb-6 leading-relaxed text-slate-300">{item.text}</p>
-              <div className="flex flex-col gap-3">
+              <div className="flex 8 gap-3">
                 {i === 2 && (
                   <Link
                     to={`/${language}/zoom-maestra`}
@@ -61,7 +61,7 @@ export default function ContactPage({ t, language }) {
                   </Link>
                 )}
                 
-                  <a href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(item.subject)}`}
+                  <a href="https://calendly.com/tihomira-psiholog/30min" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center rounded-full bg-yellow-500 px-6 py-3 text-sm font-medium text-slate-950 transition-colors hover:bg-yellow-400"
                 >
                   {item.button}
