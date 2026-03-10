@@ -1,0 +1,557 @@
+const translations = {
+    en: {
+      nav: {
+        home: 'Home',
+        about: 'About',
+        work: 'Work With Me',
+        events: 'Events',
+        zoom: "Zoom Maestra",
+        contact: 'Contact',
+      },
+      home: {
+        welcome: 'Welcome',
+        tagline: `"I don't lead people to destinations.\nI help them find their path."`,
+        intro:
+          "Life's most profound moments often occur at crossroads—when an old story ends and a new one begins. I support individuals and groups navigating these transitions with psychology, embodied awareness, and symbolic work. Together, we explore what wants to emerge.",
+        howIWork: 'How I Work',
+        workDescription:
+          'My work integrates psychology, process facilitation, embodied practices, and symbolic awareness to create spaces where transformation can unfold naturally.',
+        pillar1Title: 'Individual Sessions',
+        pillar1Desc:
+          'One-on-one work for personal transition, self-discovery, and finding clarity in moments of change.',
+        pillar2Title: 'Group Processes',
+        pillar2Desc:
+          'Experiential workshops and group facilitation, including Soul Theater and transformational group work.',
+        pillar3Title: 'Embodied & Symbolic Work',
+        pillar3Desc:
+          'Spaces combining sound, ritual elements, and embodied awareness for deeper integration.',
+        offerings: 'Offerings',
+        offering1: 'Individual Sessions',
+        offering1Sub: 'Private transformational work',
+        offering2: 'Group Workshops',
+        offering2Sub: 'Experiential collective processes',
+        offering3: 'Sound & Symbolic Experiences',
+        offering3Sub: 'Immersive embodied journeys',
+        offering4: 'Custom Facilitation',
+        offering4Sub: 'Tailored processes for organizations',
+        ready: 'Ready to explore?',
+        inviteText:
+          "Whether you're at a crossroads, seeking clarity, or ready for transformation, there's a path forward. Let's explore it together.",
+        cta: 'Get in Touch',
+        toolsTitle: 'Sound & Symbolic Tools',
+        toolsText:
+          'My practice incorporates instruments and symbolic objects that support the journey of transformation. Sound bowls, drums, and ritual elements create spaces where deeper awareness can emerge.',
+          zoomTitle: 'For Facilitators',
+          zoomText:'Zoom Maestra supports facilitators, educators, and therapists who want to work online with more ease, less technical stress, and a stronger sense of flow.',
+          zoomButton: 'Explore Zoom Maestra',
+      },
+      about: {
+        title: 'About My Work',
+        intro: 'My presence, my practice, my commitment to transformation',
+        para1:
+          "My journey began with a question: What helps people find themselves when they're lost? This curiosity led me to psychology, to group process work, and ultimately to the understanding that transformation happens not through instruction, but through creating the conditions for authentic discovery.",
+        para2:
+          "I've spent years studying how people navigate change—the fear, the confusion, the moments of unexpected clarity. I've learned that our bodies hold wisdom we've forgotten, that symbols speak to us in ways words cannot, and that when we gather intentionally, something powerful emerges from the space between us.",
+        atCrossroads: 'At the Crossroads',
+        crossroadsText:
+          '"Many important moments in life happen at crossroads—when an old story ends and a new one begins. These are not problems to be solved quickly. They are invitations to become more fully ourselves."',
+        para3:
+          "I've dedicated my practice to supporting people in these liminal spaces. Whether you're questioning your direction, grieving what was, or sensing that something is asking to be born, my work is to help you find clarity not through answers I provide, but through awakening what you already know.",
+        guidesWork: 'What Guides My Work',
+        psychologyTitle: 'Psychology',
+        psychologyText:
+          'Understanding the human psyche—patterns, wounds, strengths, and untapped potential.',
+        processTitle: 'Group Process',
+        processText:
+          'The wisdom that emerges when people gather authentically, holding space for individual and collective transformation.',
+        embodiedTitle: 'Embodied Awareness',
+        embodiedText:
+          "Reconnecting with the body's knowing—breath, sensation, movement, presence.",
+        symbolicTitle: 'Symbolic & Artistic Work',
+        symbolicText:
+          'Engaging metaphor, image, sound, and ritual to access deeper layers of awareness and transformation.',
+        archetype: 'The Archetype of the Crossroads',
+        archetypeText:
+          "Many ancient cultures describe guides who appear at life's pivotal moments—those standing at the threshold between what was and what might be. The archetype of Aurethra represents this—a presence that illuminates the path forward, not by forcing direction, but by awakening your own inner knowing.",
+        archetypeText2:
+          "This is the spirit of my work: to be a steady presence as you navigate your own transformation, honoring both the depth of where you've been and the potential of where you're going.",
+      },
+      work: {
+        title: 'Work With Me',
+        intro:
+          'I offer three primary ways to engage in transformational work. Each is designed to meet you where you are and support the unfolding of what wants to emerge.',
+        service1Title: 'Individual Sessions',
+        service1Sub: 'One-on-One Transformational Work',
+        service1Desc:
+          'Private sessions for those navigating personal transition, questioning their direction, or seeking clarity in moments of change.',
+        service1Feature1: 'Psychological support and insight',
+        service1Feature2: 'Embodied awareness practices',
+        service1Feature3: 'Symbolic exploration',
+        service1Feature4: 'Personalized pacing and depth',
+        service1ForWho: 'People at crossroads, seekers, those in transition',
+        service2Title: 'Group Workshops & Gatherings',
+        service2Sub: 'Experiential Collective Processes',
+        service2Desc:
+          'Facilitated group experiences including Soul Theater, transformational workshops, and gathering processes that create space for collective and individual transformation.',
+        service2Feature1: 'Shared exploration and witness',
+        service2Feature2: 'Group process dynamics',
+        service2Feature3: 'Soul Theater and dramatic work',
+        service2Feature4: 'Ritual and symbolic elements',
+        service2ForWho:
+          'Groups seeking depth, teams, communities, organizations',
+        service3Title: 'Sound & Symbolic Experiences',
+        service3Sub: 'Immersive Embodied Journeys',
+        service3Desc:
+          'Carefully crafted experiences combining sound, movement, ritual, and symbolic awareness to facilitate integration and awakening.',
+        service3Feature1: 'Sonic immersion',
+        service3Feature2: 'Embodied movement',
+        service3Feature3: 'Symbolic and ritual work',
+        service3Feature4: 'Sensory integration',
+        service3ForWho:
+          'Those seeking immersive transformation, artistic practitioners, spiritual explorers',
+        experience: 'What You Experience',
+        forWhom: 'For Whom',
+        questionsTitle: "Questions? Let's talk.",
+        questionsText:
+          "Each journey is unique. I'm happy to discuss what might serve you best.",
+        reach: 'Reach Out',
+      },
+      events: {
+        title: 'Gatherings & Workshops',
+        noEvents: 'New gatherings and workshops are announced periodically.',
+        stayConnected:
+          'Stay connected for invitations to upcoming transformational experiences.',
+        interested: 'Interested in bringing me to your community?',
+        custom:
+          'I offer custom facilitation for organizations, teams, and communities seeking transformational experiences.',
+        customText: 'Get in touch about custom processes →',
+      },
+      zoom: {
+        title: 'Zoom Maestra',
+        eyebrow: 'Supporting the invisible architecture of online events',
+        intro:
+          'Zoom Maestra supports the invisible architecture of online events, helping facilitators, educators, and therapists deliver their work with clarity, stability, and ease.',
+        lead1:
+          'Many people who hold powerful workshops, courses, and group processes online find themselves overwhelmed by the technical side of hosting.',
+        lead2:
+          'Instead of focusing on participants and the process, they end up managing breakout rooms, registrations, screen sharing, and unexpected technical issues.',
+        lead3:
+          'Zoom Maestra exists so that facilitators can remain present with their people — while the structure of the event is quietly supported in the background.',
+      
+        audienceTitle: 'Who this is for',
+        audienceText:
+          'Zoom Maestra supports professionals who work with people online and want a smoother, calmer technical environment.',
+        audienceList1: 'facilitators and group leaders',
+        audienceList2: 'therapists and coaches',
+        audienceList3: 'educators and course creators',
+        audienceList4: 'retreat hosts moving programs online',
+        audienceList5: 'organizations running online workshops or trainings',
+        audienceClosing:
+          'If your work involves holding space for people, the technical layer should support that space — not disrupt it.',
+      
+        supportTitle: 'How Zoom Maestra supports your event',
+        supportIntro: 'Support can include:',
+        supportBlock1Title: 'Event structure and preparation',
+        supportBlock1Item1: 'designing the Zoom session flow',
+        supportBlock1Item2: 'preparing breakout rooms and group structures',
+        supportBlock1Item3: 'creating a clear technical plan for the event',
+        supportBlock2Title: 'Registration and participant flow',
+        supportBlock2Item1: 'helping organize registration systems',
+        supportBlock2Item2: 'preparing communication with participants',
+        supportBlock2Item3: 'creating a smooth entry process for events',
+        supportBlock3Title: 'Live event hosting',
+        supportBlock3Item1: 'technical hosting during the event',
+        supportBlock3Item2: 'managing breakout rooms and transitions',
+        supportBlock3Item3: 'screen sharing and technical troubleshooting',
+        supportBlock4Title: 'Hybrid and complex events',
+        supportBlock4Item1: 'support for events combining online and physical spaces',
+        supportBlock4Item2: 'coordination between facilitators and technical layers',
+        supportClosing:
+          'The goal is simple: to create a stable structure where facilitators can focus on people and process.',
+      
+        packagesTitle: 'Ways we can work together',
+        package1Title: 'Session Support',
+        package1Text:
+          'For facilitators who need calm technical support during a single online session.',
+        package1Item1: 'Zoom room setup',
+        package1Item2: 'breakout room management',
+        package1Item3: 'screen sharing support',
+        package1Item4: 'participant entry and transitions',
+        package1Item5: 'basic troubleshooting during the event',
+        package1Ideal: 'Ideal for single workshops, group sessions, guest lectures, and online classes.',
+      
+        package2Title: 'Workshop Support',
+        package2Text:
+          'For facilitators running longer workshops or multi-session programs who want a smoother structure and participant experience.',
+        package2Item1: 'preparation call before the event',
+        package2Item2: 'event flow planning',
+        package2Item3: 'Zoom technical setup',
+        package2Item4: 'participant entry management',
+        package2Item5: 'breakout rooms and transitions',
+        package2Item6: 'technical hosting during the event',
+        package2Ideal: 'Ideal for half-day or full-day workshops, courses, and multi-session programs.',
+      
+        package3Title: 'Program Support',
+        package3Text:
+          'For complex online or hybrid events where facilitators want full technical structure behind the process.',
+        package3Item1: 'event architecture planning',
+        package3Item2: 'registration flow support',
+        package3Item3: 'participant communication setup',
+        package3Item4: 'Zoom event hosting',
+        package3Item5: 'breakout room coordination',
+        package3Item6: 'technical presence throughout the event',
+        package3Ideal: 'Ideal for online retreats, conferences, longer programs, and hybrid events.',
+      
+        whyTitle: 'Why facilitators work with Zoom Maestra',
+        whyIntro:
+          'When facilitators hold online spaces, their attention is meant to be with the people in the room — not with the technology.',
+        whyIntro2:
+          'Zoom Maestra supports the technical and structural layer of the event so that facilitators can remain fully present in their role.',
+        why1Title: 'Presence with participants',
+        why1Text:
+          'When the technical side of an event is supported, facilitators can focus entirely on the people they are working with — listening, guiding, and responding to the process in real time.',
+        why2Title: 'A calmer event flow',
+        why2Text:
+          'Online events often become stressful when the structure is unclear. With clear preparation and technical support, transitions become smoother and the experience feels more grounded for both facilitators and participants.',
+        why3Title: 'Reliability and stability',
+        why3Text:
+          'Unexpected technical situations can interrupt the atmosphere of a workshop. Having someone quietly holding the technical side creates a sense of stability for the entire group.',
+        why4Title: 'Space for deeper work',
+        why4Text:
+          'When facilitators do not need to manage technical details, they have more energy to focus on what matters most — the process, the group dynamic, and the transformation that can emerge in the space.',
+      
+        ctaTitle: 'Need calm, reliable support for your online event?',
+        ctaText:
+          'If you are preparing an online workshop, course, training, or group process and want the technology to support the experience rather than interrupt it, I would be happy to hear about your project.',
+        ctaText2:
+          'Every event is different, and we can explore what kind of structure and support would serve it best.',
+        ctaButton: 'Ask About Zoom Maestra',
+        ctaSubject: 'Zoom Maestra Support Inquiry',
+      },
+      contact: {
+        title: 'Get in Touch',
+        intro:
+          "Whether you're seeking individual sessions, interested in group work, or curious about what's possible, I'm here to listen and support your journey.",
+        email: 'Email',
+        follow: 'Follow',
+        response:
+          'I typically respond to inquiries within 2–3 days. Thank you for reaching out.',
+        yourName: 'Your Name',
+        namePlaceholder: 'Your name',
+        emailLabel: 'Email',
+        emailPlaceholder: 'your@email.com',
+        message: 'Message',
+        messagePlaceholder: 'Tell me about what brings you here...',
+        send: 'Send Message',
+      
+        formSubject: 'Message from',
+        formName: 'Name',
+        formEmail: 'Email',
+      
+        contactFlowTitle: 'How can I support you?',
+        contactFlowIntro: 'Choose the path that best fits what you are looking for.',
+      
+        path1Title: 'Individual Work',
+        path1Text: 'For people seeking one-to-one transformational support.',
+        path1Button: 'Ask About Individual Work',
+        path1Subject: 'Individual Work Inquiry',
+      
+        path2Title: 'Workshops & Group Processes',
+        path2Text: 'For organizers, communities, teams, and group collaborations.',
+        path2Button: 'Ask About Workshops',
+        path2Subject: 'Workshop / Group Inquiry',
+      
+        path3Title: 'Zoom Maestra',
+        path3Text: 'For facilitators, educators, and therapists who need support with online events.',
+        path3Button: 'Ask About Zoom Maestra',
+        path3Subject: 'Zoom Maestra Support Inquiry',
+        path3LearnMore: 'Learn more',
+      },
+      footer: {
+        brand: 'Tiha Psiha',
+        desc: 'Transformational facilitation and psychology',
+        rights: '© 2024 Tihomira Stanojević. All rights reserved.',
+        tagline: 'A space for those seeking clarity at the crossroads.',
+      },
+    },
+  
+    sr: {
+      nav: {
+        home: 'Početak',
+        about: 'O meni',
+        work: 'Rad sa mnom',
+        events: 'Događaji',
+        zoom: 'Zoom Maestra',
+        contact: 'Kontakt',
+      },
+      home: {
+        welcome: 'Dobrodošli',
+        tagline: `"Ne vodim ljude do odredišta.\nPomažem im da pronađu svoj put."`,
+        intro:
+          'Najdublji trenuci u životu često se dešavaju na raskršćima — kada se jedna priča završava, a nova počinje. Podržavam pojedince i grupe u ovim prelazima kroz psihologiju, telesnu svesnost i simbolički rad. Zajedno istražujemo ono što želi da se pojavi.',
+        howIWork: 'Kako radim',
+        workDescription:
+          'Moj rad integriše psihologiju, facilitaciju procesa, telesne prakse i simboličku svesnost kako bi se stvorio prostor u kome transformacija može prirodno da se odvija.',
+        pillar1Title: 'Individualne sesije',
+        pillar1Desc:
+          'Rad jedan na jedan za lične prelaze, samootkrivanje i pronalaženje jasnoće u trenucima promene.',
+        pillar2Title: 'Grupni procesi',
+        pillar2Desc:
+          'Iskustvene radionice i grupna facilitacija, uključujući Soul Theater i transformativni grupni rad.',
+        pillar3Title: 'Telesni i simbolički rad',
+        pillar3Desc:
+          'Prostori koji spajaju zvuk, ritualne elemente i telesnu svesnost radi dublje integracije.',
+        offerings: 'Ponuda',
+        offering1: 'Individualne sesije',
+        offering1Sub: 'Privatan transformativni rad',
+        offering2: 'Grupne radionice',
+        offering2Sub: 'Iskustveni kolektivni procesi',
+        offering3: 'Zvučna i simbolička iskustva',
+        offering3Sub: 'Imerzivna telesna putovanja',
+        offering4: 'Prilagođena facilitacija',
+        offering4Sub: 'Procesi prilagođeni organizacijama',
+        ready: 'Spremni za istraživanje?',
+        inviteText:
+          'Bilo da ste na raskršću, tražite jasnoću ili ste spremni za transformaciju, postoji put napred. Hajde da ga istražimo zajedno.',
+        cta: 'Javite se',
+        toolsTitle: 'Zvučni i simbolički alati',
+        toolsText:'U svom radu koristim instrumente i simboličke objekte koji podržavaju proces transformacije. Zvučne činije, bubnjevi i ritualni elementi stvaraju prostor u kome može da se pojavi dublja svesnost.',
+        zoomTitle: 'Za facilitatore',
+        zoomText:'Zoom Maestra podržava facilitatore, edukatore i terapeute koji žele da rade online sa više lakoće, manje tehničkog stresa i više osećaja toka.',
+        zoomButton: 'Istraži Zoom Maestru',
+        ctaSubject: 'Upit za Zoom Maestru',
+        
+        },
+      about: {
+        title: 'O mom radu',
+        intro: 'Moje prisustvo, moja praksa, moja posvećenost transformaciji',
+        para1:
+          'Moj put je počeo jednim pitanjem: šta pomaže ljudima da pronađu sebe kada su izgubljeni? Ta radoznalost me je odvela ka psihologiji, radu sa grupnim procesima i, na kraju, ka razumevanju da se transformacija ne događa kroz davanje instrukcija, već kroz stvaranje uslova za autentično otkrivanje.',
+        para2:
+          'Godinama proučavam kako ljudi prolaze kroz promene — strah, zbunjenost i trenutke neočekivane jasnoće. Naučila sam da telo nosi mudrost koju smo zaboravili, da simboli govore na način na koji reči ne mogu i da se, kada se okupimo sa namerom, nešto snažno rađa u prostoru između nas.',
+        atCrossroads: 'Na raskršću',
+        crossroadsText:
+          '"Mnogi važni trenuci u životu dešavaju se na raskršćima — kada se jedna priča završava, a nova počinje. To nisu problemi koje treba brzo rešiti. To su pozivi da postanemo potpunije ono što jesmo."',
+        para3:
+          'Svoju praksu posvetila sam podršci ljudima u ovim liminalnim prostorima. Bilo da preispitujete svoj pravac, tugujete za onim što je bilo ili osećate da nešto novo želi da se rodi, moj rad je da vam pomognem da pronađete jasnoću — ne kroz odgovore koje ja dajem, već kroz buđenje onoga što već znate.',
+        guidesWork: 'Šta vodi moj rad',
+        psychologyTitle: 'Psihologija',
+        psychologyText:
+          'Razumevanje ljudske psihe — obrazaca, rana, snaga i neiskorišćenog potencijala.',
+        processTitle: 'Grupni proces',
+        processText:
+          'Mudrost koja se pojavljuje kada se ljudi okupe autentično, čuvajući prostor za individualnu i kolektivnu transformaciju.',
+        embodiedTitle: 'Telesna svesnost',
+        embodiedText:
+          'Ponovno povezivanje sa mudrošću tela — kroz dah, senzaciju, pokret i prisustvo.',
+        symbolicTitle: 'Simbolički i umetnički rad',
+        symbolicText:
+          'Korišćenje metafore, slike, zvuka i rituala kako bi se pristupilo dubljim slojevima svesti i transformacije.',
+        archetype: 'Arhetip raskršća',
+        archetypeText:
+          'Mnoge drevne kulture opisuju vodiče koji se pojavljuju u ključnim životnim trenucima — one koji stoje na pragu između onoga što je bilo i onoga što bi moglo da bude. Arhetip Aurethre predstavlja upravo to — prisustvo koje osvetljava put napred, ne namećući smer, već budeći vaše unutrašnje znanje.',
+        archetypeText2:
+          'To je duh mog rada: da budem stabilno prisustvo dok prolazite kroz sopstvenu transformaciju, poštujući i dubinu onoga odakle dolazite i potencijal onoga kuda idete.',
+      },
+      work: {
+        title: 'Rad sa mnom',
+        intro:
+          'Nudim tri osnovna načina ulaska u transformativni rad. Svaki je osmišljen da vas susretne tamo gde jeste i podrži razvoj onoga što želi da se pojavi.',
+        service1Title: 'Individualne sesije',
+        service1Sub: 'Transformativni rad jedan na jedan',
+        service1Desc:
+          'Privatne sesije za one koji prolaze kroz lične prelaze, preispituju svoj pravac ili traže jasnoću u trenucima promene.',
+        service1Feature1: 'Psihološka podrška i uvid',
+        service1Feature2: 'Prakse telesne svesnosti',
+        service1Feature3: 'Simboličko istraživanje',
+        service1Feature4: 'Prilagođen ritam i dubina',
+        service1ForWho:
+          'Ljudi na raskršću, tragaoci, oni koji prolaze kroz promene',
+        service2Title: 'Grupne radionice i okupljanja',
+        service2Sub: 'Iskustveni kolektivni procesi',
+        service2Desc:
+          'Vođeni grupni procesi koji uključuju Soul Theater, transformativne radionice i susrete koji stvaraju prostor za kolektivnu i individualnu transformaciju.',
+        service2Feature1: 'Zajedničko istraživanje i svedočenje',
+        service2Feature2: 'Dinamika grupnog procesa',
+        service2Feature3: 'Soul Theater i dramski rad',
+        service2Feature4: 'Ritualni i simbolički elementi',
+        service2ForWho:
+          'Grupe koje traže dubinu, timovi, zajednice, organizacije',
+        service3Title: 'Zvučna i simbolička iskustva',
+        service3Sub: 'Imerzivna telesna putovanja',
+        service3Desc:
+          'Pažljivo oblikovana iskustva koja kombinuju zvuk, pokret, ritual i simboličku svesnost kako bi podržala integraciju i buđenje.',
+        service3Feature1: 'Zvučna imerzija',
+        service3Feature2: 'Telesni pokret',
+        service3Feature3: 'Simbolički i ritualni rad',
+        service3Feature4: 'Senzorna integracija',
+        service3ForWho:
+          'Oni koji traže duboku transformaciju, umetnički praktičari i duhovni istraživači',
+        experience: 'Šta doživljavate',
+        forWhom: 'Za koga je namenjeno',
+        questionsTitle: 'Pitanja? Hajde da razgovaramo.',
+        questionsText:
+          'Svako putovanje je jedinstveno. Rado ću razgovarati o tome šta bi vas moglo najbolje podržati.',
+        reach: 'Javite se',
+      },
+      events: {
+        title: 'Okupljanja i radionice',
+        noEvents: 'Nova okupljanja i radionice objavljuju se periodično.',
+        stayConnected:
+          'Ostanite povezani za pozive na predstojeća transformativna iskustva.',
+        interested: 'Želite da me dovedete u svoju zajednicu?',
+        custom:
+          'Nudim prilagođenu facilitaciju za organizacije, timove i zajednice koje traže transformativna iskustva.',
+        customText: 'Javite se povodom prilagođenih procesa →',
+      },
+      zoom: {
+        title: 'Zoom Maestra',
+        eyebrow: 'Podrška nevidljivoj strukturi online događaja',
+        intro:
+          'Zoom Maestra podržava strukturu koja stoji iza online događaja, pomažući facilitatorima, edukatorima i terapeutima da svoj rad prenesu sa jasnoćom, stabilnošću i lakoćom.',
+        lead1:
+          'Mnogi ljudi koji vode snažne radionice, kurseve i grupne procese online često se nađu preopterećeni tehničkim delom organizacije.',
+        lead2:
+          'Umesto da budu prisutni sa učesnicima i procesom, oni upravljaju breakout sobama, prijavama, ekranima i neočekivanim tehničkim problemima.',
+        lead3:
+          'Zoom Maestra postoji kako bi facilitator mogao da ostane fokusiran na ljude i proces — dok je struktura događaja stabilno podržana u pozadini.',
+      
+        audienceTitle: 'Za koga je ova usluga',
+        audienceText:
+          'Zoom Maestra podržava profesionalce koji rade sa ljudima online i žele stabilnije i mirnije tehničko okruženje.',
+        audienceList1: 'facilitatore i vođe grupa',
+        audienceList2: 'terapeute i koučeve',
+        audienceList3: 'edukatore i autore online kurseva',
+        audienceList4: 'organizatore programa koji prelaze u online prostor',
+        audienceList5: 'organizacije koje vode online radionice i treninge',
+        audienceClosing:
+          'Ako vaš rad podrazumeva držanje prostora za ljude, tehnološki sloj treba da podržava taj prostor — a ne da ga remeti.',
+      
+        supportTitle: 'Kako Zoom Maestra podržava vaš događaj',
+        supportIntro: 'Podrška može uključivati:',
+        supportBlock1Title: 'Struktura i priprema događaja',
+        supportBlock1Item1: 'dizajniranje toka Zoom sesije',
+        supportBlock1Item2: 'pripremu breakout soba i grupne dinamike',
+        supportBlock1Item3: 'izradu jasnog tehničkog plana događaja',
+        supportBlock2Title: 'Prijave i tok učesnika',
+        supportBlock2Item1: 'organizaciju sistema prijava',
+        supportBlock2Item2: 'pripremu komunikacije sa učesnicima',
+        supportBlock2Item3: 'kreiranje jednostavnog ulaska u događaj',
+        supportBlock3Title: 'Tehnička podrška tokom događaja',
+        supportBlock3Item1: 'tehničko vođenje Zoom prostora',
+        supportBlock3Item2: 'upravljanje breakout sobama i prelazima',
+        supportBlock3Item3: 'deljenje ekrana i rešavanje tehničkih situacija',
+        supportBlock4Title: 'Hibridni i kompleksni događaji',
+        supportBlock4Item1: 'podršku događajima koji kombinuju online i fizički prostor',
+        supportBlock4Item2: 'koordinaciju između facilitatora i tehničkog sloja događaja',
+        supportClosing:
+          'Cilj je jednostavan: stvoriti stabilnu strukturu u kojoj facilitator može da bude potpuno prisutan sa ljudima i procesom.',
+      
+        packagesTitle: 'Načini saradnje',
+        package1Title: 'Session Support',
+        package1Text:
+          'Za facilitatore kojima je potrebna mirna tehnička podrška tokom jedne online sesije.',
+        package1Item1: 'postavljanje Zoom prostora',
+        package1Item2: 'upravljanje breakout sobama',
+        package1Item3: 'podrška za deljenje ekrana',
+        package1Item4: 'upravljanje ulaskom učesnika i prelazima',
+        package1Item5: 'osnovno rešavanje tehničkih situacija tokom događaja',
+        package1Ideal: 'Idealno za pojedinačne radionice, grupne susrete, gostujuća predavanja i online časove.',
+      
+        package2Title: 'Workshop Support',
+        package2Text:
+          'Za facilitatore koji vode duže radionice ili programe sa više sesija i žele stabilniju strukturu i iskustvo za učesnike.',
+        package2Item1: 'pripremni razgovor pre događaja',
+        package2Item2: 'planiranje toka događaja',
+        package2Item3: 'tehničku postavku Zoom prostora',
+        package2Item4: 'upravljanje ulaskom učesnika',
+        package2Item5: 'breakout sobe i prelaze',
+        package2Item6: 'tehničko vođenje tokom događaja',
+        package2Ideal: 'Idealno za poludnevne i celodnevne radionice, kurseve i programe sa više susreta.',
+      
+        package3Title: 'Program Support',
+        package3Text:
+          'Za kompleksnije online ili hibridne događaje gde facilitator želi stabilnu tehničku strukturu iza procesa.',
+        package3Item1: 'planiranje strukture događaja',
+        package3Item2: 'podršku oko sistema prijava',
+        package3Item3: 'pripremu komunikacije sa učesnicima',
+        package3Item4: 'tehničko vođenje Zoom prostora',
+        package3Item5: 'koordinaciju breakout soba',
+        package3Item6: 'tehničku podršku tokom celog događaja',
+        package3Ideal: 'Idealno za online retreat-e, konferencije, duže programe i hibridne događaje.',
+      
+        whyTitle: 'Zašto facilitatori rade sa Zoom Maestrom',
+        whyIntro:
+          'Kada facilitatori vode online prostor, njihova pažnja treba da bude usmerena na ljude u prostoru — a ne na tehnologiju.',
+        whyIntro2:
+          'Zoom Maestra podržava tehnički i strukturalni sloj događaja kako bi facilitator mogao da ostane potpuno prisutan u svojoj ulozi.',
+        why1Title: 'Veća prisutnost sa učesnicima',
+        why1Text:
+          'Kada je tehnička strana događaja stabilna, facilitator može u potpunosti da se fokusira na ljude — da sluša, vodi i odgovara na proces u realnom vremenu.',
+        why2Title: 'Mirniji tok događaja',
+        why2Text:
+          'Online događaji često postaju stresni kada struktura nije jasna. Uz dobru pripremu i tehničku podršku, prelazi postaju jednostavniji, a iskustvo stabilnije za sve učesnike.',
+        why3Title: 'Stabilnost i sigurnost',
+        why3Text:
+          'Neočekivane tehničke situacije mogu da poremete atmosferu radionice. Kada neko tiho drži tehnički sloj događaja, cela grupa dobija osećaj stabilnosti.',
+        why4Title: 'Više prostora za suštinski rad',
+        why4Text:
+          'Kada facilitator ne mora da upravlja tehničkim detaljima, ima više energije za ono što je najvažnije — proces, dinamiku grupe i transformaciju koja može da se pojavi u prostoru.',
+      
+        ctaTitle: 'Treba vam mirna i pouzdana podrška za online događaj?',
+        ctaText:
+          'Ako pripremate online radionicu, kurs, trening ili grupni proces i želite da tehnologija podržava iskustvo umesto da ga remeti, rado ću čuti više o vašem projektu.',
+        ctaText2:
+          'Svaki događaj je drugačiji i zajedno možemo istražiti kakva struktura i podrška bi ga najbolje podržala.',
+        ctaButton: 'Piši za Zoom Maestru',
+        ctaSubject: 'Upit za Zoom Maestru',
+      },
+      contact: {
+        title: 'Kontakt',
+        intro:
+          'Bilo da vas zanimaju individualne sesije, grupni rad ili samo želite da istražite šta je moguće, tu sam da saslušam i podržim vaš put.',
+        email: 'Email',
+        follow: 'Pratite',
+        response:
+          'Na upite obično odgovaram u roku od 2–3 dana. Hvala vam što ste se javili.',
+        yourName: 'Vaše ime',
+        namePlaceholder: 'Vaše ime',
+        emailLabel: 'Email',
+        emailPlaceholder: 'vas@email.com',
+        message: 'Poruka',
+        messagePlaceholder: 'Recite mi šta vas dovodi ovde...',
+        send: 'Pošalji poruku',
+      
+        formSubject: 'Poruka od',
+        formName: 'Ime',
+        formEmail: 'Email',
+      
+        contactFlowTitle: 'Kako mogu da te podržim?',
+        contactFlowIntro: 'Izaberi pravac koji najviše odgovara onome što tražiš.',
+      
+        path1Title: 'Individualni rad',
+        path1Text: 'Za ljude koji traže podršku kroz rad jedan na jedan.',
+        path1Button: '1 na 1',
+        path1Subject: 'Upit za individualni rad',
+      
+        path2Title: 'Radionice i grupni procesi',
+        path2Text: 'Za organizatore, zajednice, timove i grupne saradnje.',
+        path2Button: 'Radionice',
+        path2Subject: 'Upit za radionicu ili grupni proces',
+      
+        path3Title: 'Zoom Maestra',
+        path3Text: 'Za facilitatore, edukatore i terapeute kojima je potrebna podrška za online događaje.',
+        path3Button: 'Zoom Maestra',
+        path3Subject: 'Upit za Zoom Maestru',
+        path3LearnMore: 'Saznaj više',
+      },
+      footer: {
+        brand: 'Tiha Psiha',
+        desc: 'Transformativna facilitacija i psihologija',
+        rights: '© 2024 Tihomira Stanojević. Sva prava zadržana.',
+        tagline: 'Prostor za one koji traže jasnoću na raskršću.',
+      },
+    },
+  };
+  
+  export default translations;

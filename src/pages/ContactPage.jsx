@@ -1,0 +1,193 @@
+import { useState } from 'react';
+import { Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const CONTACT_EMAIL = 'tihomira.psiholog@gmail.com';
+const INSTAGRAM_URL = 'https://instagram.com/';
+
+export default function ContactPage({ t, language }) {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(`${t.contact.formSubject} ${formData.name}`);
+    const body = encodeURIComponent(
+      `${t.contact.formName}: ${formData.name}\n${t.contact.formEmail}: ${formData.email}\n\n${formData.message}`
+    );
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+  };
+
+  return (
+    <div className="mx-auto max-w-3xl bg-[#0b1220] px-4 py-20 sm:px-6 lg:px-8">
+      <h1 className="mb-6 font-serif text-5xl text-white">{t.contact.title}</h1>
+      <p className="mb-12 text-lg leading-relaxed text-slate-300">
+        {t.contact.intro}
+      </p>
+      <section className="mb-16">
+  <h2 className="mb-4 font-serif text-3xl text-white">
+    {t.contact.contactFlowTitle}
+  </h2>
+
+  <p className="mb-10 max-w-2xl leading-relaxed text-slate-300">
+    {t.contact.contactFlowIntro}
+  </p>
+
+  <div className="grid gap-8 md:grid-cols-3">
+
+    {[
+      {
+        title: t.contact.path1Title,
+        text: t.contact.path1Text,
+        button: t.contact.path1Button,
+        subject: t.contact.path1Subject,
+      },
+      {
+        title: t.contact.path2Title,
+        text: t.contact.path2Text,
+        button: t.contact.path2Button,
+        subject: t.contact.path2Subject,
+      },
+      {
+        title: t.contact.path3Title,
+        text: t.contact.path3Text,
+        button: t.contact.path3Button,
+        subject: t.contact.path3Subject,
+      },
+    ].map((item, i) => (
+      <div
+        key={i}
+        className="rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8"
+      >
+        <h3 className="mb-3 text-xl font-serif text-white">
+          {item.title}
+        </h3>
+
+        <p className="mb-6 leading-relaxed text-slate-300">
+          {item.text}
+        </p>
+
+        <div className="flex gap-3">
+
+      {i === 2 && (
+     <Link
+       to={`/${language}/zoom-maestra`}
+       onClick={() => window.scrollTo(0, 0)}
+       className="inline-flex items-center rounded-full border border-yellow-500 px-5 py-3 text-sm font-medium text-yellow-400 transition-colors hover:bg-yellow-500 hover:text-slate-950"
+     >
+    {t.contact.path3LearnMore}
+  </Link>
+    )}
+
+    <a
+     href={`mailto:tihomira.psiholog@gmail.com?subject=${encodeURIComponent(item.subject)}`}
+    className="inline-flex items-center rounded-full bg-yellow-500 px-6 py-3 text-sm font-medium text-slate-950 transition-colors hover:bg-yellow-400"
+>
+  {item.button}
+</a>
+
+</div>
+      </div>
+    ))}
+
+  </div>
+</section>
+      <div className="grid gap-12 md:grid-cols-2">
+        <div className="space-y-8">
+          <div>
+            <h3 className="mb-2 font-serif text-white">{t.contact.email}</h3>
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="text-yellow-400 transition-colors hover:text-yellow-300"
+            >
+              {CONTACT_EMAIL}
+            </a>
+          </div>
+
+          <div>
+            <h3 className="mb-3 font-serif text-white">{t.contact.follow}</h3>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-yellow-400 transition-colors hover:text-yellow-300"
+            >
+              <Instagram size={20} />
+              Instagram
+            </a>
+          </div>
+
+          <div className="pt-8">
+            <p className="text-sm leading-relaxed text-slate-500">
+              {t.contact.response}
+            </p>
+          </div>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-6 rounded-2xl bg-[#121c31] p-6">
+          <div>
+            <label className="mb-2 block text-sm font-medium text-slate-200">
+              {t.contact.yourName}
+            </label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="w-full rounded border border-slate-700 bg-[#0f172a] px-4 py-3 text-white placeholder-slate-500 transition-colors focus:border-yellow-500 focus:outline-none"
+              placeholder={t.contact.namePlaceholder}
+            />
+          </div>
+
+          <div>
+            <label className="mb-2 block text-sm font-medium text-slate-200">
+              {t.contact.emailLabel}
+            </label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="w-full rounded border border-slate-700 bg-[#0f172a] px-4 py-3 text-white placeholder-slate-500 transition-colors focus:border-yellow-500 focus:outline-none"
+              placeholder={t.contact.emailPlaceholder}
+            />
+          </div>
+
+          <div>
+            <label className="mb-2 block text-sm font-medium text-slate-200">
+              {t.contact.message}
+            </label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              rows={6}
+              className="w-full resize-none rounded border border-slate-700 bg-[#0f172a] px-4 py-3 text-white placeholder-slate-500 transition-colors focus:border-yellow-500 focus:outline-none"
+              placeholder={t.contact.messagePlaceholder}
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full rounded-full bg-yellow-500 px-6 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400"
+          >
+            {t.contact.send}
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+}

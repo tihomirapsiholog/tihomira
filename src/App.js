@@ -1,0 +1,116 @@
+import { useEffect, useState } from "react";
+import { Routes, Route, useLocation, useNavigate, Navigate } from "react-router-dom";
+import translations from "./translations";
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import WorkPage from "./pages/WorkPage";
+import EventsPage from "./pages/EventsPage";
+import ZoomMaestraPage from "./pages/ZoomMaestraPage";
+import ContactPage from "./pages/ContactPage";
+
+function getLangFromPath(pathname) {
+  if (pathname.startsWith("/sr")) return "sr";
+  return "en";
+}
+
+function usePageTitle() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const titles = {
+      "/en": "Tihomira | Home",
+      "/sr": "Tihomira | Početak",
+      "/en/about": "Tihomira | About",
+      "/sr/about": "Tihomira | O meni",
+      "/en/work": "Tihomira | Work With Me",
+      "/sr/work": "Tihomira | Rad sa mnom",
+      "/en/events": "Tihomira | Events",
+      "/sr/events": "Tihomira | Događaji",
+      "/en/zoom-maestra": "Zoom Maestra | Technical Support for Online Facilitators",
+      "/sr/zoom-maestra": "Zoom Maestra | Podrška za online facilitatore",
+      "/en/contact": "Tihomira | Contact",
+      "/sr/contact": "Tihomira | Kontakt"
+    };
+
+    document.title = titles[location.pathname] || "Tihomira";
+  }, [location.pathname]);
+}
+
+export default function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const language = getLangFromPath(location.pathname);
+  const t = translations[language];
+
+  usePageTitle();
+
+  const navItems = [
+    [t.nav.home, ""],
+    [t.nav.about, "/about"],
+    [t.nav.work, "/work"],
+    [t.nav.events, "/events"],
+    [t.nav.zoom, "/zoom-maestra"],
+    [t.nav.contact, "/contact"]
+  ];
+
+  const changeLanguage = (lang) => {
+    const pathWithoutLang = location.pathname.replace(/^\/(en|sr)/, "");
+    navigate(`/${lang}${pathWithoutLang || ""}`);
+    setMenuOpen(false);
+  };
+
+  const isActive = (path) => {
+    const fullPath = `/${language}${path}`;
+    return location.pathname === fullPath;
+  };
+
+  const goToPage = (path) => {
+    navigate(`/${language}${path}`);
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-[#0b1220] via-[#111827] to-[#0a0f1a] text-slate-100">
+      <Navbar
+        language={language}
+        t={t}
+        navItems={navItems}
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+        changeLanguage={changeLanguage}
+        isActive={isActive}
+      />
+
+      <main className="pt-24">
+        <Routes>
+          <Route path="/" element={<Navigate to="/en" replace />} />
+
+          <Route path="/en" element={<HomePage setCurrentPage={goToPage} t={translations.en} />} />
+          <Route path="/sr" element={<HomePage setCurrentPage={goToPage} t={translations.sr} />} />
+
+          <Route path="/en/about" element={<AboutPage t={translations.en} />} />
+          <Route path="/sr/about" element={<AboutPage t={translations.sr} />} />
+
+          <Route path="/en/work" element={<WorkPage t={translations.en} />} />
+          <Route path="/sr/work" element={<WorkPage t={translations.sr} />} />
+
+          <Route path="/en/events" element={<EventsPage t={translations.en} />} />
+          <Route path="/sr/events" element={<EventsPage t={translations.sr} />} />
+
+          <Route path="/en/zoom-maestra" element={<ZoomMaestraPage t={translations.en} />} />
+          <Route path="/sr/zoom-maestra" element={<ZoomMaestraPage t={translations.sr} />} />
+
+          <Route path="/en/contact" element={<ContactPage t={translations.en} language="en" />} />
+          <Route path="/sr/contact" element={<ContactPage t={translations.sr} language="sr" />} />
+        </Routes>
+      </main>
+
+      <Footer t={t} />
+    </div>
+  );
+}
