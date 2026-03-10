@@ -39,9 +39,9 @@ export default function HomePage({ setCurrentPage, t }) {
 
          <div className="grid gap-8 md:grid-cols-3">
             {[
-              { icon: '↻', title: t.home.pillar1Title, desc: t.home.pillar1Desc, question: 'Da li osećaš da si zaglavljen/a u starim obrascima? Tražiš li jasnoću u trenutku promene?' },
-              { icon: '◯', title: t.home.pillar2Title, desc: t.home.pillar2Desc, question: 'Da li tvoja zajednica ili tim prolazi kroz transformaciju? Tražiš li prostor za kolektivno istraživanje?' },
-              { icon: '✦', title: t.home.pillar3Title, desc: t.home.pillar3Desc, question: 'Da li osećaš da reči nisu dovoljne? Tražiš li dublji jezik — kroz telo, zvuk i simbol?' },
+             { icon: '↻', title: t.home.pillar1Title, desc: t.home.pillar1Desc, question: t.home.pillar1Question },
+              { icon: '◯', title: t.home.pillar2Title, desc: t.home.pillar2Desc, question: t.home.pillar2Question },
+            { icon: '✦', title: t.home.pillar3Title, desc: t.home.pillar3Desc, question: t.home.pillar3Question },
             ].map((item, i) => (
               <div
                 key={i}

@@ -25,6 +25,9 @@ const translations = {
         pillar3Title: 'Embodied & Symbolic Work',
         pillar3Desc:
           'Spaces combining sound, ritual elements, and embodied awareness for deeper integration.',
+        pillar1Question: 'Do you feel stuck in old patterns? Are you seeking clarity in a moment of change?',
+        pillar2Question: 'Is your community or team going through transformation? Are you looking for a space for collective exploration?',
+        pillar3Question: 'Do you feel that words are not enough? Are you seeking a deeper language — through body, sound, and symbol?',
         offerings: 'Offerings',
         offering1: 'Individual Sessions',
         offering1Sub: 'Private transformational work',
@@ -301,7 +304,10 @@ const translations = {
         pillar3Title: 'Telesni i simbolički rad',
         pillar3Desc:
           'Prostori koji spajaju zvuk, ritualne elemente i telesnu svesnost radi dublje integracije.',
-        offerings: 'Ponuda',
+        pillar1Question: 'Da li osećaš da si zaglavljen/a u starim obrascima? Tražiš li jasnoću u trenutku promene?',
+        pillar2Question: 'Da li tvoja zajednica ili tim prolazi kroz transformaciju? Tražiš li prostor za kolektivno istraživanje?',
+        pillar3Question: 'Da li osećaš da reči nisu dovoljne? Tražiš li dublji jezik — kroz telo, zvuk i simbol?',
+          offerings: 'Ponuda',
         offering1: 'Individualne sesije',
         offering1Sub: 'Privatan transformativni rad',
         offering2: 'Grupne radionice',
