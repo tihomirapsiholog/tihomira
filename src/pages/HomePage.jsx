@@ -45,7 +45,7 @@ export default function HomePage({ setCurrentPage, t }) {
             ].map((item, i) => (
               <div
                 key={i}
-                className="group h-64 cursor-pointer"
+                className="group h-80 cursor-pointer"
                 style={{ perspective: '1000px' }}
               >
                 <div
