@@ -5,7 +5,7 @@ export default function Footer({ t }) {
         <p className="mb-6">
           <span className="font-serif text-yellow-400">{t.footer.brand}</span> — {t.footer.desc}
         </p>
-        <p className="mb-6 text-slate-500">{t.footer.rights}</p>
+        <p className="mb-6 text-slate-500">© {new Date().getFullYear()} Tihomira Stanojević. All rights reserved.</p>
         <p className="text-xs text-slate-600">{t.footer.tagline}</p>
       </div>
     </footer>
