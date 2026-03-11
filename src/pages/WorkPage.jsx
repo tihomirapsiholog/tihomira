@@ -132,7 +132,8 @@ export default function WorkPage({ t, setCurrentPage }) {
               <div
                 key={i}
                 id={anchors[i]}
-                className="rounded-2xl border border-slate-700 bg-[#111a2e] p-8 transition hover:border-yellow-400/40 hover:shadow-xl hover:shadow-black/30"
+                onClick={() => setCurrentPage('/contact')}
+                className="cursor-pointer rounded-2xl border border-slate-700 bg-[#111a2e] p-8 transition hover:border-yellow-400/40 hover:shadow-xl hover:shadow-black/30"
               >
                 <span className="inline-flex rounded-full border border-yellow-400/20 px-3 py-1 text-xs uppercase tracking-[0.2em] text-yellow-300">
                   {service.label}
