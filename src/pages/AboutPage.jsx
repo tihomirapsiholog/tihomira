@@ -232,7 +232,6 @@ export default function AboutPage({ t, setCurrentPage }) {
           >
             {t.about.ctaContact}
           </button>
-          </a>
         </div>
       </section>
 
