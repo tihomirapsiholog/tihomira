@@ -1,6 +1,6 @@
-const CONTACT_EMAIL = 'tihomira.psiholog@gmail.com';
+import { ArrowRight } from 'lucide-react';
 
-export default function ZoomMaestraPage({ t }) {
+export default function ZoomMaestraPage({ t, setCurrentPage }) {
   return (
     <div className="bg-[#0b1220]">
       <section className="relative overflow-hidden py-20">
@@ -108,39 +108,19 @@ export default function ZoomMaestraPage({ t }) {
               {
                 title: t.zoom.package1Title,
                 text: t.zoom.package1Text,
-                items: [
-                  t.zoom.package1Item1,
-                  t.zoom.package1Item2,
-                  t.zoom.package1Item3,
-                  t.zoom.package1Item4,
-                  t.zoom.package1Item5,
-                ],
+                items: [t.zoom.package1Item1, t.zoom.package1Item2, t.zoom.package1Item3, t.zoom.package1Item4, t.zoom.package1Item5],
                 ideal: t.zoom.package1Ideal,
               },
               {
                 title: t.zoom.package2Title,
                 text: t.zoom.package2Text,
-                items: [
-                  t.zoom.package2Item1,
-                  t.zoom.package2Item2,
-                  t.zoom.package2Item3,
-                  t.zoom.package2Item4,
-                  t.zoom.package2Item5,
-                  t.zoom.package2Item6,
-                ],
+                items: [t.zoom.package2Item1, t.zoom.package2Item2, t.zoom.package2Item3, t.zoom.package2Item4, t.zoom.package2Item5, t.zoom.package2Item6],
                 ideal: t.zoom.package2Ideal,
               },
               {
                 title: t.zoom.package3Title,
                 text: t.zoom.package3Text,
-                items: [
-                  t.zoom.package3Item1,
-                  t.zoom.package3Item2,
-                  t.zoom.package3Item3,
-                  t.zoom.package3Item4,
-                  t.zoom.package3Item5,
-                  t.zoom.package3Item6,
-                ],
+                items: [t.zoom.package3Item1, t.zoom.package3Item2, t.zoom.package3Item3, t.zoom.package3Item4, t.zoom.package3Item5, t.zoom.package3Item6],
                 ideal: t.zoom.package3Ideal,
               },
             ].map((pkg, i) => (
@@ -187,25 +167,23 @@ export default function ZoomMaestraPage({ t }) {
       </section>
 
       <section className="bg-gradient-to-r from-[#0a0f1a] via-[#111827] to-[#0a0f1a] py-20 text-white">
-     <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="mb-6 font-serif text-4xl">{t.zoom.ctaTitle}</h2>
-
           <p className="mb-4 text-lg leading-relaxed text-slate-300">
-      {t.zoom.ctaText}
-      </p>
-
-      <p className="mb-8 text-lg leading-relaxed text-slate-300">
-      {t.zoom.ctaText2}
-      </p>
-
-      <a
-      href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(t.zoom.ctaSubject)}`}
-      className="inline-flex items-center rounded-full bg-yellow-500 px-8 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400"
-     >
-      {t.zoom.ctaButton}
-    </a>
+            {t.zoom.ctaText}
+          </p>
+          <p className="mb-8 text-lg leading-relaxed text-slate-300">
+            {t.zoom.ctaText2}
+          </p>
+          <button
+            onClick={() => setCurrentPage('/contact')}
+            className="inline-flex items-center gap-2 rounded-full bg-yellow-500 px-8 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400"
+          >
+            {t.zoom.ctaButton}
+            <ArrowRight size={18} />
+          </button>
+        </div>
+      </section>
     </div>
-    </section>
-    </div>
-     );
-    }
+  );
+}
