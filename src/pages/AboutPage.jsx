@@ -219,16 +219,10 @@ export default function AboutPage({ t, setCurrentPage }) {
           {t.about.closingQuote}
           <em className="not-italic text-yellow-400"> {t.about.closingQuoteEm}</em>
         </blockquote>
-        <div className="flex justify-center gap-6">
-          <button
-            onClick={() => setCurrentPage('/work-with-me')}
-            className="bg-yellow-500 px-8 py-3 text-sm font-medium uppercase tracking-widest text-slate-950 transition-colors hover:bg-yellow-400"
-          >
-            {t.about.ctaWork}
-          </button>
+        <div className="flex justify-center">
           <button
             onClick={() => setCurrentPage('/contact')}
-            className="border-b border-slate-600 pb-px text-sm font-light uppercase tracking-widest text-slate-400 transition-colors hover:text-slate-200"
+            className="bg-yellow-500 px-8 py-3 text-sm font-medium uppercase tracking-widest text-slate-950 transition-colors hover:bg-yellow-400"
           >
             {t.about.ctaContact}
           </button>

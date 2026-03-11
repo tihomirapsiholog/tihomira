@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Instagram } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
 const CONTACT_EMAIL = 'tihomira.psiholog@gmail.com';
@@ -37,40 +36,6 @@ export default function ContactPage({ t, language }) {
     <div className="mx-auto max-w-3xl bg-[#0b1220] px-4 py-20 sm:px-6 lg:px-8">
       <h1 className="mb-6 font-serif text-5xl text-white">{t.contact.title}</h1>
       <p className="mb-12 text-lg leading-relaxed text-slate-300">{t.contact.intro}</p>
-
-      <section className="mb-16">
-        <h2 className="mb-4 font-serif text-3xl text-white">{t.contact.contactFlowTitle}</h2>
-        <p className="mb-10 max-w-2xl leading-relaxed text-slate-300">{t.contact.contactFlowIntro}</p>
-        <div className="grid gap-8 md:grid-cols-3">
-          {[
-            { title: t.contact.path1Title, text: t.contact.path1Text, button: t.contact.path1Button, subject: t.contact.path1Subject },
-            { title: t.contact.path2Title, text: t.contact.path2Text, button: t.contact.path2Button, subject: t.contact.path2Subject },
-            { title: t.contact.path3Title, text: t.contact.path3Text, button: t.contact.path3Button, subject: t.contact.path3Subject },
-          ].map((item, i) => (
-            <div key={i} className="rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8">
-              <h3 className="mb-3 font-serif text-xl text-white">{item.title}</h3>
-              <p className="mb-6 leading-relaxed text-slate-300">{item.text}</p>
-              <div className="flex 8 gap-3">
-                {i === 2 && (
-                  <Link
-                    to={`/${language}/zoom-maestra`}
-                    onClick={() => window.scrollTo(0, 0)}
-                    className="inline-flex items-center rounded-full border border-yellow-500 px-5 py-3 text-sm font-medium text-yellow-400 transition-colors hover:bg-yellow-500 hover:text-slate-950"
-                  >
-                    {t.contact.path3LearnMore}
-                  </Link>
-                )}
-                
-                  <a href="https://calendly.com/tihomira-psiholog/30min" target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-full bg-yellow-500 px-6 py-3 text-sm font-medium text-slate-950 transition-colors hover:bg-yellow-400"
-                >
-                  {item.button}
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
       <div className="grid gap-12 md:grid-cols-2">
         <div className="space-y-8">
