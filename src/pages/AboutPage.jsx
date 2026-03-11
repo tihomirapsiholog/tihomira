@@ -93,6 +93,12 @@ export default function AboutPage({ t }) {
             </div>
           </div>
         </div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+       <span className="text-xs uppercase tracking-widest text-slate-500">Scroll</span>
+       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M8 3v10M3 9l5 5 5-5" stroke="#d4a843" strokeWidth="1.5"/>
+      </svg>
+      </div>
       </section>
 
       {/* STORY */}

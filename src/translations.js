@@ -64,6 +64,8 @@ const translations = {
       chapter1Para2:
         'In Novi Sad I volunteered for years at <strong class="text-slate-200 font-normal">Centar Srce</strong> — a centre for suicide prevention and emotional support for people in crisis. That is where I learned to listen before I speak. Before that, I had spent two years at <strong class="text-slate-200 font-normal">Petnica Research Station</strong> — on the psychology programme, already knowing what I was heading towards.',
       chapter1Para3:
+        'Teaching statistics to psychology students, I quickly realised my job was not about numbers. It was about the <strong class="text-slate-200 font-normal">resistance to numbers</strong> — the fear, the expectations, the stories we tell ourselves about what we can and cannot understand.',
+      chapter1Para4:
         'In 2009 I attended my first Bodily Psychodrama workshop. I watched transformations happen in real time. I felt them in my own body. From that moment, I knew — this was my world.',
       chapter1Aside:
         "I don't trust explanations as much as I trust experience. Something has to move through the body before it becomes real.",
@@ -84,16 +86,16 @@ const translations = {
       chapter3Para1:
         'I came back to Serbia because my mother needed surgery — a brain aneurysm. I am her only child. There was no question.',
       chapter3Para2:
-        'The return was hard. Ecuador had opened something in me, and Serbia — with all its familiarity — felt suddenly narrow. The next call, once my mother was well, came from India — invited by a colleague to help restart a psychodrama institute after COVID. I hoped for something that would feel like South America. Instead it broke me in a completely different way. Three months instead of six. All my savings gone.',
+        'The return was hard. Ecuador had opened something in me, and Serbia — with all its familiarity — felt suddenly narrow. The next call, once my mother was well, came from India — invited by a colleague to help restart a psychodrama institute after COVID. I hoped for something that would feel like South America. Instead it broke me in a completely different way. I stayed three months instead of six. All my savings gone.',
       chapter3Para3:
         'What those years taught me: a crossroads is not a problem to solve quickly. It is an invitation to become more fully who you are. I stopped looking for the place that would fix things, and started building the work from the inside out.',
-      chapter4Label: 'Tina with the bowl',
+      chapter4Label: 'Tina with a singing bowl',
       chapter4Title: "I didn't decide to do sound work.",
       chapter4TitleEm: 'It accumulated.',
       chapter4Para1:
         'From every place I have lived, I brought something back. A hand drum made for me by Amaru, a man from the jungle at the Ecuador retreat. Rain sticks. A small hang from a Serbian instrument maker. Cymbals from India. Chinese singing balls. A singing bowl from a friend in Croatia.',
       chapter4Para2:
-        'Last summer in Barcelona, I spent three months living with people who gathered every week to improvise together. They started calling me <strong class="text-slate-200 font-normal">"Tina with the bowl."</strong> That is when I understood — I was not collecting instruments. I was finding my voice.',
+        'Last summer in Barcelona, I spent three months living with people who gathered every week to improvise together. They started calling me <strong class="text-slate-200 font-normal">"Tina with a singing bowl"</strong> — or, as the Spanish say, <em>Tina con cuenco</em>. That is when I understood — I was not collecting instruments. I was finding my voice.',
       chapter4Para3:
         'When I held my first sound bath for others, I realised I was enjoying it as much as they were. Sound carries healing, improvisation sets things free. <strong class="text-slate-200 font-normal">I trust what the body shows — more than what words describe.</strong>',
       chapter4Aside: 'I trust what the body shows — more than what words describe.',
@@ -359,6 +361,8 @@ const translations = {
       chapter1Para2:
         'U Novom Sadu sam godinama volontirala u <strong class="text-slate-200 font-normal">Centru Srce</strong> — centru za prevenciju samoubistva i emotivnu podršku osobama u krizi. Tamo sam naučila da slušam pre nego što govorim. Pre toga, provela sam dve godine u <strong class="text-slate-200 font-normal">Istraživačkoj Stanici Petnica</strong> — na programu psihologije, već znajući šta me čeka.',
       chapter1Para3:
+        'Dok sam držala časove statistike studentima psihologije, brzo sam shvatila da moj posao nije o brojevima. Već o <strong class="text-slate-200 font-normal">otporu prema brojevima</strong> — strahu, očekivanjima, pričama koje pričamo sebi o tome šta možemo i ne možemo da razumemo.',
+      chapter1Para4:
         'U 2009. godini otišla sam na prvu radionicu Telesne Psihodrame. Gledala sam transformacije u realnom vremenu. Osećala sam ih u sopstvenom telu. Od tog momenta znala sam — ovo je moj svet.',
       chapter1Aside: 'Ne verujem objašnjenjima toliko koliko verujem iskustvu. Nešto mora da prođe kroz telo da bi postalo stvarno.',
       chapter2Label: 'Vulkan',
