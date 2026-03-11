@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, useLocation, useNavigate, Navigate } from "react-router-dom";
 import translations from "./translations";
-
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import WorkPage from "./pages/WorkPage";
@@ -19,7 +17,6 @@ function getLangFromPath(pathname) {
 
 function usePageTitle() {
   const location = useLocation();
-
   useEffect(() => {
     const titles = {
       "/en": "Tihomira | Home",
@@ -35,7 +32,6 @@ function usePageTitle() {
       "/en/contact": "Tihomira | Contact",
       "/sr/contact": "Tihomira | Kontakt"
     };
-
     document.title = titles[location.pathname] || "Tihomira";
   }, [location.pathname]);
 }
@@ -44,10 +40,8 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-
   const language = getLangFromPath(location.pathname);
   const t = translations[language];
-
   usePageTitle();
 
   const navItems = [
@@ -85,31 +79,23 @@ export default function App() {
         changeLanguage={changeLanguage}
         isActive={isActive}
       />
-
       <main className="pt-24">
         <Routes>
           <Route path="/" element={<Navigate to="/en" replace />} />
-
           <Route path="/en" element={<HomePage setCurrentPage={goToPage} t={translations.en} />} />
           <Route path="/sr" element={<HomePage setCurrentPage={goToPage} t={translations.sr} />} />
-
-          <Route path="/en/about" element={<AboutPage t={translations.en} />} />
-          <Route path="/sr/about" element={<AboutPage t={translations.sr} />} />
-
-          <Route path="/en/work" element={<WorkPage t={translations.en} />} />
-          <Route path="/sr/work" element={<WorkPage t={translations.sr} />} />
-
-          <Route path="/en/events" element={<EventsPage t={translations.en} />} />
-          <Route path="/sr/events" element={<EventsPage t={translations.sr} />} />
-
-          <Route path="/en/zoom-maestra" element={<ZoomMaestraPage t={translations.en} />} />
-          <Route path="/sr/zoom-maestra" element={<ZoomMaestraPage t={translations.sr} />} />
-
+          <Route path="/en/about" element={<AboutPage setCurrentPage={goToPage} t={translations.en} />} />
+          <Route path="/sr/about" element={<AboutPage setCurrentPage={goToPage} t={translations.sr} />} />
+          <Route path="/en/work" element={<WorkPage setCurrentPage={goToPage} t={translations.en} />} />
+          <Route path="/sr/work" element={<WorkPage setCurrentPage={goToPage} t={translations.sr} />} />
+          <Route path="/en/events" element={<EventsPage setCurrentPage={goToPage} t={translations.en} />} />
+          <Route path="/sr/events" element={<EventsPage setCurrentPage={goToPage} t={translations.sr} />} />
+          <Route path="/en/zoom-maestra" element={<ZoomMaestraPage setCurrentPage={goToPage} t={translations.en} />} />
+          <Route path="/sr/zoom-maestra" element={<ZoomMaestraPage setCurrentPage={goToPage} t={translations.sr} />} />
           <Route path="/en/contact" element={<ContactPage t={translations.en} language="en" />} />
           <Route path="/sr/contact" element={<ContactPage t={translations.sr} language="sr" />} />
         </Routes>
       </main>
-
       <Footer t={t} />
     </div>
   );
