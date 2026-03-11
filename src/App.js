@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, useLocation, useNavigate, Navigate } from "react-router-dom";
+import { Mail } from "lucide-react";
 import translations from "./translations";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -68,6 +69,8 @@ export default function App() {
     navigate(`/${language}${path}`);
   };
 
+  const isContactPage = location.pathname.includes('/contact');
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0b1220] via-[#111827] to-[#0a0f1a] text-slate-100">
       <Navbar
@@ -97,6 +100,18 @@ export default function App() {
         </Routes>
       </main>
       <Footer t={t} />
+
+      {!isContactPage && (
+        <button
+          onClick={() => goToPage('/contact')}
+          className="group fixed bottom-8 right-8 z-50 flex items-center gap-2 overflow-hidden rounded-full bg-yellow-500 px-4 py-4 font-medium text-slate-950 shadow-lg transition-all duration-300 hover:px-6 hover:shadow-yellow-500/20"
+        >
+          <Mail size={20} className="shrink-0" />
+          <span className="max-w-0 overflow-hidden whitespace-nowrap transition-all duration-300 group-hover:max-w-xs">
+            {language === 'sr' ? 'Javi se' : 'Get in touch'}
+          </span>
+        </button>
+      )}
     </div>
   );
 }
