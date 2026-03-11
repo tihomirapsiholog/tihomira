@@ -8,7 +8,7 @@ const Divider = ({ text }) => (
   </div>
 );
 
-export default function WorkPage({ t }) {
+export default function WorkPage({ t, setCurrentPage }) {
   const services = [
     {
       label: t.work.service1Label,
@@ -220,13 +220,13 @@ export default function WorkPage({ t }) {
             </span>
             <h3 className="mt-4 font-serif text-2xl text-white">{t.work.city4Name}</h3>
             <p className="mx-auto mt-4 max-w-xl leading-7 text-slate-300">{t.work.city4Text}</p>
-            <a
-              href={`mailto:${CONTACT_EMAIL}`}
+            <button
+              onClick={() => setCurrentPage('/contact')}
               className="mt-6 inline-flex items-center gap-2 rounded-full border border-yellow-400/40 px-6 py-2 text-sm font-medium text-yellow-300 transition hover:border-yellow-300 hover:text-white"
             >
               {t.work.hostButton}
               <ArrowRight size={16} />
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -245,13 +245,13 @@ export default function WorkPage({ t }) {
           <p className="mx-auto mt-4 max-w-2xl leading-8 text-slate-400">
             {t.work.questionsText2}
           </p>
-          <a
-            href={`mailto:${CONTACT_EMAIL}`}
+          <button
+            onClick={() => setCurrentPage('/contact')}
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-yellow-500 px-8 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400"
           >
             {t.work.reach}
             <ArrowRight size={18} />
-          </a>
+          </button>
         </div>
       </section>
 
