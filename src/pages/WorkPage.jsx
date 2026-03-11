@@ -1,7 +1,5 @@
 import { ArrowRight } from 'lucide-react';
 
-const CONTACT_EMAIL = 'tihomira.psiholog@gmail.com';
-
 const Divider = ({ text }) => (
   <div className="py-16 text-center">
     <p className="font-serif text-xl italic font-light text-slate-400 tracking-wide">{text}</p>
