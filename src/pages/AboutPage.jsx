@@ -5,7 +5,7 @@ export default function AboutPage({ t }) {
       label: t.about.chapter1Label,
       title: t.about.chapter1Title,
       titleEm: t.about.chapter1TitleEm,
-      body: [t.about.chapter1Para1, t.about.chapter1Para2, t.about.chapter1Para3],
+      body: [t.about.chapter1Para1, t.about.chapter1Para2, t.about.chapter1Para3, t.about.chapter1Para4],
       aside: t.about.chapter1Aside,
     },
     {
@@ -22,7 +22,7 @@ export default function AboutPage({ t }) {
       title: t.about.chapter3Title,
       titleEm: t.about.chapter3TitleEm,
       body: [t.about.chapter3Para1, t.about.chapter3Para2, t.about.chapter3Para3],
-      aside: null,
+      aside: t.about.chapter3Aside,
     },
     {
       id: 'ch4',
@@ -31,6 +31,14 @@ export default function AboutPage({ t }) {
       titleEm: t.about.chapter4TitleEm,
       body: [t.about.chapter4Para1, t.about.chapter4Para2, t.about.chapter4Para3],
       aside: t.about.chapter4Aside,
+    },
+    {
+      id: 'ch5',
+      label: t.about.chapter5Label,
+      title: t.about.chapter5Title,
+      titleEm: t.about.chapter5TitleEm,
+      body: [t.about.chapter5Para1, t.about.chapter5Para2, t.about.chapter5Para3],
+      aside: t.about.chapter5Aside,
     },
   ];
 
@@ -93,12 +101,6 @@ export default function AboutPage({ t }) {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-       <span className="text-xs uppercase tracking-widest text-slate-500">Scroll</span>
-       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-      <path d="M8 3v10M3 9l5 5 5-5" stroke="#d4a843" strokeWidth="1.5"/>
-      </svg>
-      </div>
       </section>
 
       {/* STORY */}

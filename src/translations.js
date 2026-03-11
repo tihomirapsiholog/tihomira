@@ -365,34 +365,45 @@ const translations = {
       chapter1Para4:
         'U 2009. godini otišla sam na prvu radionicu Telesne Psihodrame. Gledala sam transformacije u realnom vremenu. Osećala sam ih u sopstvenom telu. Od tog momenta znala sam — ovo je moj svet.',
       chapter1Aside: 'Ne verujem objašnjenjima toliko koliko verujem iskustvu. Nešto mora da prođe kroz telo da bi postalo stvarno.',
-      chapter2Label: 'Vulkan',
-      chapter2Title: 'Ekvador, šamanski bubanj',
-      chapter2TitleEm: 'i 200 dolara u džepu.',
+      chapter2Label: 'Kovid i otvaranje sveta',
+      chapter2Title: 'Kad je svet stao,',
+      chapter2TitleEm: 'ja sam ostala sa bubnjem.',
       chapter2Para1:
-        'Dok sam volontirala za Američko udruženje za grupnu psihoterapiju i psihodramu (ASGPP), upoznala sam mnoge iskusne psihodramatičare sa raznih strana sveta — sarađivala sam sa njima, doživljavala njihove radionice. Tako sam upoznala <strong class="text-slate-200 font-normal">Shirley Barkley</strong> — ženu koja je studirala sa Morenom i već 50 godina posvećeno se bavi psihodramom, poslednjih deset kombinacijom psihodrame i indijanskih medicina.',
+        'U martu 2020. bila sam u Kini. Uhvatila sam jedan od poslednjih letova kući — u Surdulicu, u karantin, sama. U kući se desila tragedija, mama i tetka su završile u bolnici. Taj Uskrs preživela sam uz Wim Hofove metode disanja, moj bubanj — i zahvaljujući komšijama i rođacima koji su mi na kapiji ostavljali hranu. Zajednica ostaje zajednica čak i kad smo izolovani.',
       chapter2Para2:
-        'U šamanski bubanj sam inicirana koju godinu pre nego što se desio susret sa Shirley i pozivnica da dođem na retreat na dnu vulkana Pululahua u Ekvadoru. Rekla sam da — pre nego što sam imala novac. Prijatelj mi je platio kartu u jednom pravcu. Stigla sam sa 200 dolara, platila 120 za retreat — i ostala šest meseci.',
+        'Kad se situacija stabilizovala, otkrila sam Tele\'Dramu — psihodramu koja se odvija u potpunosti online. Čekala sam poziv na besplatni događaj jer nisam mogla da priuštim da platim. Kad sam ušla, zablistala sam. Tu se rodilo prijateljstvo koje Pembe i ja i danas slavimo — 24. februar kao godišnjicu prvog susreta.',
       chapter2Para3:
-        'Na moj 33. rođendan probudila sam se na dnu vulkana, bez dometa za telefon i internet, sa grupom nepoznatih ljudi. Taj dan je bio podizanje tipija i priprema za dve nedelje koje dolaze. Zamišljala sam vulkan kao mesto gde je kamen i pepeo — a to je zapravo božanstvena priroda. Kad sam izašla iz šatora i stala na zemlju, shvatila sam da je <strong class="text-slate-200 font-normal">mekana kao sunđer.</strong>',
-      chapter2Aside: 'Ono što sam naučila u Ekvadoru: sigurnost ne dolazi od toga što imaš dovoljno. Dolazi od toga što si primljena.',
-      chapter3Label: 'Povratak',
-      chapter3Title: 'Raskršća za mene nisu',
-      chapter3TitleEm: 'samo metafore.',
-      chapter3Para1: 'Vratila sam se u Srbiju jer je mama morala na operaciju — aneurizma na mozgu. Ja sam njeno jedino dete. Nije bilo dileme.',
+        'Nije prošlo mnogo vremena, a već sam bila nedeljno uključena u tri grupe — svaka po tri sata. Onlajn prostor prestao je da bude zamena za pravo iskustvo. Postao je prostor sam po sebi.',
+      chapter2Aside: 'Bubanj i kapija. To su bile moje jedine veze sa svetom.',
+      chapter3Label: 'Vulkan',
+      chapter3Title: 'Ekvador, šamanski bubanj',
+      chapter3TitleEm: 'i 200 dolara u džepu.',
+      chapter3Para1:
+        'Dok sam volontirala za Američko udruženje za grupnu psihoterapiju i psihodramu (ASGPP), upoznala sam mnoge iskusne psihodramatičare sa raznih strana sveta — sarađivala sam sa njima, doživljavala njihove radionice. Tako sam upoznala <strong class="text-slate-200 font-normal">Shirley Barkley</strong> — ženu koja je studirala sa Morenom i već 50 godina posvećeno se bavi psihodramom, poslednjih deset kombinacijom psihodrame i indijanskih medicina.',
       chapter3Para2:
-        'Povratak je bio težak. Ekvador je otvorio nešto u meni, a Srbija — sa svom svojom poznatošću — osećala se odjednom tijesno. Sledeći poziv, kada je sve sa mamom prošlo dobro, došao je iz Indije — pozvana od kolege da pomognem u ponovnom pokretanju instituta za psihodramu nakon Covida. Nadala sam se iskustvu koje će da liči na ono iz Južne Amerike. Umesto toga, slomilo me je na sasvim drugačiji način. Izdržala sam tri meseca umesto šest. Ostala bez uštedina i vratila se kući.',
+        'U šamanski bubanj sam inicirana koju godinu pre nego što se desio susret sa Shirley i pozivnica da dođem na retreat na dnu vulkana Pululahua u Ekvadoru. Rekla sam da — pre nego što sam imala novac. Prijatelj mi je platio kartu u jednom pravcu. Stigla sam sa 200 dolara, platila 120 za retreat — i ostala šest meseci.',
       chapter3Para3:
-        'Ono što su me te godine naučile: raskršće nije problem koji treba brzo rešiti. To je poziv da postaneš potpunije ono što jesi. Prestala sam da tražim mesto koje će sve popraviti i počela da gradim rad iznutra prema spolja.',
-      chapter4Label: 'Tina sa činijom',
-      chapter4Title: 'Nisam odlučila da radim sa zvukom.',
-      chapter4TitleEm: 'To se nakupilo.',
-      chapter4Para1:
-        'Iz svakog mesta gde sam živela, donela sam nešto. Ručno izrađen bubanj od Amarua, čoveka iz džungle na ekvadorskom retreatu. Kišne štapove. Mali hang od srpskog majstora instrumenata. Cimbalo iz Indije. Kineske zvučne kuglice. Zvučnu činiju od prijatelja u Hrvatskoj.',
+        'Na moj 33. rođendan probudila sam se na dnu vulkana, bez dometa za telefon i internet, sa grupom nepoznatih ljudi. Taj dan je bio podizanje tipija i priprema za dve nedelje koje dolaze. Zamišljala sam vulkan kao mesto gde je kamen i pepeo — a to je zapravo božanstvena priroda. Kad sam izašla iz šatora i stala na zemlju, shvatila sam da je <strong class="text-slate-200 font-normal">mekana kao sunđer.</strong>',
+      chapter3Aside: 'Ono što sam naučila u Ekvadoru: sigurnost ne dolazi od toga što imaš dovoljno. Dolazi od toga što si primljena.',
+      chapter4Label: 'Povratak',
+      chapter4Title: 'Raskršća za mene nisu',
+      chapter4TitleEm: 'samo metafore.',
+      chapter4Para1: 'Vratila sam se u Srbiju jer je mama morala na operaciju — aneurizma na mozgu. Ja sam njeno jedino dete. Nije bilo dileme.',
       chapter4Para2:
-        'Prošlog leta u Barseloni provela sam tri meseca živeći sa ljudima koji su se svake nedelje okupljali da improvizuju zajedno. Počeli su da me zovu <strong class="text-slate-200 font-normal">"Tina sa činijom."</strong> Tada sam shvatila — nisam sakupljala instrumente. Pronalazila sam svoj glas.',
+        'Povratak je bio težak. Ekvador je otvorio nešto u meni, a Srbija — sa svom svojom poznatošću — osećala se odjednom tijesno. Sledeći poziv, kada je sve sa mamom prošlo dobro, došao je iz Indije — pozvana od kolege da pomognem u ponovnom pokretanju instituta za psihodramu nakon Covida. Nadala sam se iskustvu koje će da liči na ono iz Južne Amerike. Umesto toga, slomilo me je na sasvim drugačiji način. Izdržala sam tri meseca umesto šest. Ostala bez uštedina i vratila se kući.',
       chapter4Para3:
+        'Ono što su me te godine naučile: raskršće nije problem koji treba brzo rešiti. To je poziv da postaneš potpunije ono što jesi. Prestala sam da tražim mesto koje će sve popraviti i počela da gradim rad iznutra prema spolja.',
+      chapter4Aside: null,
+      chapter5Label: 'Tina con Cuenco',
+      chapter5Title: 'Nisam odlučila da radim sa zvukom.',
+      chapter5TitleEm: 'To se nakupilo.',
+      chapter5Para1:
+        'Iz svakog mesta gde sam živela, donela sam nešto. Ručno izrađen bubanj od Amarua, čoveka iz džungle na ekvadorskom retreatu. Kišne štapove. Mali hang od srpskog majstora instrumenata. Cimbalo iz Indije. Kineske zvučne kuglice. Zvučnu činiju od prijatelja u Hrvatskoj.',
+      chapter5Para2:
+        'U 2025. otišla sam autom iz Surdulice u Barselonu — sa krevetom u teretnom autu i svim instrumentima. Tamo sam živela tri meseca sa ljudima koji su se svake nedelje okupljali da improvizuju zajedno. Počeli su da me zovu <strong class="text-slate-200 font-normal">"Tina con Cuenco"</strong> — Tina sa činijom.',
+      chapter5Para3:
         'Kad sam napravila prvu zvučnu kupku za druge, shvatila sam da uživam podjednako koliko i oni. Zvuk nosi isceljenje, improvizacija oslobađa. <strong class="text-slate-200 font-normal">Verujem onome što telo pokazuje — pre nego onome što reči opisuju.</strong>',
-      chapter4Aside: 'Verujem onome što telo pokazuje — pre nego onome što reči opisuju.',
+      chapter5Aside: 'Verujem onome što telo pokazuje — pre nego onome što reči opisuju.',
       instrumentsLabel: 'Instrumenti sakupljeni putem',
       inst1: 'Šamanski bubanj', inst1Origin: '— Mađarska',
       inst2: 'Ručni bubanj', inst2Origin: '— Ekvador',
