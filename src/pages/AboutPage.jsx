@@ -51,6 +51,10 @@ export default function AboutPage({ t }) {
     { name: t.about.inst7, origin: t.about.inst7Origin },
     { name: t.about.inst8, origin: t.about.inst8Origin },
     { name: t.about.inst9, origin: t.about.inst9Origin },
+    { name: t.about.inst10, origin: t.about.inst10Origin },
+    { name: t.about.inst11, origin: t.about.inst11Origin },
+    { name: t.about.inst12, origin: t.about.inst12Origin },
+    { name: t.about.inst13, origin: t.about.inst13Origin },
   ];
 
   const locations = ['Serbia', 'Ecuador', 'India', 'China', 'Slovenia', 'Montenegro', 'Spain', 'Russia'];
