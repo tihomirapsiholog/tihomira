@@ -48,37 +48,99 @@ const translations = {
           zoomText:'Zoom Maestra supports facilitators, educators, and therapists who want to work online with more ease, less technical stress, and a stronger sense of flow.',
           zoomButton: 'Explore Zoom Maestra',
       },
-      about: {
-        title: 'About My Work',
-        intro: 'My presence, my practice, my commitment to transformation',
-        para1:
-          "My journey began with a question: What helps people find themselves when they're lost? This curiosity led me to psychology, to group process work, and ultimately to the understanding that transformation happens not through instruction, but through creating the conditions for authentic discovery.",
-        para2:
-          "I've spent years studying how people navigate change—the fear, the confusion, the moments of unexpected clarity. I've learned that our bodies hold wisdom we've forgotten, that symbols speak to us in ways words cannot, and that when we gather intentionally, something powerful emerges from the space between us.",
-        atCrossroads: 'At the Crossroads',
-        crossroadsText:
-          '"Many important moments in life happen at crossroads—when an old story ends and a new one begins. These are not problems to be solved quickly. They are invitations to become more fully ourselves."',
-        para3:
-          "I've dedicated my practice to supporting people in these liminal spaces. Whether you're questioning your direction, grieving what was, or sensing that something is asking to be born, my work is to help you find clarity not through answers I provide, but through awakening what you already know.",
-        guidesWork: 'What Guides My Work',
-        psychologyTitle: 'Psychology',
-        psychologyText:
-          'Understanding the human psyche—patterns, wounds, strengths, and untapped potential.',
-        processTitle: 'Group Process',
-        processText:
-          'The wisdom that emerges when people gather authentically, holding space for individual and collective transformation.',
-        embodiedTitle: 'Embodied Awareness',
-        embodiedText:
-          "Reconnecting with the body's knowing—breath, sensation, movement, presence.",
-        symbolicTitle: 'Symbolic & Artistic Work',
-        symbolicText:
-          'Engaging metaphor, image, sound, and ritual to access deeper layers of awareness and transformation.',
-        archetype: 'The Archetype of the Crossroads',
-        archetypeText:
-          "Many ancient cultures describe guides who appear at life's pivotal moments—those standing at the threshold between what was and what might be. The archetype of Aurethra represents this—a presence that illuminates the path forward, not by forcing direction, but by awakening your own inner knowing.",
-        archetypeText2:
-          "This is the spirit of my work: to be a steady presence as you navigate your own transformation, honoring both the depth of where you've been and the potential of where you're going.",
-      },
+      const about_en = {
+  eyebrow: 'About',
+  heroTitle: 'I learn everything',
+  heroTitleEm: 'through experience.',
+  heroIntro:
+    'Psychologist, facilitator, sound practitioner. I have lived on four continents, collected instruments from every place I have called home, and spent years learning what it means to hold space — for others, and for myself.',
+  placesLived: 'Places lived',
+
+  storyLabel: 'The story',
+
+  chapter1Label: 'The beginning',
+  chapter1Title: 'I went to psychology',
+  chapter1TitleEm: 'to understand people.',
+  chapter1Para1:
+    'Before university, I spent two years at <strong class="text-slate-200 font-normal">Petnica Research Station</strong> — a place where curious young people go to go deeper. I arrived at my psychology degree already knowing what was ahead, which meant I could focus on what really mattered: the people in the room.',
+  chapter1Para2:
+    'Teaching statistics to psychology students, I quickly realised that my job was not about numbers. It was about the <strong class="text-slate-200 font-normal">resistance to numbers</strong> — fear, expectation, the stories we tell ourselves about what we can and cannot understand.',
+  chapter1Para3:
+    'In 2009, I attended my first Bodily Psychodrama workshop. I watched transformations happen in real time. I felt them in my own body. From that moment, I knew this was my world.',
+  chapter1Aside:
+    'I don\'t trust explanations as much as I trust experience. Something has to move through the body before it becomes real.',
+
+  chapter2Label: 'The volcano',
+  chapter2Title: 'Ecuador, a shaman\'s drum,',
+  chapter2TitleEm: 'and $200 in my pocket.',
+  chapter2Para1:
+    'While volunteering for the American Society of Group Psychotherapy and Psychodrama, I met Shirley — a woman who had spent 50 years in psychodrama and studied with Moreno himself. She was organising a retreat at the base of the Pululahua volcano in Ecuador. A combination of psychodrama and indigenous medicine.',
+  chapter2Para2:
+    'I had been initiated into a shamanic drum in Subotica. When she described the retreat, I said yes before I had the money. A friend paid for a one-way ticket. I arrived with $200, paid $120 for the retreat — and stayed for six months.',
+  chapter2Para3:
+    'In Ecuador I <strong class="text-slate-200 font-normal">blossomed</strong>. I had almost nothing — and felt completely held. A spiritual family formed. Someone offered me a flat. I lived, cooked, walked, and learned the culture by being inside it.',
+  chapter2Aside:
+    'What I learned in Ecuador: safety doesn\'t come from having enough. It comes from being received.',
+
+  chapter3Label: 'Coming back',
+  chapter3Title: 'Crossroads are not',
+  chapter3TitleEm: 'metaphors for me.',
+  chapter3Para1:
+    'I came back to Serbia because my mother needed surgery — a brain aneurysm. I am her only child. There was no question.',
+  chapter3Para2:
+    'The return was hard. Ecuador had opened something in me, and Serbia — with all its familiarity — felt suddenly narrow. I tried India next, invited by a colleague to help restart a psychodrama institute after COVID. I expected it to save me. Instead, it broke me differently. Three months instead of six. All my savings gone.',
+  chapter3Para3:
+    'What those years taught me: a crossroads is not a problem to solve quickly. It is an invitation to become more fully who you are. I stopped looking for the place that would fix things, and started building the work from the inside out.',
+
+  chapter4Label: 'Tina with the bowl',
+  chapter4Title: 'I didn\'t decide to do sound work.',
+  chapter4TitleEm: 'It accumulated.',
+  chapter4Para1:
+    'From every place I have lived, I brought something back. A hand drum made for me by Amaru, a man from the jungle at the Ecuador retreat. Rain sticks. A small hang from a Serbian instrument maker. Cymbals from India. Chinese singing balls. A singing bowl from a friend in Croatia.',
+  chapter4Para2:
+    'Last summer in Barcelona, I spent three months living with people who gathered every week to improvise together. They started calling me <strong class="text-slate-200 font-normal">"Tina with the bowl."</strong> That is when I understood — I was not collecting instruments. I was finding my voice.',
+  chapter4Para3:
+    'Last week I played my first sound bath for others. I loved every moment. I do not love talking as much as I love <strong class="text-slate-200 font-normal">listening to bodies</strong>. Sound is a language I trust.',
+  chapter4Aside: 'I don\'t love talking as much as I love listening to bodies.',
+
+  instrumentsLabel: 'Instruments collected along the way',
+  inst1: 'Shamanic drum', inst1Origin: '— Serbia',
+  inst2: 'Hand drum', inst2Origin: '— Ecuador',
+  inst3: 'Rain sticks', inst3Origin: '— Ecuador',
+  inst4: 'Small hang', inst4Origin: '— Serbia',
+  inst5: 'Cymbals', inst5Origin: '— India',
+  inst6: 'Singing balls', inst6Origin: '— China',
+  inst7: 'Singing bowl', inst7Origin: '— Croatia',
+  inst8: 'Piano', inst8Origin: '— childhood',
+  inst9: 'Flamenco shoes', inst9Origin: '— Spain',
+
+  drivesLabel: 'What shapes the work',
+  drivesTitle: 'Not a methodology.',
+  drivesTitleEm: 'A way of being.',
+  drive1Title: 'Psychology',
+  drive1Text: 'Understanding the human psyche — its patterns, wounds, and unrealised potential. Trained in psychodrama, bodily awareness, and group process over many years.',
+  drive2Title: 'The body as guide',
+  drive2Text: 'The body carries wisdom that words often cannot reach. Movement, sound, breath, and sensation are primary languages in my work — not additions to it.',
+  drive3Title: 'Group intelligence',
+  drive3Text: 'Something emerges when people gather with intention that no individual can produce alone. I have spent years learning how to hold that space — online and in person.',
+  drive4Title: 'Living the crossroads',
+  drive4Text: 'I know what it means to be at a threshold — between who you were and who you are becoming. I do not guide people away from that discomfort. I sit with them in it.',
+
+  trainingLabel: 'Formal grounding',
+  trainingTitle: 'Years of training,',
+  trainingTitleEm: 'honestly stated.',
+  trainingPara1:
+    'My formal grounding includes psychology studies, four years of classical psychodrama training in Novi Sad, and the <strong class="text-slate-200 font-normal">Advanced Level of Psychodramatic Bodywork®</strong> with Susan Aaron — the Canadian psychotherapist and originator of the method, recipient of the ASGPP Innovator\'s Award.',
+  trainingPara2:
+    'I completed the Advanced Level training without the final certification exam — a practical matter of distance and resources that never resolved itself. That door remains open.',
+  trainingPara3:
+    'I also hold certificates from four cycles of <strong class="text-slate-200 font-normal">Physical Theatre</strong> with director Marija Farmer, including devising process and Complicité methodology. Movement, embodiment, and the dramaturgy of the body have been central to my practice for over a decade.',
+
+  closingQuote: 'I don\'t have all the answers. But I know how to',
+  closingQuoteEm: 'hold the space while you find yours.',
+  ctaWork: 'Work with me',
+  ctaContact: 'Get in touch',
+};
       work: {
         title: 'Work With Me',
         intro:
@@ -328,37 +390,99 @@ const translations = {
         ctaSubject: 'Upit za Zoom Maestru',
         
         },
-      about: {
-        title: 'O mom radu',
-        intro: 'Moje prisustvo, moja praksa, moja posvećenost transformaciji',
-        para1:
-          'Moj put je počeo jednim pitanjem: šta pomaže ljudima da pronađu sebe kada su izgubljeni? Ta radoznalost me je odvela ka psihologiji, radu sa grupnim procesima i, na kraju, ka razumevanju da se transformacija ne događa kroz davanje instrukcija, već kroz stvaranje uslova za autentično otkrivanje.',
-        para2:
-          'Godinama proučavam kako ljudi prolaze kroz promene — strah, zbunjenost i trenutke neočekivane jasnoće. Naučila sam da telo nosi mudrost koju smo zaboravili, da simboli govore na način na koji reči ne mogu i da se, kada se okupimo sa namerom, nešto snažno rađa u prostoru između nas.',
-        atCrossroads: 'Na raskršću',
-        crossroadsText:
-          '"Mnogi važni trenuci u životu dešavaju se na raskršćima — kada se jedna priča završava, a nova počinje. To nisu problemi koje treba brzo rešiti. To su pozivi da postanemo potpunije ono što jesmo."',
-        para3:
-          'Svoju praksu posvetila sam podršci ljudima u ovim liminalnim prostorima. Bilo da preispitujete svoj pravac, tugujete za onim što je bilo ili osećate da nešto novo želi da se rodi, moj rad je da vam pomognem da pronađete jasnoću — ne kroz odgovore koje ja dajem, već kroz buđenje onoga što već znate.',
-        guidesWork: 'Šta vodi moj rad',
-        psychologyTitle: 'Psihologija',
-        psychologyText:
-          'Razumevanje ljudske psihe — obrazaca, rana, snaga i neiskorišćenog potencijala.',
-        processTitle: 'Grupni proces',
-        processText:
-          'Mudrost koja se pojavljuje kada se ljudi okupe autentično, čuvajući prostor za individualnu i kolektivnu transformaciju.',
-        embodiedTitle: 'Telesna svesnost',
-        embodiedText:
-          'Ponovno povezivanje sa mudrošću tela — kroz dah, senzaciju, pokret i prisustvo.',
-        symbolicTitle: 'Simbolički i umetnički rad',
-        symbolicText:
-          'Korišćenje metafore, slike, zvuka i rituala kako bi se pristupilo dubljim slojevima svesti i transformacije.',
-        archetype: 'Arhetip raskršća',
-        archetypeText:
-          'Mnoge drevne kulture opisuju vodiče koji se pojavljuju u ključnim životnim trenucima — one koji stoje na pragu između onoga što je bilo i onoga što bi moglo da bude. Arhetip Aurethre predstavlja upravo to — prisustvo koje osvetljava put napred, ne namećući smer, već budeći vaše unutrašnje znanje.',
-        archetypeText2:
-          'To je duh mog rada: da budem stabilno prisustvo dok prolazite kroz sopstvenu transformaciju, poštujući i dubinu onoga odakle dolazite i potencijal onoga kuda idete.',
-      },
+     const about_sr = {
+  eyebrow: 'O meni',
+  heroTitle: 'Sve učim',
+  heroTitleEm: 'kroz iskustvo.',
+  heroIntro:
+    'Psiholog, facilitator, zvučni praktičar. Živela sam na četiri kontinenta, sakupljala instrumente iz svakog mesta koje sam zvala domom i godinama učila šta znači držati prostor — za druge i za sebe.',
+  placesLived: 'Mesta gde sam živela',
+
+  storyLabel: 'Priča',
+
+  chapter1Label: 'Početak',
+  chapter1Title: 'Otišla sam na psihologiju',
+  chapter1TitleEm: 'da razumem ljude.',
+  chapter1Para1:
+    'Pre fakulteta provela sam dve godine u <strong class="text-slate-200 font-normal">Istraživačkoj Stanici Petnica</strong> — mestu gde radoznali mladi idu da odu dublje. Na fakultet sam stigla već znajući šta me čeka, što mi je omogućilo da se fokusiram na ono što je zaista važno: ljude u prostoru.',
+  chapter1Para2:
+    'Dok sam držala časove statistike studentima psihologije, brzo sam shvatila da moj posao nije o brojevima. Već o <strong class="text-slate-200 font-normal">otporu prema brojevima</strong> — strahu, očekivanjima, pričama koje pričamo sebi o tome šta možemo i ne možemo da razumemo.',
+  chapter1Para3:
+    'U 2009. godini otišla sam na prvu radionicu Telesne Psihodrame. Gledala sam transformacije u realnom vremenu. Osećala sam ih u sopstvenom telu. Od tog momenta znala sam — ovo je moj svet.',
+  chapter1Aside:
+    'Ne verujem objašnjenjima toliko koliko verujem iskustvu. Nešto mora da prođe kroz telo da bi postalo stvarno.',
+
+  chapter2Label: 'Vulkan',
+  chapter2Title: 'Ekvador, šamanski bubanj',
+  chapter2TitleEm: 'i 200 dolara u džepu.',
+  chapter2Para1:
+    'Dok sam volontirala za Američko udruženje za grupnu psihoterapiju i psihodramu, upoznala sam Shirley — ženu koja je 50 godina bila u psihodrami i studirala sa samim Morenom. Organizovala je retreat na dnu vulkana Pululahua u Ekvadoru. Kombinacija psihodrame i indijanske medicine.',
+  chapter2Para2:
+    'Bila sam inicirana u šamanski bubanj u Subotici. Kad mi je opisala retreat, rekla sam da — pre nego što sam imala novac. Prijatelj mi je platio kartu u jednom pravcu. Stigla sam sa 200 dolara, platila 120 za retreat — i ostala šest meseci.',
+  chapter2Para3:
+    'U Ekvadoru sam <strong class="text-slate-200 font-normal">procvetala</strong>. Imala sam skoro ništa — i osećala se potpuno primljenom. Formirala se duhovna porodica. Neko mi je ponudio stan. Živela sam, kuvala, šetala i učila kulturu iznutra.',
+  chapter2Aside:
+    'Ono što sam naučila u Ekvadoru: sigurnost ne dolazi od toga što imaš dovoljno. Dolazi od toga što si primljena.',
+
+  chapter3Label: 'Povratak',
+  chapter3Title: 'Raskršća za mene nisu',
+  chapter3TitleEm: 'samo metafore.',
+  chapter3Para1:
+    'Vratila sam se u Srbiju jer je mama morala na operaciju — aneurizma na mozgu. Ja sam njeno jedino dete. Nije bilo dileme.',
+  chapter3Para2:
+    'Povratak je bio težak. Ekvador je otvorio nešto u meni, a Srbija — sa svom svojom poznatošću — osećala se odjednom tijesno. Pokušala sam Indiju, pozvana od kolege da pomognem u ponovnom pokretanju instituta za psihodramu nakon Covida. Očekivala sam da će me spasiti. Umesto toga, slomila me je na drugačiji način. Tri meseca umesto šest. Sve uštedine potrošene.',
+  chapter3Para3:
+    'Ono što su me te godine naučile: raskršće nije problem koji treba brzo rešiti. To je poziv da postaneš potpunije ono što jesi. Prestala sam da tražim mesto koje će sve popraviti i počela da gradim rad iznutra prema spolja.',
+
+  chapter4Label: 'Tina sa činijom',
+  chapter4Title: 'Nisam odlučila da radim sa zvukom.',
+  chapter4TitleEm: 'To se nakupilo.',
+  chapter4Para1:
+    'Iz svakog mesta gde sam živela, donela sam nešto. Ručno izrađen bubanj od Amarua, čoveka iz džungle na ekvadorskom retreatu. Kišne štapove. Mali hang od srpskog majstora instrumenata. Cimbalo iz Indije. Kineske zvučne kuglice. Zvučnu činiju od prijatelja u Hrvatskoj.',
+  chapter4Para2:
+    'Prošlog leta u Barseloni provela sam tri meseca živeći sa ljudima koji su se svake nedelje okupljali da improvizuju zajedno. Počeli su da me zovu <strong class="text-slate-200 font-normal">"Tina sa činijom."</strong> Tada sam shvatila — nisam sakupljala instrumente. Pronalazila sam svoj glas.',
+  chapter4Para3:
+    'Prošle nedelje sam prvi put svirala zvučnu kupku za druge. Uživala sam u svakom trenutku. Ne volim toliko pričanje koliko volim <strong class="text-slate-200 font-normal">slušanje tela</strong>. Zvuk je jezik kojemu verujem.',
+  chapter4Aside: 'Ne volim toliko pričanje koliko volim slušanje tela.',
+
+  instrumentsLabel: 'Instrumenti sakupljeni putem',
+  inst1: 'Šamanski bubanj', inst1Origin: '— Srbija',
+  inst2: 'Ručni bubanj', inst2Origin: '— Ekvador',
+  inst3: 'Kišni štapovi', inst3Origin: '— Ekvador',
+  inst4: 'Mali hang', inst4Origin: '— Srbija',
+  inst5: 'Cimbalo', inst5Origin: '— Indija',
+  inst6: 'Zvučne kuglice', inst6Origin: '— Kina',
+  inst7: 'Zvučna činija', inst7Origin: '— Hrvatska',
+  inst8: 'Klavir', inst8Origin: '— detinjstvo',
+  inst9: 'Cipele za flamenko', inst9Origin: '— Španija',
+
+  drivesLabel: 'Šta oblikuje rad',
+  drivesTitle: 'Nije metodologija.',
+  drivesTitleEm: 'To je način bivanja.',
+  drive1Title: 'Psihologija',
+  drive1Text: 'Razumevanje ljudske psihe — njenih obrazaca, rana i neiskorišćenog potencijala. Godinama trenirana u psihodrami, telesnoj svesnosti i grupnim procesima.',
+  drive2Title: 'Telo kao vodič',
+  drive2Text: 'Telo nosi mudrost do koje reči često ne mogu da dopru. Pokret, zvuk, dah i senzacija su primarni jezici u mom radu — ne dodaci njemu.',
+  drive3Title: 'Grupna inteligencija',
+  drive3Text: 'Nešto se pojavljuje kada se ljudi okupe sa namerom što nijedan pojedinac ne može sam da stvori. Godinama učim kako da držim taj prostor — online i uživo.',
+  drive4Title: 'Živeti raskršće',
+  drive4Text: 'Znam kako je biti na pragu — između onoga ko si bio/la i onoga ko postaješ. Ne vodim ljude daleko od te nelagode. Sedim sa njima u njoj.',
+
+  trainingLabel: 'Formalno obrazovanje',
+  trainingTitle: 'Godine treninga,',
+  trainingTitleEm: 'iskreno navedene.',
+  trainingPara1:
+    'Moje formalno obrazovanje uključuje studije psihologije, četiri godine treninga klasične psihodrame u Novom Sadu i <strong class="text-slate-200 font-normal">Advanced Level Psychodramatic Bodywork®</strong> sa Susan Aaron — kanadskom psihoterapeutkinjom i osnivačicom metode, dobitnicom ASGPP Innovator\'s Award nagrade.',
+  trainingPara2:
+    'Advanced Level trening sam završila bez finalnog sertifikacionog ispita — praktična stvar distance i resursa koja se nikad nije rešila. Ta vrata ostaju otvorena.',
+  trainingPara3:
+    'Imam i sertifikate sa četiri ciklusa <strong class="text-slate-200 font-normal">Fizičkog Teatra</strong> sa rediteljkom Marijom Farmer, uključujući devising proces i Complicité metodologiju. Pokret, utelestvljenje i dramaturgia tela su centralni deo moje prakse više od jedne decenije.',
+
+  closingQuote: 'Nemam sve odgovore. Ali znam kako da',
+  closingQuoteEm: 'držim prostor dok ih ti pronalaziš.',
+  ctaWork: 'Rad sa mnom',
+  ctaContact: 'Javi se',
+};
       work: {
         title: 'Rad sa mnom',
         intro:
