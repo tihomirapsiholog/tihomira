@@ -1,4 +1,6 @@
 import { ArrowRight } from 'lucide-react';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Divider = ({ text }) => (
   <div className="py-16 text-center">
@@ -7,6 +9,16 @@ const Divider = ({ text }) => (
 );
 
 export default function WorkPage({ t, setCurrentPage }) {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.getElementById(location.hash.slice(1));
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+      }
+    }
+  }, [location.hash]);
   const services = [
     {
       label: t.work.service1Label,

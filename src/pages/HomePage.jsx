@@ -14,16 +14,16 @@ export default function HomePage({ setCurrentPage, t }) {
 
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <div className="flex flex-col items-center space-y-8">
-            <h1 className="font-serif text-6xl leading-tight text-yellow-100 lg:text-7xl">
+            <h1 className="font-serif font-light text-6xl leading-tight text-yellow-100 lg:text-7xl">
               Tihomira Stanojević
             </h1>
             <p className="whitespace-pre-line text-xl font-light italic text-slate-200">
               {t.home.tagline}
             </p>
-            <p className="mx-auto max-w-xl text-lg leading-relaxed text-slate-300">
+            <p className="mx-auto max-w-xl text-lg font-light leading-relaxed text-slate-300">
               {t.home.intro}
             </p>
-            <p className="text-sm uppercase tracking-[0.25em] text-slate-500">
+            <p className="text-sm font-light uppercase tracking-[0.25em] text-slate-500">
               {t.home.subline}
             </p>
           </div>
@@ -109,9 +109,9 @@ export default function HomePage({ setCurrentPage, t }) {
 
           <div className="grid gap-8 md:grid-cols-2">
             {[
-              { title: t.home.offering1, subtitle: t.home.offering1Sub, href: '/work-with-me#individual' },
-              { title: t.home.offering2, subtitle: t.home.offering2Sub, href: '/work-with-me#groups' },
-              { title: t.home.offering3, subtitle: t.home.offering3Sub, href: '/work-with-me#sound' },
+              { title: t.home.offering1, subtitle: t.home.offering1Sub, href: '/work#individual' },
+              { title: t.home.offering2, subtitle: t.home.offering2Sub, href: '/work#groups' },
+              { title: t.home.offering3, subtitle: t.home.offering3Sub, href: '/work#sound' },
               { title: t.home.offering4, subtitle: t.home.offering4Sub, href: '/zoom-maestra' },
             ].map((item, i) => (
               <button
