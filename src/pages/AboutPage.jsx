@@ -57,7 +57,7 @@ export default function AboutPage({ t }) {
     { name: t.about.inst13, origin: t.about.inst13Origin },
   ];
 
-  const locations = ['Serbia', 'Ecuador', 'India', 'China', 'Slovenia', 'Montenegro', 'Spain', 'Russia'];
+  const locations = ['Surdulica', 'Novi Sad', 'Belgrade', 'Ecuador', 'India', 'China', 'Slovenia', 'Montenegro', 'Spain', 'Russia', 'Malta'];
 
   return (
     <div className="bg-[#0b1220]">
