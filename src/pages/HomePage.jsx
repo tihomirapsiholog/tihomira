@@ -52,7 +52,27 @@ export default function HomePage({ setCurrentPage, t }) {
         transform: translateY(0);
       }
     }
+    @keyframes softFade {
+  from {
+    opacity: 0;
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
 
+@keyframes gentleRise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
     @keyframes heroZoom {
       0% {
         transform: scale(1);
@@ -166,31 +186,31 @@ export default function HomePage({ setCurrentPage, t }) {
           <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/80 via-black/30 to-transparent"></div>
 
           <div className="relative z-10 mx-auto max-w-4xl rounded-2xl bg-black/10 px-6 py-8 text-center backdrop-blur-[2px] sm:px-6 lg:px-8">
-            <div className="flex animate-[fadeUp_700ms_ease-out_both] flex-col items-center space-y-4">
-              <h1 className="font-serif text-6xl font-light leading-[1.05] tracking-[0.04em] text-yellow-50 [text-shadow:0_4px_20px_rgba(0,0,0,0.7)] lg:text-7xl">
-                Tihomira Stanojević
-              </h1>
+        <div className="flex flex-col items-center space-y-4">
+       <h1 className="animate-[gentleRise_700ms_ease-out_both] font-serif text-6xl font-light leading-[1.05] tracking-[0.04em] text-yellow-50 [text-shadow:0_4px_20px_rgba(0,0,0,0.7)] lg:text-7xl">
+         Tihomira Stanojević
+         </h1>
 
-              <p className="mx-auto max-w-[28ch] whitespace-pre-line text-2xl font-light italic leading-[1.9] text-yellow-100 [text-shadow:0_2px_10px_rgba(0,0,0,0.45)]">
-                {t.home.tagline}
-              </p>
+        <p className="mx-auto max-w-[28ch] whitespace-pre-line text-2xl font-light italic leading-[1.9] text-yellow-100 [text-shadow:0_2px_10px_rgba(0,0,0,0.45)] animate-[softFade_1200ms_ease-out_180ms_both]">
+        {t.home.tagline}
+          </p>
 
-              <div className="mx-auto mt-3 max-w-[60ch] whitespace-pre-line text-lg font-light leading-[1.75] text-slate-300">
-                <p>{t.home.intro}</p>
-                <p className="mt-4">{t.home.intro2}</p>
-                <p className="mt-4">{t.home.intro3}</p>
-              </div>
-
-              <div className="mt-2 h-px w-16 bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent animate-[dividerBreath_4s_ease-in-out_infinite]"></div>
-
-              <button
-                onClick={() => setCurrentPage('/contact')}
-                className="mt-6 text-sm tracking-[0.12em] text-yellow-200/80 transition hover:text-yellow-100"
-              >
-                Javi se
-              </button>
-            </div>
+        <div className="mx-auto mt-3 max-w-[60ch] whitespace-pre-line text-lg font-light leading-[1.75] text-slate-300 animate-[fadeUp_900ms_ease-out_320ms_both]">
+        <p>{t.home.intro}</p>
+        <p className="mt-4">{t.home.intro2}</p>
+        <p className="mt-4">{t.home.intro3}</p>
           </div>
+
+        <div className="mt-2 h-px w-16 bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent animate-[dividerBreath_4s_ease-in-out_infinite]"></div>
+
+        <button
+       onClick={() => setCurrentPage('/contact')}
+       className="mt-6 animate-[softFade_1400ms_ease-out_450ms_both] text-sm tracking-[0.12em] text-yellow-200/80 transition hover:text-yellow-100"
+    >
+       Javi se
+     </button>
+     </div>
+      </div>
 
           <div className="pointer-events-none absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center">
             <div className="h-10 w-px bg-yellow-400/40"></div>
