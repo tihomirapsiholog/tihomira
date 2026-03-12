@@ -177,24 +177,24 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
 
           <div className="grid gap-8 md:grid-cols-2">
             <div className="rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8">
+              <div className="mb-2 text-xs uppercase tracking-[0.2em] text-yellow-400">{t.zoom.testimonial1Name}</div>
               <div className="mb-6 text-4xl font-serif text-yellow-700/40">"</div>
               <p className="font-serif text-lg font-light italic leading-relaxed text-slate-200">
                 {t.zoom.testimonial1Text}
               </p>
               <div className="mt-8 border-t border-slate-700 pt-6">
-                <p className="text-sm font-medium text-white">{t.zoom.testimonial1Name}</p>
-                <p className="mt-1 text-xs leading-relaxed text-slate-500">{t.zoom.testimonial1Role}</p>
+                <p className="text-xs leading-relaxed text-slate-500">{t.zoom.testimonial1Role}</p>
               </div>
             </div>
 
             <div className="rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8">
+              <div className="mb-2 text-xs uppercase tracking-[0.2em] text-yellow-400">{t.zoom.testimonial2Name}</div>
               <div className="mb-6 text-4xl font-serif text-yellow-700/40">"</div>
               <p className="font-serif text-lg font-light italic leading-relaxed text-slate-200">
                 {t.zoom.testimonial2Text}
               </p>
               <div className="mt-8 border-t border-slate-700 pt-6">
-                <p className="text-sm font-medium text-white">{t.zoom.testimonial2Name}</p>
-                <p className="mt-1 text-xs leading-relaxed text-slate-500">{t.zoom.testimonial2Role}</p>
+                <p className="text-xs leading-relaxed text-slate-500">{t.zoom.testimonial2Role}</p>
               </div>
             </div>
           </div>

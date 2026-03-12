@@ -305,9 +305,8 @@ const translations = {
       testimonial1Name: 'Diane Adderley & Dr. Ronald Wiener',
       testimonial1Role: 'Diane Adderley, Honorary President and Senior Sociodrama Trainer, British Psychodrama Association, Guest Faculty Tele\'Drama International. Dr. Ronald Wiener, Senior Sociodrama Trainer.',
       testimonial2Text: 'I have been collaborating with Tina on various projects for a long time. Every time I know she is taking care of the space and the technical details on the Zoom platform, I have not the slightest worry or doubt about how the event will unfold and conclude.',
-      testimonial2Name: 'Mara',
-      testimonial2Role: 'PermaVEZ Collective',
-      ctaSubject: 'Zoom Maestra Support Inquiry',
+      testimonial2Name: 'PermaVEZ Collective',
+      testimonial2Role: 'Marija Babić',
     },
     contact: {
       title: 'Get in Touch',
@@ -648,8 +647,8 @@ const translations = {
       testimonial1Name: 'Diane Adderley & Dr. Ronald Wiener',
       testimonial1Role: 'Diane Adderley, počasni predsednik i viši trener sociodrame, Britička psihodramska asocijacija, gostujući predavač Tele\'Drama International. Dr. Ronald Wiener, viši trener sociodrame.',
       testimonial2Text: 'Sa Tinom sarađujem već dugo vremena na različitim projektima, i svaki put kada znam da ona brine o prostoru i tehničkim detaljima na Zoom platformi, nemam ni najmanju brigu ili sumnju oko toga kako će se događaj odvijati i završiti.',
-      testimonial2Name: 'Mara',
-      testimonial2Role: 'Kolektiv PermaVEZ',
+      testimonial2Name: 'Kolektiv PermaVEZ',
+      testimonial2Role: 'Marija Babić',
       ctaSubject: 'Upit za Zoom Maestru',
     },
     contact: {
