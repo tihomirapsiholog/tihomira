@@ -12,7 +12,7 @@ export default function HomePage({ setCurrentPage, t }) {
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/60"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
 
-        <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+        <div className="relative z-10 mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
           <div className="flex flex-col items-center space-y-8">
             <h1 className="font-serif font-light text-6xl leading-tight text-yellow-100 lg:text-7xl">
               Tihomira Stanojević
@@ -20,13 +20,13 @@ export default function HomePage({ setCurrentPage, t }) {
             <p className="whitespace-pre-line text-xl font-light italic text-slate-200">
               {t.home.tagline}
             </p>
-            <p className="mx-auto max-w-xl text-lg font-light leading-relaxed text-slate-300">
+            <p className="mx-auto max-w-3xl text-lg font-light leading-relaxed text-slate-300">
               {t.home.intro}
             </p>
-            <p className="mx-auto max-w-xl text-lg font-light leading-relaxed text-slate-300">
+           <p className="mx-auto max-w-3xl text-lg font-light leading-relaxed text-slate-300">
               {t.home.intro2}
             </p>
-            <p className="mx-auto max-w-xl text-lg font-light leading-relaxed text-slate-300">
+            <p className="mx-auto max-w-3xl text-lg font-light leading-relaxed text-slate-300">
               {t.home.intro3}
             </p>
             <p className="text-sm font-light uppercase tracking-[0.25em] text-slate-500">
