@@ -23,6 +23,12 @@ export default function HomePage({ setCurrentPage, t }) {
             <p className="mx-auto max-w-xl text-lg font-light leading-relaxed text-slate-300">
               {t.home.intro}
             </p>
+            <p className="mx-auto max-w-xl text-lg font-light leading-relaxed text-slate-300">
+              {t.home.intro2}
+            </p>
+            <p className="mx-auto max-w-xl text-lg font-light leading-relaxed text-slate-300">
+              {t.home.intro3}
+            </p>
             <p className="text-sm font-light uppercase tracking-[0.25em] text-slate-500">
               {t.home.subline}
             </p>
