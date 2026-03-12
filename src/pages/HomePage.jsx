@@ -1,180 +1,365 @@
 import { ArrowRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 export default function HomePage({ setCurrentPage, t }) {
+  const [scrollY, setScrollY] = useState(0);
+
+  const fadeUpStyle = `
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-light {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(
+        600px circle at var(--x, 50%) var(--y, 50%),
+        rgba(255, 220, 140, 0.12),
+        transparent 60%
+      );
+      transition: background 0.15s ease;
+      z-index: 1;
+    }
+
+    .custom-cursor {
+      position: fixed;
+      width: 14px;
+      height: 14px;
+      border-radius: 9999px;
+      background: rgba(255, 215, 120, 0.7);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      mix-blend-mode: screen;
+      transition: opacity 0.2s ease;
+      z-index: 9999;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heroZoom {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.08);
+      }
+    }
+
+    @keyframes dividerBreath {
+      0%, 100% {
+        opacity: 0.6;
+        transform: scaleX(1);
+      }
+      50% {
+        opacity: 1;
+        transform: scaleX(1.15);
+      }
+    }
+
+    @keyframes scrollCue {
+      0% {
+        opacity: 0;
+        transform: translateY(-4px);
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+    }
+  `;
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const cursor = document.createElement('div');
+    cursor.className = 'custom-cursor';
+    document.body.appendChild(cursor);
+
+    const move = (e) => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+    };
+
+    window.addEventListener('mousemove', move);
+
+    return () => {
+      window.removeEventListener('mousemove', move);
+      cursor.remove();
+    };
+  }, []);
+
+  useEffect(() => {
+    const elements = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const hero = document.querySelector('.hero-light');
+
+    const move = (e) => {
+      if (!hero) return;
+      hero.style.setProperty('--x', `${e.clientX}px`);
+      hero.style.setProperty('--y', `${e.clientY}px`);
+    };
+
+    window.addEventListener('mousemove', move);
+
+    return () => window.removeEventListener('mousemove', move);
+  }, []);
+
   return (
-    <div className="space-y-0">
-      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
-        <img
-          src="/silhouette.jpg"
-          alt="Silhouette"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+    <>
+      <style>{fadeUpStyle}</style>
 
-        <div className="relative z-10 mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center space-y-8">
-            <h1 className="font-serif font-light text-6xl leading-tight text-yellow-100 lg:text-7xl">
-              Tihomira Stanojević
-            </h1>
-            <p className="whitespace-pre-line text-xl font-light italic text-slate-200">
-              {t.home.tagline}
-            </p>
-            <p className="mx-auto max-w-3xl text-lg font-light leading-relaxed text-slate-300">
-              {t.home.intro}
-            </p>
-           <p className="mx-auto max-w-3xl text-lg font-light leading-relaxed text-slate-300">
-              {t.home.intro2}
-            </p>
-            <p className="mx-auto max-w-3xl text-lg font-light leading-relaxed text-slate-300">
-              {t.home.intro3}
-            </p>
-            <p className="text-sm font-light uppercase tracking-[0.25em] text-slate-500">
-              {t.home.subline}
-            </p>
+      <div className="space-y-0 font-sans">
+        <section className="relative flex min-h-[85vh] items-start justify-center overflow-hidden pt-32 reveal">
+          <div className="absolute inset-0 animate-[heroZoom_40s_linear_infinite]">
+            <img
+              src="/silhouette.jpg"
+              alt="Silhouette"
+              className="absolute inset-0 h-[108%] w-full object-cover will-change-transform"
+              style={{ transform: `translateY(${scrollY * 0.12}px)` }}
+            />
           </div>
-        </div>
-      </section>
 
-      <section className="bg-[#0e1628] py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-4 text-center font-serif text-4xl text-white">
-            {t.home.howIWork}
-          </h2>
-          <p className="mx-auto mb-16 max-w-2xl text-center text-lg text-slate-400">
-            {t.home.workDescription}
-          </p>
+          <div className="hero-light"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black/70"></div>
+          <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/80 via-black/30 to-transparent"></div>
 
-         <div className="grid gap-8 md:grid-cols-3">
-            {[
-             { icon: '↻', title: t.home.pillar1Title, desc: t.home.pillar1Desc, question: t.home.pillar1Question },
-              { icon: '◯', title: t.home.pillar2Title, desc: t.home.pillar2Desc, question: t.home.pillar2Question },
-            { icon: '✦', title: t.home.pillar3Title, desc: t.home.pillar3Desc, question: t.home.pillar3Question },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="group h-80 cursor-pointer"
-                style={{ perspective: '1000px' }}
+          <div className="relative z-10 mx-auto max-w-4xl rounded-2xl bg-black/10 px-6 py-8 text-center backdrop-blur-[2px] sm:px-6 lg:px-8">
+            <div className="flex animate-[fadeUp_700ms_ease-out_both] flex-col items-center space-y-4">
+              <h1 className="font-serif text-6xl font-light leading-[1.05] tracking-[0.04em] text-yellow-50 [text-shadow:0_4px_20px_rgba(0,0,0,0.7)] lg:text-7xl">
+                Tihomira Stanojević
+              </h1>
+
+              <p className="mx-auto max-w-[28ch] whitespace-pre-line text-2xl font-light italic leading-[1.9] text-yellow-100 [text-shadow:0_2px_10px_rgba(0,0,0,0.45)]">
+                {t.home.tagline}
+              </p>
+
+              <div className="mx-auto mt-3 max-w-[60ch] whitespace-pre-line text-lg font-light leading-[1.75] text-slate-300">
+                <p>{t.home.intro}</p>
+                <p className="mt-4">{t.home.intro2}</p>
+                <p className="mt-4">{t.home.intro3}</p>
+              </div>
+
+              <div className="mt-2 h-px w-16 bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent animate-[dividerBreath_4s_ease-in-out_infinite]"></div>
+
+              <button
+                onClick={() => setCurrentPage('/contact')}
+                className="mt-6 text-sm tracking-[0.12em] text-yellow-200/80 transition hover:text-yellow-100"
               >
+                Javi se
+              </button>
+            </div>
+          </div>
+
+          <div className="pointer-events-none absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center">
+            <div className="h-10 w-px bg-yellow-400/40"></div>
+            <div className="mt-1 h-2 w-px bg-yellow-300/70 animate-[scrollCue_2.4s_ease-in-out_infinite]"></div>
+          </div>
+        </section>
+
+        <section className="bg-[#0e1628] py-24 md:py-28">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <h2 className="mb-6 text-center font-serif text-4xl text-white md:text-5xl reveal">
+              {t.home.howIWork}
+            </h2>
+
+            <p className="mx-auto mb-16 max-w-2xl text-center text-lg text-slate-400 reveal">
+              {t.home.workDescription}
+            </p>
+
+            <div className="grid gap-8 md:grid-cols-3">
+              {[
+                {
+                  icon: '↻',
+                  title: t.home.pillar1Title,
+                  desc: t.home.pillar1Desc,
+                  question: t.home.pillar1Question,
+                },
+                {
+                  icon: '◯',
+                  title: t.home.pillar2Title,
+                  desc: t.home.pillar2Desc,
+                  question: t.home.pillar2Question,
+                },
+                {
+                  icon: '✦',
+                  title: t.home.pillar3Title,
+                  desc: t.home.pillar3Desc,
+                  question: t.home.pillar3Question,
+                },
+              ].map((item, i) => (
                 <div
-                  className="relative h-full w-full transition-transform duration-700"
-                  style={{ transformStyle: 'preserve-3d' }}
-                  onMouseEnter={e => e.currentTarget.style.transform = 'rotateY(180deg)'}
-                  onMouseLeave={e => e.currentTarget.style.transform = 'rotateY(0deg)'}
+                  key={i}
+                  className="group h-80 cursor-pointer reveal"
+                  style={{ perspective: '1000px' }}
                 >
                   <div
-                    className="absolute inset-0 rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8 hover:border-yellow-500/40 hover:shadow-xl"
-                    style={{ backfaceVisibility: 'hidden' }}
+                    className="relative h-full w-full transition-transform duration-700"
+                    style={{ transformStyle: 'preserve-3d' }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'rotateY(180deg)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'rotateY(0deg)';
+                    }}
                   >
-                    <div className="mb-4 text-4xl text-yellow-400">{item.icon}</div>
-                    <h3 className="mb-3 font-serif text-xl text-white">{item.title}</h3>
-                    <p className="leading-relaxed text-slate-400">{item.desc}</p>
-                  </div>
-                  <div
-                    className="absolute inset-0 rounded-2xl border border-yellow-500/40 bg-[#1a2540] p-8 flex items-center justify-center"
-                    style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
-                  >
-                    <p className="text-center text-lg italic leading-relaxed text-yellow-100">
-                      {item.question}
-                    </p>
+                    <div
+                      className="absolute inset-0 rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8 hover:border-yellow-500/40 hover:shadow-xl"
+                      style={{ backfaceVisibility: 'hidden' }}
+                    >
+                      <div className="mb-4 text-4xl text-yellow-400">{item.icon}</div>
+                      <h3 className="mb-3 font-serif text-xl text-white">{item.title}</h3>
+                      <p className="leading-relaxed text-slate-400">{item.desc}</p>
+                    </div>
+
+                    <div
+                      className="absolute inset-0 flex items-center justify-center rounded-2xl border border-yellow-500/40 bg-[#1a2540] p-8"
+                      style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+                    >
+                      <p className="text-center font-serif text-lg italic leading-relaxed text-yellow-100">
+                        {item.question}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-         </div>
-        </div>
-      </section>
-
-      <section className="bg-[#0b1220] py-20">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <div>
-            <h2 className="mb-6 font-serif text-3xl text-white">
-              {t.home.toolsTitle}
-            </h2>
-            <p className="mb-4 leading-relaxed text-slate-300">
-              {t.home.toolsText}
-            </p>
+              ))}
+            </div>
           </div>
+        </section>
 
-          <div className="relative overflow-hidden rounded-2xl border border-yellow-700/20 shadow-2xl">
-            <img
-              src="/instruments.jpg"
-              alt="Instruments"
-              className="h-[420px] w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0b1220]/60 via-transparent to-transparent"></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#0e1628] py-16">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-12 text-center font-serif text-3xl text-white">
-            {t.home.offerings}
-          </h2>
-
-          <div className="grid gap-8 md:grid-cols-2">
-            {[
-              { title: t.home.offering1, subtitle: t.home.offering1Sub, href: '/work#individual' },
-              { title: t.home.offering2, subtitle: t.home.offering2Sub, href: '/work#groups' },
-              { title: t.home.offering3, subtitle: t.home.offering3Sub, href: '/work#sound' },
-              { title: t.home.offering4, subtitle: t.home.offering4Sub, href: '/zoom-maestra' },
-            ].map((item, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrentPage(item.href)}
-                className="rounded-xl border-l-4 border-yellow-500/50 bg-[#121c31] p-6 text-left transition-all hover:border-yellow-400 hover:bg-[#16223b]"
-              >
-                <h3 className="text-lg font-serif text-white">{item.title}</h3>
-                <p className="mt-2 text-sm text-slate-400">{item.subtitle}</p>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#10192c] py-16">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-10 rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8 md:grid-cols-2">
-            <div>
-              <p className="mb-3 text-sm uppercase tracking-[0.3em] text-yellow-400">
-                Zoom Maestra
-              </p>
-              <h2 className="mb-4 font-serif text-3xl text-white">
-                {t.home.zoomTitle}
+        <section className="bg-[#0b1220] py-24 md:py-28">
+          <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+            <div className="reveal">
+              <h2 className="mb-6 font-serif text-3xl text-white md:text-4xl">
+                {t.home.toolsTitle}
               </h2>
-              <p className="leading-relaxed text-slate-300">
-                {t.home.zoomText}
+              <p className="mb-4 leading-relaxed text-slate-300">
+                {t.home.toolsText}
               </p>
             </div>
-            <div className="flex md:justify-end">
-              <button
-                onClick={() => setCurrentPage('/zoom-maestra')}
-                className="inline-flex items-center gap-2 rounded-full bg-yellow-500 px-8 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400"
-              >
-                {t.home.zoomButton}
-                <ArrowRight size={18} />
-              </button>
+
+            <div className="relative overflow-hidden rounded-2xl border border-yellow-700/20 shadow-2xl reveal">
+              <img
+                src="/instruments.jpg"
+                alt="Instruments"
+                className="h-[420px] w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0b1220]/60 via-transparent to-transparent"></div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="bg-gradient-to-r from-[#0a0f1a] via-[#111827] to-[#0a0f1a] py-20 text-white">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="mb-6 font-serif text-4xl">{t.home.ready}</h2>
-          <p className="mb-8 text-lg leading-relaxed text-slate-300">
-            {t.home.inviteText}
-          </p>
-          <button
-            onClick={() => setCurrentPage('/contact')}
-            className="inline-flex items-center gap-2 rounded-full bg-yellow-500 px-8 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400"
-          >
-            {t.home.cta}
-            <ArrowRight size={18} />
-          </button>
-        </div>
-      </section>
-    </div>
+        <section className="bg-[#0e1628] py-20 md:py-24">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <h2 className="mb-12 text-center font-serif text-3xl text-white md:text-4xl reveal">
+              {t.home.offerings}
+            </h2>
+
+            <div className="grid gap-8 md:grid-cols-2">
+              {[
+                { title: t.home.offering1, subtitle: t.home.offering1Sub, href: '/work#individual' },
+                { title: t.home.offering2, subtitle: t.home.offering2Sub, href: '/work#groups' },
+                { title: t.home.offering3, subtitle: t.home.offering3Sub, href: '/work#sound' },
+                { title: t.home.offering4, subtitle: t.home.offering4Sub, href: '/zoom-maestra' },
+              ].map((item, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentPage(item.href)}
+                  className="rounded-xl border-l-4 border-yellow-500/50 bg-[#121c31] p-8 text-left transition-all hover:border-yellow-400 hover:bg-[#16223b] reveal"
+                >
+                  <h3 className="text-lg font-serif text-white">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{item.subtitle}</p>
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#10192c] py-20 md:py-24">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div className="grid items-center gap-10 rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8 md:grid-cols-2 reveal">
+              <div>
+                <p className="mb-3 text-sm uppercase tracking-[0.3em] text-yellow-400">
+                  Zoom Maestra
+                </p>
+                <h2 className="mb-4 font-serif text-3xl text-white md:text-4xl">
+                  {t.home.zoomTitle}
+                </h2>
+                <p className="leading-relaxed text-slate-300">
+                  {t.home.zoomText}
+                </p>
+              </div>
+
+              <div className="flex md:justify-end">
+                <button
+                  onClick={() => setCurrentPage('/zoom-maestra')}
+                  className="inline-flex items-center gap-2 rounded-full bg-yellow-500 px-8 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400"
+                >
+                  {t.home.zoomButton}
+                  <ArrowRight size={18} />
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-gradient-to-r from-[#0a0f1a] via-[#111827] to-[#0a0f1a] py-24 md:py-28 text-white">
+          <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8 reveal">
+            <h2 className="mb-6 font-serif text-4xl md:text-5xl">{t.home.ready}</h2>
+            <p className="mb-8 text-lg leading-relaxed text-slate-300">
+              {t.home.inviteText}
+            </p>
+            <button
+              onClick={() => setCurrentPage('/contact')}
+              className="inline-flex items-center gap-2 rounded-full bg-yellow-500 px-8 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400"
+            >
+              {t.home.cta}
+              <ArrowRight size={18} />
+            </button>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
