@@ -171,12 +171,12 @@ export default function HomePage({ setCurrentPage, t }) {
 
       <div className="space-y-0 font-sans">
         <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden pt-20 md:pt-16 reveal">
-          <div className="absolute inset-0 animate-[heroZoom_40s_linear_infinite]">
+          <div className="absolute inset-0">
            <img
           src="/silhouette.jpg"
           alt="Silhouette"
            className="absolute inset-0 h-full w-full object-cover will-change-transform"
-          style={{ transform: `translateY(${scrollY * 0.08}px)` }}
+          style={{ transform: `translateY(${scrollY * 0.04}px)` }}
           />
           </div>
 
@@ -191,15 +191,13 @@ export default function HomePage({ setCurrentPage, t }) {
          Tihomira Stanojević
          </h1>
 
-        <p className="mx-auto max-w-[28ch] whitespace-pre-line text-2xl font-light italic leading-[1.9] text-yellow-100 [text-shadow:0_2px_10px_rgba(0,0,0,0.45)] animate-[softFade_1200ms_ease-out_180ms_both]">
-        {t.home.tagline}
-          </p>
+        <p className="mx-auto max-w-[22ch] text-[1.9rem] font-light italic leading-[1.35] text-yellow-100/75 animate-[softFade_1200ms_ease-out_180ms_both]">
+  {t.home.tagline}
+</p>
 
-        <div className="mx-auto mt-4 max-w-[68ch] whitespace-pre-line text-lg font-light leading-[1.9] text-slate-300 animate-[fadeUp_900ms_ease-out_320ms_both]">
-        <p>{t.home.intro}</p>
-        <p className="mt-4">{t.home.intro2}</p>
-        <p className="mt-4">{t.home.intro3}</p>
-          </div>
+        <div className="mx-auto mt-8 max-w-[58ch] text-[1.18rem] font-light leading-[1.95] text-slate-200">
+  <p>{t.home.intro}</p>
+</div>
 
         <div className="mt-2 h-px w-16 bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent animate-[dividerBreath_4s_ease-in-out_infinite]"></div>
         </div>
