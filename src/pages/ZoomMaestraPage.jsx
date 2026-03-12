@@ -166,6 +166,41 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
         </div>
       </section>
 
+      <section className="bg-[#0b1220] py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <p className="mb-3 text-xs uppercase tracking-[0.3em] text-yellow-400 text-center">
+            {t.zoom.testimonialsLabel}
+          </p>
+          <h2 className="mb-12 font-serif text-3xl text-white text-center">
+            {t.zoom.testimonialsTitle}
+          </h2>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className="rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8">
+              <div className="mb-6 text-4xl font-serif text-yellow-700/40">"</div>
+              <p className="font-serif text-lg font-light italic leading-relaxed text-slate-200">
+                {t.zoom.testimonial1Text}
+              </p>
+              <div className="mt-8 border-t border-slate-700 pt-6">
+                <p className="text-sm font-medium text-white">{t.zoom.testimonial1Name}</p>
+                <p className="mt-1 text-xs leading-relaxed text-slate-500">{t.zoom.testimonial1Role}</p>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8">
+              <div className="mb-6 text-4xl font-serif text-yellow-700/40">"</div>
+              <p className="font-serif text-lg font-light italic leading-relaxed text-slate-200">
+                {t.zoom.testimonial2Text}
+              </p>
+              <div className="mt-8 border-t border-slate-700 pt-6">
+                <p className="text-sm font-medium text-white">{t.zoom.testimonial2Name}</p>
+                <p className="mt-1 text-xs leading-relaxed text-slate-500">{t.zoom.testimonial2Role}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-gradient-to-r from-[#0a0f1a] via-[#111827] to-[#0a0f1a] py-20 text-white">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="mb-6 font-serif text-4xl">{t.zoom.ctaTitle}</h2>
