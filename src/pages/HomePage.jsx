@@ -29,19 +29,6 @@ export default function HomePage({ setCurrentPage, t }) {
       z-index: 1;
     }
 
-    .custom-cursor {
-      position: fixed;
-      width: 14px;
-      height: 14px;
-      border-radius: 9999px;
-      background: rgba(255, 215, 120, 0.7);
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      mix-blend-mode: screen;
-      transition: opacity 0.2s ease;
-      z-index: 9999;
-    }
-
     @keyframes fadeUp {
       from {
         opacity: 0;
@@ -115,24 +102,6 @@ export default function HomePage({ setCurrentPage, t }) {
   }, []);
 
   useEffect(() => {
-    const cursor = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    document.body.appendChild(cursor);
-
-    const move = (e) => {
-      cursor.style.left = `${e.clientX}px`;
-      cursor.style.top = `${e.clientY}px`;
-    };
-
-    window.addEventListener('mousemove', move);
-
-    return () => {
-      window.removeEventListener('mousemove', move);
-      cursor.remove();
-    };
-  }, []);
-
-  useEffect(() => {
     const elements = document.querySelectorAll('.reveal');
 
     const observer = new IntersectionObserver(
@@ -179,7 +148,7 @@ export default function HomePage({ setCurrentPage, t }) {
           style={{ transform: `translateY(${scrollY * 0.04}px)` }}
           />
           </div>
-
+custom-cursor
           <div className="hero-light"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/60"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black/70"></div>
