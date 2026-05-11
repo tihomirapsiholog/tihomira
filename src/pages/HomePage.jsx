@@ -156,15 +156,15 @@ custom-cursor
 
           <div className="relative z-10 mx-auto max-w-4xl px-6 py-8 text-center sm:px-6 lg:px-8">
         <div className="flex flex-col items-center space-y-6">
-       <h1 className="animate-[gentleRise_700ms_ease-out_both] font-serif text-6xl font-light leading-[1.05] tracking-[0.08em] text-yellow-50 [text-shadow:0_4px_20px_rgba(0,0,0,0.7)] lg:text-7xl">
+       <h1 className="animate-[gentleRise_700ms_ease-out_both] max-w-full break-words font-serif text-5xl font-light leading-[1.05] tracking-[0.03em] text-yellow-50 [text-shadow:0_4px_20px_rgba(0,0,0,0.7)] sm:text-6xl lg:text-7xl lg:tracking-[0.08em]">
          Tihomira Stanojević
-         </h1>
+        </h1>
 
-        <p className="mx-auto max-w-[22ch] text-[1.9rem] font-light italic leading-[1.35] text-yellow-100/75 animate-[softFade_1200ms_ease-out_180ms_both]">
+        <p className="mx-auto max-w-[22ch] text-[1.45rem] font-light italic leading-[1.35] text-yellow-100/75 animate-[softFade_1200ms_ease-out_180ms_both] sm:text-[1.9rem]">
   {t.home.tagline}
 </p>
 
-        <div className="mx-auto mt-8 max-w-[58ch] text-[1.18rem] font-light leading-[1.95] text-slate-200">
+        <div className="mx-auto mt-8 max-w-[58ch] px-2 text-[1rem] font-light leading-[1.8] text-slate-200 sm:text-[1.18rem] sm:leading-[1.95]">
   <p>{t.home.intro}</p>
 </div>
 
@@ -315,7 +315,9 @@ custom-cursor
               onClick={() => setCurrentPage('/en/silence-practice')}
               className="inline-flex items-center gap-2 rounded-full border border-yellow-500/30 px-7 py-3 text-sm tracking-wide text-yellow-100 transition-all hover:border-yellow-400 hover:bg-yellow-400 hover:text-slate-950"
             >
-              Enter the practice
+              {location.pathname.startsWith('/sr')
+               ? 'Prati proces'
+                : 'Follow the process'}
               <ArrowRight size={18} />
             </button>
           </div>
