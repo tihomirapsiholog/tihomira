@@ -171,11 +171,6 @@ custom-cursor
         <div className="mt-2 h-px w-16 bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent animate-[dividerBreath_4s_ease-in-out_infinite]"></div>
         </div>
       </div>
-
-          <div className="pointer-events-none absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center">
-            <div className="h-10 w-px bg-yellow-400/40"></div>
-            <div className="mt-1 h-2 w-px bg-yellow-300/70 animate-[scrollCue_2.4s_ease-in-out_infinite]"></div>
-          </div>
         </section>
 
         <section className="bg-[#0e1628] py-24 md:py-28">
