@@ -295,7 +295,51 @@ custom-cursor
             </div>
           </div>
         </section>
+<section className="bg-[#111827] py-24 md:py-28">
+  <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <div className="overflow-hidden rounded-[32px] border border-yellow-700/20 bg-[#161f33] reveal">
 
+      <div className="grid lg:grid-cols-2">
+        
+        <div className="flex flex-col justify-center p-10 md:p-14">
+          <p className="mb-4 text-xs uppercase tracking-[0.35em] text-yellow-400/80">
+            The Practice of Silence
+          </p>
+
+          <h2 className="mb-6 font-serif text-4xl leading-tight text-white md:text-5xl">
+            A real-time exploration of silence, attention, and the nervous system.
+          </h2>
+
+          <p className="mb-8 max-w-xl text-lg leading-relaxed text-slate-300">
+            A three-month preparation process for ten days of silence —
+            documented through field notes, embodiment, and psychological observation.
+          </p>
+
+          <div>
+            <button
+              onClick={() => setCurrentPage('/en/silence-practice')}
+              className="inline-flex items-center gap-2 rounded-full border border-yellow-500/30 px-7 py-3 text-sm tracking-wide text-yellow-100 transition-all hover:border-yellow-400 hover:bg-yellow-400 hover:text-slate-950"
+            >
+              Enter the practice
+              <ArrowRight size={18} />
+            </button>
+          </div>
+        </div>
+
+        <div className="relative min-h-[320px] overflow-hidden">
+          <img
+            src="/silhouette.jpg"
+            alt="Silence Practice"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-r from-[#161f33] via-[#161f33]/40 to-transparent lg:bg-gradient-to-l"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
         <section className="bg-[#10192c] py-20 md:py-24">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-10 rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8 md:grid-cols-2 reveal">
