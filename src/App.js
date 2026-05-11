@@ -10,6 +10,7 @@ import WorkPage from "./pages/WorkPage";
 import EventsPage from "./pages/EventsPage";
 import ZoomMaestraPage from "./pages/ZoomMaestraPage";
 import ContactPage from "./pages/ContactPage";
+import SilencePracticePage from "./pages/SilencePracticePage";
 
 function getLangFromPath(pathname) {
   if (pathname.startsWith("/sr")) return "sr";
@@ -26,8 +27,8 @@ function usePageTitle() {
       "/sr/about": "Tihomira | O meni",
       "/en/work": "Tihomira | Work With Me",
       "/sr/work": "Tihomira | Rad sa mnom",
-      "/en/events": "Tihomira | Events",
-      "/sr/events": "Tihomira | Događaji",
+      //"/en/events": "Tihomira | Events",
+      //"/sr/events": "Tihomira | Događaji",
       "/en/zoom-maestra": "Zoom Maestra | Technical Support for Online Facilitators",
       "/sr/zoom-maestra": "Zoom Maestra | Podrška za online facilitatore",
       "/en/contact": "Tihomira | Contact",
@@ -97,6 +98,8 @@ export default function App() {
           <Route path="/sr/zoom-maestra" element={<ZoomMaestraPage setCurrentPage={goToPage} t={translations.sr} />} />
           <Route path="/en/contact" element={<ContactPage t={translations.en} language="en" />} />
           <Route path="/sr/contact" element={<ContactPage t={translations.sr} language="sr" />} />
+          <Route path="/en/silence-practice" element={<SilencePracticePage />} />
+          <Route path="/sr/praksa-tisine" element={<SilencePracticePage />} />  
         </Routes>
       </main>
       <Footer t={t} />

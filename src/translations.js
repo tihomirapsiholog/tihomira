@@ -47,6 +47,20 @@ const translations = {
       zoomText: 'Zoom Maestra supports facilitators, educators, and therapists who want to work online with more ease, less technical stress, and a stronger sense of flow.',
       zoomButton: 'Explore Zoom Maestra',
     },
+    silencePractice: {
+  label: 'The Practice of Silence',
+  heroTitle: 'Silence is not the absence of sound.',
+  heroTitleEm: 'It is the presence of yourself.',
+  heroSubtitle: 'A real-time exploration of attention, embodiment, stimulation, and the nervous system — during three months of preparation for ten days of silence.',
+  cta: 'Read field notes',
+  experimentLabel: 'Real-Time Experiment',
+experimentText1:
+  'I am preparing for ten days of silence.',
+experimentText2:
+  'No phone. No speaking. No writing. No nicotine.',
+experimentText3:
+  'This page documents what happens before that threshold is crossed.',
+},
     about: {
       eyebrow: 'About',
       heroTitle: 'I learn everything',
@@ -391,6 +405,21 @@ const translations = {
       zoomButton: 'Istraži Zoom Maestru',
       ctaSubject: 'Upit za Zoom Maestru',
     },
+    silencePractice: {
+       label: 'Praksa tišine',
+      heroTitle: 'Tišina nije odsustvo zvuka.',
+      heroTitleEm: 'Već prisustvo sebe.',
+      heroSubtitle:
+    'Istraživanje pažnje, tela, stimulacije i nervnog sistema tokom tri meseca pripreme za deset dana tišine.',
+  cta: 'Čitaj zapise',
+  experimentLabel: 'Eksperiment u realnom vremenu',
+experimentText1:
+  'Pripremam se za deset dana tišine.',
+experimentText2:
+  'Bez telefona. Bez govora. Bez pisanja. Bez nikotina.',
+experimentText3:
+  'Ova stranica beleži šta se događa pre nego što se taj prag pređe.',
+},
     about: {
       eyebrow: 'O meni',
       heroTitle: 'Sve učim',

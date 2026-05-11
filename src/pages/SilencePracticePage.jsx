@@ -32,7 +32,27 @@ export default function SilencePracticePage() {
           </a>
         </div>
       </section>
+<section className="px-6 py-24 border-t border-[#2b2b2b]/10">
+  <div className="max-w-3xl mx-auto">
+    <p className="uppercase tracking-[0.25em] text-xs mb-8 text-[#6f6a61]">
+      {t.experimentLabel}
+    </p>
 
+    <div className="space-y-6">
+      <p className="font-serif text-3xl md:text-4xl leading-tight">
+        {t.experimentText1}
+      </p>
+
+      <p className="text-lg md:text-xl text-[#4a4741] leading-relaxed">
+        {t.experimentText2}
+      </p>
+
+      <p className="text-lg leading-relaxed text-[#4a4741] max-w-2xl pt-4">
+        {t.experimentText3}
+      </p>
+    </div>
+  </div>
+</section>
       <section id="field-notes" className="px-6 py-24 border-t border-[#2b2b2b]/10">
         <div className="max-w-3xl mx-auto">
           <p className="uppercase tracking-[0.25em] text-xs mb-6 text-[#6f6a61]">
