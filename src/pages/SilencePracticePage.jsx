@@ -7,10 +7,10 @@ export default function SilencePracticePage() {
   const t = translations[lang].silencePractice;
 
   return (
-    <main className="min-h-screen bg-[#f5f1ea] text-[#2b2b2b]">
+    <main className="min-h-screen bg-bg-[#1f1f1c] text-[#f3efe6]">
       <section className="min-h-screen flex items-center px-6 py-24">
         <div className="max-w-4xl mx-auto">
-          <p className="uppercase tracking-[0.28em] text-xs md:text-sm mb-8 text-[#6f6a61]">
+          <p className="uppercase tracking-[0.28em] text-xs md:text-sm mb-8 text-[#9b9488]">
             Tiha Psiha · {t.label}
           </p>
 
@@ -26,7 +26,7 @@ export default function SilencePracticePage() {
 
           <a
             href="#field-notes"
-            className="inline-flex items-center rounded-full border border-[#2b2b2b]/20 px-6 py-3 text-sm tracking-wide text-[#2b2b2b] hover:bg-[#2b2b2b] hover:text-[#f5f1ea] transition-colors duration-300"
+            className="inline-flex items-center rounded-full border border-[#2b2b2b]/20 px-6 py-3 text-sm tracking-wide text-[#2b2b2b] hover:bg-[#f3efe6] hover:text-[#1f1f1c] transition-colors duration-300"
           >
             {t.cta}
           </a>
@@ -43,7 +43,7 @@ export default function SilencePracticePage() {
         {t.experimentText1}
       </p>
 
-      <p className="text-lg md:text-xl text-[#4a4741] leading-relaxed">
+      <p className="text-lg md:text-xl text-[#c8c2b8] leading-relaxed">
         {t.experimentText2}
       </p>
 
