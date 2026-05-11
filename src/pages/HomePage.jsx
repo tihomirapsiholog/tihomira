@@ -155,19 +155,17 @@ export default function HomePage({ setCurrentPage, t }) {
 
           <div className="relative z-10 mx-auto max-w-4xl px-6 py-8 text-center sm:px-6 lg:px-8">
         <div className="flex flex-col items-center space-y-6">
-       <h1 className="animate-[gentleRise_700ms_ease-out_both] mx-auto max-w-full text-center font-serif text-[3.8rem] font-light leading-[0.98] tracking-[0.015em] text-yellow-50 [text-shadow:0_4px_20px_rgba(0,0,0,0.7)] sm:text-6xl lg:text-7xl lg:tracking-[0.08em]">
-       Tihomira Stanojević
+       <h1 className="animate-[gentleRise_700ms_ease-out_both] px-2 font-serif text-[3.2rem] font-light leading-[0.98] tracking-[0.01em] text-yellow-50 [text-shadow:0_4px_20px_rgba(0,0,0,0.7)] sm:text-6xl lg:text-7xl lg:tracking-[0.08em]">
+        Tihomira Stanojević
       </h1>
 
-        <p className="mx-auto max-w-[90vw] text-[1.45rem] font-light italic leading-[1.35] text-yellow-100/75 animate-[softFade_1200ms_ease-out_180ms_both] sm:text-[1.9rem]">
+        <p className="mx-auto max-w-[85vw] text-[1.35rem] font-light italic leading-[1.35] text-yellow-100/75 animate-[softFade_1200ms_ease-out_180ms_both] sm:max-w-[22ch] sm:text-[1.9rem]">
   {t.home.tagline}
 </p>
 
         <div className="mx-auto mt-8 max-w-[58ch] px-2 text-[1rem] font-light leading-[1.8] text-slate-200 sm:text-[1.18rem] sm:leading-[1.95]">
   <p>{t.home.intro}</p>
 </div>
-
-        <div className="mt-2 h-px w-16 bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent animate-[dividerBreath_4s_ease-in-out_infinite]"></div>
         </div>
       </div>
         </section>
