@@ -148,13 +148,13 @@ export default function HomePage({ setCurrentPage, t }) {
           style={{ transform: `translateY(${scrollY * 0.04}px)` }}
           />
           </div>
-custom-cursor
           <div className="hero-light"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/60"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black/70"></div>
           <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/80 via-black/30 to-transparent"></div>
 
-          <div className="relative z-10 mx-auto w-full max-w-4xl overflow-hidden px-5 py-8 text-center sm:px-6 lg:px-8">
+          <div className="relative z-10 mx-auto flex w-full justify-center px-5 py-8">
+          <div className="w-full max-w-[92vw] sm:max-w-3xl text-center">
         <div className="flex flex-col items-center space-y-6">
        <h1 className="animate-[gentleRise_700ms_ease-out_both] mx-auto max-w-full text-center font-serif text-[3.8rem] font-light leading-[0.98] tracking-[0.015em] text-yellow-50 [text-shadow:0_4px_20px_rgba(0,0,0,0.7)] sm:text-6xl lg:text-7xl lg:tracking-[0.08em]">
        Tihomira Stanojević
@@ -169,6 +169,7 @@ custom-cursor
 </div>
 
         <div className="mt-2 h-px w-16 bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent animate-[dividerBreath_4s_ease-in-out_infinite]"></div>
+        </div>
         </div>
       </div>
         </section>
