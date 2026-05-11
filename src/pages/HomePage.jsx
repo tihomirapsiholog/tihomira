@@ -312,12 +312,16 @@ custom-cursor
 
           <div>
             <button
-              onClick={() => setCurrentPage('/en/silence-practice')}
+              onClick={() =>
+           setCurrentPage(
+             t.nav.home === 'Početak'
+             ? '/sr/praksa-tisine'
+            : '/en/silence-practice'
+             )
+            }
               className="inline-flex items-center gap-2 rounded-full border border-yellow-500/30 px-7 py-3 text-sm tracking-wide text-yellow-100 transition-all hover:border-yellow-400 hover:bg-yellow-400 hover:text-slate-950"
             >
-              {location.pathname.startsWith('/sr')
-               ? 'Prati proces'
-                : 'Follow the process'}
+              {t.home.silenceBlockButton}
               <ArrowRight size={18} />
             </button>
           </div>
