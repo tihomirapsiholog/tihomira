@@ -138,7 +138,7 @@ export default function HomePage({ setCurrentPage, t }) {
     <>
       <style>{fadeUpStyle}</style>
 
-      <div className="space-y-0 font-sans">
+      <div className="space-y-0 font-sans overflow-x-hidden">
         <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden pt-20 md:pt-16 reveal">
           <div className="absolute inset-0">
            <img

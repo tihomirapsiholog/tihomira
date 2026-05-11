@@ -1,4 +1,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
+}html,
+body {
+  overflow-x: hidden;
 }
