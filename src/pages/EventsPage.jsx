@@ -1,6 +1,21 @@
 import { ArrowRight } from 'lucide-react';
 
 export default function EventsPage({ t }) {
+  const upcomingEvents = [
+    {
+      title: 'Zagrevanje za nove uloge',
+      subtitle: 'Kada stari identitet više ne stoji, a novi još nije živ.',
+    },
+    {
+      title: 'Zaglavljeni u promenama',
+      subtitle: 'Kad prošlost drži, a budućnost zove.',
+    },
+    {
+      title: 'Ko u nama protestuje',
+      subtitle: 'Osvetljavanje unutrašnjeg sabotera.',
+    },
+  ];
+
   return (
     <div className="bg-[#0b1220] text-slate-100">
       <section className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
@@ -66,9 +81,7 @@ export default function EventsPage({ t }) {
             </div>
 
             <div className="rounded-[28px] border border-yellow-700/20 bg-[#10192c] p-8">
-              <h3 className="mb-8 font-serif text-2xl text-white">
-                Prijava
-              </h3>
+              <h3 className="mb-8 font-serif text-2xl text-white">Prijava</h3>
 
               <form
                 action="https://formspree.io/f/mwvyywkd"
@@ -115,14 +128,15 @@ export default function EventsPage({ t }) {
 
                 <button
                   type="submit"
-                  <p className="pt-2 text-sm leading-relaxed text-slate-500">
-  Nakon prijave dobićete email sa potvrdom mesta i instrukcijama za plaćanje.
-</p>
                   className="inline-flex items-center gap-2 rounded-full bg-yellow-500 px-8 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400"
                 >
                   Pošalji prijavu
                   <ArrowRight size={18} />
                 </button>
+
+                <p className="pt-2 text-sm leading-relaxed text-slate-500">
+                  Nakon prijave dobićete email sa potvrdom mesta i instrukcijama za plaćanje.
+                </p>
               </form>
             </div>
           </div>
@@ -135,15 +149,10 @@ export default function EventsPage({ t }) {
             U najavi
           </h2>
 
-          <div className="grid gap-6 md:grid-cols-2">
-           {[
-           'Susret i impuls',
-            'Telo i glas',
-           'Pažnja i preplavljenost',
-           'Simbolička akcija',
-].map((item) => (
+          <div className="grid gap-6 md:grid-cols-3">
+            {upcomingEvents.map((item) => (
               <div
-                key={item}
+                key={item.title}
                 className="rounded-[24px] border border-yellow-700/10 bg-[#10192c] p-8"
               >
                 <p className="text-sm uppercase tracking-[0.2em] text-yellow-400/60">
@@ -151,8 +160,12 @@ export default function EventsPage({ t }) {
                 </p>
 
                 <h3 className="mt-4 font-serif text-2xl text-white">
-                  {item}
+                  {item.title}
                 </h3>
+
+                <p className="mt-4 text-sm leading-relaxed text-slate-400">
+                  {item.subtitle}
+                </p>
               </div>
             ))}
           </div>
