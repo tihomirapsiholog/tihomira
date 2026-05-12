@@ -180,12 +180,11 @@ const translations = {
       trainingTitle: 'Years of training,',
       trainingTitleEm: 'honestly stated.',
       trainingPara1:
-        'My formal grounding includes psychology studies, four years of classical psychodrama training in Novi Sad, and the <strong class="text-slate-200 font-normal">Advanced Level of Psychodramatic Bodywork®</strong> with Susan Aaron — the Canadian psychotherapist and originator of the method, recipient of the ASGPP Innovator\'s Award.',
+      "My formal education includes undergraduate and master’s studies in psychology at the University of Novi Sad, alongside many years of work with experiential, action-based and group-centered methods."
       trainingPara2:
-        'I completed the Advanced Level training. That door remains open.',
+      "For four years I trained in classical psychodrama in Novi Sad, while my work continued to evolve through the ongoing process of Advanced Level Psychodramatic Bodywork® training with Susan Aaron — Canadian psychotherapist and founder of the method.<br /><br />My approach has also been deeply influenced by multiple cycles of Physical Theatre training with director Marija Farmer, through which I explored devising processes, Complicité methodology, embodiment, symbolic action and the subtle dynamics that emerge between people when experience is given space to unfold.",
       trainingPara3:
-        'I also hold certificates from four cycles of <strong class="text-slate-200 font-normal">Physical Theatre</strong> with director Marija Farmer, including devising process and Complicité methodology. Movement, embodiment, and the dramaturgy of the body have been central to my practice for over a decade.',
-      closingQuote: "I don't have all the answers. But I know how to",
+      "Over the years I continued learning through Transactional Analysis training at Psihopolis, Tele'Drama Practitioner trainings, Ericksonian approaches and conversational hypnosis, as well as the Ethics — Path to the True Self training with Tadeja Bradaš.<br /><br />Sound and rhythm have also been part of my life for a long time. I completed elementary music school, and in recent years that exploration has continued through gong work and experiential spaces involving attention, resonance and embodied presence.<br /><br />Over the past fifteen years I have worked with groups in different contexts — from psychodramatic and educational settings to international online and hybrid processes, including Tele'Drama environments, ecological sociodrama and workshops exploring the relationship between humans, technology, attention and contemporary life.<br /><br />Before fully dedicating myself to experiential work, my first research project at Petnica Science Center received an award while I was still in high school. That research-oriented impulse has remained an important part of my practice, alongside my interest in group intelligence, embodiment and the ways people create meaning through relationship and experience.",      closingQuote: "I don't have all the answers. But I know how to",
       closingQuoteEm: 'hold the space while you find yours.',
       ctaWork: 'Work with me',
       ctaContact: 'Get in touch',
@@ -568,11 +567,11 @@ fieldNotes: [
       trainingTitle: 'Godine treninga,',
       trainingTitleEm: 'iskreno navedene.',
       trainingPara1:
-        'Moje formalno obrazovanje uključuje studije psihologije, četiri godine treninga klasične psihodrame u Novom Sadu i <strong class="text-slate-200 font-normal">Advanced Level Psychodramatic Bodywork®</strong> sa Susan Aaron — kanadskom psihoterapeutkinjom i osnivačicom metode, dobitnicom ASGPP Innovator\'s Award nagrade.',
+      "Moje formalno obrazovanje uključuje osnovne i master studije psihologije na Univerzitetu u Novom Sadu, kao i dugogodišnji rad sa iskustvenim, akcionim i grupnim metodama.",
       trainingPara2:
-        'Advanced Level trening sam završila. Ta vrata ostaju otvorena.',
+      "Četiri godine trenirala sam klasičnu psihodramu u Novom Sadu, a moj rad se dalje razvijao kroz ongoing proces Advanced Level Psychodramatic Bodywork® treninga sa Susan Aaron — kanadskom psihoterapeutkinjom i osnivačicom metode.<br /><br />Veliki uticaj na moj način rada imali su i ciklusi Fizičkog Teatra sa rediteljkom Marijom Farmer, kroz koje sam godinama istraživala devising proces, Complicité metodologiju, odnos tela i simboličke akcije, kao i ono što se događa između ljudi kada iskustvo dobije prostor da se odigra.",
       trainingPara3:
-        'Imam i sertifikate sa četiri ciklusa <strong class="text-slate-200 font-normal">Fizičkog Teatra</strong> sa rediteljkom Marijom Farmer, uključujući devising proces i Complicité metodologiju. Pokret, utelestvljenje i dramaturgia tela su centralni deo moje prakse više od jedne decenije.',
+      "Tokom godina dodatno sam učila kroz Transakcionu analizu u Psihopolisu, Tele'Drama Practitioner treninge, Ericksonian pristup i konverzacijsku hipnozu, kao i trening Etika — Put do pravog ja sa Tadejom Bradaš.<br /><br />Zvuk i ritam takođe su dugo deo mog života. Završila sam osnovnu muzičku školu, a poslednjih godina to istraživanje nastavilo se kroz rad sa gongom i iskustvenim prostorima koji uključuju pažnju, rezonancu i telesko prisustvo.<br /><br />Tokom poslednjih petnaest godina radila sam sa grupama u različitim kontekstima — od psihodramskih i edukativnih prostora do međunarodnih online i hibridnih procesa, uključujući Tele'Drama okruženje, ekološku sociodramu i radionice koje istražuju odnos čoveka, tehnologije, pažnje i savremenog života.<br /><br />Pre nego što sam se potpuno posvetila iskustvenom radu, moj prvi istraživački projekat u Petnici bio je nagrađen još tokom srednjoškolskih dana. Taj istraživački nerv ostao je važan deo mog rada — zajedno sa interesovanjem za grupnu inteligenciju, embodiment i načine na koje ljudi stvaraju značenje kroz odnos i iskustvo.",
       closingQuote: 'Nemam sve odgovore. Ali znam kako da',
       closingQuoteEm: 'držim prostor dok ih ti pronalaziš.',
       ctaWork: 'Rad sa mnom',
@@ -740,7 +739,7 @@ events: {
       testimonialsTitle: 'Njihovim rečima',
       testimonial1Text: 'Osećam se sigurno i sa poverenjem kada je Tina na tehničkom kormilu naših radionica. Znam da će odraditi dobar posao i ne moram da brinem ni oko čega — a ako se i dogodi problem, siguran/na sam da će ga rešiti sa sebi svojstvenim mirom. Toplo je preporučujem kolegama i svima koji razmišljaju o saradnji.',
       testimonial1Name: 'Diane Adderley & Dr. Ronald Wiener',
-      testimonial1Role: 'Diane Adderley, počasni predsednik i viši trener sociodrame, Britička psihodramska asocijacija, gostujući predavač Tele\'Drama International. Dr. Ronald Wiener, viši trener sociodrame.',
+      testimonial1Role: 'Diane Adderley, počasni predsednik i viši trener sociodrame, Britička psihodramska asocijacija, gostujući predavač Tele'Drama International. Dr. Ronald Wiener, viši trener sociodrame.',
       testimonial2Text: 'Sa Tinom sarađujem već dugo vremena na različitim projektima, i svaki put kada znam da ona brine o prostoru i tehničkim detaljima na Zoom platformi, nemam ni najmanju brigu ili sumnju oko toga kako će se događaj odvijati i završiti.',
       testimonial2Name: 'Kolektiv PermaVEZ',
       testimonial2Role: 'Marija Babić',
