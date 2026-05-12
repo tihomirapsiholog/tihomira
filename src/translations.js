@@ -180,10 +180,10 @@ const translations = {
       trainingTitle: 'Years of training,',
       trainingTitleEm: 'honestly stated.',
       trainingPara1:
-      "My formal education includes undergraduate and master’s studies in psychology at the University of Novi Sad, alongside many years of work with experiential, action-based and group-centered methods."
-      trainingPara2:
-      "For four years I trained in classical psychodrama in Novi Sad, while my work continued to evolve through the ongoing process of Advanced Level Psychodramatic Bodywork® training with Susan Aaron — Canadian psychotherapist and founder of the method.<br /><br />My approach has also been deeply influenced by multiple cycles of Physical Theatre training with director Marija Farmer, through which I explored devising processes, Complicité methodology, embodiment, symbolic action and the subtle dynamics that emerge between people when experience is given space to unfold.",
-      trainingPara3:
+      "My formal education includes undergraduate and master studies in psychology at the University of Novi Sad, alongside many years of work with experiential, action-based and group-centered methods."
+      trainingPara2: 
+      "For four years I trained in classical psychodrama in Novi Sad, while my work continued to evolve through the ongoing process of Advanced Level Psychodramatic Bodywork® training with Susan Aaron — Canadian psychotherapist and founder of the method.<br /><br />My approach has also been deeply influenced by multiple cycles of Physical Theatre training with director Marija Farmer, through which I explored devising processes, Complicité methodology, embodiment, symbolic action and the subtle dynamics that emerge between people when experience is given space to unfold.",      trainingPara3:
+      trainingPara3: 
       "Over the years I continued learning through Transactional Analysis training at Psihopolis, Tele'Drama Practitioner trainings, Ericksonian approaches and conversational hypnosis, as well as the Ethics — Path to the True Self training with Tadeja Bradaš.<br /><br />Sound and rhythm have also been part of my life for a long time. I completed elementary music school, and in recent years that exploration has continued through gong work and experiential spaces involving attention, resonance and embodied presence.<br /><br />Over the past fifteen years I have worked with groups in different contexts — from psychodramatic and educational settings to international online and hybrid processes, including Tele'Drama environments, ecological sociodrama and workshops exploring the relationship between humans, technology, attention and contemporary life.<br /><br />Before fully dedicating myself to experiential work, my first research project at Petnica Science Center received an award while I was still in high school. That research-oriented impulse has remained an important part of my practice, alongside my interest in group intelligence, embodiment and the ways people create meaning through relationship and experience.",      closingQuote: "I don't have all the answers. But I know how to",
       closingQuoteEm: 'hold the space while you find yours.',
       ctaWork: 'Work with me',
@@ -739,7 +739,7 @@ events: {
       testimonialsTitle: 'Njihovim rečima',
       testimonial1Text: 'Osećam se sigurno i sa poverenjem kada je Tina na tehničkom kormilu naših radionica. Znam da će odraditi dobar posao i ne moram da brinem ni oko čega — a ako se i dogodi problem, siguran/na sam da će ga rešiti sa sebi svojstvenim mirom. Toplo je preporučujem kolegama i svima koji razmišljaju o saradnji.',
       testimonial1Name: 'Diane Adderley & Dr. Ronald Wiener',
-      testimonial1Role: 'Diane Adderley, počasni predsednik i viši trener sociodrame, Britička psihodramska asocijacija, gostujući predavač Tele'Drama International. Dr. Ronald Wiener, viši trener sociodrame.',
+      testimonial1Role: 'Diane Adderley, počasni predsednik i viši trener sociodrame, Britička psihodramska asocijacija, gostujući predavač Tele''Drama International. Dr. Ronald Wiener, viši trener sociodrame.',
       testimonial2Text: 'Sa Tinom sarađujem već dugo vremena na različitim projektima, i svaki put kada znam da ona brine o prostoru i tehničkim detaljima na Zoom platformi, nemam ni najmanju brigu ili sumnju oko toga kako će se događaj odvijati i završiti.',
       testimonial2Name: 'Kolektiv PermaVEZ',
       testimonial2Role: 'Marija Babić',
