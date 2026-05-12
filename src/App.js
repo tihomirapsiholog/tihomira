@@ -101,7 +101,7 @@ export default function App() {
           <Route path="/sr/praksa-tisine" element={<SilencePracticePage />} />  
         </Routes>
       </main>
-      <Footer t={t} />
+      <Footer t={t} language={language} />
 
       {!isContactPage && (
         <button
