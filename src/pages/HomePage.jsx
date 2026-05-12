@@ -262,31 +262,6 @@ export default function HomePage({ setCurrentPage, t }) {
           </div>
         </section>
 
-        <section className="bg-[#0e1628] py-20 md:py-24">
-          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-            <h2 className="mb-12 text-center font-serif text-3xl text-white md:text-4xl reveal">
-              {t.home.offerings}
-            </h2>
-
-            <div className="grid gap-8 md:grid-cols-2">
-              {[
-                { title: t.home.offering1, subtitle: t.home.offering1Sub, href: '/work#individual' },
-                { title: t.home.offering2, subtitle: t.home.offering2Sub, href: '/work#groups' },
-                { title: t.home.offering3, subtitle: t.home.offering3Sub, href: '/work#sound' },
-                { title: t.home.offering4, subtitle: t.home.offering4Sub, href: '/zoom-maestra' },
-              ].map((item, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrentPage(item.href)}
-                  className="rounded-xl border-l-4 border-yellow-500/50 bg-[#121c31] p-8 text-left transition-all hover:border-yellow-400 hover:bg-[#16223b] reveal"
-                >
-                  <h3 className="text-lg font-serif text-white">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{item.subtitle}</p>
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
 <section className="bg-[#111827] py-24 md:py-28">
   <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
     <div className="overflow-hidden rounded-[32px] border border-yellow-700/20 bg-[#161f33] reveal">
