@@ -257,14 +257,22 @@ const translations = {
       questionsText2: 'Sometimes a single conversation is enough to see things differently.',
       reach: 'Reach Out',
     },
-    events: {
-      title: 'Gatherings & Workshops',
-      noEvents: 'New gatherings and workshops are announced periodically.',
-      stayConnected: 'Stay connected for invitations to upcoming transformational experiences.',
-      interested: 'Interested in bringing me to your community?',
-      custom: 'I offer custom facilitation for organizations, teams, and communities seeking transformational experiences.',
-      customText: 'Get in touch about custom processes →',
-    },
+events: {
+  label: 'Gatherings & Events',
+  heroTitle:
+    'Spaces where experience becomes visible through encounter, action, and group work.',
+  heroIntro:
+    'Events at Tiha Psiha are not designed as performances, lectures, or quick solutions. They are spaces for experiential exploration — through relationship, action, symbol, role, group presence, and what forms between people.',
+  currentTitle: 'Current exploration',
+  event1Type: 'Online experiential workshop',
+  event1Title: 'AI & Human Encounter',
+  event1Text:
+    'An experiential exploration of the relationship between humans and artificial intelligence through psychodramatic and action-based methods.',
+  event1Button: 'Ask about this workshop',
+  inquiryTitle: 'Ongoing themes',
+  inquiryText:
+    'Current themes of exploration include attention, AI and human relationship, group encounter, embodiment, impulse, overstimulation, symbolic process, and relational dynamics.',
+},
     zoom: {
       title: 'Zoom Maestra',
       eyebrow: 'Supporting the invisible architecture of online events',
@@ -637,14 +645,22 @@ fieldNotes: [
       questionsText2: 'Ponekad je dovoljan jedan razgovor da se stvari vide drugačije.',
       reach: 'Javite se',
     },
-    events: {
-      title: 'Okupljanja i radionice',
-      noEvents: 'Nova okupljanja i radionice objavljuju se periodično.',
-      stayConnected: 'Ostanite povezani za pozive na predstojeća transformativna iskustva.',
-      interested: 'Želite da me dovedete u svoju zajednicu?',
-      custom: 'Nudim prilagođenu facilitaciju za organizacije, timove i zajednice koje traže transformativna iskustva.',
-      customText: 'Javite se povodom prilagođenih procesa →',
-    },
+events: {
+  label: 'Susreti',
+  heroTitle:
+    'Prostori u kojima iskustvo postaje vidljivo kroz susret, akciju i grupni rad.',
+  heroIntro:
+    'Događaji u Tihој Psihi nisu performansi, predavanja ni brza rešenja. To su prostori za iskustveno istraživanje — kroz odnos, akciju, simbol, ulogu, prisustvo grupe i ono što se formira između ljudi.',
+  currentTitle: 'Trenutno istraživanje',
+  event1Type: 'Online iskustvena radionica',
+  event1Title: 'AI & Human Encounter',
+  event1Text:
+    'Iskustveno istraživanje odnosa između čoveka i veštačke inteligencije kroz psihodramske i akcione metode.',
+  event1Button: 'Raspitaj se o radionici',
+  inquiryTitle: 'Teme koje istražujem',
+  inquiryText:
+    'Trenutne teme istraživanja uključuju pažnju, odnos čoveka i AI-a, grupni susret, telo, impuls, preplavljenost, simbolički proces i relacione dinamike.',
+},
     zoom: {
       title: 'Zoom Maestra',
       eyebrow: 'Podrška nevidljivoj strukturi online događaja',
