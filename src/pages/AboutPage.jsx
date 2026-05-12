@@ -133,7 +133,7 @@ export default function AboutPage({ t, setCurrentPage }) {
       </section>
 
       {/* STORY */}
-      <section className="px-4 py16 sm:px-6 lg:px-8">
+      <section className="px-4 pt-16 pb-24 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-6xl items-start gap-16 lg:grid-cols-[220px_1fr]">
           <div className="sticky top-28 hidden lg:block">
             <p className="mb-4 text-xs uppercase tracking-[0.25em] text-yellow-400">
