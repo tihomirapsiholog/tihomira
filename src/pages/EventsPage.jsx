@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 
 export default function EventsPage({ t }) {
-  const [submitted, setSubmitted] = useState(false);
+const [submitted, setSubmitted] = useState(false);
 
 const handleSubmit = async (e) => {
   e.preventDefault();
 
-  const form = e.target;
+  const form = e.currentTarget;
   const data = new FormData(form);
 
   const response = await fetch('https://formspree.io/f/mwvyywkd', {
@@ -106,11 +106,8 @@ const handleSubmit = async (e) => {
               <h3 className="mb-8 font-serif text-2xl text-white">Prijava</h3>
 
               <form
-                action="https://formspree.io/f/mwvyywkd"
-                method="POST"
-                className="space-y-5"
-              >
-                <input type="hidden" name="event" value="AI & Human Encounter" />
+              onSubmit={handleSubmit} className="space-y-5">
+               <input type="hidden" name="event" value="AI & Human Encounter" />
 
                 <div>
                   <label className="mb-2 block text-sm text-slate-400">
