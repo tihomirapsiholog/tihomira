@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function Footer({ t, language }) {
   return (
     <footer className="mt-20 border-t border-yellow-700/10 bg-[#090e18] text-slate-300">
-      <div className="mx-auto max-w-6xl px-4 py-14 text-center sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 py-10 text-center sm:px-6 lg:px-8">
         <p className="font-serif text-lg text-yellow-400">
           {t.footer.brand}
         </p>
@@ -12,12 +12,12 @@ export default function Footer({ t, language }) {
           Prostor za iskustveno istraživanje unutrašnjeg života.
         </p>
 
-        <p className="mx-auto mt-6 max-w-2xl text-xs leading-relaxed text-slate-500">
+        <p className="mx-auto mt-4 max-w-2xl text-xs leading-relaxed text-slate-500">
           Master psihologije sa 15+ godina iskustva u grupnom radu,
           psihodrami i međunarodnim facilitacijskim okruženjima.
         </p>
 
-        <div className="mx-auto mt-10 max-w-xl">
+        <div className="mx-auto mt8 max-w-xl">
           <Link
             to={`/${language}/zoom-maestra`}
             className="group inline-block transition-colors"
@@ -32,7 +32,7 @@ export default function Footer({ t, language }) {
           </Link>
         </div>
 
-        <p className="mt-10 text-xs text-slate-600">
+        <p className="mt8 text-xs text-slate-600">
           © {new Date().getFullYear()} Tihomira Stanojević. All rights reserved.
         </p>
       </div>
