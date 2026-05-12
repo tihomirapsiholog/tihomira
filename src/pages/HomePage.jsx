@@ -159,7 +159,7 @@ export default function HomePage({ setCurrentPage, t }) {
         Tihomira Stanojević
       </h1>
 
-        <p className="mx-auto max-w-[85vw] text-[1.35rem] font-light italic leading-[1.35] text-yellow-100/75 animate-[softFade_1200ms_ease-out_180ms_both] sm:max-w-[22ch] sm:text-[1.9rem]">
+        <p className="mx-auto max-w-[85vw] text-[1.2rem] font-light italic leading-[1.35] text-yellow-100/75 animate-[softFade_1200ms_ease-out_180ms_both] sm:max-w-[28ch] sm:text-[1.9rem]">
   {t.home.tagline}
 </p>
 

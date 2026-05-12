@@ -10,9 +10,9 @@ const translations = {
     },
     home: {
       welcome: 'Welcome',
-      tagline: `"I don't lead people to destinations.\nI help them find their path."`,
-      intro: 'I have formal education, years of training, and shelves of books that have shaped my understanding. But that is not where my work comes from. It comes from years of lived, embodied, and sometimes inexplicable experience — integrated into a practice that meets each person where they are.I will not offer you my answers. What you will find here is guidance and support to discover your own authentic experience — and to integrate it into your life.',
-      howIWork: 'How I Work',
+    tagline: "Not a new self. A different relationship to the same self.",
+    intro:  "Tiha Psiha is a space for experiential exploration of inner life. Through individual and group work, it explores what becomes visible when experience is given attention, relationship, movement, or voice.",
+   howIWork: 'How I Work',
       workDescription:
         'My work integrates psychology, process facilitation, embodied practices, and symbolic awareness to create spaces where transformation can unfold naturally.',
       pillar1Title: 'Individual Sessions',
@@ -400,9 +400,8 @@ const translations = {
     },
     home: {
       welcome: 'Dobrodošli',
-      tagline: `"Ne vodim ljude do odredišta.\nPomažem im da pronađu svoj put."`,
-      intro: 'Imam formalno obrazovanje, godine školovanja i vanškolskih edukacija, police knjiga koje su oblikovale moje razumevanje. Ali to nije odakle moj rad dolazi. Dolazi iz godina življenog, telesnog i ponekad neobjašnjivog iskustva — integrisanog u praksu koja sreće svaku osobu tamo gde jeste. Neću ti nuditi svoje odgovore. Od mene ćeš dobiti vođstvo i podršku da pronađeš sopstveno autentično iskustvo — i integrišeš ga u svoj život.',
-      howIWork: 'Kako radim',
+       tagline:"Ne novo ja. Drugačiji odnos prema istom ja.",
+      intro:"Tiha Psiha je prostor za iskustveno istraživanje unutrašnjeg života. Kroz individualni i grupni rad istražujemo ono što postaje vidljivo kada iskustvo dobije pažnju, odnos, pokret ili glas.",     howIWork: 'Kako radim',
       workDescription:
         'Moj rad integriše psihologiju, facilitaciju procesa, telesne prakse i simboličku svesnost kako bi se stvorio prostor u kome transformacija može prirodno da se odvija.',
       pillar1Title: 'Individualne sesije',
