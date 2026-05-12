@@ -106,7 +106,10 @@ const handleSubmit = async (e) => {
               <h3 className="mb-8 font-serif text-2xl text-white">Prijava</h3>
 
               <form
-              onSubmit={handleSubmit} className="space-y-5">
+              onSubmit={handleSubmit}
+             noValidate
+             className="space-y-5"
+              >
                <input type="hidden" name="event" value="AI & Human Encounter" />
 
                 <div>
