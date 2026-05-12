@@ -115,6 +115,9 @@ export default function EventsPage({ t }) {
 
                 <button
                   type="submit"
+                  <p className="pt-2 text-sm leading-relaxed text-slate-500">
+  Nakon prijave dobićete email sa potvrdom mesta i instrukcijama za plaćanje.
+</p>
                   className="inline-flex items-center gap-2 rounded-full bg-yellow-500 px-8 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400"
                 >
                   Pošalji prijavu
