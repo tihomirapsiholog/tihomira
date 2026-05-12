@@ -47,13 +47,12 @@ export default function App() {
   usePageTitle();
 
   const navItems = [
-    [t.nav.home, ""],
-    [t.nav.about, "/about"],
-    [t.nav.work, "/work"],
-    [t.nav.events, "/events"],
-    [t.nav.zoom, "/zoom-maestra"],
-    [t.nav.contact, "/contact"]
-  ];
+  [t.nav.home, ""],
+  [t.nav.about, "/about"],
+  [t.nav.work, "/work"],
+  [t.nav.events, "/events"],
+  [t.nav.contact, "/contact"]
+];
 
   const changeLanguage = (lang) => {
     const pathWithoutLang = location.pathname.replace(/^\/(en|sr)/, "");
