@@ -168,14 +168,16 @@ const handleSubmit = async (e) => {
                   <ArrowRight size={18} />
                 </button>
                 {submitted && (
-                <div className="rounded-xl border border-yellow-700/20 bg-[#0b1220] p-4 text-sm leading-relaxed text-slate-300">
-                 Hvala na prijavi. Nakon pregleda prijava dobićete email sa potvrdom mesta i informacijama o uplati.
-                </div>
-                  )}
+              <div className="rounded-2xl border border-yellow-500/20 bg-yellow-500/10 p-5 text-sm leading-relaxed text-yellow-50">
+             <p className="font-serif text-lg text-yellow-300">
+             Hvala na prijavi.
+            </p>
+           <p className="mt-2 text-slate-300">
+             Nakon pregleda prijava dobićete email sa potvrdom mesta i informacijama o uplati.
+           </p>
+           </div>
+            )}
 
-                <p className="pt-2 text-sm leading-relaxed text-slate-500">
-                  Nakon prijave dobićete email sa potvrdom mesta i instrukcijama za plaćanje.
-                </p>
               </form>
             </div>
           </div>
