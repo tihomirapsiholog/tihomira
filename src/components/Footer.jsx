@@ -1,16 +1,20 @@
 import { Link } from 'react-router-dom';
 
-export default function Footer({ t }) {
+export default function Footer({ t, language }) {
   return (
     <footer className="mt-20 border-t border-yellow-700/10 bg-[#090e18] text-slate-300">
       <div className="mx-auto max-w-6xl px-4 py-12 text-center text-sm sm:px-6 lg:px-8">
         <p className="mb-6">
+          <p className="mx-auto mb-8 max-w-2xl text-sm leading-relaxed text-slate-500">
+  Master psihologije sa 15+ godina iskustva u grupnom radu,
+  psihodrami i međunarodnim facilitacijskim okruženjima.
+</p>
           <span className="font-serif text-yellow-400">{t.footer.brand}</span> — {t.footer.desc}
         </p>
 
         <div className="mx-auto mb-8 max-w-xl border-y border-yellow-700/10 py-6">
           <Link
-            to="/en/zoom-maestra"
+            to={`/${language}/zoom-maestra`}
             className="group inline-block transition-colors"
           >
             <span className="block font-serif text-lg text-yellow-400 group-hover:text-yellow-300">
