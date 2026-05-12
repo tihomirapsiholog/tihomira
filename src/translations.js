@@ -149,7 +149,7 @@ const translations = {
       chapter5Para2:
         'In 2025 I drove from Surdulica to Barcelona — with a bed in the back of a van and all my instruments. I lived across different corners of the city, sometimes in the van itself. Every week I gathered with people to improvise together. They started calling me <strong class="text-slate-200 font-normal">"Tina con Cuenco"</strong> — Tina with a singing bowl.',
       chapter5Para3:
-        'When I held my first sound bath for others, I realised I was enjoying it as much as they were. Sound carries healing, improvisation sets things free. <strong class="text-slate-200 font-normal">I trust what the body shows — more than what words describe.</strong>',
+        'When I held my first sound bath for others, I realised I was enjoying it as much as they were. Sound carries healing, improvisation sets things free. <strong class="text-slate-200 font-normal",</strong>',
       chapter5Aside: 'I trust what the body shows — more than what words describe.',
       instrumentsLabel: 'Instruments collected along the way',
       inst1: 'Shamanic drum', inst1Origin: '— Hungary',
@@ -536,7 +536,7 @@ fieldNotes: [
       chapter5Para2:
         'U 2025. otišla sam autom iz Surdulice u Barselonu — sa krevetom u teretnom autu i svim instrumentima. Živela sam po različitim kutcima grada, ponekad i u kolima. Svake nedelje okupljala sam se sa ljudima da improvizujemo zajedno. Počeli su da me zovu <strong class="text-slate-200 font-normal">"Tina con Cuenco"</strong> — Tina sa činijom.',
       chapter5Para3:
-        'Kad sam napravila prvu zvučnu kupku za druge, shvatila sam da uživam podjednako koliko i oni. Zvuk nosi isceljenje, improvizacija oslobađa. <strong class="text-slate-200 font-normal">Verujem onome što telo pokazuje — pre nego onome što reči opisuju.</strong>',
+        'Kad sam napravila prvu zvučnu kupku za druge, shvatila sam da uživam podjednako koliko i oni. Zvuk nosi isceljenje, improvizacija oslobađa. <strong class="text-slate-200 font-normal".</strong>',
       chapter5Aside: 'Verujem onome što telo pokazuje — pre nego onome što reči opisuju.',
       instrumentsLabel: 'Instrumenti sakupljeni putem',
       inst1: 'Šamanski bubanj', inst1Origin: '— Mađarska',
