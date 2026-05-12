@@ -82,7 +82,7 @@ export default function AboutPage({ t, setCurrentPage }) {
   return (
     <div className="bg-[#0b1220]">
       {/* HERO */}
-      <section className="min-h-screen px-4 pt-28 pb-16 sm:px-6 lg:px-8">
+      <section className="px-4 pt-28 pb-20 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-2 lg:items-end">
           <div>
             <p className="mb-6 text-xs uppercase tracking-[0.3em] text-yellow-400">
@@ -133,7 +133,7 @@ export default function AboutPage({ t, setCurrentPage }) {
       </section>
 
       {/* STORY */}
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
+      <section className="px-4 py16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-6xl items-start gap-16 lg:grid-cols-[220px_1fr]">
           <div className="sticky top-28 hidden lg:block">
             <p className="mb-4 text-xs uppercase tracking-[0.25em] text-yellow-400">
@@ -154,7 +154,7 @@ export default function AboutPage({ t, setCurrentPage }) {
             </ul>
           </div>
 
-          <div className="space-y-20">
+          <div className="space-y-16">
             {chapters.map((ch, i) => (
               <div key={ch.id} id={ch.id}>
                 <p className="mb-3 text-xs uppercase tracking-[0.25em] text-yellow-400">
@@ -188,7 +188,7 @@ export default function AboutPage({ t, setCurrentPage }) {
       </section>
 
       {/* INSTRUMENTS */}
-      <div className="border-t border-yellow-700/10 bg-[#10192c] px-4 py-16 sm:px-6 lg:px-8">
+      <div className="border-t border-yellow-700/10 bg-[#10192c] px-4 py-14 sm:px-6 lg:px-8">
         <p className="mb-6 text-center text-xs uppercase tracking-[0.25em] text-yellow-400">
           {t.about.instrumentsLabel}
         </p>
@@ -244,7 +244,7 @@ export default function AboutPage({ t, setCurrentPage }) {
       </section>
 
       {/* TRAINING */}
-      <section className="border-t border-yellow-700/10 bg-[#10192c] px-4 py-20 sm:px-6 lg:px-8">
+      <section className="border-t border-yellow-700/10 bg-[#10192c] px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <p className="mb-3 text-xs uppercase tracking-[0.25em] text-yellow-400">
             {t.about.trainingLabel}
@@ -266,7 +266,7 @@ export default function AboutPage({ t, setCurrentPage }) {
       </section>
 
       {/* CLOSING */}
-      <section className="border-t border-yellow-700/10 bg-[#0b1220] px-4 py-24 sm:px-6 lg:px-8">
+      <section className="border-t border-yellow-700/10 bg-[#0b1220] px-4 py-18 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <blockquote className="mb-12 font-serif text-2xl font-light italic leading-relaxed text-white sm:text-3xl">
             Ne novo ja.
