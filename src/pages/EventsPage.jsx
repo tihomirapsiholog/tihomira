@@ -133,12 +133,12 @@ export default function EventsPage({ t }) {
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {[
-              'Encounter & Impulse',
-              'Body & Voice',
-              'Attention & Overstimulation',
-              'Symbolic Action',
-            ].map((item) => (
+           {[
+           'Susret i impuls',
+            'Telo i glas',
+           'Pažnja i preplavljenost',
+           'Simbolička akcija',
+].map((item) => (
               <div
                 key={item}
                 className="rounded-[24px] border border-yellow-700/10 bg-[#10192c] p-8"
