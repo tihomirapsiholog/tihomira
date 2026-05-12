@@ -1,6 +1,28 @@
+import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 
 export default function EventsPage({ t }) {
+  const [submitted, setSubmitted] = useState(false);
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = new FormData(form);
+
+  const response = await fetch('https://formspree.io/f/mwvyywkd', {
+    method: 'POST',
+    body: data,
+    headers: {
+      Accept: 'application/json',
+    },
+  });
+
+  if (response.ok) {
+    setSubmitted(true);
+    form.reset();
+  }
+};
   const upcomingEvents = [
     {
       title: 'Zagrevanje za nove uloge',
@@ -115,6 +137,18 @@ export default function EventsPage({ t }) {
                 </div>
 
                 <div>
+                <label className="mb-2 block text-sm text-slate-400">
+                 Odakle se javljate?
+                  </label>
+                 <input
+                  type="text"
+                 name="location"
+                   required
+                   className="w-full rounded-xl border border-yellow-700/20 bg-[#0b1220] px-4 py-3 text-white outline-none transition-colors focus:border-yellow-400"
+                  />
+                </div>
+
+                <div>
                   <label className="mb-2 block text-sm text-slate-400">
                     Šta vas trenutno najviše zanima u ovoj temi?
                   </label>
@@ -133,6 +167,11 @@ export default function EventsPage({ t }) {
                   Pošalji prijavu
                   <ArrowRight size={18} />
                 </button>
+                {submitted && (
+                <div className="rounded-xl border border-yellow-700/20 bg-[#0b1220] p-4 text-sm leading-relaxed text-slate-300">
+                 Hvala na prijavi. Nakon pregleda prijava dobićete email sa potvrdom mesta i informacijama o uplati.
+                </div>
+                  )}
 
                 <p className="pt-2 text-sm leading-relaxed text-slate-500">
                   Nakon prijave dobićete email sa potvrdom mesta i instrukcijama za plaćanje.
