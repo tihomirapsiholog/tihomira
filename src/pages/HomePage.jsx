@@ -214,28 +214,6 @@ export default function HomePage({ setCurrentPage, t }) {
   </div>
 </section>
 
-        <section className="bg-[#0b1220] py-24 md:py-28">
-          <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-            <div className="reveal">
-              <h2 className="mb-6 font-serif text-3xl text-white md:text-4xl">
-                {t.home.toolsTitle}
-              </h2>
-              <p className="mb-4 leading-relaxed text-slate-300">
-                {t.home.toolsText}
-              </p>
-            </div>
-
-            <div className="relative overflow-hidden rounded-2xl border border-yellow-700/20 shadow-2xl reveal">
-              <img
-                src="/instruments.jpg"
-                alt="Instruments"
-                className="h-[420px] w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0b1220]/60 via-transparent to-transparent"></div>
-            </div>
-          </div>
-        </section>
-
 <section className="bg-[#111827] py-24 md:py-28">
   <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
     <div className="overflow-hidden rounded-[32px] border border-yellow-700/20 bg-[#161f33] reveal">
