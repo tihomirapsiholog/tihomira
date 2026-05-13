@@ -235,47 +235,6 @@ export default function HomePage({ setCurrentPage, t }) {
   </div>
 </section>
 
-<section className="bg-[#0e1628] px-6 py-28 md:py-32">
-  <div className="mx-auto max-w-4xl reveal">
-    <p className="mb-6 text-sm uppercase tracking-[0.25em] text-yellow-400/80">
-      {t.home.encounterLabel}
-    </p>
-
-    <h2 className="max-w-3xl font-serif text-3xl leading-tight text-white md:text-4xl">
-      {t.home.encounterTitle1}
-      <br />
-      {t.home.encounterTitle2}
-    </h2>
-
-    <div className="mt-12 space-y-10 text-slate-300">
-      <div className="max-w-3xl space-y-4">
-        <p className="font-serif text-2xl leading-tight text-yellow-50">
-          {t.home.encounterBlock1Title}
-        </p>
-
-        <p className="text-lg leading-relaxed">
-          {t.home.encounterBlock1Text}
-        </p>
-      </div>
-
-      <div className="max-w-3xl space-y-4">
-        <p className="font-serif text-2xl leading-tight text-yellow-50">
-          {t.home.encounterBlock2Title}
-        </p>
-
-        <p className="text-lg leading-relaxed">
-          {t.home.encounterBlock2Text}
-        </p>
-      </div>
-
-      <div className="max-w-3xl space-y-4">
-        <p className="font-serif text-2xl leading-tight text-yellow-50">
-          {t.home.encounterBlock3Title}
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 <section className="bg-[#0b1220] px-6 py-24 md:py-28">
   <div className="mx-auto max-w-5xl reveal">
     <p className="mb-6 text-sm uppercase tracking-[0.25em] text-yellow-400/80">
