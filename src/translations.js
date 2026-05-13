@@ -150,6 +150,11 @@ const translations = {
 },
     about: {
       eyebrow: 'About',
+      aboutHeroMain: 'Some things become visible only in the presence of another.',
+      aboutHeroEm: 'Encounter as practice.',
+      aboutHeroIntro1: 'My work is experiential and action-oriented. Through encounter, group process, psychodrama, symbol and embodied work, we explore what becomes visible when experience is given space to unfold.',
+      aboutHeroIntro2: 'Tiha Psiha is not a space for a new self, but for a different relationship to the same self.',
+      aboutLocationsIntro: 'Living and working across different cultural contexts has changed the way I observe identity, group belonging and inner change.',
       heroTitle: 'I learn everything',
       heroTitleEm: 'through experience.',
       heroIntro:
@@ -598,6 +603,11 @@ fieldNotes: [
 },
     about: {
       eyebrow: 'O meni',
+      aboutHeroMain: 'Neke stvari postaju vidljive tek u prisustvu drugog.',
+      aboutHeroEm: 'Susret kao praksa.',
+      aboutHeroIntro1: 'Moj rad je iskustven i akciono orijentisan. Kroz encounter, grupni proces, psihodramu, simbol i rad sa telom istražujemo ono što postaje vidljivo tek kada iskustvo dobije prostor da se odigra.',
+      aboutHeroIntro2: 'Tiha Psiha nije prostor za novo ja, već za drugačiji odnos prema istom ja.',
+      aboutLocationsIntro: 'Život i rad u različitim kulturnim kontekstima promenili su način na koji posmatram identitet, grupu, pripadanje i unutrašnje promene.',
       heroTitle: 'Sve učim',
       heroTitleEm: 'kroz iskustvo.',
       heroIntro:

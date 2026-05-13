@@ -90,32 +90,26 @@ export default function AboutPage({ t, setCurrentPage }) {
             </p>
 
             <h1 className="mb-8 font-serif text-5xl font-light leading-tight text-white sm:text-6xl">
-              Neke stvari postaju vidljive tek u prisustvu drugog.
+              {t.about.aboutHeroMain}
               <em className="mt-2 block italic text-yellow-400">
-                Susret kao praksa.
+              {t.about.aboutHeroEm}
               </em>
             </h1>
 
             <div className="max-w-2xl space-y-6 text-lg font-light leading-relaxed text-slate-400">
               <p>
-                Moj rad je iskustven i akciono orijentisan. Kroz encounter,
-                grupni proces, psihodramu, simbol i rad sa telom istražujemo
-                ono što postaje vidljivo tek kada iskustvo dobije prostor da se
-                odigra.
+              {t.about.aboutHeroIntro1}              
               </p>
 
               <p>
-                Tiha Psiha nije prostor za novo ja, već za drugačiji odnos prema
-                istom ja.
+              {t.about.aboutHeroIntro2}
               </p>
             </div>
           </div>
 
           <div className="lg:pb-4">
             <p className="mb-5 max-w-md text-sm font-light leading-relaxed text-slate-500">
-              Život i rad u različitim kulturnim kontekstima promenili su način
-              na koji posmatram identitet, grupu, pripadanje i unutrašnje
-              promene.
+            {t.about.aboutLocationsIntro}            
             </p>
 
             <div className="flex flex-wrap gap-2">
