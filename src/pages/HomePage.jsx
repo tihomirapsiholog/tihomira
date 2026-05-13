@@ -396,9 +396,7 @@ export default function HomePage({ setCurrentPage, t }) {
   <div className="mx-auto max-w-5xl reveal">
     <div className="border-y border-yellow-700/10 py-8">
       <p className="text-center text-sm leading-relaxed tracking-[0.02em] text-slate-400">
-        Master psihologije • 15+ godina iskustva u grupnom radu •
-        psihodrama • fizički teatar • Tele'Drama • međunarodni online i
-        uživo procesi
+        {t.home.credibility}
       </p>
     </div>
   </div>
@@ -411,16 +409,15 @@ export default function HomePage({ setCurrentPage, t }) {
         
         <div className="flex flex-col justify-center p-10 md:p-14">
           <p className="mb-4 text-xs uppercase tracking-[0.35em] text-yellow-400/80">
-            The Practice of Silence
+            {t.home.silenceLabel}
           </p>
 
           <h2 className="mb-6 font-serif text-3xl leading-tight text-white md:text-4xl">
-            A real-time exploration of silence, attention, and the nervous system.
-          </h2>
+            {t.home.silenceTitle}
+            </h2>
 
           <p className="mb-8 max-w-xl text-lg leading-relaxed text-slate-300">
-            A three-month preparation process for ten days of silence —
-            documented through field notes, embodiment, and psychological observation.
+          {t.home.silenceText}          
           </p>
 
           <div>

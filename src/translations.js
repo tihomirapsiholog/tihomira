@@ -101,7 +101,11 @@ const translations = {
       space2Text:  'Online and in-person spaces where experience is explored through encounter, action, group process and symbolic work.',
       space3Title: 'The Practice of Silence',
       space3Text:  'An exploration of attention, stimulation, the nervous system and the relationship to inner rhythm through writing, practice and experiential process.',
-    
+      credibility:  "Master's degree in Psychology • 15+ years of group work experience • psychodrama • physical theatre • Tele'Drama • international online and in-person processes",
+      silenceLabel: 'The Practice of Silence',
+      silenceTitle: 'A real-time exploration of silence, attention and the nervous system.',
+      silenceText: 'A three-month preparation process for ten days of silence — documented through field notes, embodiment and psychological observation.',
+      
       silencePractice: {
   label: 'The Practice of Silence',
   heroTitle: 'Silence is not the absence of sound.',
@@ -547,8 +551,12 @@ events: {
     space2Text: 'Online i uživo susreti u kojima se iskustvo istražuje kroz encounter, akciju, grupni proces i simbolički rad.',
     space3Title: 'Praksa tišine',
     space3Text:  'Istraživanje pažnje, stimulacije, nervnog sistema i odnosa prema unutrašnjem ritmu kroz pisanje, praksu i iskustvene procese.',
-    
-silencePractice: {
+    credibility: 'Master psihologije • 15+ godina iskustva u grupnom radu • psihodrama • fizički teatar • Tele\'Drama • međunarodni online i uživo procesi',
+    silenceLabel: 'Praksa tišine',
+    silenceTitle: 'Istraživanje tišine, pažnje i nervnog sistema u realnom vremenu.',
+    silenceText: 'Tromesečni proces pripreme za deset dana tišine — dokumentovan kroz beleške, telo i psihološko posmatranje.',
+
+    silencePractice: {
        label: 'Praksa tišine',
       heroTitle: 'Tišina nije odsustvo zvuka.',
       heroTitleEm: 'Već prisustvo sebe.',
