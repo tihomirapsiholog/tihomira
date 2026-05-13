@@ -463,6 +463,10 @@ events: {
     },
     footer: {
       brand: 'Tiha Psiha',
+      tagline:'Psychology, embodiment and experiential spaces for people in transition.',
+      credentials: "Master's degree in Psychology • psychodrama • embodiment • international online and in-person work",
+      zoomText: 'Support for online group spaces, workshops and facilitators.',
+      copyright: 'All rights reserved.',
       desc: 'Transformational facilitation and psychology',
       rights: '© 2024 Tihomira Stanojević. All rights reserved.',
       tagline: 'A space for those seeking clarity at the crossroads.',
@@ -926,6 +930,10 @@ events: {
     },
     footer: {
       brand: 'Tiha Psiha',
+      tagline: 'Psihologija, embodiment i iskustveni prostori za ljude u tranziciji.',
+      credentials: 'Master psihologije • psihodrama • embodiment • međunarodni online i uživo rad',
+      zoomText: 'Podrška za online grupne prostore, radionice i fasilitatore.',
+      copyright: 'Sva prava zadržana.',
       desc: 'Transformativna facilitacija i psihologija',
       rights: '© 2024 Tihomira Stanojević. Sva prava zadržana.',
       tagline: 'Prostor za one koji traže jasnoću na raskršću.',
