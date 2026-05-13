@@ -67,30 +67,24 @@ const handleSubmit = async (e) => {
             </p>
 
               <h3 className="mb-6 font-serif text-3xl leading-tight text-white md:text-4xl">
-                Kako se zapravo osećam u vezi sa AI-jem?
+              {t.events.event1RealTitle}
               </h3>
 
               <div className="space-y-5 text-lg leading-relaxed text-slate-300">
                 <p>
-                  U poslednje vreme sve češće govorimo o veštačkoj inteligenciji —
-                  ali ređe govorimo o tome šta se u nama događa dok o njoj razmišljamo.
+              {t.events.event1Para1}                
+              </p>
+
+                <p>
+                 {t.events.event1Para1}
                 </p>
 
                 <p>
-                  Ova radionica nije o tome šta AI jeste, već šta se u nama pokreće
-                  kada se sa njim susretnemo.
+                  {t.events.event1Para3}
                 </p>
 
                 <p>
-                  Da li osećam olakšanje ili pritisak? Da li mi pomaže ili me
-                  ubrzava preko mere? Šta se događa sa mojom kreativnošću, načinom
-                  rada i osećajem vrednosti?
-                </p>
-
-                <p>
-                  Kroz rad u maloj grupi i uz pomoć psihodramskih i akcionih metoda
-                  istraživaćemo unutrašnje reakcije, pitanja i glasove koji se javljaju
-                  u susretu sa AI-jem — bez potrebe da zauzmemo „ispravan stav“.
+                {t.events.event1Para4}                
                 </p>
 
                 <div className="mt-8 grid gap-3 rounded-2xl border border-yellow-700/20 bg-[#0b1220] p-5 text-sm text-slate-300 sm:grid-cols-2">
