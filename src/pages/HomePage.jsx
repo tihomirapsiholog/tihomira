@@ -169,7 +169,51 @@ export default function HomePage({ setCurrentPage, t }) {
         </div>
       </div>
         </section>
-      <section className="bg-[#0b1220] px-6 py-20 md:py-24">
+      <section className="bg-[#0e1628] px-6 py-28 md:py-32">
+  <div className="mx-auto max-w-4xl reveal">
+    <p className="mb-6 text-sm uppercase tracking-[0.25em] text-yellow-400/80">
+      {t.home.encounterLabel}
+    </p>
+
+    <h2 className="max-w-3xl font-serif text-3xl leading-tight text-white md:text-4xl">
+      {t.home.encounterTitle1}
+      <br />
+      {t.home.encounterTitle2}
+    </h2>
+
+    <div className="mt-12 space-y-10 text-slate-300">
+
+      <div className="max-w-3xl space-y-4">
+        <p className="font-serif text-2xl leading-tight text-yellow-50">
+          {t.home.encounterBlock1Title}
+        </p>
+
+        <p className="text-lg leading-relaxed">
+          {t.home.encounterBlock1Text}
+        </p>
+      </div>
+
+      <div className="max-w-3xl space-y-4">
+        <p className="font-serif text-2xl leading-tight text-yellow-50">
+          {t.home.encounterBlock2Title}
+        </p>
+
+        <p className="text-lg leading-relaxed">
+          {t.home.encounterBlock2Text}
+        </p>
+      </div>
+
+      <div className="max-w-3xl space-y-4">
+        <p className="font-serif text-2xl leading-tight text-yellow-50">
+          {t.home.encounterBlock3Title}
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+<section className="bg-[#0b1220] px-6 py-20 md:py-24">
   <div className="mx-auto max-w-4xl reveal">
     <p className="mb-6 text-sm uppercase tracking-[0.25em] text-yellow-400/80">
       {t.home.recognitionLabel}
@@ -177,10 +221,7 @@ export default function HomePage({ setCurrentPage, t }) {
 
     <div className="space-y-8">
       {t.home.recognitionItems.map((item, index) => (
-        <div
-          key={index}
-          className="border-t border-yellow-700/10 pt-6"
-        >
+        <div key={index} className="border-t border-yellow-700/10 pt-6">
           <h3 className="font-serif text-2xl leading-tight text-yellow-50 md:text-3xl">
             {item.title}
           </h3>
@@ -193,45 +234,43 @@ export default function HomePage({ setCurrentPage, t }) {
     </div>
   </div>
 </section>
+
 <section className="bg-[#0e1628] px-6 py-28 md:py-32">
   <div className="mx-auto max-w-4xl reveal">
-   <p className="mb-6 text-sm uppercase tracking-[0.25em] text-yellow-400/80">
-  {t.home.encounterLabel}
-</p>
+    <p className="mb-6 text-sm uppercase tracking-[0.25em] text-yellow-400/80">
+      {t.home.encounterLabel}
+    </p>
 
-<h2 className="max-w-3xl font-serif text-3xl leading-tight text-white md:text-4xl">
-  {t.home.encounterTitle1}
-  <br />
-  {t.home.encounterTitle2}
-</h2>
+    <h2 className="max-w-3xl font-serif text-3xl leading-tight text-white md:text-4xl">
+      {t.home.encounterTitle1}
+      <br />
+      {t.home.encounterTitle2}
+    </h2>
 
     <div className="mt-12 space-y-10 text-slate-300">
       <div className="max-w-3xl space-y-4">
         <p className="font-serif text-2xl leading-tight text-yellow-50">
-          Neka iskustva postaju jasnija tek kada ih sretnemo.
+          {t.home.encounterBlock1Title}
         </p>
 
         <p className="text-lg leading-relaxed">
-          Ne samo kroz razgovor, već kroz odnos, akciju, telo, simbol i
-          prisustvo drugih ljudi.
+          {t.home.encounterBlock1Text}
         </p>
       </div>
 
       <div className="max-w-3xl space-y-4">
         <p className="font-serif text-2xl leading-tight text-yellow-50">
-          Iskustvo ne mora odmah da bude objašnjeno da bi bilo stvarno.
+          {t.home.encounterBlock2Title}
         </p>
 
         <p className="text-lg leading-relaxed">
-          U radu obraćamo pažnju na ono što se formira između impulsa,
-          akcije, unutrašnjeg života i odnosa sa drugima.
+          {t.home.encounterBlock2Text}
         </p>
       </div>
 
       <div className="max-w-3xl space-y-4">
         <p className="font-serif text-2xl leading-tight text-yellow-50">
-          Ponekad osoba prvi put primeti sopstveni impuls tek kada ga vidi
-          odigranog ispred sebe.
+          {t.home.encounterBlock3Title}
         </p>
       </div>
     </div>
