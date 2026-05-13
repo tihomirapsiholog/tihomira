@@ -346,6 +346,58 @@ export default function HomePage({ setCurrentPage, t }) {
     </div>
   </div>
 </section>
+<section className="bg-[#0e1628] px-6 py-24 md:py-28">
+  <div className="mx-auto max-w-5xl reveal">
+    <p className="mb-6 text-sm uppercase tracking-[0.25em] text-yellow-400/80">
+      Prostori rada
+    </p>
+
+    <h2 className="max-w-3xl font-serif text-4xl leading-tight text-white md:text-5xl">
+      Različiti formati rada za različite faze procesa.
+    </h2>
+
+    <div className="mt-16 grid gap-10 md:grid-cols-3">
+
+      <div className="border-t border-yellow-700/20 pt-6">
+        <h3 className="font-serif text-2xl text-yellow-50">
+          Individualni susreti
+        </h3>
+
+        <p className="mt-4 text-lg leading-relaxed text-slate-300">
+          Rad jedan na jedan kroz razgovor, simbol, telo i iskustveno istraživanje.
+        </p>
+
+        <p className="mt-4 text-base leading-relaxed text-slate-400">
+          Za periode tranzicije, preplavljenosti, unutrašnjih konflikata ili
+          potrebe za jasnijim kontaktom sa sobom.
+        </p>
+      </div>
+
+      <div className="border-t border-yellow-700/20 pt-6">
+        <h3 className="font-serif text-2xl text-yellow-50">
+          Radionice i grupni prostori
+        </h3>
+
+        <p className="mt-4 text-lg leading-relaxed text-slate-300">
+          Online i uživo susreti u kojima se iskustvo istražuje kroz encounter,
+          akciju, grupni proces i simbolički rad.
+        </p>
+      </div>
+
+      <div className="border-t border-yellow-700/20 pt-6">
+        <h3 className="font-serif text-2xl text-yellow-50">
+          Praksa tišine
+        </h3>
+
+        <p className="mt-4 text-lg leading-relaxed text-slate-300">
+          Istraživanje pažnje, stimulacije, nervnog sistema i odnosa prema
+          unutrašnjem ritmu kroz pisanje, praksu i iskustvene procese.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 <section className="bg-[#111827] py-24 md:py-28">
   <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
     <div className="overflow-hidden rounded-[32px] border border-yellow-700/20 bg-[#161f33] reveal">
