@@ -279,72 +279,66 @@ export default function HomePage({ setCurrentPage, t }) {
 <section className="bg-[#0b1220] px-6 py-24 md:py-28">
   <div className="mx-auto max-w-5xl reveal">
     <p className="mb-6 text-sm uppercase tracking-[0.25em] text-yellow-400/80">
-      Kako radim
-    </p>
+  {t.home.methodLabel}
+</p>
 
-    <h2 className="max-w-3xl font-serif text-3xl leading-tight text-white md:text-4xl">
-      Psihologija, akcija, telo i grupni proces.
-    </h2>
+   <h2 className="max-w-3xl font-serif text-3xl leading-tight text-white md:text-4xl">
+  {t.home.methodTitle}
+</h2>
 
-    <p className="mt-8 max-w-3xl text-lg leading-relaxed text-slate-300">
-      Moj rad kombinuje psihologiju, psihodramske i akcione metode, telo,
-      simbol, pokret i iskustveni grupni rad.
-    </p>
+   v<p className="mt-8 max-w-3xl text-lg leading-relaxed text-slate-300">
+  {t.home.methodIntro}
+</p>
 
     <div className="mt-16 grid gap-px border border-yellow-700/10 bg-yellow-700/10 md:grid-cols-2">
       
       <div className="bg-[#111827] p-8 md:p-10">
+      <h3 className="font-serif text-xl text-yellow-50">
+  {t.home.method1Title}
+</h3>
+        <p className="mt-4 text-lg leading-relaxed text-slate-300">
+  {t.home.method1Text}
+</p>
+      </div>
+
+      <div className="bg-[#111827] p-8 md:p-10">
         <h3 className="font-serif text-xl text-yellow-50">
-          Psihologija
-        </h3>
+  {t.home.method2Title}
+</h3>
 
         <p className="mt-4 text-lg leading-relaxed text-slate-300">
-          Unutrašnji život ne posmatramo kao problem koji treba brzo rešiti,
-          već kao prostor koji može postati čitljiviji.
-        </p>
+  {t.home.method2Text}
+</p>
       </div>
 
       <div className="bg-[#111827] p-8 md:p-10">
-        <h3 className="font-serif text-2xl text-yellow-50">
-          Psihodramske i akcione metode
-        </h3>
+      <h3 className="font-serif text-xl text-yellow-50">
+  {t.home.method3Title}
+</h3>
 
         <p className="mt-4 text-lg leading-relaxed text-slate-300">
-          Neka iskustva postaju jasna tek kada ih vidimo, odigramo ili sretnemo
-          iz druge perspektive.
-        </p>
+  {t.home.method3Text}
+</p>
       </div>
 
       <div className="bg-[#111827] p-8 md:p-10">
-        <h3 className="font-serif text-2xl text-yellow-50">
-          Telo i pokret
-        </h3>
+       <h3 className="font-serif text-xl text-yellow-50">
+  {t.home.method4Title}
+</h3>
 
         <p className="mt-4 text-lg leading-relaxed text-slate-300">
-          Telo često registruje promenu pre nego što je um ume objasniti.
-        </p>
-      </div>
-
-      <div className="bg-[#111827] p-8 md:p-10">
-        <h3 className="font-serif text-2xl text-yellow-50">
-          Simbolički rad
-        </h3>
-
-        <p className="mt-4 text-lg leading-relaxed text-slate-300">
-          Slike, uloge, metafore i unutrašnje scene ponekad nose više
-          informacija od objašnjenja.
-        </p>
+  {t.home.method4Text}
+</p>
       </div>
 
       <div className="bg-[#111827] p-8 md:p-10 md:col-span-2">
-        <h3 className="font-serif text-2xl text-yellow-50">
-          Grupni proces
-        </h3>
+       <h3 className="font-serif text-xl text-yellow-50">
+  {t.home.method5Title}
+</h3>
 
-        <p className="mt-4 max-w-3xl text-lg leading-relaxed text-slate-300">
-          Odnos sa drugima često postaje prostor u kome prvi put vidimo
-          sopstvene obrasce, impulse i granice.
-        </p>
+        <p className="mt-4 text-lg leading-relaxed text-slate-300">
+  {t.home.method5Text}
+</p>
       </div>
     </div>
   </div>
