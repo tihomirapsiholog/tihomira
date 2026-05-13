@@ -306,7 +306,7 @@ export default function HomePage({ setCurrentPage, t }) {
   <img
     src="/psychodrama-divider.png"
     alt=""
-    className="w-20 object-contain"
+    className="w-24 object-contain"
   />
 </div>
 <section className="bg-[#0e1628] px-6 py-24 md:py-28">
