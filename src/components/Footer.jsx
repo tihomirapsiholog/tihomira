@@ -17,7 +17,7 @@ export default function Footer({ t, language }) {
           psihodrami i međunarodnim facilitacijskim okruženjima.
         </p>
 
-        <div className="mx-auto mt8 max-w-xl">
+        <div className="mx-auto mt-8 max-w-xl">
           <Link
             to={`/${language}/zoom-maestra`}
             className="group inline-block transition-colors"
@@ -32,7 +32,7 @@ export default function Footer({ t, language }) {
           </Link>
         </div>
 
-        <p className="mt8 text-xs text-slate-600">
+        <p className="mt-8 text-xs text-slate-600">
           © {new Date().getFullYear()} Tihomira Stanojević. All rights reserved.
         </p>
       </div>
