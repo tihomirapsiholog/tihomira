@@ -57,14 +57,14 @@ const handleSubmit = async (e) => {
       <section className="border-t border-yellow-700/10 bg-[#0e1628] px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-10 font-serif text-3xl text-white md:text-4xl">
-            Aktuelni događaj
-          </h2>
+         {t.events.currentTitle}
+        </h2>
 
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="rounded-[28px] border border-yellow-700/20 bg-[#121c31] p-8 md:p-10">
-              <p className="mb-4 text-xs uppercase tracking-[0.25em] text-yellow-400/80">
-                Online iskustvena radionica
-              </p>
+             <p className="mb-4 text-xs uppercase tracking-[0.25em] text-yellow-400/80">
+            {t.events.event1Type}
+            </p>
 
               <h3 className="mb-6 font-serif text-3xl leading-tight text-white md:text-4xl">
                 Kako se zapravo osećam u vezi sa AI-jem?
