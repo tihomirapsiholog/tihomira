@@ -71,6 +71,14 @@ const translations = {
      },
         ],
        },
+      encounterLabel: 'Encounter',
+      encounterTitle1: 'Not a new self.',
+      encounterTitle2: 'A different relationship to the same self.',
+      encounterBlock1Title: 'Some experiences become clearer only when we meet them.',
+      encounterBlock1Text: 'Not only through conversation, but through relationship, action, body, symbol and the presence of other people.',
+      encounterBlock2Title: 'Experience does not have to be explained immediately to be real.',
+      encounterBlock2Text: 'In this work, we pay attention to what forms between impulse, action, inner life and relationship with others.',
+      encounterBlock3Title: 'Sometimes a person notices their own impulse for the first time only when they see it enacted in front of them.',
    silencePractice: {
   label: 'The Practice of Silence',
   heroTitle: 'Silence is not the absence of sound.',
@@ -463,7 +471,6 @@ events: {
       zoomButton: 'Istraži Zoom Maestru',
       ctaSubject: 'Upit za Zoom Maestru',
       recognitionLabel: 'Možda ste ovde jer...',
-
       recognitionItems: [
      {
     title: 'Nalazite se u životnom prelazu',
@@ -487,6 +494,14 @@ events: {
      },
     ],
     },
+    encounterLabel: 'Encounter',
+    encounterTitle1: 'Ne novo ja.',
+    encounterTitle2: 'Drugačiji odnos prema istom ja.',
+    encounterBlock1Title: 'Neka iskustva postaju jasnija tek kada ih sretnemo.',
+    encounterBlock1Text: 'Ne samo kroz razgovor, već kroz odnos, akciju, telo, simbol i prisustvo drugih ljudi.',
+    encounterBlock2Title: 'Iskustvo ne mora odmah da bude objašnjeno da bi bilo stvarno.',
+    encounterBlock2Text: 'U radu obraćamo pažnju na ono što se formira između impulsa, akcije, unutrašnjeg života i odnosa sa drugima.',
+    encounterBlock3Title: 'Ponekad osoba prvi put primeti sopstveni impuls tek kada ga vidi odigranog ispred sebe.',
     silencePractice: {
        label: 'Praksa tišine',
       heroTitle: 'Tišina nije odsustvo zvuka.',
