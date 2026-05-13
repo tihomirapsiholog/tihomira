@@ -229,6 +229,9 @@ const translations = {
       inst11: 'Daire (frame drum)', inst11Origin: '— tradition',
       inst12: 'Rain stick — ocean', inst12Origin: '— Serbia (handmade)',
       inst13: 'Rain stick — gentle', inst13Origin: '— Serbia (handmade)',
+      instrumentsLabel: 'Instruments collected along the way',
+  instrumentsIntro:
+  'I use sound as an extension of experiential work — not as performance, but as a way of working with rhythm, attention and presence.',
       drivesLabel: 'What shapes the work',
       drivesTitle: 'Not a methodology.',
       drivesTitleEm: 'A way of being.',
@@ -679,6 +682,10 @@ fieldNotes: [
       inst11: 'Daire', inst11Origin: '— tradicija',
       inst12: 'Kišni štap — okean', inst12Origin: '— Srbija (ručni rad)',
       inst13: 'Kišni štap — nežni', inst13Origin: '— Srbija (ručni rad)',
+      instrumentsLabel: 'Instrumenti sakupljeni putem',
+
+instrumentsIntro:
+  'Zvuk koristim kao produžetak iskustvenog rada — ne kao performans, već kao način rada sa ritmom, pažnjom i prisustvom.',
       drivesLabel: 'Šta oblikuje rad',
       drivesTitle: 'Nije metodologija.',
       drivesTitleEm: 'To je način bivanja.',

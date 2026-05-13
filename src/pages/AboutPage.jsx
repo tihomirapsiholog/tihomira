@@ -188,8 +188,7 @@ export default function AboutPage({ t, setCurrentPage }) {
         </p>
 
         <p className="mx-auto mb-10 max-w-2xl text-center text-base font-light leading-relaxed text-slate-400">
-          Zvuk koristim kao produžetak iskustvenog rada — ne kao performans, već
-          kao način rada sa ritmom, pažnjom i prisustvom.
+          {t.about.instrumentsIntro}
         </p>
 
         <div className="mx-auto flex max-w-2xl flex-wrap justify-center gap-3">
