@@ -125,8 +125,11 @@ const handleSubmit = async (e) => {
              noValidate
              className="space-y-5"
               >
-               <input type="hidden" name="event" value="AI & Human Encounter" />
-
+              <input
+             type="hidden"
+              name="event"
+              value="Kako se zapravo osećam u vezi sa AI-jem? — 04.06.2026"
+                />
                 <div>
                   <label className="mb-2 block text-sm text-slate-400">
                     Ime i prezime
