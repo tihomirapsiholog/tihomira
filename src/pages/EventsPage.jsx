@@ -42,17 +42,16 @@ const handleSubmit = async (e) => {
     <div className="bg-[#0b1220] text-slate-100">
       <section className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
         <p className="mb-6 text-sm uppercase tracking-[0.25em] text-yellow-400/80">
-          Gatherings & Events
+         {t.events.label}
         </p>
 
         <h1 className="max-w-4xl font-serif text-4xl leading-tight text-white md:text-6xl">
-          Prostori u kojima iskustvo postaje vidljivo kroz susret, akciju i grupni rad.
+        {t.events.heroTitle}        
         </h1>
 
         <p className="mt-8 max-w-3xl text-lg leading-relaxed text-slate-300">
-          Događaji u Tihoj Psihi su prostori za iskustveno istraživanje — kroz odnos,
-          akciju, simbol, ulogu, prisustvo grupe i ono što se formira između ljudi.
-        </p>
+          {t.events.heroIntro}        
+          </p>
       </section>
 
       <section className="border-t border-yellow-700/10 bg-[#0e1628] px-4 py-20 sm:px-6 lg:px-8">
