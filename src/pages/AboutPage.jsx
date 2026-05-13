@@ -208,11 +208,11 @@ export default function AboutPage({ t, setCurrentPage }) {
       <section className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <p className="mb-3 text-xs uppercase tracking-[0.25em] text-yellow-400">
-            Ono čemu se vraćam
+            {t.about.drivesSectionLabel}
           </p>
 
           <h2 className="mb-12 font-serif text-4xl font-light leading-snug text-white">
-            Susret, pažnja i iskustvo.
+           {t.about.drivesSectionTitle}
           </h2>
 
           <div className="grid gap-px border border-yellow-700/10 bg-yellow-700/10 sm:grid-cols-2">
