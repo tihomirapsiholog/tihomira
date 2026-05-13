@@ -76,7 +76,7 @@ const handleSubmit = async (e) => {
               </p>
 
                 <p>
-                 {t.events.event1Para1}
+                 {t.events.event1Para2}
                 </p>
 
                 <p>
@@ -88,38 +88,38 @@ const handleSubmit = async (e) => {
                 </p>
 
                <div className="mt-8 grid gap-3 rounded-2xl border border-yellow-700/20 bg-[#0b1220] p-5 text-sm text-slate-300 sm:grid-cols-2">
-  <p>
-    <span className="text-yellow-400">{t.events.eventDateLabel}</span>{' '}
-    {t.events.eventDateValue}
-  </p>
+               <p>
+              <span className="text-yellow-400">{t.events.eventDateLabel}</span>{' '}
+              {t.events.eventDateValue}
+              </p>
 
-  <p>
-    <span className="text-yellow-400">{t.events.eventTimeLabel}</span>{' '}
-    {t.events.eventTimeValue}
-  </p>
+              <p>
+              <span className="text-yellow-400">{t.events.eventTimeLabel}</span>{' '}
+             {t.events.eventTimeValue}
+             </p>
 
-  <p>
-    <span className="text-yellow-400">{t.events.eventFormatLabel}</span>{' '}
-    {t.events.eventFormatValue}
-  </p>
+              <p>
+             <span className="text-yellow-400">{t.events.eventFormatLabel}</span>{' '}
+              {t.events.eventFormatValue}
+              </p>
 
-  <p>
-    <span className="text-yellow-400">{t.events.eventLanguageLabel}</span>{' '}
-    {t.events.eventLanguageValue}
-  </p>
+             <p>
+             <span className="text-yellow-400">{t.events.eventLanguageLabel}</span>{' '}
+            {t.events.eventLanguageValue}
+            </p>
 
-  <p>
-    <span className="text-yellow-400">{t.events.eventPriceLabel}</span>{' '}
-    {t.events.eventPriceValue}
-  </p>
+           <p>
+             <span className="text-yellow-400">{t.events.eventPriceLabel}</span>{' '}
+            {t.events.eventPriceValue}
+            </p>
 
-  <p>
-    <span className="text-yellow-400">{t.events.eventGroupLabel}</span>{' '}
-    {t.events.eventGroupValue}
-  </p>
-</div>
+           <p>
+            <span className="text-yellow-400">{t.events.eventGroupLabel}</span>{' '}
+           {t.events.eventGroupValue}
+           </p>
             </div>
-
+            </div>
+            </div>
             <div className="rounded-[28px] border border-yellow-700/20 bg-[#10192c] p-8">
               <h3 className="mb-8 font-serif text-2xl text-white">Prijava</h3>
 
