@@ -90,8 +90,8 @@ const handleSubmit = async (e) => {
 
                 <p>
                   Kroz rad u maloj grupi i uz pomoć psihodramskih i akcionih metoda
-                  istraživaćemo te unutrašnje glasove — bez potrebe da zauzmemo
-                  „ispravan stav“.
+                  istraživaćemo unutrašnje reakcije, pitanja i glasove koji se javljaju
+                  u susretu sa AI-jem — bez potrebe da zauzmemo „ispravan stav“.
                 </p>
 
                 <div className="mt-8 grid gap-3 rounded-2xl border border-yellow-700/20 bg-[#0b1220] p-5 text-sm text-slate-300 sm:grid-cols-2">
@@ -177,7 +177,9 @@ const handleSubmit = async (e) => {
                     className="w-full rounded-xl border border-yellow-700/20 bg-[#0b1220] px-4 py-3 text-white outline-none transition-colors focus:border-yellow-400"
                   />
                 </div>
-
+                <p className="text-sm leading-relaxed text-slate-500">
+                   Nakon prijave dobićete email sa potvrdom mesta i informacijama za uplatu.
+                  </p>
                 <button
                   type="submit"
                   className="inline-flex items-center gap-2 rounded-full bg-yellow-500 px-8 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400"
