@@ -175,49 +175,48 @@ export default function HomePage({ setCurrentPage, t }) {
       Možda ste ovde jer...
     </p>
 
-    <div className="grid gap-10 md:grid-cols-2">
+    <div className="grid gap-x-16 gap-y-14 md:grid-cols-2">
       <div className="space-y-3">
-        <h3 className="font-serif text-2xl leading-tight text-yellow-50">
-          se nalazite u životnom prelazu
+      <h3 className="font-serif text-[1.7rem] leading-[1.15] text-yellow-50 md:text-[2rem]">          se nalazite u životnom prelazu
         </h3>
 
-        <p className="text-lg leading-relaxed text-slate-300">
+        <p className="text-base leading-relaxed text-slate-400 md:text-lg">
           i stari način funkcionisanja više ne radi.
         </p>
       </div>
 
       <div className="space-y-3">
-        <h3 className="font-serif text-2xl leading-tight text-yellow-50">
+        <h3 className="font-serif text-[1.7rem] leading-[1.15] text-yellow-50 md:text-[2rem]">
           osećate da držite previše toga predugo
         </h3>
 
-        <p className="text-lg leading-relaxed text-slate-300">
+        <p className="text-base leading-relaxed text-slate-400 md:text-lg">
           bez prostora da zaista stanete.
         </p>
       </div>
 
       <div className="space-y-3">
-        <h3 className="font-serif text-2xl leading-tight text-yellow-50">
+        <h3 className="font-serif text-[1.7rem] leading-[1.15] text-yellow-50 md:text-[2rem]">
           tražite drugačiji odnos prema sebi
         </h3>
 
-        <p className="text-lg leading-relaxed text-slate-300">
+       <p className="text-base leading-relaxed text-slate-400 md:text-lg">
           ne još jedan pokušaj da se „popravite“.
         </p>
       </div>
 
       <div className="space-y-3">
-        <h3 className="font-serif text-2xl leading-tight text-yellow-50">
+        <h3 className="font-serif text-[1.7rem] leading-[1.15] text-yellow-50 md:text-[2rem]">
           želite prostor u kome ne morate odmah da znate
         </h3>
 
-        <p className="text-lg leading-relaxed text-slate-300">
+        <p className="text-base leading-relaxed text-slate-400 md:text-lg">
           šta dalje.
         </p>
       </div>
 
-      <div className="space-y-3 md:col-span-2">
-        <h3 className="font-serif text-2xl leading-tight text-yellow-50">
+      <div className="max-w-3xl space-y-3 md:col-span-2">
+        <h3 className="font-serif text-[1.7rem] leading-[1.15] text-yellow-50 md:text-[2rem]">
           radite sa ljudima
         </h3>
 
@@ -395,6 +394,17 @@ export default function HomePage({ setCurrentPage, t }) {
         </p>
       </div>
 
+    </div>
+  </div>
+</section>
+<section className="bg-[#0b1220] px-6 py-14">
+  <div className="mx-auto max-w-5xl reveal">
+    <div className="border-y border-yellow-700/10 py-8">
+      <p className="text-center text-sm leading-relaxed tracking-[0.02em] text-slate-400">
+        Master psihologije • 15+ godina iskustva u grupnom radu •
+        psihodrama • fizički teatar • Tele'Drama • međunarodni online i
+        uživo procesi
+      </p>
     </div>
   </div>
 </section>
