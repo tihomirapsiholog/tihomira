@@ -800,12 +800,11 @@ instrumentsIntro:
       reach: 'Javite se',
     },
 events: {
-  label: 'Susreti',
+  label: 'Okupljanja i događaji',
   heroTitle:
     'Prostori u kojima iskustvo postaje vidljivo kroz susret, akciju i grupni rad.',
   heroIntro:
-    'Događaji u Tihој Psihi nisu performansi, predavanja ni brza rešenja. To su prostori za iskustveno istraživanje — kroz odnos, akciju, simbol, ulogu, prisustvo grupe i ono što se formira između ljudi.',
-  currentTitle: 'Trenutno istraživanje',
+  'Događaji u Tihoj Psihi nisu performansi, predavanja ni brza rešenja. To su prostori za iskustveno istraživanje — kroz odnos, akciju, simbol, ulogu, prisustvo grupe i ono što se formira između ljudi.',  currentTitle: 'Trenutno istraživanje',
   event1Type: 'Online iskustvena radionica',
   event1Title: 'AI & Human Encounter',
   event1Text:
