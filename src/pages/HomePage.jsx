@@ -302,6 +302,15 @@ export default function HomePage({ setCurrentPage, t }) {
     </div>
   </div>
 </section>
+<section className="bg-[#0b1220] px-6 py-10">
+  <div className="mx-auto max-w-3xl overflow-hidden rounded-[28px] border border-yellow-700/10">
+    <img
+      src="/psychodrama-divider.png"
+      alt=""
+      className="h-32 w-full object-cover object-center opacity-70"
+    />
+  </div>
+</section>
 <section className="bg-[#0e1628] px-6 py-24 md:py-28">
   <div className="mx-auto max-w-5xl reveal">
     <p className="mb-6 text-sm uppercase tracking-[0.25em] text-yellow-400/80">
