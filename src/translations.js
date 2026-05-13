@@ -92,6 +92,16 @@ const translations = {
       method4Text: 'Images, roles, metaphors and inner scenes sometimes carry more information than explanation.',
       method5Title: 'Group process',
       method5Text: 'Relationship with others often becomes the space where we first see our own patterns, impulses and boundaries.',
+      spacesLabel: 'Ways of working',
+      spacesTitle: 'Different formats for different stages of the process.',
+      space1Title: 'Individual sessions',
+      space1Text1: 'One-on-one work through conversation, symbol, body and experiential exploration.',
+      space1Text2: 'For periods of transition, overwhelm, inner conflict or the need for clearer contact with yourself.',
+      space2Title: 'Workshops and group spaces',
+      space2Text:  'Online and in-person spaces where experience is explored through encounter, action, group process and symbolic work.',
+      space3Title: 'The Practice of Silence',
+      space3Text:  'An exploration of attention, stimulation, the nervous system and the relationship to inner rhythm through writing, practice and experiential process.',
+    
       silencePractice: {
   label: 'The Practice of Silence',
   heroTitle: 'Silence is not the absence of sound.',
@@ -528,8 +538,17 @@ events: {
     method4Text: 'Slike, uloge, metafore i unutrašnje scene ponekad nose više informacija od objašnjenja.',
     method5Title: 'Grupni proces',
     method5Text: 'Odnos sa drugima često postaje prostor u kome prvi put vidimo sopstvene obrasce, impulse i granice.',
+    spacesLabel: 'Prostori rada',
+    spacesTitle: 'Različiti formati rada za različite faze procesa.',
+    space1Title: 'Individualni susreti',
+    space1Text1: 'Rad jedan na jedan kroz razgovor, simbol, telo i iskustveno istraživanje.',
+    space1Text2: 'Za periode tranzicije, preplavljenosti, unutrašnjih konflikata ili potrebe za jasnijim kontaktom sa sobom.',
+    space2Title: 'Radionice i grupni prostori',
+    space2Text: 'Online i uživo susreti u kojima se iskustvo istražuje kroz encounter, akciju, grupni proces i simbolički rad.',
+    space3Title: 'Praksa tišine',
+    space3Text:  'Istraživanje pažnje, stimulacije, nervnog sistema i odnosa prema unutrašnjem ritmu kroz pisanje, praksu i iskustvene procese.',
     
-    silencePractice: {
+silencePractice: {
        label: 'Praksa tišine',
       heroTitle: 'Tišina nije odsustvo zvuka.',
       heroTitleEm: 'Već prisustvo sebe.',

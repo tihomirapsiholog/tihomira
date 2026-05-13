@@ -346,49 +346,46 @@ export default function HomePage({ setCurrentPage, t }) {
 <section className="bg-[#0e1628] px-6 py-24 md:py-28">
   <div className="mx-auto max-w-5xl reveal">
     <p className="mb-6 text-sm uppercase tracking-[0.25em] text-yellow-400/80">
-      Prostori rada
+     {t.home.spacesLabel}
     </p>
 
     <h2 className="max-w-3xl font-serif text-3xl leading-tight text-white md:text-4xl">
-      Različiti formati rada za različite faze procesa.
+     {t.home.spacesTitle}
     </h2>
 
     <div className="mt-16 grid gap-10 md:grid-cols-3">
 
       <div className="border-t border-yellow-700/20 pt-6">
         <h3 className="font-serif text-2xl text-yellow-50">
-          Individualni susreti
+          {t.home.space1Title}
         </h3>
 
         <p className="mt-4 text-lg leading-relaxed text-slate-300">
-          Rad jedan na jedan kroz razgovor, simbol, telo i iskustveno istraživanje.
+        {t.home.space1Text1}        
         </p>
 
         <p className="mt-4 text-base leading-relaxed text-slate-400">
-          Za periode tranzicije, preplavljenosti, unutrašnjih konflikata ili
-          potrebe za jasnijim kontaktom sa sobom.
+      {t.home.space1Text2}        
+      </p>
+      </div>
+
+      <div className="border-t border-yellow-700/20 pt-6">
+        <h3 className="font-serif text-2xl text-yellow-50">
+          {t.home.space2Title}
+        </h3>
+
+        <p className="mt-4 text-lg leading-relaxed text-slate-300">
+          {t.home.space2Text}
         </p>
       </div>
 
       <div className="border-t border-yellow-700/20 pt-6">
         <h3 className="font-serif text-2xl text-yellow-50">
-          Radionice i grupni prostori
+          {t.home.space3Title}
         </h3>
 
         <p className="mt-4 text-lg leading-relaxed text-slate-300">
-          Online i uživo susreti u kojima se iskustvo istražuje kroz encounter,
-          akciju, grupni proces i simbolički rad.
-        </p>
-      </div>
-
-      <div className="border-t border-yellow-700/20 pt-6">
-        <h3 className="font-serif text-2xl text-yellow-50">
-          Praksa tišine
-        </h3>
-
-        <p className="mt-4 text-lg leading-relaxed text-slate-300">
-          Istraživanje pažnje, stimulacije, nervnog sistema i odnosa prema
-          unutrašnjem ritmu kroz pisanje, praksu i iskustvene procese.
+          {t.home.space13Text}
         </p>
       </div>
 
