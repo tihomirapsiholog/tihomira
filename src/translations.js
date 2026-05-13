@@ -70,7 +70,7 @@ const translations = {
     text: 'and you feel the need for deeper contact with your own impulse, body and presence.',
      },
         ],
-       },
+
       encounterLabel: 'Encounter',
       encounterTitle1: 'Not a new self.',
       encounterTitle2: 'A different relationship to the same self.',
@@ -105,7 +105,7 @@ const translations = {
       silenceLabel: 'The Practice of Silence',
       silenceTitle: 'A real-time exploration of silence, attention and the nervous system.',
       silenceText: 'A three-month preparation process for ten days of silence — documented through field notes, embodiment and psychological observation.',
-      
+      },
       silencePractice: {
   label: 'The Practice of Silence',
   heroTitle: 'Silence is not the absence of sound.',
@@ -520,7 +520,7 @@ events: {
     text: 'i osećate da vam je potreban dublji kontakt sa sopstvenim impulsom, telom i prisustvom.',
      },
     ],
-    },
+  
     encounterLabel: 'Encounter',
     encounterTitle1: 'Ne novo ja.',
     encounterTitle2: 'Drugačiji odnos prema istom ja.',
@@ -555,7 +555,7 @@ events: {
     silenceLabel: 'Praksa tišine',
     silenceTitle: 'Istraživanje tišine, pažnje i nervnog sistema u realnom vremenu.',
     silenceText: 'Tromesečni proces pripreme za deset dana tišine — dokumentovan kroz beleške, telo i psihološko posmatranje.',
-
+},
     silencePractice: {
        label: 'Praksa tišine',
       heroTitle: 'Tišina nije odsustvo zvuka.',
