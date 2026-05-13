@@ -278,7 +278,7 @@ export default function HomePage({ setCurrentPage, t }) {
       Kako radim
     </p>
 
-    <h2 className="max-w-3xl font-serif text-4xl leading-tight text-white md:text-5xl">
+    <h2 className="max-w-3xl font-serif text-3xl leading-tight text-white md:text-4xl">
       Psihologija, akcija, telo i grupni proces.
     </h2>
 
@@ -290,7 +290,7 @@ export default function HomePage({ setCurrentPage, t }) {
     <div className="mt-16 grid gap-px border border-yellow-700/10 bg-yellow-700/10 md:grid-cols-2">
       
       <div className="bg-[#111827] p-8 md:p-10">
-        <h3 className="font-serif text-2xl text-yellow-50">
+        <h3 className="font-serif text-xl text-yellow-50">
           Psihologija
         </h3>
 
@@ -351,7 +351,7 @@ export default function HomePage({ setCurrentPage, t }) {
       Prostori rada
     </p>
 
-    <h2 className="max-w-3xl font-serif text-4xl leading-tight text-white md:text-5xl">
+    <h2 className="max-w-3xl font-serif text-3xl leading-tight text-white md:text-4xl">
       Različiti formati rada za različite faze procesa.
     </h2>
 
@@ -419,7 +419,7 @@ export default function HomePage({ setCurrentPage, t }) {
             The Practice of Silence
           </p>
 
-          <h2 className="mb-6 font-serif text-4xl leading-tight text-white md:text-5xl">
+          <h2 className="mb-6 font-serif text-3xl leading-tight text-white md:text-4xl">
             A real-time exploration of silence, attention, and the nervous system.
           </h2>
 

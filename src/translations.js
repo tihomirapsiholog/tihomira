@@ -10,7 +10,7 @@ const translations = {
     },
     home: {
       welcome: 'Welcome',
-    tagline: "Not a new self. A different relationship to the same self.",
+    tagline: "Not a new self. A different relationship to the same.",
     intro:  "Tiha Psiha is a space for experiential exploration of inner life. Through individual and group work, it explores what becomes visible when experience is given attention, relationship, movement, or voice.",
    howIWork: 'How I Work',
       workDescription:
