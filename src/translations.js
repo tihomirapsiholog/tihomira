@@ -349,6 +349,23 @@ events: {
   'Do I feel relief or pressure? Does it support me or speed me up beyond my own rhythm? What happens to my creativity, my way of working and my sense of value?',
   event1Para4:
   'Through work in a small group and with the help of psychodramatic and action-based methods, we will explore the inner reactions, questions and voices that appear in the encounter with AI — without needing to take the “right” position.',
+  eventDateLabel: 'Date:',
+eventDateValue: '04.06.2026, Thursday',
+
+eventTimeLabel: 'Time:',
+eventTimeValue: '18:00–21:00',
+
+eventFormatLabel: 'Format:',
+eventFormatValue: 'online / Zoom',
+
+eventLanguageLabel: 'Language:',
+eventLanguageValue: 'Serbian / Croatian',
+
+eventPriceLabel: 'Price:',
+eventPriceValue: '1000 RSD / 10 EUR',
+
+eventGroupLabel: 'Group:',
+eventGroupValue: 'up to 15 participants',
   event1Text:
     'An experiential exploration of the relationship between humans and artificial intelligence through psychodramatic and action-based methods.',
   event1Button: 'Ask about this workshop',
@@ -825,6 +842,23 @@ events: {
   'Da li osećam olakšanje ili pritisak? Da li mi pomaže ili me ubrzava preko mere? Šta se događa sa mojom kreativnošću, načinom rada i osećajem vrednosti?',
   event1Para4:
   'Kroz rad u maloj grupi i uz pomoć psihodramskih i akcionih metoda istraživaćemo unutrašnje reakcije, pitanja i glasove koji se javljaju u susretu sa AI-jem — bez potrebe da zauzmemo „ispravan stav“.',
+  eventDateLabel: 'Datum:',
+eventDateValue: '04.06.2026, četvrtak',
+
+eventTimeLabel: 'Vreme:',
+eventTimeValue: '18:00–21:00',
+
+eventFormatLabel: 'Format:',
+eventFormatValue: 'online / Zoom',
+
+eventLanguageLabel: 'Jezik:',
+eventLanguageValue: 'srpski / hrvatski',
+
+eventPriceLabel: 'Cena:',
+eventPriceValue: '1000 RSD / 10 EUR',
+
+eventGroupLabel: 'Grupa:',
+eventGroupValue: 'do 15 učesnika',
   event1Text:
     'Iskustveno istraživanje odnosa između čoveka i veštačke inteligencije kroz psihodramske i akcione metode.',
   event1Button: 'Raspitaj se o radionici',
