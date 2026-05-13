@@ -87,27 +87,37 @@ const handleSubmit = async (e) => {
                 {t.events.event1Para4}                
                 </p>
 
-                <div className="mt-8 grid gap-3 rounded-2xl border border-yellow-700/20 bg-[#0b1220] p-5 text-sm text-slate-300 sm:grid-cols-2">
-                <p>
-              <span className="text-yellow-400">Datum:</span> 04.06.2026, četvrtak
-               </p>
-              <p>
-               <span className="text-yellow-400">Vreme:</span> 18:00–21:00
-                </p>
-               <p>
-              <span className="text-yellow-400">Format:</span> online / Zoom
-              </p>
-               <p>
-               <span className="text-yellow-400">Jezik:</span> srpski / hrvatski
-              </p>
-              <p>
-             <span className="text-yellow-400">Cena:</span> 1000 RSD / 10 EUR
-            </p>
-            <p>
-           <span className="text-yellow-400">Grupa:</span> do 15 učesnika
-           </p>
-          </div>
-              </div>
+               <div className="mt-8 grid gap-3 rounded-2xl border border-yellow-700/20 bg-[#0b1220] p-5 text-sm text-slate-300 sm:grid-cols-2">
+  <p>
+    <span className="text-yellow-400">{t.events.eventDateLabel}</span>{' '}
+    {t.events.eventDateValue}
+  </p>
+
+  <p>
+    <span className="text-yellow-400">{t.events.eventTimeLabel}</span>{' '}
+    {t.events.eventTimeValue}
+  </p>
+
+  <p>
+    <span className="text-yellow-400">{t.events.eventFormatLabel}</span>{' '}
+    {t.events.eventFormatValue}
+  </p>
+
+  <p>
+    <span className="text-yellow-400">{t.events.eventLanguageLabel}</span>{' '}
+    {t.events.eventLanguageValue}
+  </p>
+
+  <p>
+    <span className="text-yellow-400">{t.events.eventPriceLabel}</span>{' '}
+    {t.events.eventPriceValue}
+  </p>
+
+  <p>
+    <span className="text-yellow-400">{t.events.eventGroupLabel}</span>{' '}
+    {t.events.eventGroupValue}
+  </p>
+</div>
             </div>
 
             <div className="rounded-[28px] border border-yellow-700/20 bg-[#10192c] p-8">
