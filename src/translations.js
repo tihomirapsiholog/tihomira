@@ -327,6 +327,7 @@ const translations = {
       questionsText: 'Not every moment in life requires guidance. But sometimes a well-held space can make all the difference.',
       questionsText2: 'Sometimes a single conversation is enough to see things differently.',
       reach: 'Reach Out',
+       serviceCardCta: 'Ask about this format',
     },
 events: {
   label: 'Gatherings & Events',
@@ -720,6 +721,7 @@ instrumentsIntro:
       closingText4: 'Taj odnos prema ritmu, prisustvu, prirodi i susretu ostao je duboko utkan u način na koji danas radim.',
       closingQuote: 'Nemam sve odgovore. Ali znam kako da držim prostor dok ih ti pronalaziš.',
       contactButton: 'Istraži mogućnost susreta',
+      serviceCardCta: 'Raspitaj se o ovom formatu',
     },
 
     work: {
