@@ -340,6 +340,15 @@ events: {
   currentTitle: 'Current exploration',
   event1Type: 'Online experiential workshop',
   event1Title: 'AI & Human Encounter',
+  event1RealTitle: 'How do I actually feel about AI?',
+  event1Para1:
+  'Lately, we speak more and more often about artificial intelligence — but less often about what happens inside us when we think about it.',
+  event1Para2:
+  'This workshop is not about what AI is, but about what is activated in us when we encounter it.',
+  event1Para3:
+  'Do I feel relief or pressure? Does it support me or speed me up beyond my own rhythm? What happens to my creativity, my way of working and my sense of value?',
+  event1Para4:
+  'Through work in a small group and with the help of psychodramatic and action-based methods, we will explore the inner reactions, questions and voices that appear in the encounter with AI — without needing to take the “right” position.',
   event1Text:
     'An experiential exploration of the relationship between humans and artificial intelligence through psychodramatic and action-based methods.',
   event1Button: 'Ask about this workshop',
@@ -807,6 +816,15 @@ events: {
   'Događaji u Tihoj Psihi nisu performansi, predavanja ni brza rešenja. To su prostori za iskustveno istraživanje — kroz odnos, akciju, simbol, ulogu, prisustvo grupe i ono što se formira između ljudi.',  currentTitle: 'Trenutno istraživanje',
   event1Type: 'Online iskustvena radionica',
   event1Title: 'AI & Human Encounter',
+  event1RealTitle: 'Kako se zapravo osećam u vezi sa AI-jem?',
+  event1Para1:
+  'U poslednje vreme sve češće govorimo o veštačkoj inteligenciji — ali ređe govorimo o tome šta se u nama događa dok o njoj razmišljamo.',
+  event1Para2:
+  'Ova radionica nije o tome šta AI jeste, već šta se u nama pokreće kada se sa njim susretnemo.',
+  event1Para3:
+  'Da li osećam olakšanje ili pritisak? Da li mi pomaže ili me ubrzava preko mere? Šta se događa sa mojom kreativnošću, načinom rada i osećajem vrednosti?',
+  event1Para4:
+  'Kroz rad u maloj grupi i uz pomoć psihodramskih i akcionih metoda istraživaćemo unutrašnje reakcije, pitanja i glasove koji se javljaju u susretu sa AI-jem — bez potrebe da zauzmemo „ispravan stav“.',
   event1Text:
     'Iskustveno istraživanje odnosa između čoveka i veštačke inteligencije kroz psihodramske i akcione metode.',
   event1Button: 'Raspitaj se o radionici',
