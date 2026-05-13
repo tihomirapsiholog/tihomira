@@ -94,11 +94,26 @@ const handleSubmit = async (e) => {
                   „ispravan stav“.
                 </p>
 
-                <div className="space-y-2 pt-4 text-sm text-slate-400">
-                  <p>📍 Online (Zoom)</p>
-                  <p>⏳ Oko 2–2.5 sata</p>
-                  <p>👥 Mala grupa</p>
-                </div>
+                <div className="mt-8 grid gap-3 rounded-2xl border border-yellow-700/20 bg-[#0b1220] p-5 text-sm text-slate-300 sm:grid-cols-2">
+                <p>
+              <span className="text-yellow-400">Datum:</span> 04.06.2026, četvrtak
+               </p>
+              <p>
+               <span className="text-yellow-400">Vreme:</span> 18:00–21:00
+                </p>
+               <p>
+              <span className="text-yellow-400">Format:</span> online / Zoom
+              </p>
+               <p>
+               <span className="text-yellow-400">Jezik:</span> srpski / hrvatski
+              </p>
+              <p>
+             <span className="text-yellow-400">Cena:</span> 1000 RSD / 10 EUR
+            </p>
+            <p>
+           <span className="text-yellow-400">Grupa:</span> do 15 učesnika
+           </p>
+          </div>
               </div>
             </div>
 
