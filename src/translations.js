@@ -213,9 +213,8 @@ const translations = {
       chapter5Para2:
         'In 2025 I drove from Surdulica to Barcelona — with a bed in the back of a van and all my instruments. I lived across different corners of the city, sometimes in the van itself. Every week I gathered with people to improvise together. They started calling me <strong class="text-slate-200 font-normal">"Tina con Cuenco"</strong> — Tina with a singing bowl.',
       chapter5Para3:
-        'When I held my first sound bath for others, I realised I was enjoying it as much as they were. Sound carries healing, improvisation sets things free. <strong class="text-slate-200 font-normal",</strong>',
+        'When I held my first sound bath for others, I realised I was enjoying it as much as they were. Sound carries healing, improvisation sets things free. <strong class="text-slate-200 font-normal"</strong>',
       chapter5Aside: 'I trust what the body shows — more than what words describe.',
-      instrumentsLabel: 'Instruments collected along the way',
       inst1: 'Shamanic drum', inst1Origin: '— Hungary',
       inst2: 'Hand drum', inst2Origin: '— Ecuador',
       inst3: 'Rain sticks', inst3Origin: '— Ecuador',
@@ -251,10 +250,16 @@ const translations = {
       trainingPara2: 
       "For four years I trained in classical psychodrama in Novi Sad, while my work continued to evolve through the ongoing process of Advanced Level Psychodramatic Bodywork® training with Susan Aaron — Canadian psychotherapist and founder of the method.<br /><br />My approach has also been deeply influenced by multiple cycles of Physical Theatre training with director Marija Farmer, through which I explored devising processes, Complicité methodology, embodiment, symbolic action and the subtle dynamics that emerge between people when experience is given space to unfold.",
       trainingPara3:
-      "Over the years I continued learning through Transactional Analysis training at Psihopolis, Tele'Drama Practitioner trainings, Ericksonian approaches and conversational hypnosis, as well as the Ethics — Path to the True Self training with Tadeja Bradaš.<br /><br />Sound and rhythm have also been part of my life for a long time. I completed elementary music school, and in recent years that exploration has continued through gong work and experiential spaces involving attention, resonance and embodied presence.<br /><br />Over the past fifteen years I have worked with groups in different contexts — from psychodramatic and educational settings to international online and hybrid processes, including Tele'Drama environments, ecological sociodrama and workshops exploring the relationship between humans, technology, attention and contemporary life.<br /><br />Before fully dedicating myself to experiential work, my first research project at Petnica Science Center received an award while I was still in high school. That research-oriented impulse has remained an important part of my practice, alongside my interest in group intelligence, embodiment and the ways people create meaning through relationship and experience.",      closingQuote: "I don't have all the answers. But I know how to",
-      closingQuoteEm: 'hold the space while you find yours.',
+      "Over the years I continued learning through Transactional Analysis training at Psihopolis, Tele'Drama Practitioner trainings, Ericksonian approaches and conversational hypnosis, as well as the Ethics — Path to the True Self training with Tadeja Bradaš.<br /><br />Sound and rhythm have also been part of my life for a long time. I completed elementary music school, and in recent years that exploration has continued through gong work and experiential spaces involving attention, resonance and embodied presence.<br /><br />Over the past fifteen years I have worked with groups in different contexts — from psychodramatic and educational settings to international online and hybrid processes, including Tele'Drama environments, ecological sociodrama and workshops exploring the relationship between humans, technology, attention and contemporary life.<br /><br />Before fully dedicating myself to experiential work, my first research project at Petnica Science Center received an award while I was still in high school. That research-oriented impulse has remained an important part of my practice, alongside my interest in group intelligence, embodiment and the ways people create meaning through relationship and experience.",  
       ctaWork: 'Work with me',
       ctaContact: 'Get in touch',
+      closingLabel: 'What I return to',
+      closingText1: 'Tiha Psiha was born one evening in a living room in Umka, in conversation with a close friend whose way of organizing people and spaces deeply shaped me.',
+      closingText2: 'It was the first and last time we sat in that room before she and her family moved to Stara Planina, where they now live more closely with nature and its rhythms.',
+      closingText3: 'Since then, we continue to nurture the encounter that began there — through conversations, shared meals, silence, ideas and the changing seasons.',
+      closingText4: 'That relationship with rhythm, presence, nature and encounter remains deeply woven into the way I work today.',
+      closingQuote: 'Not a new self. A different relationship to the same self.',
+      contactButton: 'Explore the possibility of encounter',
     },
     work: {
       eyebrow: 'Work With Me',
@@ -668,7 +673,6 @@ fieldNotes: [
       chapter5Para3:
         'Kad sam napravila prvu zvučnu kupku za druge, shvatila sam da uživam podjednako koliko i oni. Zvuk nosi isceljenje, improvizacija oslobađa. <strong class="text-slate-200 font-normal".</strong>',
       chapter5Aside: 'Verujem onome što telo pokazuje — pre nego onome što reči opisuju.',
-      instrumentsLabel: 'Instrumenti sakupljeni putem',
       inst1: 'Šamanski bubanj', inst1Origin: '— Mađarska',
       inst2: 'Ručni bubanj', inst2Origin: '— Ekvador',
       inst3: 'Kišni štapovi', inst3Origin: '— Ekvador',
@@ -706,11 +710,18 @@ instrumentsIntro:
       "Četiri godine trenirala sam klasičnu psihodramu u Novom Sadu, a moj rad se dalje razvijao kroz ongoing proces Advanced Level Psychodramatic Bodywork® treninga sa Susan Aaron — kanadskom psihoterapeutkinjom i osnivačicom metode.<br /><br />Veliki uticaj na moj način rada imali su i ciklusi Fizičkog Teatra sa rediteljkom Marijom Farmer, kroz koje sam godinama istraživala devising proces, Complicité metodologiju, odnos tela i simboličke akcije, kao i ono što se događa između ljudi kada iskustvo dobije prostor da se odigra.",
       trainingPara3:
       "Tokom godina dodatno sam učila kroz Transakcionu analizu u Psihopolisu, Tele'Drama Practitioner treninge, Ericksonian pristup i konverzacijsku hipnozu, kao i trening Etika — Put do pravog ja sa Tadejom Bradaš.<br /><br />Zvuk i ritam takođe su dugo deo mog života. Završila sam osnovnu muzičku školu, a poslednjih godina to istraživanje nastavilo se kroz rad sa gongom i iskustvenim prostorima koji uključuju pažnju, rezonancu i telesko prisustvo.<br /><br />Tokom poslednjih petnaest godina radila sam sa grupama u različitim kontekstima — od psihodramskih i edukativnih prostora do međunarodnih online i hibridnih procesa, uključujući Tele'Drama okruženje, ekološku sociodramu i radionice koje istražuju odnos čoveka, tehnologije, pažnje i savremenog života.<br /><br />Pre nego što sam se potpuno posvetila iskustvenom radu, moj prvi istraživački projekat u Petnici bio je nagrađen još tokom srednjoškolskih dana. Taj istraživački nerv ostao je važan deo mog rada — zajedno sa interesovanjem za grupnu inteligenciju, embodiment i načine na koje ljudi stvaraju značenje kroz odnos i iskustvo.",
-      closingQuote: 'Nemam sve odgovore. Ali znam kako da',
-      closingQuoteEm: 'držim prostor dok ih ti pronalaziš.',
+      
       ctaWork: 'Rad sa mnom',
       ctaContact: 'Javi se',
+      closingLabel: 'Ono čemu se vraćam',
+      closingText1: 'Tiha Psiha je nastala jedne večeri u dnevnoj sobi u Umci, u razgovoru sa bliskom prijateljicom čiji je način organizovanja ljudi i prostora duboko uticao na mene.',
+      closingText2: 'To je bio prvi i poslednji put da smo sedele u toj sobi pre nego što su se ona i njena porodica preselili na Staru Planinu, gde danas žive bliže prirodi i njenim ritmovima.',
+      closingText3: 'Od tada nastavljamo da negujemo encounter koji je tamo počeo — kroz razgovore, zajedničke obroke, tišinu, ideje i smenu godišnjih doba.',
+      closingText4: 'Taj odnos prema ritmu, prisustvu, prirodi i susretu ostao je duboko utkan u način na koji danas radim.',
+      closingQuote: 'Nemam sve odgovore. Ali znam kako da držim prostor dok ih ti pronalaziš.',
+      contactButton: 'Istraži mogućnost susreta',
     },
+
     work: {
       eyebrow: 'Rad sa mnom',
       title: 'Postoje trenuci u životu kada nešto počinje da se pomera.',

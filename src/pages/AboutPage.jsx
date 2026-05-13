@@ -262,27 +262,23 @@ export default function AboutPage({ t, setCurrentPage }) {
       <section className="border-t border-yellow-700/10 bg-[#0b1220] px-4 py-18 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <blockquote className="mb-12 font-serif text-2xl font-light italic leading-relaxed text-white sm:text-3xl">
-            Ne novo ja.
-            <em className="not-italic text-yellow-400">
-              {' '}
-              Drugačiji odnos prema istom ja.
-            </em>
+        {t.about.closingQuote}
           </blockquote>
 
           <div className="space-y-6 text-base font-light leading-relaxed text-slate-400">
-            <p>
-              Naziv Tiha Psiha nastao je spontano, tokom razgovora u dnevnoj
-              sobi prijatelja na Umci. Bio je to prvi i poslednji put da smo
-              sedeli u tom prostoru pre nego što su se preselili na Staru
-              Planinu, gde danas zajedno sa svoje tri ćerke grade drugačiji
-              odnos prema vremenu, prirodi i svakodnevnom životu.
-            </p>
+           <p>
+          {t.about.closingText1}
+          </p>
 
             <p>
-              Od tada se naši susreti nastavljaju tamo — uz sporiji ritam, više
-              tišine i onu vrstu encountera koja ne nastaje iz spektakla, već iz
-              kontinuiteta prisustva.
-            </p>
+          {t.about.closingText2}
+          </p>
+          <p>
+           {t.about.closingText3}
+          </p>
+          <p>
+          {t.about.closingText4}
+          </p>
           </div>
 
           <div className="mt-14 flex justify-center">
@@ -290,7 +286,7 @@ export default function AboutPage({ t, setCurrentPage }) {
               onClick={() => setCurrentPage('/contact')}
               className="rounded-full border border-yellow-500/30 px-8 py-3 text-sm tracking-wide text-yellow-100 transition-all hover:border-yellow-400 hover:bg-yellow-400 hover:text-slate-950"
             >
-              Istraži mogućnost susreta
+              {t.about.contactButton}
             </button>
           </div>
         </div>
