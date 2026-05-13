@@ -169,6 +169,66 @@ export default function HomePage({ setCurrentPage, t }) {
         </div>
       </div>
         </section>
+        <section className="bg-[#0b1220] px-6 py-20 md:py-24">
+  <div className="mx-auto max-w-5xl reveal">
+    <p className="mb-6 text-sm uppercase tracking-[0.25em] text-yellow-400/80">
+      Možda ste ovde jer...
+    </p>
+
+    <div className="grid gap-10 md:grid-cols-2">
+      <div className="space-y-3">
+        <h3 className="font-serif text-2xl leading-tight text-yellow-50">
+          se nalazite u životnom prelazu
+        </h3>
+
+        <p className="text-lg leading-relaxed text-slate-300">
+          i stari način funkcionisanja više ne radi.
+        </p>
+      </div>
+
+      <div className="space-y-3">
+        <h3 className="font-serif text-2xl leading-tight text-yellow-50">
+          osećate da držite previše toga predugo
+        </h3>
+
+        <p className="text-lg leading-relaxed text-slate-300">
+          bez prostora da zaista stanete.
+        </p>
+      </div>
+
+      <div className="space-y-3">
+        <h3 className="font-serif text-2xl leading-tight text-yellow-50">
+          tražite drugačiji odnos prema sebi
+        </h3>
+
+        <p className="text-lg leading-relaxed text-slate-300">
+          ne još jedan pokušaj da se „popravite“.
+        </p>
+      </div>
+
+      <div className="space-y-3">
+        <h3 className="font-serif text-2xl leading-tight text-yellow-50">
+          želite prostor u kome ne morate odmah da znate
+        </h3>
+
+        <p className="text-lg leading-relaxed text-slate-300">
+          šta dalje.
+        </p>
+      </div>
+
+      <div className="space-y-3 md:col-span-2">
+        <h3 className="font-serif text-2xl leading-tight text-yellow-50">
+          radite sa ljudima
+        </h3>
+
+        <p className="max-w-3xl text-lg leading-relaxed text-slate-300">
+          i osećate da vam je potreban dublji kontakt sa sopstvenim impulsom,
+          telom i prisustvom.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 <section className="bg-[#0e1628] px-6 py-28 md:py-32">
   <div className="mx-auto max-w-4xl reveal">
     <p className="mb-6 text-sm uppercase tracking-[0.25em] text-yellow-400/80">
