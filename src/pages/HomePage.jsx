@@ -169,62 +169,27 @@ export default function HomePage({ setCurrentPage, t }) {
         </div>
       </div>
         </section>
-        <section className="bg-[#0b1220] px-6 py-20 md:py-24">
-  <div className="mx-auto max-w-5xl reveal">
+      <section className="bg-[#0b1220] px-6 py-20 md:py-24">
+  <div className="mx-auto max-w-4xl reveal">
     <p className="mb-6 text-sm uppercase tracking-[0.25em] text-yellow-400/80">
-      Možda ste ovde jer...
+      {t.home.recognitionLabel}
     </p>
 
-    <div className="grid gap-x-16 gap-y-14 md:grid-cols-2">
-      <div className="space-y-3">
-      <h3 className="font-serif text-[1.7rem] leading-[1.15] text-yellow-50 md:text-[2rem]">          se nalazite u životnom prelazu
-        </h3>
+    <div className="space-y-8">
+      {t.home.recognitionItems.map((item, index) => (
+        <div
+          key={index}
+          className="border-t border-yellow-700/10 pt-6"
+        >
+          <h3 className="font-serif text-2xl leading-tight text-yellow-50 md:text-3xl">
+            {item.title}
+          </h3>
 
-        <p className="text-base leading-relaxed text-slate-400 md:text-lg">
-          i stari način funkcionisanja više ne radi.
-        </p>
-      </div>
-
-      <div className="space-y-3">
-        <h3 className="font-serif text-[1.7rem] leading-[1.15] text-yellow-50 md:text-[2rem]">
-          osećate da držite previše toga predugo
-        </h3>
-
-        <p className="text-base leading-relaxed text-slate-400 md:text-lg">
-          bez prostora da zaista stanete.
-        </p>
-      </div>
-
-      <div className="space-y-3">
-        <h3 className="font-serif text-[1.7rem] leading-[1.15] text-yellow-50 md:text-[2rem]">
-          tražite drugačiji odnos prema sebi
-        </h3>
-
-       <p className="text-base leading-relaxed text-slate-400 md:text-lg">
-          ne još jedan pokušaj da se „popravite“.
-        </p>
-      </div>
-
-      <div className="space-y-3">
-        <h3 className="font-serif text-[1.7rem] leading-[1.15] text-yellow-50 md:text-[2rem]">
-          želite prostor u kome ne morate odmah da znate
-        </h3>
-
-        <p className="text-base leading-relaxed text-slate-400 md:text-lg">
-          šta dalje.
-        </p>
-      </div>
-
-      <div className="max-w-3xl space-y-3 md:col-span-2">
-        <h3 className="font-serif text-[1.7rem] leading-[1.15] text-yellow-50 md:text-[2rem]">
-          radite sa ljudima
-        </h3>
-
-        <p className="max-w-3xl text-lg leading-relaxed text-slate-300">
-          i osećate da vam je potreban dublji kontakt sa sopstvenim impulsom,
-          telom i prisustvom.
-        </p>
-      </div>
+          <p className="mt-3 max-w-2xl text-base leading-relaxed text-slate-400 md:text-lg">
+            {item.text}
+          </p>
+        </div>
+      ))}
     </div>
   </div>
 </section>

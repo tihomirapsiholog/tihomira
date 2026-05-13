@@ -46,7 +46,31 @@ const translations = {
       zoomTitle: 'For Facilitators',
       zoomText: 'Zoom Maestra supports facilitators, educators, and therapists who want to work online with more ease, less technical stress, and a stronger sense of flow.',
       zoomButton: 'Explore Zoom Maestra',
-    },
+      recognitionLabel: 'You may be here because...',
+
+      recognitionItems: [
+       {
+    title: 'You are navigating a life transition',
+    text: 'and the old way of functioning no longer works.',
+      },
+       {
+       title: 'You have been holding too much for too long',
+     text: 'without enough space to truly pause.',
+      },
+       {
+    title: 'You are looking for a different relationship with yourself',
+    text: 'not another attempt to “fix” who you are.',
+       },
+     {
+    title: 'You want a space where you do not have to know immediately',
+    text: 'what comes next.',
+      },
+       {
+    title: 'You work with people',
+    text: 'and you feel the need for deeper contact with your own impulse, body and presence.',
+     },
+        ],
+       },
    silencePractice: {
   label: 'The Practice of Silence',
   heroTitle: 'Silence is not the absence of sound.',
@@ -438,6 +462,30 @@ events: {
       zoomText: 'Zoom Maestra podržava facilitatore, edukatore i terapeute koji žele da rade online sa više lakoće, manje tehničkog stresa i više osećaja toka.',
       zoomButton: 'Istraži Zoom Maestru',
       ctaSubject: 'Upit za Zoom Maestru',
+      recognitionLabel: 'Možda ste ovde jer...',
+
+      recognitionItems: [
+     {
+    title: 'Nalazite se u životnom prelazu',
+    text: 'i stari način funkcionisanja više ne radi.',
+     },
+      {
+    title: 'Osećate da držite previše toga predugo',
+    text: 'bez prostora da zaista stanete.',
+     },
+     {
+    title: 'Tražite drugačiji odnos prema sebi',
+    text: 'ne još jedan pokušaj da se „popravite“.',
+     },
+     {
+    title: 'Želite prostor u kome ne morate odmah da znate',
+    text: 'šta dalje.',
+      },
+      {
+    title: 'Radite sa ljudima',
+    text: 'i osećate da vam je potreban dublji kontakt sa sopstvenim impulsom, telom i prisustvom.',
+     },
+    ],
     },
     silencePractice: {
        label: 'Praksa tišine',
