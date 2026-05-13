@@ -133,8 +133,7 @@ export default function WorkPage({ t, setCurrentPage }) {
                 key={i}
                 id={anchors[i]}
                 onClick={() => setCurrentPage('/contact')}
-                className="cursor-pointer rounded-2xl border border-slate-700 bg-[#111a2e] p-8 transition hover:border-yellow-400/40 hover:shadow-xl hover:shadow-black/30"
-              >
+                className="cursor-pointer rounded-2xl border border-slate-700 bg-[#111a2e] p-8 transition hover:border-yellow-400/40 hover:shadow-xl hover:shadow-black/30"              >
                 <span className="inline-flex rounded-full border border-yellow-400/20 px-3 py-1 text-xs uppercase tracking-[0.2em] text-yellow-300">
                   {service.label}
                 </span>
@@ -168,8 +167,7 @@ export default function WorkPage({ t, setCurrentPage }) {
                   </h4>
                   <p className="leading-7 text-slate-300">{service.forWho}</p>
                 </div>
-                <div className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-yellow-300">
-                {t.work.serviceCardCta}
+                <div className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-yellow-300 transition-transform duration-300 group-hover:translate-x-1">                {t.work.serviceCardCta}
                 <ArrowRight size={16} />
               </div>
               </div>
