@@ -302,11 +302,11 @@ export default function HomePage({ setCurrentPage, t }) {
     </div>
   </div>
 </section>
-<div className="flex justify-center py-8 opacity-20">
+<div className="flex justify-center py-8 opacity-10">
   <img
     src="/psychodrama-divider.png"
     alt=""
-    className="w-24 object-contain"
+    className="w-14 object-contain"
   />
 </div>
 <section className="bg-[#0e1628] px-6 py-24 md:py-28">
