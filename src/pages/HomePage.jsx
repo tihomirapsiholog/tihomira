@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight } from 'lucide-react';
 
 const gates = [
   {
@@ -62,23 +61,30 @@ export default function HomePage({ setCurrentPage, t }) {
     }
   };
 
-  const handleGateClick = (gateId) => {
-    if (!isTouchDevice) return;
+ const handleGateClick = (gate) => {
+  if (!isTouchDevice) {
+    setCurrentPage(gate.page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return;
+  }
 
-    setActiveGate((currentGate) =>
-      currentGate === gateId ? null : gateId
-    );
-  };
+  if (activeGate === gate.id) {
+    setCurrentPage(gate.page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return;
+  }
 
-  const handleGateKeyDown = (event, gateId) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
+  setActiveGate(gate.id);
+};
 
-      setActiveGate((currentGate) =>
-        currentGate === gateId ? null : gateId
-      );
-    }
-  };
+  const handleGateKeyDown = (event, gate) => {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+
+    setCurrentPage(gate.page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+};
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#f3eee4] text-[#182018]">
@@ -104,19 +110,16 @@ export default function HomePage({ setCurrentPage, t }) {
             return (
               <article
                 key={gate.id}
-                role="button"
+                role="link"
                 tabIndex={0}
                 aria-expanded={isActive}
-                aria-label={`Otvori kapiju ${gate.title}`}
+                aria-label={`Uđi u ${gate.title}`}
                 onMouseEnter={() => handleMouseEnter(gate.id)}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleGateClick(gate.id)}
-                onKeyDown={(event) => handleGateKeyDown(event, gate.id)}
+                onClick={() => handleGateClick(gate)}
+                onKeyDown={(event) => handleGateKeyDown(event, gate)}
                 className={[
-                'group relative min-h-[420px] overflow-hidden rounded-[2rem] shadow-2xl outline-none transition-all duration-500 ease-out sm:min-h-[520px] lg:min-h-[560px]',
-                 gate.theme === 'tiha'
-                 ? 'bg-[radial-gradient(circle_at_center,rgba(214,173,91,0.20),rgba(20,45,26,0.98)_62%,rgba(9,18,12,1)_100%)]'
-                 : 'bg-[radial-gradient(circle_at_center,rgba(214,173,91,0.16),rgba(9,29,58,0.98)_62%,rgba(4,12,25,1)_100%)]',
+                'group relative min-h-[420px] cursor-pointer overflow-hidden rounded-[2rem] shadow-2xl outline-none transition-all duration-500 ease-out sm:min-h-[520px] lg:min-h-[560px]',
                 'focus-visible:ring-4 focus-visible:ring-[#c7a65d] focus-visible:ring-offset-4',
                  isActive ? '-translate-y-1' : '',
                 ].join(' ')}
@@ -179,17 +182,6 @@ export default function HomePage({ setCurrentPage, t }) {
                       {gate.description}
                     </p>
 
-                    <button
-                      type="button"
-                      onClick={(event) => {
-                        event.stopPropagation();
-                        setCurrentPage(gate.page);
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                      }}
-                      className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#d6ad5b] px-6 py-3 text-sm font-semibold tracking-[0.04em] text-[#17130b] shadow-xl transition hover:-translate-y-0.5 hover:bg-[#e4c274] focus:outline-none focus-visible:ring-4 focus-visible:ring-white/80"                    >
-                      Uđi
-                      <ArrowRight size={17} />
-                    </button>
                   </div>
                 </div>
               </article>
