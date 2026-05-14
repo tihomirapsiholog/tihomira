@@ -89,10 +89,9 @@ export default function HomePage({ setCurrentPage, t }) {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#6f6759]">
             tihomira.info
           </p>
-          <h1 className="mx-auto grid max-w-5xl grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">          
-            Dve kapije
+          <h1 className="font-serif text-5xl font-normal leading-none text-[#172018] sm:text-6xl lg:text-6xl">
+           Dve kapije
           </h1>
-
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#4f574d] sm:text-xl">
             Izaberi onu koja te vodi tamo gde ćeš naći ono što tražiš.
           </p>
@@ -114,21 +113,21 @@ export default function HomePage({ setCurrentPage, t }) {
                 onClick={() => handleGateClick(gate.id)}
                 onKeyDown={(event) => handleGateKeyDown(event, gate.id)}
                 className={[
-                  'group relative min-h-[420px] overflow-hidden rounded-[2rem] shadow-2xl outline-none transition-all duration-500 ease-out sm:min-h-[620px]',
-                  'focus-visible:ring-4 focus-visible:ring-[#c7a65d] focus-visible:ring-offset-4',
-                  isActive ? '-translate-y-1' : '',
+               'group relative min-h-[420px] overflow-hidden rounded-[2rem] bg-[#101827] shadow-2xl outline-none transition-all duration-500 ease-out sm:min-h-[520px] lg:min-h-[560px]',
+               'focus-visible:ring-4 focus-visible:ring-[#c7a65d] focus-visible:ring-offset-4',
+               isActive ? '-translate-y-1' : '',
                 ].join(' ')}
-              >
-                <img
-                  src={gate.closedImage}
-                  alt=""
-                  className={[
-                  'group relative min-h-[420px] overflow-hidden rounded-[2rem] bg-[#101827] shadow-2xl outline-none transition-all duration-500 ease-out sm:min-h-[500px] lg:min-h-[560px]',                    isActive
-                      ? 'scale-[1.02] opacity-0'
-                      : 'scale-100 opacity-100 group-hover:scale-[1.02] group-hover:opacity-0',
-                  ].join(' ')}
+               >
+              <img
+               src={gate.closedImage}
+               alt=""
+               className={[
+              'absolute inset-0 h-full w-full object-contain transition-all duration-500 ease-out',
+                isActive
+               ? 'scale-[1.02] opacity-0'
+               : 'scale-100 opacity-100 group-hover:scale-[1.02] group-hover:opacity-0',
+               ].join(' ')}
                 />
-
                 <img
                   src={gate.halfImage}
                   alt=""
@@ -184,8 +183,7 @@ export default function HomePage({ setCurrentPage, t }) {
                         setCurrentPage(gate.page);
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                       }}
-                      className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#d6ad5b] px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#17130b] shadow-xl transition hover:-translate-y-0.5 hover:bg-[#e4c274] focus:outline-none focus-visible:ring-4 focus-visible:ring-white/80"
-                    >
+                      className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#d6ad5b] px-6 py-3 text-sm font-semibold tracking-[0.04em] text-[#17130b] shadow-xl transition hover:-translate-y-0.5 hover:bg-[#e4c274] focus:outline-none focus-visible:ring-4 focus-visible:ring-white/80"                    >
                       Uđi
                       <ArrowRight size={17} />
                     </button>
