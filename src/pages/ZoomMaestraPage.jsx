@@ -68,7 +68,7 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
 }, []);
   return (
     <div className="bg-[#0b1220]">
-      <section className="relative overflow-hidden py-20">
+      <section className="relative overflow-hidden pb-10 pt-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-yellow-400">
             {t.zoom.eyebrow}
@@ -113,9 +113,9 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
     })}
   </div>
 </nav>
-  <div className="h-12" />
+  <div className="h-8" />
 
-      <section id="overview" className="scroll-mt-48 bg-[#0b1220] py-16">
+      <section id="overview" className="scroll-mt-48 bg-[#0b1220] py-10">
         <div className="mx-auto max-w-4xl space-y-6 px-4 sm:px-6 lg:px-8">
           <p className="text-lg leading-relaxed text-slate-300">{t.zoom.lead1}</p>
           <p className="text-lg leading-relaxed text-slate-300">{t.zoom.lead2}</p>
@@ -175,7 +175,8 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
                 items: [t.zoom.supportBlock4Item1, t.zoom.supportBlock4Item2],
               },
             ].map((block, i) => (
-              <div key={i} className="rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8">
+              <div key={i} 
+              className="rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8 md:p-9">
                 <h3 className="mb-4 text-xl font-serif text-white">{block.title}</h3>
                 <ul className="space-y-3 text-slate-300">
                   {block.items.map((item, j) => (
@@ -265,39 +266,62 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
       </section>
 
       <section id="testimonials" className="scroll-mt-48 bg-[#0b1220] py-16">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <p className="mb-3 text-xs uppercase tracking-[0.3em] text-yellow-400 text-center">
-            {t.zoom.testimonialsLabel}
+     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <p className="mb-3 text-center text-xs uppercase tracking-[0.3em] text-yellow-400">
+      {t.zoom.testimonialsLabel}
+    </p>
+
+    <h2 className="mb-12 text-center font-serif text-3xl text-white">
+      {t.zoom.testimonialsTitle}
+    </h2>
+
+    <div className="grid gap-8 md:grid-cols-2">
+      {[
+        {
+          name: t.zoom.testimonial1Name,
+          text: t.zoom.testimonial1Text,
+          role: t.zoom.testimonial1Role,
+        },
+        {
+          name: t.zoom.testimonial2Name,
+          text: t.zoom.testimonial2Text,
+          role: t.zoom.testimonial2Role,
+        },
+        {
+          name: t.zoom.testimonial3Name,
+          text: t.zoom.testimonial3Text,
+          role: t.zoom.testimonial3Role,
+        },
+        {
+          name: t.zoom.testimonial4Name,
+          text: t.zoom.testimonial4Text,
+          role: t.zoom.testimonial4Role,
+        },
+      ].map((testimonial, index) => (
+        <div
+          key={index}
+          className="rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8"
+        >
+          <div className="mb-2 text-xs uppercase tracking-[0.2em] text-yellow-400">
+            {testimonial.name}
+          </div>
+
+          <div className="mb-4 text-3xl font-serif text-yellow-700/35">"</div>
+
+          <p className="text-base font-normal leading-8 text-slate-200/90">
+          {testimonial.text}
           </p>
-          <h2 className="mb-12 font-serif text-3xl text-white text-center">
-            {t.zoom.testimonialsTitle}
-          </h2>
 
-          <div className="grid gap-8 md:grid-cols-2">
-            <div className="rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8">
-              <div className="mb-2 text-xs uppercase tracking-[0.2em] text-yellow-400">{t.zoom.testimonial1Name}</div>
-              <div className="mb-6 text-4xl font-serif text-yellow-700/40">"</div>
-              <p className="font-serif text-lg font-light italic leading-relaxed text-slate-200">
-                {t.zoom.testimonial1Text}
-              </p>
-              <div className="mt-8 border-t border-slate-700 pt-6">
-                <p className="text-xs leading-relaxed text-slate-500">{t.zoom.testimonial1Role}</p>
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-yellow-700/20 bg-[#121c31] p-8">
-              <div className="mb-2 text-xs uppercase tracking-[0.2em] text-yellow-400">{t.zoom.testimonial2Name}</div>
-              <div className="mb-6 text-4xl font-serif text-yellow-700/40">"</div>
-              <p className="font-serif text-lg font-light italic leading-relaxed text-slate-200">
-                {t.zoom.testimonial2Text}
-              </p>
-              <div className="mt-8 border-t border-slate-700 pt-6">
-                <p className="text-xs leading-relaxed text-slate-500">{t.zoom.testimonial2Role}</p>
-              </div>
-            </div>
+          <div className="mt-8 border-t border-slate-700 pt-6">
+            <p className="text-xs leading-relaxed text-slate-500">
+              {testimonial.role}
+            </p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
           <section id="contact-zoom" className="scroll-mt-48 bg-gradient-to-r from-[#0a0f1a] via-[#111827] to-[#0a0f1a] py-20 text-white">        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="mb-6 font-serif text-4xl">{t.zoom.ctaTitle}</h2>
