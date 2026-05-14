@@ -81,8 +81,7 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
           </p>
         </div>
       </section>
-       <nav className="sticky top-24 z-30 border-b border-yellow-700/10 bg-[#0b1220]/90 backdrop-blur">
-  <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 py-3 text-xs uppercase tracking-[0.12em] sm:px-6 lg:px-8">
+      <nav className="sticky top-[72px] z-40 border-b border-yellow-700/10 bg-[#0b1220]/95 shadow-lg shadow-black/20 backdrop-blur">  <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 py-3 text-xs uppercase tracking-[0.12em] sm:px-6 lg:px-8">
    {zoomSectionItems.map((item) => {
   const isActive = activeSection === item.id;
   const label = isSerbian ? item.sr : item.en;
@@ -104,7 +103,7 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
 })}
   </div>
 </nav>
-      <section id="for-whom" className="scroll-mt-40 bg-[#0b1220] py-16">
+      <section id="overview" className="scroll-mt-48 bg-[#0b1220] py-16">
         <div className="mx-auto max-w-4xl space-y-6 px-4 sm:px-6 lg:px-8">
           <p className="text-lg leading-relaxed text-slate-300">{t.zoom.lead1}</p>
           <p className="text-lg leading-relaxed text-slate-300">{t.zoom.lead2}</p>
@@ -112,7 +111,7 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
         </div>
       </section>
 
-      <section id="for-whom" className="scroll-mt-40 bg-[#0b1220] py-16">
+      <section id="for-whom" className="scroll-mt-48 bg-[#0b1220] py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-4 font-serif text-3xl text-white">
             {t.zoom.audienceTitle}
@@ -136,7 +135,7 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
         </div>
       </section>
 
-      <section id="support" className="scroll-mt-40 bg-[#10192c] py-16">
+      <section id="support" className="scroll-mt-48 bg-[#10192c] py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-4 font-serif text-3xl text-white">
             {t.zoom.supportTitle}
@@ -184,7 +183,7 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
         </div>
       </section>
 
-      <section id="packages" className="scroll-mt-40 bg-[#0b1220] py-16">
+      <section id="packages" className="scroll-mt-48 bg-[#0b1220] py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-8 font-serif text-3xl text-white">
             {t.zoom.packagesTitle}
@@ -229,7 +228,7 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
         </div>
       </section>
 
-      <section id="why-me" className="scroll-mt-40 bg-[#10192c] py-16">
+      <section id="why-me" className="scroll-mt-48 bg-[#10192c] py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-4 font-serif text-3xl text-white">
             {t.zoom.whyTitle}
@@ -253,7 +252,7 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
         </div>
       </section>
 
-      <section id="testimonials" className="scroll-mt-40 bg-[#0b1220] py-16">
+      <section id="testimonials" className="scroll-mt-48 bg-[#0b1220] py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <p className="mb-3 text-xs uppercase tracking-[0.3em] text-yellow-400 text-center">
             {t.zoom.testimonialsLabel}
@@ -288,7 +287,7 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
         </div>
       </section>
 
-          <section id="contact-zoom" className="scroll-mt-40 bg-gradient-to-r from-[#0a0f1a] via-[#111827] to-[#0a0f1a] py-20 text-white">        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+          <section id="contact-zoom" className="scroll-mt-48 bg-gradient-to-r from-[#0a0f1a] via-[#111827] to-[#0a0f1a] py-20 text-white">        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="mb-6 font-serif text-4xl">{t.zoom.ctaTitle}</h2>
           <p className="mb-4 text-lg leading-relaxed text-slate-300">
             {t.zoom.ctaText}
