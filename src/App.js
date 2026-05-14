@@ -49,8 +49,6 @@ export default function App() {
   const t = translations[language];
   usePageTitle();
 
-  const isGateHome = location.pathname === "/en" || location.pathname === "/sr";
-
   const usesPortalNav =
   location.pathname === "/en" ||
   location.pathname === "/sr" ||
