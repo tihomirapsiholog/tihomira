@@ -1,6 +1,42 @@
+import { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
-
+const zoomSections = [
+  ['Overview', 'overview'],
+  ['For whom', 'for-whom'],
+  ['Support', 'support'],
+  ['Packages', 'packages'],
+  ['Why me', 'why-me'],
+  ['Testimonials', 'testimonials'],
+  ['Contact', 'contact-zoom'],
+];
 export default function ZoomMaestraPage({ t, setCurrentPage }) {
+  const [activeSection, setActiveSection] = useState('overview');
+  useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    },
+    {
+      root: null,
+      rootMargin: '-35% 0px -55% 0px',
+      threshold: 0,
+    }
+  );
+
+  zoomSections.forEach(([, id]) => {
+    const element = document.getElementById(id);
+
+    if (element) {
+      observer.observe(element);
+    }
+  });
+
+  return () => observer.disconnect();
+}, []);
   return (
     <div className="bg-[#0b1220]">
       <section className="relative overflow-hidden py-20">
@@ -16,26 +52,29 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
           </p>
         </div>
       </section>
-        <nav className="sticky top-24 z-30 border-b border-yellow-700/10 bg-[#0b1220]/90 backdrop-blur">
-          <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 py-3 text-xs uppercase tracking-[0.12em] text-slate-400 sm:px-6 lg:px-8">          {[
-            ['Overview', '#overview'],
-            ['For whom', '#for-whom'],
-            ['Support', '#support'],
-            ['Packages', '#packages'],
-            ['Why me', '#why-me'],
-            ['Testimonials', '#testimonials'],
-            ['Contact', '#contact-zoom'],
-          ].map(([label, href]) => (
-            <a
-              key={href}
-              href={href}
-              className="shrink-0 rounded-full px-3 py-2 transition hover:bg-yellow-500/10 hover:text-yellow-100"            >
-              {label}
-            </a>
-          ))}
-        </div>
-      </nav>
-      <section id="overview" className="scroll-mt-40 bg-[#10192c] py-16">
+       <nav className="sticky top-24 z-30 border-b border-yellow-700/10 bg-[#0b1220]/90 backdrop-blur">
+  <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 py-3 text-xs uppercase tracking-[0.12em] sm:px-6 lg:px-8">
+    {zoomSections.map(([label, id]) => {
+      const isActive = activeSection === id;
+
+      return (
+        <a
+          key={id}
+          href={`#${id}`}
+          className={[
+            'shrink-0 rounded-full px-3 py-2 transition',
+            isActive
+              ? 'bg-yellow-500/15 text-yellow-100'
+              : 'text-slate-400 hover:bg-yellow-500/10 hover:text-yellow-100',
+          ].join(' ')}
+        >
+          {label}
+        </a>
+      );
+    })}
+  </div>
+</nav>
+      <section id="for-whom" className="scroll-mt-40 bg-[#0b1220] py-16">
         <div className="mx-auto max-w-4xl space-y-6 px-4 sm:px-6 lg:px-8">
           <p className="text-lg leading-relaxed text-slate-300">{t.zoom.lead1}</p>
           <p className="text-lg leading-relaxed text-slate-300">{t.zoom.lead2}</p>
