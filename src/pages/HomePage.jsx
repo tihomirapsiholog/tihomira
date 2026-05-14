@@ -27,6 +27,7 @@ const gates = [
 
 export default function HomePage({ setCurrentPage, t }) {
   const [activeGate, setActiveGate] = useState(null);
+  const isSerbian = t.nav.home === 'Početak';
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
@@ -93,13 +94,15 @@ export default function HomePage({ setCurrentPage, t }) {
 
         <div className="mx-auto mb-12 max-w-4xl text-center">
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#6f6759]">
-            tihomira.info
-          </p>
-          <h1 className="font-serif text-5xl font-normal leading-none text-[#172018] sm:text-6xl lg:text-6xl">
-           Dve kapije
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#4f574d] sm:text-xl">
-            Izaberi onu koja te vodi tamo gde ćeš naći ono što tražiš.
+         tihomira.info
+         </p>
+        <h1 className="font-serif text-5xl font-normal leading-none text-[#172018] sm:text-6xl lg:text-6xl">
+         {isSerbian ? 'Dve kapije' : 'Two Gates'}
+        </h1>
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#4f574d] sm:text-xl">
+         {isSerbian
+          ? 'Izaberi onu koja te vodi tamo gde ćeš naći ono što tražiš.'
+          : 'Choose the one that leads you toward what you are looking for.'}
           </p>
         </div>
 
@@ -179,7 +182,7 @@ export default function HomePage({ setCurrentPage, t }) {
                     ].join(' ')}
                   >
                     <p className="text-base leading-relaxed text-white/90 drop-shadow-md sm:text-lg">
-                      {gate.description}
+                     {isSerbian ? gate.descriptionSr : gate.descriptionEn}
                     </p>
 
                   </div>
