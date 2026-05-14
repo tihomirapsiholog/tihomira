@@ -81,29 +81,40 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
           </p>
         </div>
       </section>
-      <nav className="sticky top-[72px] z-40 border-b border-yellow-700/10 bg-[#0b1220]/95 shadow-lg shadow-black/20 backdrop-blur">  
-      <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 py-3 text-xs uppercase tracking-[0.12em] sm:px-6 lg:px-8">
-          {zoomSectionItems.map((item) => {
-            const isActive = activeSection === item.id;
-            const label = isSerbian ? item.sr : item.en;
+     <nav
+  style={{
+    position: 'fixed',
+    top: '60px',
+    left: 0,
+    right: 0,
+    zIndex: 60,
+  }}
+  className="border-b border-yellow-700/10 bg-[#0b1220]/95 shadow-lg shadow-black/20 backdrop-blur"
+>
+  <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 py-3 text-xs uppercase tracking-[0.12em] sm:px-6 lg:px-8">
+    {zoomSectionItems.map((item) => {
+      const isActive = activeSection === item.id;
+      const label = isSerbian ? item.sr : item.en;
 
-        return (
-         <a
-            key={item.id}
-            href={`#${item.id}`}
-             className={[
-                'shrink-0 rounded-full px-3 py-2 transition',
-             isActive
-          ? 'bg-yellow-500/15 text-yellow-100'
-          : 'text-slate-400 hover:bg-yellow-500/10 hover:text-yellow-100',
-        ].join(' ')}
-     >
-      {label}
-    </a>
-  );
-})}
+      return (
+        <a
+          key={item.id}
+          href={`#${item.id}`}
+          className={[
+            'shrink-0 rounded-full px-3 py-2 transition',
+            isActive
+              ? 'bg-yellow-500/15 text-yellow-100'
+              : 'text-slate-400 hover:bg-yellow-500/10 hover:text-yellow-100',
+          ].join(' ')}
+        >
+          {label}
+        </a>
+      );
+    })}
   </div>
 </nav>
+  <div className="h-12" />
+
       <section id="overview" className="scroll-mt-48 bg-[#0b1220] py-16">
         <div className="mx-auto max-w-4xl space-y-6 px-4 sm:px-6 lg:px-8">
           <p className="text-lg leading-relaxed text-slate-300">{t.zoom.lead1}</p>
