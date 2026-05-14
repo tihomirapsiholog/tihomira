@@ -82,15 +82,14 @@ export default function HomePage({ setCurrentPage, t }) {
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#f3eee4] text-[#182018]">
-      <section className="relative px-6 pb-20 pt-28 sm:px-8 lg:px-12">
+      <section className="relative px-6 pb-20 pt-16 sm:px-8 lg:px-12">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(190,154,82,0.22),transparent_34%),linear-gradient(135deg,#f7f1e7_0%,#eef2ea_48%,#e7edf5_100%)]" />
 
         <div className="mx-auto mb-12 max-w-4xl text-center">
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#6f6759]">
             tihomira.info
           </p>
-
-          <h1 className="font-serif text-5xl font-normal leading-none text-[#172018] sm:text-6xl lg:text-7xl">
+          <h1 className="mx-auto grid max-w-5xl grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">          
             Dve kapije
           </h1>
 
