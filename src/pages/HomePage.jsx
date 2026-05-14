@@ -113,9 +113,12 @@ export default function HomePage({ setCurrentPage, t }) {
                 onClick={() => handleGateClick(gate.id)}
                 onKeyDown={(event) => handleGateKeyDown(event, gate.id)}
                 className={[
-               'group relative min-h-[420px] overflow-hidden rounded-[2rem] bg-[#101827] shadow-2xl outline-none transition-all duration-500 ease-out sm:min-h-[520px] lg:min-h-[560px]',
-               'focus-visible:ring-4 focus-visible:ring-[#c7a65d] focus-visible:ring-offset-4',
-               isActive ? '-translate-y-1' : '',
+                'group relative min-h-[420px] overflow-hidden rounded-[2rem] shadow-2xl outline-none transition-all duration-500 ease-out sm:min-h-[520px] lg:min-h-[560px]',
+                 gate.theme === 'tiha'
+                 ? 'bg-[radial-gradient(circle_at_center,rgba(214,173,91,0.20),rgba(20,45,26,0.98)_62%,rgba(9,18,12,1)_100%)]'
+                 : 'bg-[radial-gradient(circle_at_center,rgba(214,173,91,0.16),rgba(9,29,58,0.98)_62%,rgba(4,12,25,1)_100%)]',
+                'focus-visible:ring-4 focus-visible:ring-[#c7a65d] focus-visible:ring-offset-4',
+                 isActive ? '-translate-y-1' : '',
                 ].join(' ')}
                >
               <img
