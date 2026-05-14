@@ -1,16 +1,45 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
-const zoomSections = [
-  ['Overview', 'overview'],
-  ['For whom', 'for-whom'],
-  ['Support', 'support'],
-  ['Packages', 'packages'],
-  ['Why me', 'why-me'],
-  ['Testimonials', 'testimonials'],
-  ['Contact', 'contact-zoom'],
+const zoomSectionItems = [
+  {
+    id: 'overview',
+    en: 'Overview',
+    sr: 'Pregled',
+  },
+  {
+    id: 'for-whom',
+    en: 'For whom',
+    sr: 'Za koga',
+  },
+  {
+    id: 'support',
+    en: 'Support',
+    sr: 'Podrška',
+  },
+  {
+    id: 'packages',
+    en: 'Packages',
+    sr: 'Paketi',
+  },
+  {
+    id: 'why-me',
+    en: 'Why me',
+    sr: 'Zašto ja',
+  },
+  {
+    id: 'testimonials',
+    en: 'Testimonials',
+    sr: 'Iskustva',
+  },
+  {
+    id: 'contact-zoom',
+    en: 'Contact',
+    sr: 'Kontakt',
+  },
 ];
 export default function ZoomMaestraPage({ t, setCurrentPage }) {
   const [activeSection, setActiveSection] = useState('overview');
+    const isSerbian = t.nav.home === 'Početak';
   useEffect(() => {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -27,13 +56,13 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
     }
   );
 
-  zoomSections.forEach(([, id]) => {
-    const element = document.getElementById(id);
+  zoomSectionItems.forEach(({ id }) => {
+  const element = document.getElementById(id);
 
-    if (element) {
-      observer.observe(element);
-    }
-  });
+  if (element) {
+    observer.observe(element);
+  }
+});
 
   return () => observer.disconnect();
 }, []);
@@ -54,24 +83,25 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
       </section>
        <nav className="sticky top-24 z-30 border-b border-yellow-700/10 bg-[#0b1220]/90 backdrop-blur">
   <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 py-3 text-xs uppercase tracking-[0.12em] sm:px-6 lg:px-8">
-    {zoomSections.map(([label, id]) => {
-      const isActive = activeSection === id;
+   {zoomSectionItems.map((item) => {
+  const isActive = activeSection === item.id;
+  const label = isSerbian ? item.sr : item.en;
 
-      return (
-        <a
-          key={id}
-          href={`#${id}`}
-          className={[
-            'shrink-0 rounded-full px-3 py-2 transition',
-            isActive
-              ? 'bg-yellow-500/15 text-yellow-100'
-              : 'text-slate-400 hover:bg-yellow-500/10 hover:text-yellow-100',
-          ].join(' ')}
-        >
-          {label}
-        </a>
-      );
-    })}
+  return (
+    <a
+      key={item.id}
+      href={`#${item.id}`}
+      className={[
+        'shrink-0 rounded-full px-3 py-2 transition',
+        isActive
+          ? 'bg-yellow-500/15 text-yellow-100'
+          : 'text-slate-400 hover:bg-yellow-500/10 hover:text-yellow-100',
+      ].join(' ')}
+    >
+      {label}
+    </a>
+  );
+})}
   </div>
 </nav>
       <section id="for-whom" className="scroll-mt-40 bg-[#0b1220] py-16">
