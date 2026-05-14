@@ -16,9 +16,8 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
           </p>
         </div>
       </section>
-              <nav className="sticky top-24 z-30 border-y border-yellow-700/20 bg-[#0b1220]/95 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl gap-4 overflow-x-auto px-4 py-4 text-sm text-slate-300 sm:px-6 lg:px-8">
-          {[
+        <nav className="sticky top-24 z-30 border-b border-yellow-700/10 bg-[#0b1220]/90 backdrop-blur">
+          <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 py-3 text-xs uppercase tracking-[0.12em] text-slate-400 sm:px-6 lg:px-8">          {[
             ['Overview', '#overview'],
             ['For whom', '#for-whom'],
             ['Support', '#support'],
@@ -30,8 +29,7 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
             <a
               key={href}
               href={href}
-              className="shrink-0 rounded-full border border-transparent px-4 py-2 transition hover:border-yellow-500/40 hover:bg-yellow-500/10 hover:text-yellow-100"
-            >
+              className="shrink-0 rounded-full px-3 py-2 transition hover:bg-yellow-500/10 hover:text-yellow-100"            >
               {label}
             </a>
           ))}
