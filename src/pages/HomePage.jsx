@@ -99,7 +99,7 @@ export default function HomePage({ setCurrentPage, t }) {
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
           {gates.map((gate) => {
             const isActive = activeGate === gate.id;
 
@@ -115,7 +115,7 @@ export default function HomePage({ setCurrentPage, t }) {
                 onClick={() => handleGateClick(gate.id)}
                 onKeyDown={(event) => handleGateKeyDown(event, gate.id)}
                 className={[
-                  'group relative min-h-[520px] overflow-hidden rounded-[2rem] shadow-2xl outline-none transition-all duration-500 ease-out sm:min-h-[620px]',
+                  'group relative min-h-[420px] overflow-hidden rounded-[2rem] shadow-2xl outline-none transition-all duration-500 ease-out sm:min-h-[620px]',
                   'focus-visible:ring-4 focus-visible:ring-[#c7a65d] focus-visible:ring-offset-4',
                   isActive ? '-translate-y-1' : '',
                 ].join(' ')}
@@ -124,8 +124,7 @@ export default function HomePage({ setCurrentPage, t }) {
                   src={gate.closedImage}
                   alt=""
                   className={[
-                    'absolute inset-0 h-full w-full object-cover transition-all duration-500 ease-out',
-                    isActive
+                  'group relative min-h-[420px] overflow-hidden rounded-[2rem] bg-[#101827] shadow-2xl outline-none transition-all duration-500 ease-out sm:min-h-[500px] lg:min-h-[560px]',                    isActive
                       ? 'scale-[1.02] opacity-0'
                       : 'scale-100 opacity-100 group-hover:scale-[1.02] group-hover:opacity-0',
                   ].join(' ')}
@@ -135,7 +134,7 @@ export default function HomePage({ setCurrentPage, t }) {
                   src={gate.halfImage}
                   alt=""
                   className={[
-                    'absolute inset-0 h-full w-full object-cover transition-all duration-500 ease-out',
+                    'absolute inset-0 h-full w-full object-contain transition-all duration-500 ease-out',
                     isActive
                       ? 'scale-[1.04] opacity-0'
                       : 'scale-[1.02] opacity-0 group-hover:opacity-100',
@@ -146,7 +145,7 @@ export default function HomePage({ setCurrentPage, t }) {
                   src={gate.openImage}
                   alt=""
                   className={[
-                    'absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-out',
+                    'absolute inset-0 h-full w-full object-contain transition-all duration-700 ease-out',
                     isActive
                       ? 'scale-[1.06] opacity-100'
                       : 'scale-[1.03] opacity-0 group-hover:scale-[1.06] group-hover:opacity-100',
