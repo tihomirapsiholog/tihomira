@@ -51,9 +51,15 @@ export default function App() {
 
   const isGateHome = location.pathname === "/en" || location.pathname === "/sr";
 
-const navItems = isGateHome
+  const usesPortalNav =
+  location.pathname === "/en" ||
+  location.pathname === "/sr" ||
+  location.pathname === "/en/zoom-maestra" ||
+  location.pathname === "/sr/zoom-maestra";
+
+  const navItems = usesPortalNav
   ? [
-      [language === "sr" ? "Tiha Psiha" : "Tiha Psiha", "/tiha-psiha"],
+      ["Tiha Psiha", "/tiha-psiha"],
       ["Zoom Maestra", "/zoom-maestra"],
       [t.nav.contact, "/contact"],
     ]
@@ -65,7 +71,7 @@ const navItems = isGateHome
       [t.nav.contact, "/contact"],
     ];
 
-  const changeLanguage = (lang) => {
+    const changeLanguage = (lang) => {
     const pathWithoutLang = location.pathname.replace(/^\/(en|sr)/, "");
     navigate(`/${lang}${pathWithoutLang || ""}`);
     setMenuOpen(false);
