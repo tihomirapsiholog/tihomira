@@ -11,6 +11,7 @@ import EventsPage from "./pages/EventsPage";
 import ZoomMaestraPage from "./pages/ZoomMaestraPage";
 import ContactPage from "./pages/ContactPage";
 import SilencePracticePage from "./pages/SilencePracticePage";
+import TihaPsihaPage from './pages/TihaPsihaPage';
 
 function getLangFromPath(pathname) {
   if (pathname.startsWith("/sr")) return "sr";
@@ -23,6 +24,8 @@ function usePageTitle() {
     const titles = {
       "/en": "Tihomira | Home",
       "/sr": "Tihomira | Početak",
+      "/en/tiha-psiha": "Tiha Psiha | Tihomira",
+      "/sr/tiha-psiha": "Tiha Psiha | Tihomira",
       "/en/about": "Tihomira | About",
       "/sr/about": "Tihomira | O meni",
       "/en/work": "Tihomira | Work With Me",
@@ -87,6 +90,8 @@ export default function App() {
           <Route path="/" element={<Navigate to="/en" replace />} />
           <Route path="/en" element={<HomePage setCurrentPage={goToPage} t={translations.en} />} />
           <Route path="/sr" element={<HomePage setCurrentPage={goToPage} t={translations.sr} />} />
+          <Route path="/en/tiha-psiha" element={<TihaPsihaPage setCurrentPage={goToPage} t={translations.en} />} />
+          <Route path="/sr/tiha-psiha" element={<TihaPsihaPage setCurrentPage={goToPage} t={translations.sr} />} />
           <Route path="/en/about" element={<AboutPage setCurrentPage={goToPage} t={translations.en} />} />
           <Route path="/sr/about" element={<AboutPage setCurrentPage={goToPage} t={translations.sr} />} />
           <Route path="/en/work" element={<WorkPage setCurrentPage={goToPage} t={translations.en} />} />
