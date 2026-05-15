@@ -26,7 +26,7 @@ const gates = [
   },
 ];
 
-export default function HomePage({ setCurrentPage, t }) {
+export default function HomePage({ setCurrentPage, t, language = 'en' }) {
   const [activeGate, setActiveGate] = useState(null);
   const isSerbian = t.nav.home === 'Početak';
   const [isTouchDevice, setIsTouchDevice] = useState(false);
@@ -90,9 +90,21 @@ export default function HomePage({ setCurrentPage, t }) {
 
   return (  <>
     <SEO
-      title="Tiha Psiha & Zoom Maestra | Psychology, Facilitation & Online Event Support"
-      description="Two pathways for inner work and professional online spaces: Tiha Psiha for psychological and experiential work, and Zoom Maestra for online event support."
-      url="https://tihomira.info/"
+  title={
+    language === 'sr'
+      ? 'Tiha Psiha & Zoom Maestra | Psihologija, iskustveni rad i online podrška'
+      : 'Tiha Psiha & Zoom Maestra | Psychology, Experiential Work & Online Event Support'
+  }
+  description={
+    language === 'sr'
+      ? 'Dve kapije: Tiha Psiha za psihološki, iskustveni i zvučni rad, i Zoom Maestra za mirnu podršku online i hibridnim događajima.'
+      : 'Two pathways: Tiha Psiha for psychological, experiential and sound-based work, and Zoom Maestra for calm online and hybrid event support.'
+  }
+  url={
+    language === 'sr'
+      ? 'https://tihomira.info/sr'
+      : 'https://tihomira.info/en'
+  }
     />
     <main className="min-h-screen overflow-hidden bg-[#f3eee4] text-[#182018]">
       <section className="relative px-6 pb-20 pt-16 sm:px-8 lg:px-12">

@@ -1,4 +1,5 @@
-export default function AboutPage({ t, setCurrentPage }) {
+import SEO from '../components/SEO';
+export default function AboutPage({ t, setCurrentPage, language = 'en' }) {
   const chapters = [
     {
       id: 'ch1',
@@ -80,8 +81,26 @@ export default function AboutPage({ t, setCurrentPage }) {
   ];
 
   return (
-    <div className="bg-[#0b1220]">
-      {/* HERO */}
+  <div className="bg-[#0b1220]">
+   <SEO
+  title={
+    language === 'sr'
+      ? 'O meni | Tihomira Stanojević'
+      : 'About | Tihomira Stanojević'
+  }
+  description={
+    language === 'sr'
+      ? 'Saznajte više o Tihomiri Stanojević, njenom iskustvu u psihologiji, facilitaciji, grupnom radu, simboličkom procesu i međunarodnom radu.'
+      : 'Learn more about Tihomira Stanojević, her background in psychology, facilitation, group work, symbolic process and international experience.'
+  }
+  url={
+    language === 'sr'
+      ? 'https://tihomira.info/sr/about'
+      : 'https://tihomira.info/en/about'
+  }
+/>
+
+    {/* HERO */}
       <section className="px-4 pt-28 pb-20 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-2 lg:items-end">
           <div>

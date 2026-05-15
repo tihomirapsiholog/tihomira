@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import SEO from '../components/SEO';
 
-export default function TihaPsihaPage({ setCurrentPage, t }) {
+export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
   const [scrollY, setScrollY] = useState(0);
 
   const fadeUpStyle = `
@@ -137,12 +137,23 @@ export default function TihaPsihaPage({ setCurrentPage, t }) {
 
  return (
   <>
-    <SEO
-      title="Tiha Psiha | Individual Sessions, Workshops & Symbolic Experiences"
-      description="Tiha Psiha offers psychological, experiential and symbolic work through individual sessions, group workshops and in-person sound experiences."
-      url="https://tihomira.info/tiha-psiha"
-    />
-
+   <SEO
+  title={
+    language === 'sr'
+      ? 'Tiha Psiha | Individualni susreti, radionice i zvučna iskustva'
+      : 'Tiha Psiha | Individual Sessions, Workshops & Sound Experiences'
+  }
+  description={
+    language === 'sr'
+      ? 'Tiha Psiha nudi psihološki, iskustveni i simbolički rad kroz individualne susrete, grupne radionice i zvučna iskustva uživo.'
+      : 'Tiha Psiha offers psychological, experiential and symbolic work through individual sessions, group workshops and in-person sound experiences.'
+  }
+  url={
+    language === 'sr'
+      ? 'https://tihomira.info/sr/tiha-psiha'
+      : 'https://tihomira.info/en/tiha-psiha'
+  }
+/>
     <style>{fadeUpStyle}</style>
 
       <div className="space-y-0 font-sans overflow-x-hidden">

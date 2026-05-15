@@ -38,7 +38,7 @@ const zoomSectionItems = [
     sr: 'Kontakt',
   },
 ];
-export default function ZoomMaestraPage({ t, setCurrentPage }) {
+export default function ZoomMaestraPage({ t, setCurrentPage, language = 'en' }) {
   const [activeSection, setActiveSection] = useState('overview');
     const isSerbian = t.nav.home === 'Početak';
   useEffect(() => {
@@ -70,10 +70,22 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
   return (
   <div className="bg-[#0b1220]">
     <SEO
-      title="Zoom Maestra | Online Event Support for Facilitators and Educators"
-      description="Zoom Maestra provides calm technical hosting, Zoom support, breakout management and participant flow for online and hybrid events."
-      url="https://tihomira.info/zoom-maestra"
-    />
+  title={
+    language === 'sr'
+      ? 'Zoom Maestra | Zoom podrška za online i hibridne događaje'
+      : 'Zoom Maestra | Zoom Support for Online and Hybrid Events'
+  }
+  description={
+    language === 'sr'
+      ? 'Zoom Maestra pruža mirnu tehničku podršku, Zoom hosting, breakout sobe i podršku toku učesnika za online i hibridne događaje.'
+      : 'Zoom Maestra provides calm technical hosting, Zoom support, breakout room management and participant flow for online and hybrid events, workshops, trainings and conferences.'
+  }
+  url={
+    language === 'sr'
+      ? 'https://tihomira.info/sr/zoom-maestra'
+      : 'https://tihomira.info/en/zoom-maestra'
+  }
+/>
     <section className="relative overflow-hidden pb-10 pt-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-yellow-400">

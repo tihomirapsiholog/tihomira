@@ -77,10 +77,10 @@ export default function App() {
       <main className="pt-24">
         <Routes>
           <Route path="/" element={<Navigate to="/en" replace />} />
-          <Route path="/en" element={<HomePage setCurrentPage={goToPage} t={translations.en} />} />
-          <Route path="/sr" element={<HomePage setCurrentPage={goToPage} t={translations.sr} />} />
-          <Route path="/en/tiha-psiha" element={<TihaPsihaPage setCurrentPage={goToPage} t={translations.en} />} />
-          <Route path="/sr/tiha-psiha" element={<TihaPsihaPage setCurrentPage={goToPage} t={translations.sr} />} />
+          <Route path="/en" element={<HomePage setCurrentPage={goToPage} t={translations.en} language="en" />} />
+          <Route path="/sr" element={<HomePage setCurrentPage={goToPage} t={translations.sr} language="sr" />} />
+          <Route path="/en/tiha-psiha" element={<TihaPsihaPage setCurrentPage={goToPage} t={translations.en} language="en" />} />
+          <Route path="/sr/tiha-psiha" element={<TihaPsihaPage setCurrentPage={goToPage} t={translations.sr} language="sr" />} /> 
           <Route path="/en/about" element={<AboutPage setCurrentPage={goToPage} t={translations.en} />} />
           <Route path="/sr/about" element={<AboutPage setCurrentPage={goToPage} t={translations.sr} />} />
           <Route path="/en/work" element={<WorkPage setCurrentPage={goToPage} t={translations.en} />} />
@@ -88,7 +88,7 @@ export default function App() {
           <Route path="/en/events" element={<EventsPage setCurrentPage={goToPage} t={translations.en} />} />
           <Route path="/sr/events" element={<EventsPage setCurrentPage={goToPage} t={translations.sr} />} />
           <Route path="/en/zoom-maestra" element={<ZoomMaestraPage setCurrentPage={goToPage} t={translations.en} />} />
-          <Route path="/sr/zoom-maestra" element={<ZoomMaestraPage setCurrentPage={goToPage} t={translations.sr} />} />
+          <Route path="/sr/zoom-maestra" element={<ZoomMaestraPage setCurrentPage={goToPage} t={translations.sr} />} />          
           <Route path="/en/contact" element={<ContactPage t={translations.en} language="en" />} />
           <Route path="/sr/contact" element={<ContactPage t={translations.sr} language="sr" />} />
           <Route path="/en/silence-practice" element={<SilencePracticePage />} />

@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const Divider = ({ text }) => (
   <div className="py-16 text-center">
@@ -8,7 +9,7 @@ const Divider = ({ text }) => (
   </div>
 );
 
-export default function WorkPage({ t, setCurrentPage }) {
+export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
   const location = useLocation();
 
   useEffect(() => {
@@ -80,9 +81,25 @@ export default function WorkPage({ t, setCurrentPage }) {
   ];
 
   return (
-    <div className="bg-[#0b1220] text-slate-100">
-
-      {/* HERO */}
+  <div className="bg-[#0b1220] text-slate-100">
+    <SEO
+  title={
+    language === 'sr'
+      ? 'Rad sa mnom | Individualni susreti, radionice i zvučne kupke'
+      : 'Work With Me | Individual Sessions, Workshops and Sound Baths'
+  }
+  description={
+    language === 'sr'
+      ? 'Istražite individualne susrete, grupne radionice, simbolički rad i zvučne kupke uživo sa Tihomirom Stanojević.'
+      : 'Explore individual sessions, group workshops, symbolic experiences and in-person sound baths with Tihomira Stanojević.'
+  }
+  url={
+    language === 'sr'
+      ? 'https://tihomira.info/sr/work'
+      : 'https://tihomira.info/en/work'
+  }
+/>
+    {/* HERO */}
       <section className="border-b border-white/5 bg-[#0b1220] py-24 sm:py-28">
         <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
           <span className="text-sm uppercase tracking-[0.3em] text-yellow-400">

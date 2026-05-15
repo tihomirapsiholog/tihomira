@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
 
-export default function EventsPage({ t }) {
+export default function EventsPage({ t, language = 'en' }) {
 const [submitted, setSubmitted] = useState(false);
 
 const handleSubmit = async (e) => {
@@ -39,8 +40,25 @@ const handleSubmit = async (e) => {
   ];
 
   return (
-    <div className="bg-[#0b1220] text-slate-100">
-      <section className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
+  <div className="bg-[#0b1220] text-slate-100">
+    <SEO
+  title={
+    language === 'sr'
+      ? 'Događaji | Radionice, grupni susreti i iskustveni prostori'
+      : 'Events | Workshops, Gatherings and Experiential Spaces'
+  }
+  description={
+    language === 'sr'
+      ? 'Aktuelne i buduće radionice, grupni susreti i iskustveni prostori za psihološko istraživanje, grupni rad i simbolički proces.'
+      : 'Current and upcoming workshops, gatherings and experiential spaces for psychological exploration, group work and symbolic process.'
+  }
+  url={
+    language === 'sr'
+      ? 'https://tihomira.info/sr/events'
+      : 'https://tihomira.info/en/events'
+  }
+/>
+    <section className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
         <p className="mb-6 text-sm uppercase tracking-[0.25em] text-yellow-400/80">
          {t.events.label}
         </p>
