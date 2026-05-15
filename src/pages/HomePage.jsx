@@ -105,7 +105,13 @@ export default function HomePage({ setCurrentPage, t, language = 'en' }) {
       ? 'https://tihomira.info/sr'
       : 'https://tihomira.info/en'
   }
-    />
+  language={language}
+  alternateUrls={{
+    en: 'https://tihomira.info/en',
+    sr: 'https://tihomira.info/sr',
+    xDefault: 'https://tihomira.info/en',
+  }}
+/>
     <main className="min-h-screen overflow-hidden bg-[#f3eee4] text-[#182018]">
       <section className="relative px-6 pb-20 pt-16 sm:px-8 lg:px-12">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(190,154,82,0.22),transparent_34%),linear-gradient(135deg,#f7f1e7_0%,#eef2ea_48%,#e7edf5_100%)]" />

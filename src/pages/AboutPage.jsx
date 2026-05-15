@@ -82,7 +82,7 @@ export default function AboutPage({ t, setCurrentPage, language = 'en' }) {
 
   return (
   <div className="bg-[#0b1220]">
-   <SEO
+  <SEO
   title={
     language === 'sr'
       ? 'O meni | Tihomira Stanojević'
@@ -98,6 +98,12 @@ export default function AboutPage({ t, setCurrentPage, language = 'en' }) {
       ? 'https://tihomira.info/sr/about'
       : 'https://tihomira.info/en/about'
   }
+  language={language}
+  alternateUrls={{
+    en: 'https://tihomira.info/en/about',
+    sr: 'https://tihomira.info/sr/about',
+    xDefault: 'https://tihomira.info/en/about',
+  }}
 />
 
     {/* HERO */}

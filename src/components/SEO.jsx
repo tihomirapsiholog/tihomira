@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-const defaultImage = 'https://tihomira.info/og-image.jpg';
+const defaultImage = 'https://tihomira.info/portrait.jpg';
 
 function SEO({
   title,
@@ -8,9 +8,19 @@ function SEO({
   url = 'https://tihomira.info/',
   image = defaultImage,
   type = 'website',
+  language = 'en',
+  alternateUrls,
 }) {
+  const defaultAlternateUrls = {
+    en: url,
+    sr: url,
+    xDefault: 'https://tihomira.info/en',
+  };
+
+  const alternates = alternateUrls || defaultAlternateUrls;
+
   return (
-    <Helmet>
+    <Helmet htmlAttributes={{ lang: language }}>
       <title>{title}</title>
       <meta name="description" content={description} />
 
@@ -26,6 +36,18 @@ function SEO({
       <meta name="twitter:image" content={image} />
 
       <link rel="canonical" href={url} />
+
+      {alternates.en && (
+        <link rel="alternate" hrefLang="en" href={alternates.en} />
+      )}
+
+      {alternates.sr && (
+        <link rel="alternate" hrefLang="sr" href={alternates.sr} />
+      )}
+
+      {alternates.xDefault && (
+        <link rel="alternate" hrefLang="x-default" href={alternates.xDefault} />
+      )}
     </Helmet>
   );
 }

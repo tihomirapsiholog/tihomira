@@ -85,6 +85,12 @@ export default function ZoomMaestraPage({ t, setCurrentPage, language = 'en' }) 
       ? 'https://tihomira.info/sr/zoom-maestra'
       : 'https://tihomira.info/en/zoom-maestra'
   }
+  language={language}
+  alternateUrls={{
+    en: 'https://tihomira.info/en/zoom-maestra',
+    sr: 'https://tihomira.info/sr/zoom-maestra',
+    xDefault: 'https://tihomira.info/en/zoom-maestra',
+  }}
 />
     <section className="relative overflow-hidden pb-10 pt-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
