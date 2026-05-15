@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
 const zoomSectionItems = [
   {
     id: 'overview',
@@ -67,8 +68,13 @@ export default function ZoomMaestraPage({ t, setCurrentPage }) {
   return () => observer.disconnect();
 }, []);
   return (
-    <div className="bg-[#0b1220]">
-      <section className="relative overflow-hidden pb-10 pt-16">
+  <div className="bg-[#0b1220]">
+    <SEO
+      title="Zoom Maestra | Online Event Support for Facilitators and Educators"
+      description="Zoom Maestra provides calm technical hosting, Zoom support, breakout management and participant flow for online and hybrid events."
+      url="https://tihomira.info/zoom-maestra"
+    />
+    <section className="relative overflow-hidden pb-10 pt-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-yellow-400">
             {t.zoom.eyebrow}

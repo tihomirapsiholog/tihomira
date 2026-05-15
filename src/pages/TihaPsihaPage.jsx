@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import SEO from '../components/SEO';
 
 export default function TihaPsihaPage({ setCurrentPage, t }) {
   const [scrollY, setScrollY] = useState(0);
@@ -134,9 +135,15 @@ export default function TihaPsihaPage({ setCurrentPage, t }) {
     return () => window.removeEventListener('mousemove', move);
   }, []);
 
-  return (
-    <>
-      <style>{fadeUpStyle}</style>
+ return (
+  <>
+    <SEO
+      title="Tiha Psiha | Individual Sessions, Workshops & Symbolic Experiences"
+      description="Tiha Psiha offers psychological, experiential and symbolic work through individual sessions, group workshops and in-person sound experiences."
+      url="https://tihomira.info/tiha-psiha"
+    />
+
+    <style>{fadeUpStyle}</style>
 
       <div className="space-y-0 font-sans overflow-x-hidden">
         <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden pt-20 md:pt-16 reveal">

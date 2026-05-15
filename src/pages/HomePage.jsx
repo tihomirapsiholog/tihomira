@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import SEO from '../components/SEO';
 
 const gates = [
   {
@@ -87,7 +88,12 @@ export default function HomePage({ setCurrentPage, t }) {
   }
 };
 
-  return (
+  return (  <>
+    <SEO
+      title="Tiha Psiha & Zoom Maestra | Psychology, Facilitation & Online Event Support"
+      description="Two pathways for inner work and professional online spaces: Tiha Psiha for psychological and experiential work, and Zoom Maestra for online event support."
+      url="https://tihomira.info/"
+    />
     <main className="min-h-screen overflow-hidden bg-[#f3eee4] text-[#182018]">
       <section className="relative px-6 pb-20 pt-16 sm:px-8 lg:px-12">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(190,154,82,0.22),transparent_34%),linear-gradient(135deg,#f7f1e7_0%,#eef2ea_48%,#e7edf5_100%)]" />
@@ -182,7 +188,7 @@ export default function HomePage({ setCurrentPage, t }) {
                     ].join(' ')}
                   >
                     <p className="text-base leading-relaxed text-white/90 drop-shadow-md sm:text-lg">
-                     {isSerbian ? gate.descriptionSr : gate.descriptionEn}
+                     {gate.description}
                     </p>
 
                   </div>
@@ -191,7 +197,8 @@ export default function HomePage({ setCurrentPage, t }) {
             );
           })}
         </div>
-      </section>
+        </section>
     </main>
-  );
+  </>
+);
 }
