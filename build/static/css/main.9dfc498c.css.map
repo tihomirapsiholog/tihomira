@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.9dfc498c.css","mappings":"AAAA,KAEE,sBAAuB,CADvB,QAEF,CAAC,UAEC,iBACF","sources":["index.css"],"sourcesContent":["body {\r\n  margin: 0;\r\n  font-family: sans-serif;\r\n}html,\r\nbody {\r\n  overflow-x: hidden;\r\n}"],"names":[],"sourceRoot":""}
