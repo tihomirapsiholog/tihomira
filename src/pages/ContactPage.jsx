@@ -192,17 +192,17 @@ export default function ContactPage({ t, language }) {
           )}
 
           {status === 'error' && (
-            <p className="text-center text-red-400">
-              Greška. Pokušaj ponovo ili piši direktno na email.
-            </p>
-          )}
+         <p className="text-center text-red-400">
+         {t.contact.errorMessage}
+        </p>
+        )}
 
           <button
-            type="submit"
-            disabled={status === 'sending'}
-            className="w-full rounded-full bg-yellow-500 px-6 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400 disabled:opacity-50"
-          >
-            {status === 'sending' ? 'Šalje se...' : t.contact.send}
+           type="submit"
+           disabled={status === 'sending'}
+           className="w-full rounded-full bg-yellow-500 px-6 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400 disabled:opacity-50"
+            >
+         {status === 'sending' ? t.contact.sending : t.contact.send}
           </button>
         </form>
       </div>
