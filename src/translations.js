@@ -376,9 +376,47 @@ eventGroupValue: 'up to 15 participants',
   inquiryTitle: 'Ongoing themes',
   inquiryText:
     'Current themes of exploration include attention, AI and human relationship, group encounter, embodiment, impulse, overstimulation, symbolic process, and relational dynamics.',
+
+  formTitle: 'Registration',
+  formNameLabel: 'Full name',
+  formEmailLabel: 'Email',
+  formLocationLabel: 'Where are you joining from?',
+  formMessageLabel: 'What interests you most about this topic right now?',
+  formNote: 'After registering, you will receive an email with confirmation and payment information.',
+  formButton: 'Send registration',
+  formSuccessTitle: 'Thank you, your registration has been sent.',
+  formSuccessText: 'I will get back to you soon with confirmation.',
+  eventHiddenValue: 'How do I actually feel about AI? — 04.06.2026',
+
+  upcomingTitle: 'Coming up',
+  upcomingType: 'Exploration',
+  upcomingItems: [
+    {
+      title: 'Warming up for new roles',
+      subtitle: 'When the old identity no longer fits, and the new one is not yet alive.',
+    },
+    {
+      title: 'Stuck in change',
+      subtitle: 'When the past holds on, and the future is calling.',
+    },
+    {
+      title: 'Who in us protests',
+      subtitle: 'Illuminating the inner saboteur.',
+    },
+  ],
+
+  ongoingGroupsTitle: 'Ongoing groups',
+  ongoingGroupsText1:
+    'Weekly online group meetings for people who want continuity in working with themselves and others.',
+  ongoingGroupsText2:
+    'Small online group spaces for continuous experiential exploration through encounter, relationship, action and group dynamics.',
+
+  themesTitle: 'Themes I explore',
+  themesText:
+    'Current themes of exploration include attention, the relationship between humans and AI, group encounter, body, impulse, overwhelm, symbolic process and relational dynamics.',
 },
     zoom: {
-      title: 'Zoom Maestra',
+  title: 'Zoom Maestra',
       eyebrow: 'Supporting the invisible architecture of online events',
       intro: 'Zoom Maestra supports the invisible architecture of online events, helping facilitators, educators, and therapists deliver their work with clarity, stability, and ease.',
       lead1: 'Many people who hold powerful workshops, courses, and group processes online find themselves overwhelmed by the technical side of hosting.',
@@ -870,8 +908,46 @@ eventGroupValue: 'do 15 učesnika',
   event1Text:
     'Iskustveno istraživanje odnosa između čoveka i veštačke inteligencije kroz psihodramske i akcione metode.',
   event1Button: 'Raspitaj se o radionici',
-  inquiryTitle: 'Teme koje istražujem',
+     inquiryTitle: 'Teme koje istražujem',
   inquiryText:
+    'Trenutne teme istraživanja uključuju pažnju, odnos čoveka i AI-a, grupni susret, telo, impuls, preplavljenost, simbolički proces i relacione dinamike.',
+
+  formTitle: 'Prijava',
+  formNameLabel: 'Ime i prezime',
+  formEmailLabel: 'Email',
+  formLocationLabel: 'Odakle se javljate?',
+  formMessageLabel: 'Šta vas trenutno najviše zanima u ovoj temi?',
+  formNote: 'Nakon prijave dobićete email sa potvrdom mesta i informacijama za uplatu.',
+  formButton: 'Pošalji prijavu',
+  formSuccessTitle: 'Hvala, prijava je poslata.',
+  formSuccessText: 'Javiću vam se uskoro sa potvrdom.',
+  eventHiddenValue: 'Kako se zapravo osećam u vezi sa AI-jem? — 04.06.2026',
+
+  upcomingTitle: 'U najavi',
+  upcomingType: 'Istraživanje',
+  upcomingItems: [
+    {
+      title: 'Zagrevanje za nove uloge',
+      subtitle: 'Kada stari identitet više ne stoji, a novi još nije živ.',
+    },
+    {
+      title: 'Zaglavljeni u promenama',
+      subtitle: 'Kad prošlost drži, a budućnost zove.',
+    },
+    {
+      title: 'Ko u nama protestuje',
+      subtitle: 'Osvetljavanje unutrašnjeg sabotera.',
+    },
+  ],
+
+  ongoingGroupsTitle: 'Grupe u toku',
+  ongoingGroupsText1:
+    'Nedeljni online grupni susreti za ljude koji žele kontinuitet u radu sa sobom i drugima.',
+  ongoingGroupsText2:
+    'Mali online grupni prostori za kontinuirano iskustveno istraživanje kroz encounter, odnos, akciju i grupnu dinamiku.',
+
+  themesTitle: 'Teme koje istražujem',
+  themesText:
     'Trenutne teme istraživanja uključuju pažnju, odnos čoveka i AI-a, grupni susret, telo, impuls, preplavljenost, simbolički proces i relacione dinamike.',
 },
     zoom: {
