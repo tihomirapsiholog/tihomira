@@ -137,7 +137,7 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
 
  return (
   <>
-   <SEO
+ <SEO
   title={
     language === 'sr'
       ? 'Tiha Psiha | Individualni susreti, radionice i zvučna iskustva'
@@ -153,6 +153,12 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
       ? 'https://tihomira.info/sr/tiha-psiha'
       : 'https://tihomira.info/en/tiha-psiha'
   }
+  language={language}
+  alternateUrls={{
+    en: 'https://tihomira.info/en/tiha-psiha',
+    sr: 'https://tihomira.info/sr/tiha-psiha',
+    xDefault: 'https://tihomira.info/en/tiha-psiha',
+  }}
 />
     <style>{fadeUpStyle}</style>
 
@@ -161,7 +167,11 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
           <div className="absolute inset-0">
            <img
           src="/silhouette.jpg"
-          alt="Silhouette"
+          alt={
+          language === 'sr'
+           ? 'Silueta osobe u prostoru tišine i unutrašnjeg rada'
+          : 'Silhouette of a person in a space of silence and inner work'
+          }
            className="absolute inset-0 h-full w-full object-cover will-change-transform"
           style={{ transform: `translateY(${scrollY * 0.04}px)` }}
           />
