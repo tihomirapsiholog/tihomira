@@ -30,7 +30,14 @@ export default function Footer({ t, language }) {
             </span>
           </Link>
         </div>
-
+        <div className="mt-8">
+          <Link
+            to={`/${language}/privacy-policy`}
+            className="text-xs text-slate-500 transition-colors hover:text-yellow-300"
+          >
+            {language === 'sr' ? 'Politika privatnosti' : 'Privacy Policy'}
+          </Link>
+        </div>
         <p className="mt-8 text-xs text-slate-600">
           © {new Date().getFullYear()} Tihomira Stanojević. {t.footer.copyright}
         </p>

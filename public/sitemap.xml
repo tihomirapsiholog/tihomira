@@ -76,4 +76,12 @@
     <loc>https://tihomira.info/sr/praksa-tisine</loc>
     <priority>0.6</priority>
   </url>
-</urlset>
+  < url>
+  <loc>https://tihomira.info/en/privacy-policy</loc>
+  <priority>0.5</priority>
+  </url>
+  <url>
+  <loc>https://tihomira.info/sr/privacy-policy</loc>
+  <priority>0.5</priority>
+  </url>
+  </urlset>

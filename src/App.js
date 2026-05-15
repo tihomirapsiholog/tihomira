@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Routes, Route, useLocation, useNavigate, Navigate } from "react-router-dom";
 import { Mail } from "lucide-react";
 import translations from "./translations";
@@ -12,33 +12,11 @@ import ZoomMaestraPage from "./pages/ZoomMaestraPage";
 import ContactPage from "./pages/ContactPage";
 import SilencePracticePage from "./pages/SilencePracticePage";
 import TihaPsihaPage from './pages/TihaPsihaPage';
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 
 function getLangFromPath(pathname) {
   if (pathname.startsWith("/sr")) return "sr";
   return "en";
-}
-
-function usePageTitle() {
-  const location = useLocation();
-  useEffect(() => {
-    const titles = {
-      "/en": "Tihomira | Home",
-      "/sr": "Tihomira | Početak",
-      "/en/tiha-psiha": "Tiha Psiha | Tihomira",
-      "/sr/tiha-psiha": "Tiha Psiha | Tihomira",
-      "/en/about": "Tihomira | About",
-      "/sr/about": "Tihomira | O meni",
-      "/en/work": "Tihomira | Work With Me",
-      "/sr/work": "Tihomira | Rad sa mnom",
-      //"/en/events": "Tihomira | Events",
-      //"/sr/events": "Tihomira | Događaji",
-      "/en/zoom-maestra": "Zoom Maestra | Technical Support for Online Facilitators",
-      "/sr/zoom-maestra": "Zoom Maestra | Podrška za online facilitatore",
-      "/en/contact": "Tihomira | Contact",
-      "/sr/contact": "Tihomira | Kontakt"
-    };
-    document.title = titles[location.pathname] || "Tihomira";
-  }, [location.pathname]);
 }
 
 export default function App() {
@@ -47,7 +25,6 @@ export default function App() {
   const navigate = useNavigate();
   const language = getLangFromPath(location.pathname);
   const t = translations[language];
-  usePageTitle();
 
   const usesPortalNav =
   location.pathname === "/en" ||
@@ -116,6 +93,8 @@ export default function App() {
           <Route path="/sr/contact" element={<ContactPage t={translations.sr} language="sr" />} />
           <Route path="/en/silence-practice" element={<SilencePracticePage />} />
           <Route path="/sr/praksa-tisine" element={<SilencePracticePage />} />  
+          <Route path="/en/privacy-policy" element={<PrivacyPolicyPage language="en" />} />
+          <Route path="/sr/privacy-policy" element={<PrivacyPolicyPage language="sr" />} />
         </Routes>
       </main>
       <Footer t={t} language={language} />

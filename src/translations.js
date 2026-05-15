@@ -10,9 +10,13 @@ const translations = {
     },
     home: {
       welcome: 'Welcome',
-    tagline: "Not a new self. A different relationship to the same.",
-    intro:  "Tiha Psiha is a space for experiential exploration of inner life. Through individual and group work, it explores what becomes visible when experience is given attention, relationship, movement, or voice.",
-   howIWork: 'How I Work',
+      seoIntroTiha:
+      'Tiha Psiha is a space for psychology, facilitation, individual sessions, workshops, and symbolic experiential work.',
+      seoIntroZoom:
+      'Zoom Maestra offers online event support, Zoom support, and hybrid event coordination for facilitators, therapists, educators, and group leaders.',
+       tagline: "Not a new self. A different relationship to the same.",
+       intro:  "Tiha Psiha is a space for experiential exploration of inner life. Through individual and group work, it explores what becomes visible when experience is given attention, relationship, movement, or voice.",
+      howIWork: 'How I Work',
       workDescription:
         'My work integrates psychology, process facilitation, embodied practices, and symbolic awareness to create spaces where transformation can unfold naturally.',
       pillar1Title: 'Individual Sessions',

@@ -196,6 +196,15 @@ export default function HomePage({ setCurrentPage, t }) {
               </article>
             );
           })}
+               </div>
+
+        <div className="mx-auto mt-12 max-w-3xl rounded-[1.5rem] bg-white/45 px-6 py-7 text-center shadow-sm ring-1 ring-[#172018]/10 backdrop-blur sm:px-8">
+          <p className="text-base leading-relaxed text-[#3f493d] sm:text-lg">
+            {t.home.seoIntroTiha}
+          </p>
+          <p className="mt-4 text-base leading-relaxed text-[#3f493d] sm:text-lg">
+            {t.home.seoIntroZoom}
+          </p>
         </div>
         </section>
     </main>
