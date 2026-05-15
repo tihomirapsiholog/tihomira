@@ -61,11 +61,28 @@ export default function ContactPage({ t, language }) {
   return (
     <div className="mx-auto max-w-3xl bg-[#0b1220] px-4 py-20 sm:px-6 lg:px-8">
       <SEO
-        title="Contact | Tiha Psiha and Zoom Maestra"
-        description="Contact Tihomira Stanojević about individual sessions, workshops, sound experiences or Zoom Maestra online event support."
-        url="https://tihomira.info/contact"
-      />
-
+  title={
+    language === 'sr'
+      ? 'Kontakt | Tiha Psiha i Zoom Maestra'
+      : 'Contact | Tiha Psiha and Zoom Maestra'
+  }
+  description={
+    language === 'sr'
+      ? 'Kontaktirajte Tihomiru Stanojević za individualne susrete, radionice, zvučne kupke ili Zoom Maestra podršku za online događaje.'
+      : 'Contact Tihomira Stanojević about individual sessions, workshops, sound baths or Zoom Maestra online event support.'
+  }
+  url={
+    language === 'sr'
+      ? 'https://tihomira.info/sr/contact'
+      : 'https://tihomira.info/en/contact'
+  }
+  language={language}
+  alternateUrls={{
+    en: 'https://tihomira.info/en/contact',
+    sr: 'https://tihomira.info/sr/contact',
+    xDefault: 'https://tihomira.info/en/contact',
+  }}
+/>
       <h1 className="mb-6 font-serif text-5xl text-white">
         {t.contact.title}
       </h1>
@@ -169,7 +186,9 @@ export default function ContactPage({ t, language }) {
           </div>
 
           {status === 'success' && (
-            <p className="text-center text-green-400">✓ Poruka je poslata!</p>
+          <p className="text-center text-green-400">
+         {t.contact.successMessage}
+        </p>
           )}
 
           {status === 'error' && (
