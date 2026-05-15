@@ -1,79 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tihomira.info/</loc>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
     <loc>https://tihomira.info/en</loc>
-    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://tihomira.info/sr</loc>
-    <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://tihomira.info/en/tiha-psiha</loc>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tihomira.info/sr/tiha-psiha</loc>
-    <priority>0.9</priority>
   </url>
-
-  <url>
-    <loc>https://tihomira.info/en/zoom-maestra</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://tihomira.info/sr/zoom-maestra</loc>
-    <priority>0.9</priority>
-  </url>
-
   <url>
     <loc>https://tihomira.info/en/about</loc>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tihomira.info/sr/about</loc>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://tihomira.info/en/work</loc>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tihomira.info/sr/work</loc>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://tihomira.info/en/events</loc>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tihomira.info/sr/events</loc>
-    <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://tihomira.info/en/zoom-maestra</loc>
+  </url>
+  <url>
+    <loc>https://tihomira.info/sr/zoom-maestra</loc>
+  </url>
   <url>
     <loc>https://tihomira.info/en/contact</loc>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tihomira.info/sr/contact</loc>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://tihomira.info/en/silence-practice</loc>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://tihomira.info/sr/praksa-tisine</loc>
-    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tihomira.info/en/privacy-policy</loc>
+  </url>
+  <url>
+    <loc>https://tihomira.info/sr/privacy-policy</loc>
   </url>
 </urlset>
