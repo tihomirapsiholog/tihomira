@@ -91,7 +91,8 @@ export default function App() {
           <Route path="/sr/zoom-maestra" element={<ZoomMaestraPage setCurrentPage={goToPage} t={translations.sr} />} />          
           <Route path="/en/contact" element={<ContactPage t={translations.en} language="en" />} />
           <Route path="/sr/contact" element={<ContactPage t={translations.sr} language="sr" />} />
-          <Route path="/en/silence-practice" element={<SilencePracticePage />} />
+          <Route path="/en/silence-practice"element={<SilencePracticePage t={translations.en} language="en" />}/>
+          <Route path="/sr/praksa-tisine"element={<SilencePracticePage t={translations.sr} language="sr" />}/>
           <Route path="/sr/praksa-tisine" element={<SilencePracticePage />} />  
           <Route path="/en/privacy-policy" element={<PrivacyPolicyPage language="en" />} />
           <Route path="/sr/privacy-policy" element={<PrivacyPolicyPage language="sr" />} />
