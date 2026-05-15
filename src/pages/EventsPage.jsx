@@ -3,157 +3,153 @@ import { ArrowRight } from 'lucide-react';
 import SEO from '../components/SEO';
 
 export default function EventsPage({ t, language = 'en' }) {
-const [submitted, setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const form = e.currentTarget;
-  const data = new FormData(form);
+    const form = e.currentTarget;
+    const data = new FormData(form);
 
-  const response = await fetch('https://formspree.io/f/mwvyywkd', {
-    method: 'POST',
-    body: data,
-    headers: {
-      Accept: 'application/json',
-    },
-  });
+    const response = await fetch('https://formspree.io/f/mwvyywkd', {
+      method: 'POST',
+      body: data,
+      headers: {
+        Accept: 'application/json',
+      },
+    });
 
-  if (response.ok) {
-    setSubmitted(true);
-    form.reset();
-  }
-};
-  const upcomingEvents = [
-    {
-      title: 'Zagrevanje za nove uloge',
-      subtitle: 'Kada stari identitet više ne stoji, a novi još nije živ.',
-    },
-    {
-      title: 'Zaglavljeni u promenama',
-      subtitle: 'Kad prošlost drži, a budućnost zove.',
-    },
-    {
-      title: 'Ko u nama protestuje',
-      subtitle: 'Osvetljavanje unutrašnjeg sabotera.',
-    },
-  ];
+    if (response.ok) {
+      setSubmitted(true);
+      form.reset();
+    }
+  };
+
+  const upcomingEvents = t.events.upcomingItems;
 
   return (
-  <div className="bg-[#0b1220] text-slate-100">
-    <SEO
-  title={
-    language === 'sr'
-      ? 'Događaji | Radionice, grupni susreti i iskustveni prostori'
-      : 'Events | Workshops, Gatherings and Experiential Spaces'
-  }
-  description={
-    language === 'sr'
-      ? 'Aktuelne i buduće radionice, grupni susreti i iskustveni prostori za psihološko istraživanje, grupni rad i simbolički proces.'
-      : 'Current and upcoming workshops, gatherings and experiential spaces for psychological exploration, group work and symbolic process.'
-  }
-  url={
-    language === 'sr'
-      ? 'https://tihomira.info/sr/events'
-      : 'https://tihomira.info/en/events'
-  }
-/>
-    <section className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
+    <div className="bg-[#0b1220] text-slate-100">
+      <SEO
+        title={
+          language === 'sr'
+            ? 'Događaji | Radionice, grupni susreti i iskustveni prostori'
+            : 'Events | Workshops, Gatherings and Experiential Spaces'
+        }
+        description={
+          language === 'sr'
+            ? 'Aktuelne i buduće radionice, grupni susreti i iskustveni prostori za psihološko istraživanje, grupni rad i simbolički proces.'
+            : 'Current and upcoming workshops, gatherings and experiential spaces for psychological exploration, group work and symbolic process.'
+        }
+        url={
+          language === 'sr'
+            ? 'https://tihomira.info/sr/events'
+            : 'https://tihomira.info/en/events'
+        }
+        language={language}
+        alternateUrls={{
+          en: 'https://tihomira.info/en/events',
+          sr: 'https://tihomira.info/sr/events',
+          xDefault: 'https://tihomira.info/en/events',
+        }}
+      />
+
+      <section className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
         <p className="mb-6 text-sm uppercase tracking-[0.25em] text-yellow-400/80">
-         {t.events.label}
+          {t.events.label}
         </p>
 
         <h1 className="max-w-4xl font-serif text-4xl leading-tight text-white md:text-6xl">
-        {t.events.heroTitle}        
+          {t.events.heroTitle}
         </h1>
 
         <p className="mt-8 max-w-3xl text-lg leading-relaxed text-slate-300">
-          {t.events.heroIntro}        
-          </p>
+          {t.events.heroIntro}
+        </p>
       </section>
 
       <section className="border-t border-yellow-700/10 bg-[#0e1628] px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-10 font-serif text-3xl text-white md:text-4xl">
-         {t.events.currentTitle}
-        </h2>
+            {t.events.currentTitle}
+          </h2>
 
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="rounded-[28px] border border-yellow-700/20 bg-[#121c31] p-8 md:p-10">
-             <p className="mb-4 text-xs uppercase tracking-[0.25em] text-yellow-400/80">
-            {t.events.event1Type}
-            </p>
+              <p className="mb-4 text-xs uppercase tracking-[0.25em] text-yellow-400/80">
+                {t.events.event1Type}
+              </p>
 
               <h3 className="mb-6 font-serif text-3xl leading-tight text-white md:text-4xl">
-              {t.events.event1RealTitle}
+                {t.events.event1RealTitle}
               </h3>
 
               <div className="space-y-5 text-lg leading-relaxed text-slate-300">
-                <p>
-              {t.events.event1Para1}                
-              </p>
+                <p>{t.events.event1Para1}</p>
+                <p>{t.events.event1Para2}</p>
+                <p>{t.events.event1Para3}</p>
+                <p>{t.events.event1Para4}</p>
 
-                <p>
-                 {t.events.event1Para2}
-                </p>
+                <div className="mt-8 grid gap-3 rounded-2xl border border-yellow-700/20 bg-[#0b1220] p-5 text-sm text-slate-300 sm:grid-cols-2">
+                  <p>
+                    <span className="text-yellow-400">
+                      {t.events.eventDateLabel}
+                    </span>{' '}
+                    {t.events.eventDateValue}
+                  </p>
 
-                <p>
-                  {t.events.event1Para3}
-                </p>
+                  <p>
+                    <span className="text-yellow-400">
+                      {t.events.eventTimeLabel}
+                    </span>{' '}
+                    {t.events.eventTimeValue}
+                  </p>
 
-                <p>
-                {t.events.event1Para4}                
-                </p>
+                  <p>
+                    <span className="text-yellow-400">
+                      {t.events.eventFormatLabel}
+                    </span>{' '}
+                    {t.events.eventFormatValue}
+                  </p>
 
-               <div className="mt-8 grid gap-3 rounded-2xl border border-yellow-700/20 bg-[#0b1220] p-5 text-sm text-slate-300 sm:grid-cols-2">
-               <p>
-              <span className="text-yellow-400">{t.events.eventDateLabel}</span>{' '}
-              {t.events.eventDateValue}
-              </p>
+                  <p>
+                    <span className="text-yellow-400">
+                      {t.events.eventLanguageLabel}
+                    </span>{' '}
+                    {t.events.eventLanguageValue}
+                  </p>
 
-              <p>
-              <span className="text-yellow-400">{t.events.eventTimeLabel}</span>{' '}
-             {t.events.eventTimeValue}
-             </p>
+                  <p>
+                    <span className="text-yellow-400">
+                      {t.events.eventPriceLabel}
+                    </span>{' '}
+                    {t.events.eventPriceValue}
+                  </p>
 
-              <p>
-             <span className="text-yellow-400">{t.events.eventFormatLabel}</span>{' '}
-              {t.events.eventFormatValue}
-              </p>
-
-             <p>
-             <span className="text-yellow-400">{t.events.eventLanguageLabel}</span>{' '}
-            {t.events.eventLanguageValue}
-            </p>
-
-           <p>
-             <span className="text-yellow-400">{t.events.eventPriceLabel}</span>{' '}
-            {t.events.eventPriceValue}
-            </p>
-
-           <p>
-            <span className="text-yellow-400">{t.events.eventGroupLabel}</span>{' '}
-           {t.events.eventGroupValue}
-           </p>
+                  <p>
+                    <span className="text-yellow-400">
+                      {t.events.eventGroupLabel}
+                    </span>{' '}
+                    {t.events.eventGroupValue}
+                  </p>
+                </div>
+              </div>
             </div>
-            </div>
-            </div>
+
             <div className="rounded-[28px] border border-yellow-700/20 bg-[#10192c] p-8">
-              <h3 className="mb-8 font-serif text-2xl text-white">Prijava</h3>
+              <h3 className="mb-8 font-serif text-2xl text-white">
+                {t.events.formTitle}
+              </h3>
 
-              <form
-              onSubmit={handleSubmit}
-             noValidate
-             className="space-y-5"
-              >
-              <input
-             type="hidden"
-              name="event"
-              value="Kako se zapravo osećam u vezi sa AI-jem? — 04.06.2026"
+              <form onSubmit={handleSubmit} noValidate className="space-y-5">
+                <input
+                  type="hidden"
+                  name="event"
+                  value={t.events.eventHiddenValue}
                 />
+
                 <div>
                   <label className="mb-2 block text-sm text-slate-400">
-                    Ime i prezime
+                    {t.events.formNameLabel}
                   </label>
                   <input
                     type="text"
@@ -165,7 +161,7 @@ const handleSubmit = async (e) => {
 
                 <div>
                   <label className="mb-2 block text-sm text-slate-400">
-                    Email
+                    {t.events.formEmailLabel}
                   </label>
                   <input
                     type="email"
@@ -176,20 +172,20 @@ const handleSubmit = async (e) => {
                 </div>
 
                 <div>
-                <label className="mb-2 block text-sm text-slate-400">
-                 Odakle se javljate?
+                  <label className="mb-2 block text-sm text-slate-400">
+                    {t.events.formLocationLabel}
                   </label>
-                 <input
-                  type="text"
-                 name="location"
-                   required
-                   className="w-full rounded-xl border border-yellow-700/20 bg-[#0b1220] px-4 py-3 text-white outline-none transition-colors focus:border-yellow-400"
+                  <input
+                    type="text"
+                    name="location"
+                    required
+                    className="w-full rounded-xl border border-yellow-700/20 bg-[#0b1220] px-4 py-3 text-white outline-none transition-colors focus:border-yellow-400"
                   />
                 </div>
 
                 <div>
                   <label className="mb-2 block text-sm text-slate-400">
-                    Šta vas trenutno najviše zanima u ovoj temi?
+                    {t.events.formMessageLabel}
                   </label>
                   <textarea
                     name="message"
@@ -198,27 +194,29 @@ const handleSubmit = async (e) => {
                     className="w-full rounded-xl border border-yellow-700/20 bg-[#0b1220] px-4 py-3 text-white outline-none transition-colors focus:border-yellow-400"
                   />
                 </div>
+
                 <p className="text-sm leading-relaxed text-slate-500">
-                   Nakon prijave dobićete email sa potvrdom mesta i informacijama za uplatu.
-                  </p>
+                  {t.events.formNote}
+                </p>
+
                 <button
                   type="submit"
                   className="inline-flex items-center gap-2 rounded-full bg-yellow-500 px-8 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400"
                 >
-                  Pošalji prijavu
+                  {t.events.formButton}
                   <ArrowRight size={18} />
                 </button>
-             {submitted && (
-              <div className="rounded-2xl border border-yellow-500/20 bg-yellow-500/10 p-5 text-sm leading-relaxed text-yellow-50">
-              <p className="font-serif text-lg text-yellow-300">
-                Hvala, prijava je poslata.
-              </p>
-              <p className="mt-2 text-slate-300">
-             Javiću vam se uskoro sa potvrdom.
-              </p>
-           </div>
-            )}
 
+                {submitted && (
+                  <div className="rounded-2xl border border-yellow-500/20 bg-yellow-500/10 p-5 text-sm leading-relaxed text-yellow-50">
+                    <p className="font-serif text-lg text-yellow-300">
+                      {t.events.formSuccessTitle}
+                    </p>
+                    <p className="mt-2 text-slate-300">
+                      {t.events.formSuccessText}
+                    </p>
+                  </div>
+                )}
               </form>
             </div>
           </div>
@@ -228,7 +226,7 @@ const handleSubmit = async (e) => {
       <section className="border-t border-yellow-700/10 bg-[#0b1220] px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-10 font-serif text-3xl text-white md:text-4xl">
-            U najavi
+            {t.events.upcomingTitle}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-3">
@@ -238,7 +236,7 @@ const handleSubmit = async (e) => {
                 className="rounded-[24px] border border-yellow-700/10 bg-[#10192c] p-8"
               >
                 <p className="text-sm uppercase tracking-[0.2em] text-yellow-400/60">
-                  Istraživanje
+                  {t.events.upcomingType}
                 </p>
 
                 <h3 className="mt-4 font-serif text-2xl text-white">
@@ -257,18 +255,16 @@ const handleSubmit = async (e) => {
       <section className="border-t border-yellow-700/10 bg-[#0e1628] px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <h2 className="mb-8 font-serif text-3xl text-white md:text-4xl">
-            Grupe u toku
+            {t.events.ongoingGroupsTitle}
           </h2>
 
           <div className="rounded-[28px] border border-yellow-700/20 bg-[#121c31] p-8 md:p-10">
             <p className="max-w-3xl text-xl leading-relaxed text-slate-300">
-              Nedeljni online grupni susreti za ljude koji žele kontinuitet
-              u radu sa sobom i drugima.
+              {t.events.ongoingGroupsText1}
             </p>
 
             <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-400">
-              Mali online grupni prostori za kontinuirano iskustveno istraživanje
-              kroz encounter, odnos, akciju i grupnu dinamiku.
+              {t.events.ongoingGroupsText2}
             </p>
           </div>
         </div>
@@ -277,13 +273,11 @@ const handleSubmit = async (e) => {
       <section className="border-t border-yellow-700/10 px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <h2 className="mb-6 font-serif text-3xl text-white md:text-4xl">
-            Teme koje istražujem
+            {t.events.themesTitle}
           </h2>
 
           <p className="max-w-3xl text-lg leading-relaxed text-slate-300">
-            Trenutne teme istraživanja uključuju pažnju, odnos čoveka i AI-a,
-            grupni susret, telo, impuls, preplavljenost, simbolički proces i
-            relacione dinamike.
+            {t.events.themesText}
           </p>
         </div>
       </section>
