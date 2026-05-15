@@ -5,7 +5,9 @@ const gates = [
   {
     id: 'tiha-psiha',
     title: 'Tiha Psiha',
-    description:
+    descriptionEn:
+      'A space for psychological, experiential and symbolic work — through encounter, body, sound, group process and inner imagery.',
+    descriptionSr:
       'Prostor za psihološki, iskustveni i simbolički rad — kroz susret, telo, zvuk, grupu i unutrašnje slike.',
     page: '/tiha-psiha',
     closedImage: '/gates/tiha-closed.png',
@@ -16,7 +18,9 @@ const gates = [
   {
     id: 'zoom-maestra',
     title: 'Zoom Maestra',
-    description:
+    descriptionEn:
+      'A space for facilitators, educators and therapists who need calm, precise and reliable support for online and hybrid events.',
+    descriptionSr:
       'Prostor za facilitatore, edukatore i terapeute kojima je potrebna mirna, precizna i pouzdana podrška za online i hibridne događaje.',
     page: '/zoom-maestra',
     closedImage: '/gates/zoom-closed.png',
@@ -140,7 +144,11 @@ export default function HomePage({ setCurrentPage, t, language = 'en' }) {
                 role="link"
                 tabIndex={0}
                 aria-expanded={isActive}
-                aria-label={`Uđi u ${gate.title}`}
+                aria-label={
+                 language === 'sr'
+               ? `Uđi u ${gate.title}`
+               : `Enter ${gate.title}`
+                }
                 onMouseEnter={() => handleMouseEnter(gate.id)}
                 onMouseLeave={handleMouseLeave}
                 onClick={() => handleGateClick(gate)}
@@ -206,7 +214,7 @@ export default function HomePage({ setCurrentPage, t, language = 'en' }) {
                     ].join(' ')}
                   >
                     <p className="text-base leading-relaxed text-white/90 drop-shadow-md sm:text-lg">
-                     {gate.description}
+                     {language === 'sr' ? gate.descriptionSr : gate.descriptionEn}
                     </p>
 
                   </div>

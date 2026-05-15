@@ -21,8 +21,13 @@ export default function ContactPage({ t, language }) {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
+    };
+    const handlePathSelect = (message) => {
+  setFormData((prev) => ({
+    ...prev,
+    message,
+  }));
+};
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -90,7 +95,66 @@ export default function ContactPage({ t, language }) {
       <p className="mb-12 text-lg leading-relaxed text-slate-300">
         {t.contact.intro}
       </p>
+      <section className="mb-14 rounded-3xl border border-yellow-700/20 bg-[#10192c] p-6 sm:p-8">
+  <p className="mb-3 text-xs uppercase tracking-[0.25em] text-yellow-400">
+    {t.contact.contactFlowTitle}
+  </p>
 
+  <p className="mb-8 text-sm leading-relaxed text-slate-400">
+    {t.contact.contactFlowIntro}
+  </p>
+
+  <div className="grid gap-4 md:grid-cols-3">
+    <button
+      type="button"
+      onClick={() => handlePathSelect(t.contact.path1Message)}
+      className="rounded-2xl border border-yellow-700/20 bg-[#0b1220] p-5 text-left transition hover:border-yellow-400/50 hover:bg-[#121c31]"
+    >
+      <h2 className="font-serif text-xl text-white">
+        {t.contact.path1Title}
+      </h2>
+      <p className="mt-3 text-sm leading-relaxed text-slate-400">
+        {t.contact.path1Text}
+      </p>
+      <span className="mt-5 inline-block text-sm text-yellow-400">
+        {t.contact.path1Button}
+      </span>
+    </button>
+
+    <button
+      type="button"
+      onClick={() => handlePathSelect(t.contact.path2Message)}
+      className="rounded-2xl border border-yellow-700/20 bg-[#0b1220] p-5 text-left transition hover:border-yellow-400/50 hover:bg-[#121c31]"
+    >
+      <h2 className="font-serif text-xl text-white">
+        {t.contact.path2Title}
+      </h2>
+      <p className="mt-3 text-sm leading-relaxed text-slate-400">
+        {t.contact.path2Text}
+      </p>
+      <span className="mt-5 inline-block text-sm text-yellow-400">
+        {t.contact.path2Button}
+      </span>
+    </button>
+
+    <button
+      type="button"
+      onClick={() => handlePathSelect(t.contact.path3Message)}
+      className="rounded-2xl border border-yellow-700/20 bg-[#0b1220] p-5 text-left transition hover:border-yellow-400/50 hover:bg-[#121c31]"
+    >
+      <h2 className="font-serif text-xl text-white">
+        {t.contact.path3Title}
+      </h2>
+      <p className="mt-3 text-sm leading-relaxed text-slate-400">
+        {t.contact.path3Text}
+      </p>
+      <span className="mt-5 inline-block text-sm text-yellow-400">
+        {t.contact.path3Button}
+        </span>
+        </button>
+      </div>
+      </section>
+    
       <div className="grid gap-12 md:grid-cols-2">
         <div className="space-y-8">
           <div>
