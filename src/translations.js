@@ -152,121 +152,76 @@ const translations = {
     },
   ],
 },
-    about: {
-      eyebrow: 'About',
-      aboutHeroMain: 'Some things become visible only in the presence of another.',
-      aboutHeroEm: 'Encounter as practice.',
-      aboutHeroIntro1: 'My work is experiential and action-oriented. Through encounter, group process, psychodrama, symbol and embodied work, we explore what becomes visible when experience is given space to unfold.',
-      aboutHeroIntro2: 'Tiha Psiha is not a space for a new self, but for a different relationship to the same self.',
-      aboutLocationsIntro: 'Living and working across different cultural contexts has changed the way I observe identity, group belonging and inner change.',
-      heroTitle: 'I learn everything',
-      heroTitleEm: 'through experience.',
-      heroIntro:
-        'Psychologist, facilitator, sound practitioner. I have lived on four continents, collected instruments from every place I have called home, and spent years learning what it means to hold space — for others, and for myself.',
-      placesLived: 'Places lived',
-      storyLabel: 'The story',
-      chapter1Label: 'The beginning',
-      chapter1Title: 'I went to psychology',
-      chapter1TitleEm: 'to understand people.',
-      chapter1Para1:
-        'I grew up in Surdulica. When the time came for university, I opened a map and looked for the furthest city in Serbia with psychology at a public faculty. That is how I ended up in Novi Sad — same language, completely different culture. It was my first crossing.',
-      chapter1Para2:
-        'In Novi Sad I volunteered for years at <strong class="text-slate-200 font-normal">Centar Srce</strong> — a centre for suicide prevention and emotional support for people in crisis. That is where I learned to listen before I speak. Before that, I had spent two years at <strong class="text-slate-200 font-normal">Petnica Research Station</strong> — on the psychology programme, already knowing what I was heading towards.',
-      chapter1Para3:
-        'Teaching statistics to psychology students, I quickly realised my job was not about numbers. It was about the <strong class="text-slate-200 font-normal">resistance to numbers</strong> — the fear, the expectations, the stories we tell ourselves about what we can and cannot understand.',
-      chapter1Para4:
-        'In 2009 I attended my first Psychodramatic Bodywork® workshop. I watched transformations happen in real time. I felt them in my own body. From that moment, I knew — this was my world.',
-      chapter1Aside:
-        "I don't trust explanations as much as I trust experience. Something has to move through the body before it becomes real.",
-      chapter2Label: 'Closing the gate and opening the world',
-      chapter2Title: 'When the world stopped,',
-      chapter2TitleEm: 'my world opened.',
-      chapter2Para1:
-        'In March 2020 I was in China. I caught one of the last flights home — to Surdulica, into quarantine, alone. A tragedy happened in the house, my mother and aunt ended up in hospital. That Easter I survived with Wim Hof breathing, my drum — and neighbours and relatives who left food at the gate. Community stays community even when we are isolated.',
-      chapter2Para2:
-        'When the situation stabilised, I discovered Tele\'Drama — psychodrama conducted entirely online. I waited for a free event because I could not afford to pay. When I entered, I shone. A friendship was born there that Pembe and I still celebrate — February 24th as our anniversary.',
-      chapter2Para3:
-        'Not much time passed before I was in three groups every week — each three hours long. The online space stopped being a substitute for real experience. It became a space of its own.',
-      chapter2Aside: 'The drum and the gate. Those were my only connections to the world.',
-      chapter3Label: 'At the bottom of the volcano',
-      chapter3Title: "Ecuador, a shaman's drum,",
-      chapter3TitleEm: 'and $200 in my pocket.',
-      chapter3Para1:
-        'While volunteering for the American Society of Group Psychotherapy and Psychodrama (ASGPP), I met experienced psychodramatists from around the world — collaborated with them, experienced their workshops. That is how I met <strong class="text-slate-200 font-normal">Shirley Barkley</strong> — a woman who studied with Moreno and has devoted 50 years to psychodrama, the last ten combining psychodrama with indigenous medicines.',
-      chapter3Para2:
-        'I had been initiated into a shamanic drum a few years before I met Shirley and received her invitation to join a retreat at the bottom of the Pululahua volcano in Ecuador. I said yes — before I had the money. A friend paid for a one-way ticket. I arrived with $200, paid $120 for the retreat — and stayed for six months.',
-      chapter3Para3:
-        'On my 33rd birthday I woke up at the base of a volcano, no phone signal, no internet, surrounded by strangers. That day we raised the tipi and prepared for the two weeks ahead. I had imagined a volcano as stone and ash — it was actually <strong class="text-slate-200 font-normal">divine nature</strong>. When I stepped outside my tent and onto the ground, I realised the earth was <strong class="text-slate-200 font-normal">soft as a sponge.</strong>',
-      chapter3Aside:
-        "What I learned in Ecuador: safety doesn't come from having enough. It comes from being received.",
-      chapter4Label: 'Coming back',
-      chapter4Title: 'Crossroads are not',
-      chapter4TitleEm: 'metaphors for me.',
-      chapter4Para1:
-        'I came back to Serbia because my mother needed surgery — a brain aneurysm. I am her only child. There was no question.',
-      chapter4Para2:
-        'The return was hard. Ecuador had opened something in me, and Serbia — with all its familiarity — felt suddenly narrow. The next call, once my mother was well, came from India — invited by a colleague to help restart a psychodrama institute after COVID. I hoped for something that would feel like South America. Instead it broke me in a completely different way. I stayed three months instead of six. All my savings gone.',
-      chapter4Para3:
-        'What those years taught me: a crossroads is not a problem to solve quickly. It is an invitation to become more fully who you are. I stopped looking for the place that would fix things, and started building the work from the inside out.',
-      chapter4Aside: null,
-      chapter5Label: 'Tina con Cuenco',
-      chapter5Title: "I didn't decide to do sound work.",
-      chapter5TitleEm: 'It accumulated.',
-      chapter5Para1:
-        'From every place I have lived, I brought something back. A hand drum made for me by Amaru, a man from the jungle at the Ecuador retreat. Rain sticks. A small hang from a Serbian instrument maker. Cymbals from India. Chinese singing balls. A singing bowl from a friend in Croatia.',
-      chapter5Para2:
-        'In 2025 I drove from Surdulica to Barcelona — with a bed in the back of a van and all my instruments. I lived across different corners of the city, sometimes in the van itself. Every week I gathered with people to improvise together. They started calling me <strong class="text-slate-200 font-normal">"Tina con Cuenco"</strong> — Tina with a singing bowl.',
-      chapter5Para3:
-        'When I held my first sound bath for others, I realised I was enjoying it as much as they were. Sound carries healing, improvisation sets things free. <strong class="text-slate-200 font-normal"</strong>',
-      chapter5Aside: 'I trust what the body shows — more than what words describe.',
-      inst1: 'Shamanic drum', inst1Origin: '— Hungary',
-      inst2: 'Hand drum', inst2Origin: '— Ecuador',
-      inst3: 'Rain sticks', inst3Origin: '— Ecuador',
-      inst4: 'Small hang', inst4Origin: '— Serbia',
-      inst5: 'Cymbals', inst5Origin: '— India',
-      inst6: 'Singing balls', inst6Origin: '— China',
-      inst7: 'Singing bowl', inst7Origin: '— Croatia',
-      inst8: 'Piano', inst8Origin: '— childhood',
-      inst9: 'Flamenco shoes', inst9Origin: '— Spain',
-      inst10: 'Seed shakers', inst10Origin: '— Ecuador',
-      inst11: 'Daire (frame drum)', inst11Origin: '— tradition',
-      inst12: 'Rain stick — ocean', inst12Origin: '— Serbia (handmade)',
-      inst13: 'Rain stick — gentle', inst13Origin: '— Serbia (handmade)',
-      instrumentsLabel: 'Instruments collected along the way',
-  instrumentsIntro:
-  'I use sound as an extension of experiential work — not as performance, but as a way of working with rhythm, attention and presence.',
-      drivesLabel: 'What shapes the work',
-      drivesTitle: 'Not a methodology.',
-      drivesTitleEm: 'A way of being.',
-      drive1Title: 'Psychology',
-       drivesSectionLabel: 'What I return to',
-      drivesSectionTitle: 'Encounter, attention and experience.',
-      drive1Text: 'Understanding the human psyche — its patterns, wounds, and unrealised potential. Trained in psychodrama, bodily awareness, and group process over many years.',
-      drive2Title: 'The body as guide',
-      drive2Text: 'The body carries wisdom that words often cannot reach. Movement, sound, breath, and sensation are primary languages in my work — not additions to it.',
-      drive3Title: 'Group intelligence',
-      drive3Text: 'Something emerges when people gather with intention that no individual can produce alone. I have spent years learning how to hold that space — online and in person.',
-      drive4Title: 'Living the crossroads',
-      drive4Text: 'I know what it means to be at a threshold — between who you were and who you are becoming. I do not guide people away from that discomfort. I sit with them in it.',
-      trainingLabel: 'Formal grounding',
-      trainingTitle: 'Years of training,',
-      trainingTitleEm: 'honestly stated.',
-      trainingPara1:
-      "My formal education includes undergraduate and master studies in psychology at the University of Novi Sad, alongside many years of work with experiential, action-based and group-centered methods.", 
-      trainingPara2: 
-      "For four years I trained in classical psychodrama in Novi Sad, while my work continued to evolve through the ongoing process of Advanced Level Psychodramatic Bodywork® training with Susan Aaron — Canadian psychotherapist and founder of the method.<br /><br />My approach has also been deeply influenced by multiple cycles of Physical Theatre training with director Marija Farmer, through which I explored devising processes, Complicité methodology, embodiment, symbolic action and the subtle dynamics that emerge between people when experience is given space to unfold.",
-      trainingPara3:
-      "Over the years I continued learning through Transactional Analysis training at Psihopolis, Tele'Drama Practitioner trainings, Ericksonian approaches and conversational hypnosis, as well as the Ethics — Path to the True Self training with Tadeja Bradaš.<br /><br />Sound and rhythm have also been part of my life for a long time. I completed elementary music school, and in recent years that exploration has continued through gong work and experiential spaces involving attention, resonance and embodied presence.<br /><br />Over the past fifteen years I have worked with groups in different contexts — from psychodramatic and educational settings to international online and hybrid processes, including Tele'Drama environments, ecological sociodrama and workshops exploring the relationship between humans, technology, attention and contemporary life.<br /><br />Before fully dedicating myself to experiential work, my first research project at Petnica Science Center received an award while I was still in high school. That research-oriented impulse has remained an important part of my practice, alongside my interest in group intelligence, embodiment and the ways people create meaning through relationship and experience.",  
-      ctaWork: 'Work with me',
-      ctaContact: 'Get in touch',
-      closingLabel: 'What I return to',
-      closingText1: 'Tiha Psiha was born one evening in a living room in Umka, in conversation with a close friend whose way of organizing people and spaces deeply shaped me.',
-      closingText2: 'It was the first and last time we sat in that room before she and her family moved to Stara Planina, where they now live more closely with nature and its rhythms.',
-      closingText3: 'Since then, we continue to nurture the encounter that began there — through conversations, shared meals, silence, ideas and the changing seasons.',
-      closingText4: 'That relationship with rhythm, presence, nature and encounter remains deeply woven into the way I work today.',
-      closingQuote: 'Not a new self. A different relationship to the same self.',
-      contactButton: 'Explore the possibility of encounter',
-    },
+   about: {
+  eyebrow: 'About',
+  heroTitle: 'I work with experience, not only with explanation.',
+  heroIntro:
+    'My name is Tihomira Stanojević. I am a psychologist, facilitator and experiential practitioner working at the intersection of psychology, group process, psychodrama-informed methods, embodiment, symbolic exploration and sound.',
+  heroIntro2:
+    'Through Tiha Psiha, I offer psychology-informed spaces for individual work, small experiential workshops and in-person sound experiences. The work is grounded, relational and attentive to what becomes visible when experience is given enough space.',
+  identityLabel: 'Professional identity',
+  identityTitle: 'Psychologist, facilitator, experiential practitioner.',
+  identityText:
+    'I hold a master’s degree in psychology and have more than fifteen years of experience with group work, experiential learning and action-based methods. My work has developed through psychodrama, Psychodramatic Bodywork®, physical theatre, Tele’Drama, symbolic process, online facilitation and sound-based experiential spaces.',
+  identityNote:
+    'I name my background honestly: psychodrama and related experiential methods deeply inform my work, while Tiha Psiha itself is not presented as psychotherapy or as a certified psychodrama practice.',
+  foundationsLabel: 'What shapes the work',
+  foundationsTitle: 'A grounded experiential approach.',
+  foundationsIntro:
+    'The work brings together psychological reflection, action methods, body awareness, symbolic process and group intelligence.',
+  foundation1Title: 'Psychology',
+  foundation1Text:
+    'Psychology gives the work a grounded frame: attention to inner life, patterns, relationships, developmental processes and the complexity of human experience.',
+  foundation2Title: 'Group process',
+  foundation2Text:
+    'Groups have their own intelligence. I have spent years learning how to hold spaces where people can meet themselves through others, through witnessing, resonance and shared process.',
+  foundation3Title: 'Body, sound and symbol',
+  foundation3Text:
+    'Some experiences do not become clear through words alone. Movement, image, rhythm, sound and symbolic action often reveal what explanation cannot reach.',
+  foundation4Title: 'International and online spaces',
+  foundation4Text:
+    'Living and working across different cultural contexts, and supporting international online groups, has shaped the way I understand belonging, transition, identity and presence.',
+  trainingLabel: 'Training and experience',
+  trainingTitle: 'Formal grounding, honestly stated.',
+  trainingIntro:
+    'My professional background combines formal psychology education with long-term experiential training and many years of practice in group and online spaces.',
+  trainingItem1:
+    'Undergraduate and master studies in psychology at the University of Novi Sad.',
+  trainingItem2:
+    'Four years of classical psychodrama training in Novi Sad.',
+  trainingItem3:
+    'Advanced Level Psychodramatic Bodywork® training process with Susan Aaron.',
+  trainingItem4:
+    'Multiple cycles of Physical Theatre training with director Marija Farmer, including devising, Complicité-informed work, embodiment and symbolic action.',
+  trainingItem5:
+    'Additional learning through Transactional Analysis, Tele’Drama Practitioner trainings, Ericksonian approaches, conversational hypnosis and Ethics — Path to the True Self training.',
+  trainingItem6:
+    'More than fifteen years of work with groups in educational, psychodramatic, creative, ecological, online and hybrid contexts.',
+  experienceLabel: 'Lived experience',
+  experienceTitle: 'The work was shaped across places.',
+  experienceText:
+    'I have lived and worked across different cultural contexts, including Serbia, China, Ecuador, India, Malta, Slovenia, Russia and Spain. These crossings changed how I understand transition, belonging, identity and the body’s need for safety.',
+  experienceText2:
+    'Sound also entered gradually. Instruments gathered through different places became part of the way I work with attention, rhythm, atmosphere and embodied presence.',
+  storyLabel: 'A shorter story',
+  storyTitle: 'Not a linear path.',
+  storyIntro:
+    'The longer personal story belongs to another space. Here, I keep only the threads that directly shape the work.',
+  story1Title: 'Listening before speaking',
+  story1Text:
+    'Volunteering at Centar Srce in Novi Sad taught me the discipline of listening before offering interpretation, advice or direction.',
+  story2Title: 'Online space became real space',
+  story2Text:
+    'Through Tele’Drama and international online groups, I learned that online work can hold presence, action, intimacy and group process when the structure is clear.',
+  story3Title: 'Crossroads became practice',
+  story3Text:
+    'Periods of relocation, return, loss, uncertainty and reinvention taught me that transition is not a problem to rush through, but a threshold that asks for presence.',
+  ctaWork: 'Work with me',
+  ctaContact: 'Get in touch',
+  closingQuote:
+    'I do not lead people to destinations. I help them find their path.',
+  closingButton: 'Explore ways of working',
+},
     work: {
       eyebrow: 'Work With Me',
       title: 'Psychology-informed support for moments of transition, uncertainty and inner change.',
@@ -696,120 +651,75 @@ fieldNotes: [
 ],
 },
     about: {
-      eyebrow: 'O meni',
-      aboutHeroMain: 'Neke stvari postaju vidljive tek u prisustvu drugog.',
-      aboutHeroEm: 'Susret kao praksa.',
-      aboutHeroIntro1: 'Moj rad je iskustven i akciono orijentisan. Kroz encounter, grupni proces, psihodramu, simbol i rad sa telom istražujemo ono što postaje vidljivo tek kada iskustvo dobije prostor da se odigra.',
-      aboutHeroIntro2: 'Tiha Psiha nije prostor za novo ja, već za drugačiji odnos prema istom ja.',
-      aboutLocationsIntro: 'Život i rad u različitim kulturnim kontekstima promenili su način na koji posmatram identitet, grupu, pripadanje i unutrašnje promene.',
-      heroTitle: 'Sve učim',
-      heroTitleEm: 'kroz iskustvo.',
-      heroIntro:
-        'Psiholog, facilitator, zvučni praktičar. Živela sam na četiri kontinenta, sakupljala instrumente iz svakog mesta koje sam zvala domom i godinama učila šta znači držati prostor — za druge i za sebe.',
-      placesLived: 'Mesta gde sam živela',
-      storyLabel: 'Priča',
-      chapter1Label: 'Početak',
-      chapter1Title: 'Otišla sam na psihologiju',
-      chapter1TitleEm: 'da razumem ljude.',
-      chapter1Para1:
-        'Odrasla sam u Surdulici. Kad je došlo vreme za fakultet, otvorila sam mapu i potražila najdalji grad u Srbiji sa psihologijom na državnom fakultetu. Tako sam stigla u Novi Sad — isti jezik, potpuno drugačija kultura. Bio je to moj prvi prelaz.',
-      chapter1Para2:
-        'U Novom Sadu sam godinama volontirala u <strong class="text-slate-200 font-normal">Centru Srce</strong> — centru za prevenciju samoubistva i emotivnu podršku osobama u krizi. Tamo sam naučila da slušam pre nego što govorim. Pre toga, provela sam dve godine u <strong class="text-slate-200 font-normal">Istraživačkoj Stanici Petnica</strong> — na programu psihologije, već znajući šta me čeka.',
-      chapter1Para3:
-        'Dok sam držala časove statistike studentima psihologije, brzo sam shvatila da moj posao nije o brojevima. Već o <strong class="text-slate-200 font-normal">otporu prema brojevima</strong> — strahu, očekivanjima, pričama koje pričamo sebi o tome šta možemo i ne možemo da razumemo.',
-      chapter1Para4:
-        'U 2009. godini otišla sam na prvu radionicu Psychodramatic Bodywork®. Gledala sam transformacije u realnom vremenu. Osećala sam ih u sopstvenom telu. Od tog momenta znala sam — ovo je moj svet.',
-      chapter1Aside: 'Ne verujem objašnjenjima toliko koliko verujem iskustvu. Nešto mora da prođe kroz telo da bi postalo stvarno.',
-      chapter2Label: 'Zatvaranje kapije',
-      chapter2Title: 'Zatvaranje kapije',
-      chapter2TitleEm: 'i otvaranje sveta.',
-      chapter2Para1:
-        'U martu 2020. bila sam u Kini. Uhvatila sam jedan od poslednjih letova kući — u Surdulicu, u karantin, sama. U kući se desila tragedija, mama i tetka su završile u bolnici. Taj Uskrs preživela sam uz Wim Hofove metode disanja, moj bubanj — i zahvaljujući komšijama i rođacima koji su mi na kapiji ostavljali hranu. Zajednica ostaje zajednica čak i kad smo izolovani.',
-      chapter2Para2:
-        'Kad se situacija stabilizovala, otkrila sam Tele\'Dramu — psihodramu koja se odvija u potpunosti online. Čekala sam poziv na besplatni događaj jer nisam mogla da priuštim da platim. Kad sam ušla, zablistala sam. Tu se rodilo prijateljstvo koje Pembe i ja i danas slavimo — 24. februar kao godišnjicu prvog susreta.',
-      chapter2Para3:
-        'Nije prošlo mnogo vremena, a već sam bila nedeljno uključena u tri grupe — svaka po tri sata. Onlajn prostor prestao je da bude zamena za pravo iskustvo. Postao je prostor sam po sebi.',
-      chapter2Aside: 'Bubanj i kapija. To su bile moje jedine veze sa svetom.',
-      chapter3Label: 'Na dnu vulkana',
-      chapter3Title: 'Ekvador, šamanski bubanj',
-      chapter3TitleEm: 'i 200 dolara u džepu.',
-      chapter3Para1:
-        'Dok sam volontirala za Američko udruženje za grupnu psihoterapiju i psihodramu (ASGPP), upoznala sam mnoge iskusne psihodramatičare sa raznih strana sveta — sarađivala sam sa njima, doživljavala njihove radionice. Tako sam upoznala <strong class="text-slate-200 font-normal">Shirley Barkley</strong> — ženu koja je studirala sa Morenom i već 50 godina posvećeno se bavi psihodramom, poslednjih deset kombinacijom psihodrame i indijanskih medicina.',
-      chapter3Para2:
-        'U šamanski bubanj sam inicirana koju godinu pre nego što se desio susret sa Shirley i pozivnica da dođem na retreat na dnu vulkana Pululahua u Ekvadoru. Rekla sam da — pre nego što sam imala novac. Prijatelj mi je platio kartu u jednom pravcu. Stigla sam sa 200 dolara, platila 120 za retreat — i ostala šest meseci.',
-      chapter3Para3:
-        'Na moj 33. rođendan probudila sam se na dnu vulkana, bez dometa za telefon i internet, sa grupom nepoznatih ljudi. Taj dan je bio podizanje tipija i priprema za dve nedelje koje dolaze. Zamišljala sam vulkan kao mesto gde je kamen i pepeo — a to je zapravo božanstvena priroda. Kad sam izašla iz šatora i stala na zemlju, shvatila sam da je <strong class="text-slate-200 font-normal">mekana kao sunđer.</strong>',
-      chapter3Aside: 'Ono što sam naučila u Ekvadoru: sigurnost ne dolazi od toga što imaš dovoljno. Dolazi od toga što si primljena.',
-      chapter4Label: 'Povratak',
-      chapter4Title: 'Raskršća za mene nisu',
-      chapter4TitleEm: 'samo metafore.',
-      chapter4Para1: 'Vratila sam se u Srbiju jer je mama morala na operaciju — aneurizma na mozgu. Ja sam njeno jedino dete. Nije bilo dileme.',
-      chapter4Para2:
-        'Povratak je bio težak. Ekvador je otvorio nešto u meni, a Srbija — sa svom svojom poznatošću — osećala se odjednom tijesno. Sledeći poziv, kada je sve sa mamom prošlo dobro, došao je iz Indije — pozvana od kolege da pomognem u ponovnom pokretanju instituta za psihodramu nakon Covida. Nadala sam se iskustvu koje će da liči na ono iz Južne Amerike. Umesto toga, slomilo me je na sasvim drugačiji način. Izdržala sam tri meseca umesto šest. Ostala bez uštedina i vratila se kući.',
-      chapter4Para3:
-        'Ono što su me te godine naučile: raskršće nije problem koji treba brzo rešiti. To je poziv da postaneš potpunije ono što jesi. Prestala sam da tražim mesto koje će sve popraviti i počela da gradim rad iznutra prema spolja.',
-      chapter4Aside: null,
-      chapter5Label: 'Tina con Cuenco',
-      chapter5Title: 'Nisam odlučila da radim sa zvukom.',
-      chapter5TitleEm: 'To se nakupilo.',
-      chapter5Para1:
-        'Iz svakog mesta gde sam živela, donela sam nešto. Ručno izrađen bubanj od Amarua, čoveka iz džungle na ekvadorskom retreatu. Kišne štapove. Mali hang od srpskog majstora instrumenata. Cimbalo iz Indije. Kineske zvučne kuglice. Zvučnu činiju od prijatelja u Hrvatskoj.',
-      chapter5Para2:
-        'U 2025. otišla sam autom iz Surdulice u Barselonu — sa krevetom u teretnom autu i svim instrumentima. Živela sam po različitim kutcima grada, ponekad i u kolima. Svake nedelje okupljala sam se sa ljudima da improvizujemo zajedno. Počeli su da me zovu <strong class="text-slate-200 font-normal">"Tina con Cuenco"</strong> — Tina sa činijom.',
-      chapter5Para3:
-        'Kad sam napravila prvu zvučnu kupku za druge, shvatila sam da uživam podjednako koliko i oni. Zvuk nosi isceljenje, improvizacija oslobađa. <strong class="text-slate-200 font-normal".</strong>',
-      chapter5Aside: 'Verujem onome što telo pokazuje — pre nego onome što reči opisuju.',
-      inst1: 'Šamanski bubanj', inst1Origin: '— Mađarska',
-      inst2: 'Ručni bubanj', inst2Origin: '— Ekvador',
-      inst3: 'Kišni štapovi', inst3Origin: '— Ekvador',
-      inst4: 'Mali hang', inst4Origin: '— Srbija',
-      inst5: 'Cimbalo', inst5Origin: '— Indija',
-      inst6: 'Zvučne kuglice', inst6Origin: '— Kina',
-      inst7: 'Zvučna činija', inst7Origin: '— Hrvatska',
-      inst8: 'Klavir', inst8Origin: '— detinjstvo',
-      inst9: 'Cipele za flamenko', inst9Origin: '— Španija',
-      inst10: 'Zvečke od semena', inst10Origin: '— Ekvador',
-      inst11: 'Daire', inst11Origin: '— tradicija',
-      inst12: 'Kišni štap — okean', inst12Origin: '— Srbija (ručni rad)',
-      inst13: 'Kišni štap — nežni', inst13Origin: '— Srbija (ručni rad)',
-      instrumentsLabel: 'Instrumenti sakupljeni putem',
-
-instrumentsIntro:
-  'Zvuk koristim kao produžetak iskustvenog rada — ne kao performans, već kao način rada sa ritmom, pažnjom i prisustvom.',
-      drivesLabel: 'Šta oblikuje rad',
-      drivesTitle: 'Nije metodologija.',
-      drivesTitleEm: 'To je način bivanja.',
-      drivesSectionLabel: 'Ono čemu se vraćam',
-      drivesSectionTitle: 'Susret, pažnja i iskustvo.',
-      drive1Title: 'Psihologija',
-      drive1Text: 'Razumevanje ljudske psihe — njenih obrazaca, rana i neiskorišćenog potencijala. Godinama trenirana u psihodrami, telesnoj svesnosti i grupnim procesima.',
-      drive2Title: 'Telo kao vodič',
-      drive2Text: 'Telo nosi mudrost do koje reči često ne mogu da dopru. Pokret, zvuk, dah i senzacija su primarni jezici u mom radu — ne dodaci njemu.',
-      drive3Title: 'Grupna inteligencija',
-      drive3Text: 'Nešto se pojavljuje kada se ljudi okupe sa namerom što nijedan pojedinac ne može sam da stvori. Godinama učim kako da držim taj prostor — online i uživo.',
-      drive4Title: 'Živeti raskršće',
-      drive4Text: 'Znam kako je biti na pragu — između onoga ko si bio/la i onoga ko postaješ. Ne vodim ljude daleko od te nelagode. Sedim sa njima u njoj.',
-      trainingLabel: 'Formalno obrazovanje',
-      trainingTitle: 'Godine treninga,',
-      trainingTitleEm: 'iskreno navedene.',
-      trainingPara1:
-      "Moje formalno obrazovanje uključuje osnovne i master studije psihologije na Univerzitetu u Novom Sadu, kao i dugogodišnji rad sa iskustvenim, akcionim i grupnim metodama.",
-      trainingPara2:
-      "Četiri godine trenirala sam klasičnu psihodramu u Novom Sadu, a moj rad se dalje razvijao kroz ongoing proces Advanced Level Psychodramatic Bodywork® treninga sa Susan Aaron — kanadskom psihoterapeutkinjom i osnivačicom metode.<br /><br />Veliki uticaj na moj način rada imali su i ciklusi Fizičkog Teatra sa rediteljkom Marijom Farmer, kroz koje sam godinama istraživala devising proces, Complicité metodologiju, odnos tela i simboličke akcije, kao i ono što se događa između ljudi kada iskustvo dobije prostor da se odigra.",
-      trainingPara3:
-      "Tokom godina dodatno sam učila kroz Transakcionu analizu u Psihopolisu, Tele'Drama Practitioner treninge, Ericksonian pristup i konverzacijsku hipnozu, kao i trening Etika — Put do pravog ja sa Tadejom Bradaš.<br /><br />Zvuk i ritam takođe su dugo deo mog života. Završila sam osnovnu muzičku školu, a poslednjih godina to istraživanje nastavilo se kroz rad sa gongom i iskustvenim prostorima koji uključuju pažnju, rezonancu i telesko prisustvo.<br /><br />Tokom poslednjih petnaest godina radila sam sa grupama u različitim kontekstima — od psihodramskih i edukativnih prostora do međunarodnih online i hibridnih procesa, uključujući Tele'Drama okruženje, ekološku sociodramu i radionice koje istražuju odnos čoveka, tehnologije, pažnje i savremenog života.<br /><br />Pre nego što sam se potpuno posvetila iskustvenom radu, moj prvi istraživački projekat u Petnici bio je nagrađen još tokom srednjoškolskih dana. Taj istraživački nerv ostao je važan deo mog rada — zajedno sa interesovanjem za grupnu inteligenciju, embodiment i načine na koje ljudi stvaraju značenje kroz odnos i iskustvo.",
-      
-      ctaWork: 'Rad sa mnom',
-      ctaContact: 'Javi se',
-      closingLabel: 'Ono čemu se vraćam',
-      closingText1: 'Tiha Psiha je nastala jedne večeri u dnevnoj sobi u Umci, u razgovoru sa bliskom prijateljicom čiji je način organizovanja ljudi i prostora duboko uticao na mene.',
-      closingText2: 'To je bio prvi i poslednji put da smo sedele u toj sobi pre nego što su se ona i njena porodica preselili na Staru Planinu, gde danas žive bliže prirodi i njenim ritmovima.',
-      closingText3: 'Od tada nastavljamo da negujemo encounter koji je tamo počeo — kroz razgovore, zajedničke obroke, tišinu, ideje i smenu godišnjih doba.',
-      closingText4: 'Taj odnos prema ritmu, prisustvu, prirodi i susretu ostao je duboko utkan u način na koji danas radim.',
-      closingQuote: 'Nemam sve odgovore. Ali znam kako da držim prostor dok ih ti pronalaziš.',
-      contactButton: 'Istraži mogućnost susreta',
-      serviceCardCta: 'Raspitaj se o ovom formatu',
-    },
+  eyebrow: 'O meni',
+  heroTitle: 'Radim sa iskustvom, ne samo sa objašnjenjem.',
+  heroIntro:
+    'Zovem se Tihomira Stanojević. Master sam psihologije, facilitator i praktičarka iskustvenog rada na preseku psihologije, grupnog procesa, psihodramski informisanih metoda, embodimenta, simboličkog istraživanja i zvuka.',
+  heroIntro2:
+    'Kroz Tihu Psihu nudim psihološki utemeljene prostore za individualni rad, male iskustvene radionice i zvučna iskustva uživo. Rad je prizemljen, odnosan i usmeren na ono što postaje vidljivo kada iskustvo dobije dovoljno prostora.',
+  identityLabel: 'Profesionalni identitet',
+  identityTitle: 'Psiholog, facilitator, praktičarka iskustvenog rada.',
+  identityText:
+    'Imam master diplomu iz psihologije i više od petnaest godina iskustva u grupnom radu, iskustvenom učenju i akcionim metodama. Moj rad se razvijao kroz psihodramu, Psychodramatic Bodywork®, fizički teatar, Tele’Dramu, simbolički proces, online facilitaciju i zvučne iskustvene prostore.',
+  identityNote:
+    'Svoju pozadinu navodim iskreno: psihodrama i srodne iskustvene metode duboko informišu moj rad, ali Tiha Psiha nije predstavljena kao psihoterapija niti kao sertifikovana psihodramska praksa.',
+  foundationsLabel: 'Šta oblikuje rad',
+  foundationsTitle: 'Prizemljen iskustveni pristup.',
+  foundationsIntro:
+    'Rad spaja psihološku refleksiju, akcione metode, telesnu svesnost, simbolički proces i grupnu inteligenciju.',
+  foundation1Title: 'Psihologija',
+  foundation1Text:
+    'Psihologija daje radu stabilan okvir: pažnju prema unutrašnjem životu, obrascima, odnosima, razvojnim procesima i složenosti ljudskog iskustva.',
+  foundation2Title: 'Grupni proces',
+  foundation2Text:
+    'Grupe imaju sopstvenu inteligenciju. Godinama učim kako se drži prostor u kome ljudi mogu da sretnu sebe kroz druge, kroz svedočenje, rezonancu i zajednički proces.',
+  foundation3Title: 'Telo, zvuk i simbol',
+  foundation3Text:
+    'Neka iskustva se ne razjasne samo kroz reči. Pokret, slika, ritam, zvuk i simbolička akcija često pokažu ono do čega objašnjenje ne može da dopre.',
+  foundation4Title: 'Međunarodni i online prostori',
+  foundation4Text:
+    'Život i rad u različitim kulturnim kontekstima, kao i podrška međunarodnim online grupama, oblikovali su moj odnos prema pripadanju, tranziciji, identitetu i prisustvu.',
+  trainingLabel: 'Obuka i iskustvo',
+  trainingTitle: 'Formalno utemeljenje, iskreno navedeno.',
+  trainingIntro:
+    'Moja profesionalna pozadina spaja formalno psihološko obrazovanje, dugogodišnju iskustvenu obuku i višegodišnji rad u grupnim i online prostorima.',
+  trainingItem1:
+    'Osnovne i master studije psihologije na Univerzitetu u Novom Sadu.',
+  trainingItem2:
+    'Četiri godine treninga klasične psihodrame u Novom Sadu.',
+  trainingItem3:
+    'Advanced Level Psychodramatic Bodywork® trening proces sa Susan Aaron.',
+  trainingItem4:
+    'Više ciklusa Fizičkog Teatra sa rediteljkom Marijom Farmer, uključujući devising, Complicité pristup, embodiment i simboličku akciju.',
+  trainingItem5:
+    'Dodatno učenje kroz Transakcionu analizu, Tele’Drama Practitioner treninge, Ericksonian pristupe, konverzacijsku hipnozu i trening Etika — Put do pravog ja.',
+  trainingItem6:
+    'Više od petnaest godina rada sa grupama u edukativnim, psihodramskim, kreativnim, ekološkim, online i hibridnim kontekstima.',
+  experienceLabel: 'Životno iskustvo',
+  experienceTitle: 'Rad se oblikovao kroz različita mesta.',
+  experienceText:
+    'Živela sam i radila u različitim kulturnim kontekstima, uključujući Srbiju, Kinu, Ekvador, Indiju, Maltu, Sloveniju, Rusiju i Španiju. Ti prelazi su promenili način na koji razumem tranziciju, pripadanje, identitet i potrebu tela za sigurnošću.',
+  experienceText2:
+    'Zvuk je u moj rad ušao postepeno. Instrumenti sakupljeni kroz različita mesta postali su deo načina na koji radim sa pažnjom, ritmom, atmosferom i telesnim prisustvom.',
+  storyLabel: 'Kraća priča',
+  storyTitle: 'Put nije bio linearan.',
+  storyIntro:
+    'Duža lična priča pripada drugom prostoru. Ovde ostavljam samo niti koje direktno oblikuju rad.',
+  story1Title: 'Slušanje pre govora',
+  story1Text:
+    'Volontiranje u Centru Srce u Novom Sadu naučilo me je disciplini slušanja pre interpretacije, saveta ili usmeravanja.',
+  story2Title: 'Online prostor je postao stvaran prostor',
+  story2Text:
+    'Kroz Tele’Dramu i međunarodne online grupe naučila sam da online rad može da nosi prisustvo, akciju, bliskost i grupni proces kada je struktura jasna.',
+  story3Title: 'Raskršća su postala praksa',
+  story3Text:
+    'Periodi selidbi, povrataka, gubitaka, neizvesnosti i ponovnog stvaranja naučili su me da tranzicija nije problem koji treba pretrčati, već prag koji traži prisustvo.',
+  ctaWork: 'Rad sa mnom',
+  ctaContact: 'Javi se',
+  closingQuote:
+    'Ne vodim ljude ka destinacijama. Pomažem im da pronađu svoj put.',
+  closingButton: 'Istraži načine rada',
+},
 
    work: {
   eyebrow: 'Rad sa mnom',
