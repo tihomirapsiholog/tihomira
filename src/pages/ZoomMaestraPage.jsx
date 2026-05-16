@@ -439,7 +439,7 @@ ${zoomFormData.message}
       <nav
         style={{
           position: 'fixed',
-          top: '96px',
+          top: '60px',
           left: 0,
           right: 0,
           zIndex: 60,
