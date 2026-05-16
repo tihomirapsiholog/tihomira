@@ -1,7 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function Navbar( {
+export default function Navbar({
   language,
   t,
   navItems,
@@ -10,31 +10,50 @@ export default function Navbar( {
   changeLanguage,
   isActive,
 }) {
+  const handleNavClick = (path) => {
+    setMenuOpen(false);
+
+    // Ako link ima hash, npr. /zoom-maestra#contact-zoom,
+    // ne vraćamo stranicu na vrh.
+    if (path.includes('#')) {
+      return;
+    }
+
+    window.scrollTo(0, 0);
+  };
+
+  const isItemActive = (path) => {
+    const cleanPath = path.split('#')[0];
+    return isActive(cleanPath);
+  };
+
   return (
-        <nav className="fixed top-0 z-50 w-full border-b border-yellow-700/10 bg-[#0b1220]/70 shadow-[0_8px_30px_rgba(0,0,0,0.18)] backdrop-blur-xl">      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 z-50 w-full border-b border-yellow-700/10 bg-[#0b1220]/70 shadow-[0_8px_30px_rgba(0,0,0,0.18)] backdrop-blur-xl">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link
-        to={`/${language}`}
-        onClick={() => {
-         setMenuOpen(false);
-         window.scrollTo(0, 0);
-         }}
-         className="flex items-center gap-3 text-xl font-serif text-white transition-colors hover:text-yellow-400"
-    >
-     <img
-      src="/favicon.png"
-     alt="Tihomira symbol"
-     className="h-7 w-7 object-contain"
-     />
-     <span>Tihomira</span>
-</Link>
+          to={`/${language}`}
+          onClick={() => {
+            setMenuOpen(false);
+            window.scrollTo(0, 0);
+          }}
+          className="flex items-center gap-3 text-xl font-serif text-white transition-colors hover:text-yellow-400"
+        >
+          <img
+            src="/favicon.png"
+            alt="Tihomira symbol"
+            className="h-7 w-7 object-contain"
+          />
+          <span>Tihomira</span>
+        </Link>
+
         <div className="hidden items-center gap-8 md:flex">
           {navItems.map(([label, path]) => (
             <Link
               key={path || 'home'}
               to={`/${language}${path}`}
-              onClick={() => window.scrollTo(0, 0)}
+              onClick={() => handleNavClick(path)}
               className={`text-sm transition-all ${
-                isActive(path)
+                isItemActive(path)
                   ? 'font-medium text-yellow-400'
                   : 'border-b border-transparent text-slate-300 hover:border-yellow-400 hover:text-yellow-400'
               }`}
@@ -54,6 +73,7 @@ export default function Navbar( {
             >
               EN
             </button>
+
             <button
               onClick={() => changeLanguage('sr')}
               className={`rounded px-2 py-1 text-xs transition-all ${
@@ -82,12 +102,9 @@ export default function Navbar( {
             <Link
               key={path || 'mobile-home'}
               to={`/${language}${path}`}
-              onClick={() => {
-                setMenuOpen(false);
-                window.scrollTo(0, 0);
-              }}
+              onClick={() => handleNavClick(path)}
               className={`block w-full text-left text-sm transition-all ${
-                isActive(path)
+                isItemActive(path)
                   ? 'font-medium text-yellow-400'
                   : 'text-slate-300 hover:text-white'
               }`}
@@ -107,6 +124,7 @@ export default function Navbar( {
             >
               English
             </button>
+
             <button
               onClick={() => changeLanguage('sr')}
               className={`flex-1 rounded px-3 py-2 text-xs transition-all ${
