@@ -13,6 +13,7 @@ import ContactPage from "./pages/ContactPage";
 import SilencePracticePage from "./pages/SilencePracticePage";
 import TihaPsihaPage from './pages/TihaPsihaPage';
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import TermsPage from "./pages/TermsPage";
 
 function getLangFromPath(pathname) {
   if (pathname.startsWith("/sr")) return "sr";
@@ -93,9 +94,10 @@ export default function App() {
           <Route path="/sr/contact" element={<ContactPage t={translations.sr} language="sr" />} />
           <Route path="/en/silence-practice"element={<SilencePracticePage t={translations.en} language="en" />}/>
           <Route path="/sr/praksa-tisine"element={<SilencePracticePage t={translations.sr} language="sr" />}/>
-          <Route path="/sr/praksa-tisine" element={<SilencePracticePage />} />  
           <Route path="/en/privacy-policy" element={<PrivacyPolicyPage language="en" />} />
           <Route path="/sr/privacy-policy" element={<PrivacyPolicyPage language="sr" />} />
+          <Route path="/en/terms" element={<TermsPage language="en" />} />
+          <Route path="/sr/terms" element={<TermsPage language="sr" />} />
         </Routes>
       </main>
       <Footer t={t} language={language} />
