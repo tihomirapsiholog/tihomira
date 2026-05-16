@@ -150,7 +150,7 @@ export default function ZoomMaestraPage({ t, setCurrentPage, language = 'en' }) 
       ideal: zoom.package1Ideal,
     },
     {
-      icon: MonitorCog,
+      icon: Monitor,
       title: zoom.package2Title,
       text: zoom.package2Text,
       items: [
