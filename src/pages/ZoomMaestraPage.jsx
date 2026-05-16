@@ -3,7 +3,7 @@ import {
   ArrowRight,
   CalendarCheck,
   CheckCircle2,
-  MonitorCog,
+  Monitor,
   MousePointerClick,
   Network,
   ShieldCheck,
