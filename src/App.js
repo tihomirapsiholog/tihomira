@@ -35,16 +35,21 @@ export default function App() {
 
   const navItems = usesPortalNav
   ? [
-      ["Tiha Psiha", "/tiha-psiha"],
-      ["Zoom Maestra", "/zoom-maestra"],
-      [t.nav.contact, "/contact"],
+      ['Tiha Psiha', '/tiha-psiha'],
+      ['Zoom Maestra', '/zoom-maestra'],
+      [
+        t.nav.contact,
+        location.pathname.includes('/zoom-maestra')
+          ? '/zoom-maestra#contact-zoom'
+          : '/contact',
+      ],
     ]
   : [
-      [t.nav.home, ""],
-      [t.nav.about, "/about"],
-      [t.nav.work, "/work"],
-      [t.nav.events, "/events"],
-      [t.nav.contact, "/contact"],
+      [t.nav.home, ''],
+      [t.nav.about, '/about'],
+      [t.nav.work, '/work'],
+      [t.nav.events, '/events'],
+      [t.nav.contact, '/contact'],
     ];
 
     const changeLanguage = (lang) => {
@@ -63,6 +68,18 @@ export default function App() {
   };
 
   const isContactPage = location.pathname.includes('/contact');
+  const isZoomMaestraPage = location.pathname.includes('/zoom-maestra');
+
+const goToZoomContact = () => {
+  navigate(`/${language}/zoom-maestra#contact-zoom`);
+
+  setTimeout(() => {
+    const formSection = document.getElementById('contact-zoom');
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, 100);
+};
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0b1220] via-[#111827] to-[#0a0f1a] text-slate-100">
