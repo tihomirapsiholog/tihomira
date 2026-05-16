@@ -105,8 +105,8 @@ const goToZoomContact = () => {
           <Route path="/sr/work" element={<WorkPage setCurrentPage={goToPage} t={translations.sr} />} />
           <Route path="/en/events" element={<EventsPage setCurrentPage={goToPage} t={translations.en} />} />
           <Route path="/sr/events" element={<EventsPage setCurrentPage={goToPage} t={translations.sr} />} />
-          <Route path="/en/zoom-maestra" element={<ZoomMaestraPage setCurrentPage={goToPage} t={translations.en} />} />
-          <Route path="/sr/zoom-maestra" element={<ZoomMaestraPage setCurrentPage={goToPage} t={translations.sr} />} />          
+          <Route path="/en/zoom-maestra" element={<ZoomMaestraPage setCurrentPage={goToPage} t={translations.en} language="en" />} />
+          <Route path="/sr/zoom-maestra" element={<ZoomMaestraPage setCurrentPage={goToPage} t={translations.sr} language="sr" />} />          
           <Route path="/en/contact" element={<ContactPage t={translations.en} language="en" />} />
           <Route path="/sr/contact" element={<ContactPage t={translations.sr} language="sr" />} />
           <Route path="/en/silence-practice"element={<SilencePracticePage t={translations.en} language="en" />}/>
@@ -121,8 +121,8 @@ const goToZoomContact = () => {
 
       {!isContactPage && (
         <button
-          onClick={() => goToPage('/contact')}
-          className="group fixed bottom-8 right-8 z-50 flex items-center gap-2 overflow-hidden rounded-full bg-yellow-500 px-4 py-4 font-medium text-slate-950 shadow-lg transition-all duration-300 hover:px-6 hover:shadow-yellow-500/20"
+        onClick={isZoomMaestraPage ? goToZoomContact : () => goToPage('/contact')}
+        className="group fixed bottom-8 right-8 z-50 flex items-center gap-2 overflow-hidden rounded-full bg-yellow-500 px-4 py-4 font-medium text-slate-950 shadow-lg transition-all duration-300 hover:px-6 hover:shadow-yellow-500/20"
         >
           <Mail size={20} className="shrink-0" />
           <span className="max-w-0 overflow-hidden whitespace-nowrap transition-all duration-300 group-hover:max-w-xs">
