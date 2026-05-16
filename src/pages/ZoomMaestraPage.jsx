@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import {
   ArrowRight,
   CalendarCheck,
@@ -12,6 +13,11 @@ import {
   Video,
 } from 'lucide-react';
 import SEO from '../components/SEO';
+import emailjs from '@emailjs/browser';
+
+const SERVICE_ID = 'service_e5e9hho';
+const TEMPLATE_ID = 'template_43a1p3l';
+const PUBLIC_KEY = '5iomSKfBXui4AQYwo';
 
 const zoomSectionItems = [
   {
@@ -51,10 +57,23 @@ const zoomSectionItems = [
   },
 ];
 
-export default function ZoomMaestraPage({ t, setCurrentPage, language = 'en' }) {
+export default function ZoomMaestraPage({ t, language = 'en' }) {
   const [activeSection, setActiveSection] = useState('overview');
-  const isSerbian = language === 'sr';
+  const isSerbian = language === 'sr' || t?.nav?.home === 'Početak';
   const zoom = t.zoom;
+  const location = useLocation();
+
+    const [zoomFormData, setZoomFormData] = useState({
+    name: '',
+    email: '',
+    eventType: '',
+    eventDate: '',
+    participants: '',
+    message: '',
+    website: '',
+  });
+
+  const [zoomFormStatus, setZoomFormStatus] = useState(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -83,13 +102,104 @@ export default function ZoomMaestraPage({ t, setCurrentPage, language = 'en' }) 
     return () => observer.disconnect();
   }, []);
 
-  const goToZoomInquiry = (message) => {
+  useEffect(() => {
+  if (location.hash) {
+    const element = document.getElementById(location.hash.slice(1));
+
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 150);
+    }
+  }
+}, [location.hash]);
+
+    const goToZoomInquiry = (message) => {
     const fallbackMessage = isSerbian
       ? 'Zanima me Zoom Maestra podrška. Ovo su detalji online ili hibridnog događaja...'
       : 'I am interested in Zoom Maestra support. Here are the details of the online or hybrid event...';
 
-    const encodedMessage = encodeURIComponent(message || fallbackMessage);
-    setCurrentPage(`/contact?message=${encodedMessage}`);
+    setZoomFormData((prev) => ({
+      ...prev,
+      message: message || fallbackMessage,
+    }));
+
+    const formSection = document.getElementById('contact-zoom');
+
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+    const handleZoomFormChange = (e) => {
+    setZoomFormData({
+      ...zoomFormData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleZoomFormSubmit = async (e) => {
+    e.preventDefault();
+
+    if (zoomFormData.website) {
+      return;
+    }
+
+    setZoomFormStatus('sending');
+
+    const subject = isSerbian ? 'Zoom Maestra upit' : 'Zoom Maestra inquiry';
+
+    const fullMessage = isSerbian
+      ? `
+${subject}
+
+Ime: ${zoomFormData.name}
+Email: ${zoomFormData.email}
+Vrsta događaja: ${zoomFormData.eventType}
+Datum / okvirni period: ${zoomFormData.eventDate}
+Broj učesnika: ${zoomFormData.participants}
+
+Šta je potrebno:
+${zoomFormData.message}
+`
+      : `
+${subject}
+
+Name: ${zoomFormData.name}
+Email: ${zoomFormData.email}
+Event type: ${zoomFormData.eventType}
+Date / approximate period: ${zoomFormData.eventDate}
+Number of participants: ${zoomFormData.participants}
+
+Support needed:
+${zoomFormData.message}
+`;
+
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          name: zoomFormData.name,
+          email: zoomFormData.email,
+          message: fullMessage,
+        },
+        PUBLIC_KEY
+      );
+
+      setZoomFormStatus('success');
+      setZoomFormData({
+        name: '',
+        email: '',
+        eventType: '',
+        eventDate: '',
+        participants: '',
+        message: '',
+        website: '',
+      });
+    } catch (err) {
+      setZoomFormStatus('error');
+    }
   };
 
   const audienceItems = [
@@ -325,8 +435,17 @@ export default function ZoomMaestraPage({ t, setCurrentPage, language = 'en' }) 
         </div>
       </section>
 
-      {/* STICKY NAV */}
-      <nav className="sticky top-0 z-50 border-b border-yellow-700/10 bg-[#0b1220]/95 shadow-lg shadow-black/20 backdrop-blur">
+           {/* FIXED ZOOM NAV */}
+      <nav
+        style={{
+          position: 'fixed',
+          top: '96px',
+          left: 0,
+          right: 0,
+          zIndex: 60,
+        }}
+        className="border-b border-yellow-700/10 bg-[#0b1220]/95 shadow-lg shadow-black/20 backdrop-blur"
+      >
         <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 py-3 text-xs uppercase tracking-[0.12em] sm:px-6 lg:px-8">
           {zoomSectionItems.map((item) => {
             const isActive = activeSection === item.id;
@@ -349,6 +468,8 @@ export default function ZoomMaestraPage({ t, setCurrentPage, language = 'en' }) 
           })}
         </div>
       </nav>
+
+      <div className="h-14" />
 
       {/* OVERVIEW */}
       <section id="overview" className="scroll-mt-32 bg-[#0b1220] py-20">
@@ -601,35 +722,187 @@ export default function ZoomMaestraPage({ t, setCurrentPage, language = 'en' }) 
         </div>
       </section>
 
-      {/* CONTACT */}
+           {/* CONTACT */}
       <section
         id="contact-zoom"
         className="scroll-mt-32 bg-gradient-to-r from-[#0a0f1a] via-[#111827] to-[#0a0f1a] py-24 text-white"
       >
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-yellow-400">
-            {isSerbian ? 'Sledeći korak' : 'Next step'}
-          </p>
+        <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+          <div>
+            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-yellow-400">
+              {isSerbian ? 'Sledeći korak' : 'Next step'}
+            </p>
 
-          <h2 className="mb-6 font-serif text-4xl leading-tight sm:text-5xl">
-            {zoom.ctaTitle}
-          </h2>
+            <h2 className="font-serif text-4xl leading-tight sm:text-5xl">
+              {isSerbian
+                ? 'Pošalji upit za Zoom Maestra podršku'
+                : 'Send an inquiry for Zoom Maestra support'}
+            </h2>
 
-          <p className="mb-4 text-lg leading-8 text-slate-300">
-            {zoom.ctaText}
-          </p>
+            <p className="mt-6 text-lg leading-8 text-slate-300">
+              {isSerbian
+                ? 'Ako pripremaš online ili hibridni događaj, radionicu, trening, kurs ili grupni proces, pošalji mi osnovne informacije.'
+                : 'If you are preparing an online or hybrid event, workshop, training, course or group process, send me the basic details.'}
+            </p>
 
-          <p className="mb-9 text-lg leading-8 text-slate-300">
-            {zoom.ctaText2}
-          </p>
+            <p className="mt-4 text-lg leading-8 text-slate-300">
+              {isSerbian
+                ? 'Javiću ti se sa predlogom strukture i vrste podrške koja bi najbolje odgovarala tvom događaju.'
+                : 'I will get back to you with a suggestion for the structure and kind of support that would best fit your event.'}
+            </p>
+          </div>
 
-          <button
-            onClick={() => goToZoomInquiry()}
-            className="inline-flex items-center gap-2 rounded-full bg-yellow-500 px-8 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400"
+          <form
+            onSubmit={handleZoomFormSubmit}
+            className="space-y-5 rounded-3xl border border-yellow-700/20 bg-[#121c31] p-6 shadow-2xl shadow-black/20 sm:p-8"
           >
-            {zoom.ctaButton}
-            <ArrowRight size={18} />
-          </button>
+            <div className="hidden" aria-hidden="true">
+              <label htmlFor="zoom-website">Website</label>
+              <input
+                id="zoom-website"
+                type="text"
+                name="website"
+                value={zoomFormData.website}
+                onChange={handleZoomFormChange}
+                tabIndex="-1"
+                autoComplete="off"
+              />
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-2">
+              <div>
+                <label className="mb-2 block text-sm font-medium text-slate-200">
+                  {isSerbian ? 'Ime i prezime' : 'Full name'}
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  value={zoomFormData.name}
+                  onChange={handleZoomFormChange}
+                  required
+                  className="w-full rounded border border-slate-700 bg-[#0f172a] px-4 py-3 text-white placeholder-slate-500 transition-colors focus:border-yellow-500 focus:outline-none"
+                  placeholder={isSerbian ? 'Tvoje ime' : 'Your name'}
+                />
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-medium text-slate-200">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  value={zoomFormData.email}
+                  onChange={handleZoomFormChange}
+                  required
+                  className="w-full rounded border border-slate-700 bg-[#0f172a] px-4 py-3 text-white placeholder-slate-500 transition-colors focus:border-yellow-500 focus:outline-none"
+                  placeholder={isSerbian ? 'tvoj@email.com' : 'your@email.com'}
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="mb-2 block text-sm font-medium text-slate-200">
+                {isSerbian ? 'Vrsta događaja' : 'Event type'}
+              </label>
+              <input
+                type="text"
+                name="eventType"
+                value={zoomFormData.eventType}
+                onChange={handleZoomFormChange}
+                required
+                className="w-full rounded border border-slate-700 bg-[#0f172a] px-4 py-3 text-white placeholder-slate-500 transition-colors focus:border-yellow-500 focus:outline-none"
+                placeholder={
+                  isSerbian
+                    ? 'radionica, trening, online grupa, konferencija, hibridni događaj...'
+                    : 'workshop, training, online group, conference, hybrid event...'
+                }
+              />
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-2">
+              <div>
+                <label className="mb-2 block text-sm font-medium text-slate-200">
+                  {isSerbian ? 'Datum ili okvirni period' : 'Date or approximate period'}
+                </label>
+                <input
+                  type="text"
+                  name="eventDate"
+                  value={zoomFormData.eventDate}
+                  onChange={handleZoomFormChange}
+                  className="w-full rounded border border-slate-700 bg-[#0f172a] px-4 py-3 text-white placeholder-slate-500 transition-colors focus:border-yellow-500 focus:outline-none"
+                  placeholder={
+                    isSerbian
+                      ? 'npr. 12. jun / kraj juna / još nije određeno'
+                      : 'e.g. June 12 / late June / not decided yet'
+                  }
+                />
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-medium text-slate-200">
+                  {isSerbian ? 'Broj učesnika' : 'Number of participants'}
+                </label>
+                <input
+                  type="text"
+                  name="participants"
+                  value={zoomFormData.participants}
+                  onChange={handleZoomFormChange}
+                  className="w-full rounded border border-slate-700 bg-[#0f172a] px-4 py-3 text-white placeholder-slate-500 transition-colors focus:border-yellow-500 focus:outline-none"
+                  placeholder={isSerbian ? 'npr. 12, 30, 80...' : 'e.g. 12, 30, 80...'}
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="mb-2 block text-sm font-medium text-slate-200">
+                {isSerbian ? 'Šta ti je potrebno?' : 'What support do you need?'}
+              </label>
+              <textarea
+                name="message"
+                value={zoomFormData.message}
+                onChange={handleZoomFormChange}
+                required
+                rows={6}
+                className="w-full resize-none rounded border border-slate-700 bg-[#0f172a] px-4 py-3 text-white placeholder-slate-500 transition-colors focus:border-yellow-500 focus:outline-none"
+                placeholder={
+                  isSerbian
+                    ? 'Napiši ukratko šta pripremaš, koliko traje događaj, da li ima breakout soba, više facilitatora, tehničkih izazova ili posebnih potreba.'
+                    : 'Briefly describe what you are preparing, how long the event is, whether there are breakout rooms, several facilitators, technical challenges or specific needs.'
+                }
+              />
+            </div>
+
+            {zoomFormStatus === 'success' && (
+              <p className="text-center text-green-400">
+                {isSerbian
+                  ? 'Hvala, upit je poslat. Javiću ti se uskoro sa odgovorom.'
+                  : 'Thank you, your inquiry has been sent. I will get back to you soon.'}
+              </p>
+            )}
+
+            {zoomFormStatus === 'error' && (
+              <p className="text-center text-red-400">
+                {isSerbian
+                  ? 'Nešto nije prošlo. Pokušaj ponovo ili mi piši direktno na email.'
+                  : 'Something went wrong. Please try again or email me directly.'}
+              </p>
+            )}
+
+            <button
+              type="submit"
+              disabled={zoomFormStatus === 'sending'}
+              className="w-full rounded-full bg-yellow-500 px-6 py-3 font-medium text-slate-950 transition-colors hover:bg-yellow-400 disabled:opacity-50"
+            >
+              {zoomFormStatus === 'sending'
+                ? isSerbian
+                  ? 'Šalje se...'
+                  : 'Sending...'
+                : isSerbian
+                  ? 'Pošalji upit'
+                  : 'Send inquiry'}
+            </button>
+          </form>
         </div>
       </section>
     </div>

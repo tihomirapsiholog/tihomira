@@ -68,17 +68,27 @@ export default function App() {
   };
 
   const isContactPage = location.pathname.includes('/contact');
-  const isZoomMaestraPage = location.pathname.includes('/zoom-maestra');
+const isZoomMaestraPage = location.pathname === `/${language}/zoom-maestra`;
+
+const scrollToZoomContact = () => {
+  const formSection = document.getElementById('contact-zoom');
+
+  if (formSection) {
+    formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
 
 const goToZoomContact = () => {
+  if (isZoomMaestraPage) {
+    scrollToZoomContact();
+    return;
+  }
+
   navigate(`/${language}/zoom-maestra#contact-zoom`);
 
   setTimeout(() => {
-    const formSection = document.getElementById('contact-zoom');
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }, 100);
+    scrollToZoomContact();
+  }, 150);
 };
 
   return (
@@ -121,7 +131,13 @@ const goToZoomContact = () => {
 
       {!isContactPage && (
         <button
-        onClick={isZoomMaestraPage ? goToZoomContact : () => goToPage('/contact')}
+      onClick={() => {
+         if (isZoomMaestraPage) {
+         goToZoomContact();
+         return;
+           }
+          goToPage('/contact');
+          }}        
         className="group fixed bottom-8 right-8 z-50 flex items-center gap-2 overflow-hidden rounded-full bg-yellow-500 px-4 py-4 font-medium text-slate-950 shadow-lg transition-all duration-300 hover:px-6 hover:shadow-yellow-500/20"
         >
           <Mail size={20} className="shrink-0" />
