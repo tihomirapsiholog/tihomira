@@ -1,319 +1,286 @@
+import { ArrowRight, Globe2, GraduationCap, Users, Waves } from 'lucide-react';
 import SEO from '../components/SEO';
+
 export default function AboutPage({ t, setCurrentPage, language = 'en' }) {
-  const chapters = [
+  const about = t.about;
+
+  const foundations = [
     {
-      id: 'ch1',
-      label: t.about.chapter1Label,
-      title: t.about.chapter1Title,
-      titleEm: t.about.chapter1TitleEm,
-      body: [t.about.chapter1Para1, t.about.chapter1Para2, t.about.chapter1Para3, t.about.chapter1Para4],
-      aside: t.about.chapter1Aside,
+      icon: GraduationCap,
+      title: about.foundation1Title,
+      text: about.foundation1Text,
     },
     {
-      id: 'ch2',
-      label: t.about.chapter2Label,
-      title: t.about.chapter2Title,
-      titleEm: t.about.chapter2TitleEm,
-      body: [t.about.chapter2Para1, t.about.chapter2Para2, t.about.chapter2Para3],
-      aside: t.about.chapter2Aside,
+      icon: Users,
+      title: about.foundation2Title,
+      text: about.foundation2Text,
     },
     {
-      id: 'ch3',
-      label: t.about.chapter3Label,
-      title: t.about.chapter3Title,
-      titleEm: t.about.chapter3TitleEm,
-      body: [t.about.chapter3Para1, t.about.chapter3Para2, t.about.chapter3Para3],
-      aside: t.about.chapter3Aside,
+      icon: Waves,
+      title: about.foundation3Title,
+      text: about.foundation3Text,
     },
     {
-      id: 'ch4',
-      label: t.about.chapter4Label,
-      title: t.about.chapter4Title,
-      titleEm: t.about.chapter4TitleEm,
-      body: [t.about.chapter4Para1, t.about.chapter4Para2, t.about.chapter4Para3],
-      aside: t.about.chapter4Aside,
-    },
-    {
-      id: 'ch5',
-      label: t.about.chapter5Label,
-      title: t.about.chapter5Title,
-      titleEm: t.about.chapter5TitleEm,
-      body: [t.about.chapter5Para1, t.about.chapter5Para2, t.about.chapter5Para3],
-      aside: t.about.chapter5Aside,
+      icon: Globe2,
+      title: about.foundation4Title,
+      text: about.foundation4Text,
     },
   ];
 
-  const drives = [
-    { num: '01', title: t.about.drive1Title, text: t.about.drive1Text },
-    { num: '02', title: t.about.drive2Title, text: t.about.drive2Text },
-    { num: '03', title: t.about.drive3Title, text: t.about.drive3Text },
-    { num: '04', title: t.about.drive4Title, text: t.about.drive4Text },
+  const training = [
+    about.trainingItem1,
+    about.trainingItem2,
+    about.trainingItem3,
+    about.trainingItem4,
+    about.trainingItem5,
+    about.trainingItem6,
   ];
 
-  const instruments = [
-    { name: t.about.inst1, origin: t.about.inst1Origin },
-    { name: t.about.inst2, origin: t.about.inst2Origin },
-    { name: t.about.inst3, origin: t.about.inst3Origin },
-    { name: t.about.inst4, origin: t.about.inst4Origin },
-    { name: t.about.inst5, origin: t.about.inst5Origin },
-    { name: t.about.inst6, origin: t.about.inst6Origin },
-    { name: t.about.inst7, origin: t.about.inst7Origin },
-    { name: t.about.inst8, origin: t.about.inst8Origin },
-    { name: t.about.inst9, origin: t.about.inst9Origin },
-    { name: t.about.inst10, origin: t.about.inst10Origin },
-    { name: t.about.inst11, origin: t.about.inst11Origin },
-    { name: t.about.inst12, origin: t.about.inst12Origin },
-    { name: t.about.inst13, origin: t.about.inst13Origin },
-  ];
-
-  const locations = [
-    'Ecuador',
-    'India',
-    'China',
-    'Slovenia',
-    'Montenegro',
-    'Spain',
-    'Russia',
-    'Malta',
-    'Surdulica',
-    'Novi Sad',
-    'Belgrade',
+  const story = [
+    {
+      title: about.story1Title,
+      text: about.story1Text,
+    },
+    {
+      title: about.story2Title,
+      text: about.story2Text,
+    },
+    {
+      title: about.story3Title,
+      text: about.story3Text,
+    },
   ];
 
   return (
-  <div className="bg-[#0b1220]">
-  <SEO
-  title={
-    language === 'sr'
-      ? 'O meni | Tihomira Stanojević'
-      : 'About | Tihomira Stanojević'
-  }
-  description={
-    language === 'sr'
-      ? 'Saznajte više o Tihomiri Stanojević, njenom iskustvu u psihologiji, facilitaciji, grupnom radu, simboličkom procesu i međunarodnom radu.'
-      : 'Learn more about Tihomira Stanojević, her background in psychology, facilitation, group work, symbolic process and international experience.'
-  }
-  url={
-    language === 'sr'
-      ? 'https://tihomira.info/sr/about'
-      : 'https://tihomira.info/en/about'
-  }
-  language={language}
-  alternateUrls={{
-    en: 'https://tihomira.info/en/about',
-    sr: 'https://tihomira.info/sr/about',
-    xDefault: 'https://tihomira.info/en/about',
-  }}
-/>
+    <div className="bg-[#0b1220] text-slate-100">
+      <SEO
+        title={
+          language === 'sr'
+            ? 'O meni | Tihomira Stanojević'
+            : 'About | Tihomira Stanojević'
+        }
+        description={
+          language === 'sr'
+            ? 'Tihomira Stanojević je master psihologije, facilitator i praktičarka iskustvenog rada, sa dugogodišnjim iskustvom u grupnom procesu, psihodrami, embodimentu, online i uživo prostorima.'
+            : 'Tihomira Stanojević is a psychologist, facilitator and experiential practitioner with long-term experience in group process, psychodrama, embodiment, online and in-person spaces.'
+        }
+        url={
+          language === 'sr'
+            ? 'https://tihomira.info/sr/about'
+            : 'https://tihomira.info/en/about'
+        }
+        language={language}
+        alternateUrls={{
+          en: 'https://tihomira.info/en/about',
+          sr: 'https://tihomira.info/sr/about',
+          xDefault: 'https://tihomira.info/en/about',
+        }}
+      />
 
-    {/* HERO */}
-      <section className="px-4 pt-28 pb-20 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-2 lg:items-end">
+      {/* HERO */}
+      <section className="border-b border-white/5 bg-[#0b1220] py-24 sm:py-28">
+        <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
           <div>
-            <p className="mb-6 text-xs uppercase tracking-[0.3em] text-yellow-400">
-              {t.about.eyebrow}
-            </p>
+            <span className="text-sm uppercase tracking-[0.3em] text-yellow-400">
+              {about.eyebrow}
+            </span>
 
-            <h1 className="mb-8 font-serif text-5xl font-light leading-tight text-white sm:text-6xl">
-              {t.about.aboutHeroMain}
-              <em className="mt-2 block italic text-yellow-400">
-              {t.about.aboutHeroEm}
-              </em>
+            <h1 className="mt-6 font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
+              {about.heroTitle}
             </h1>
 
-            <div className="max-w-2xl space-y-6 text-lg font-light leading-relaxed text-slate-400">
-              <p>
-              {t.about.aboutHeroIntro1}              
-              </p>
-
-              <p>
-              {t.about.aboutHeroIntro2}
-              </p>
-            </div>
-          </div>
-
-          <div className="lg:pb-4">
-            <p className="mb-5 max-w-md text-sm font-light leading-relaxed text-slate-500">
-            {t.about.aboutLocationsIntro}            
+            <p className="mt-8 max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">
+              {about.heroIntro}
             </p>
 
-            <div className="flex flex-wrap gap-2">
-              {locations.map((loc) => (
-                <span
-                  key={loc}
-                  className="border border-yellow-700/20 px-3 py-1 text-xs uppercase tracking-widest text-slate-400"
-                >
-                  {loc}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* STORY */}
-      <section className="px-4 pt-16 pb-20 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-6xl items-start gap-16 lg:grid-cols-[220px_1fr]">
-          <div className="sticky top-28 hidden lg:block">
-            <p className="mb-4 text-xs uppercase tracking-[0.25em] text-yellow-400">
-              {t.about.storyLabel}
+            <p className="mt-5 max-w-3xl leading-8 text-slate-400">
+              {about.heroIntro2}
             </p>
 
-            <ul className="space-y-3">
-              {chapters.map((ch) => (
-                <li key={ch.id}>
-                  <a
-                    href={`#${ch.id}`}
-                    className="block border-l border-transparent pl-4 text-sm font-light text-slate-500 transition-all hover:border-yellow-500 hover:text-slate-200"
-                  >
-                    {ch.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="space-y-16">
-            {chapters.map((ch, i) => (
-              <div key={ch.id} id={ch.id}>
-                <p className="mb-3 text-xs uppercase tracking-[0.25em] text-yellow-400">
-                  {String(i + 1).padStart(2, '0')} — {ch.label}
-                </p>
-
-                <h2 className="mb-6 font-serif text-4xl font-light leading-snug text-white">
-                  {ch.title}
-                  {ch.titleEm && (
-                    <em className="block italic text-yellow-400">
-                      {ch.titleEm}
-                    </em>
-                  )}
-                </h2>
-
-                <div className="max-w-2xl space-y-4 text-base font-light leading-relaxed text-slate-400">
-                  {ch.body.map((para, j) => (
-                    <p key={j} dangerouslySetInnerHTML={{ __html: para }} />
-                  ))}
-                </div>
-
-                {ch.aside && (
-                  <blockquote className="mt-6 max-w-xl border-l-2 border-yellow-700/40 pl-6 font-serif text-lg italic font-light leading-relaxed text-slate-300">
-                    {ch.aside}
-                  </blockquote>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* INSTRUMENTS */}
-      <div className="border-t border-yellow-700/10 bg-[#10192c] px-4 py-14 sm:px-6 lg:px-8">
-        <p className="mb-6 text-center text-xs uppercase tracking-[0.25em] text-yellow-400">
-          {t.about.instrumentsLabel}
-        </p>
-
-        <p className="mx-auto mb-10 max-w-2xl text-center text-base font-light leading-relaxed text-slate-400">
-          {t.about.instrumentsIntro}
-        </p>
-
-        <div className="mx-auto flex max-w-2xl flex-wrap justify-center gap-3">
-          {instruments.map((inst, i) => (
-            <span
-              key={i}
-              className="border border-yellow-700/20 px-4 py-2 text-sm font-light text-slate-400 transition-colors hover:border-yellow-700/50 hover:text-yellow-400"
-            >
-              {inst.name}{' '}
-              <span className="text-xs text-slate-600">{inst.origin}</span>
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* WHAT I RETURN TO */}
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-5xl">
-          <p className="mb-3 text-xs uppercase tracking-[0.25em] text-yellow-400">
-            {t.about.drivesSectionLabel}
-          </p>
-
-          <h2 className="mb-12 font-serif text-4xl font-light leading-snug text-white">
-           {t.about.drivesSectionTitle}
-          </h2>
-
-          <div className="grid gap-px border border-yellow-700/10 bg-yellow-700/10 sm:grid-cols-2">
-            {drives.map((d) => (
-              <div
-                key={d.num}
-                className="bg-[#0b1220] p-8 transition-colors hover:bg-[#10192c]"
+            <div className="mt-10 flex flex-wrap gap-3">
+              <button
+                onClick={() => setCurrentPage('/work')}
+                className="inline-flex items-center gap-2 rounded-full bg-yellow-500 px-6 py-3 text-sm font-medium text-slate-950 transition hover:bg-yellow-400"
               >
-                <p className="mb-3 text-xs uppercase tracking-[0.2em] text-yellow-400">
-                  {d.num}
-                </p>
-                <h3 className="mb-3 font-serif text-xl font-light text-white">
-                  {d.title}
-                </h3>
-                <p className="text-sm font-light leading-relaxed text-slate-400">
-                  {d.text}
-                </p>
-              </div>
-            ))}
+                {about.ctaWork}
+                <ArrowRight size={16} />
+              </button>
+
+              <button
+                onClick={() => setCurrentPage('/contact')}
+                className="inline-flex items-center gap-2 rounded-full border border-yellow-400/40 px-6 py-3 text-sm font-medium text-yellow-300 transition hover:border-yellow-300 hover:text-white"
+              >
+                {about.ctaContact}
+                <ArrowRight size={16} />
+              </button>
+            </div>
+          </div>
+
+          <aside className="rounded-2xl border border-slate-700 bg-[#111827] p-8">
+            <p className="text-xs uppercase tracking-[0.25em] text-yellow-400">
+              {about.identityLabel}
+            </p>
+
+            <h2 className="mt-4 font-serif text-2xl text-white">
+              {about.identityTitle}
+            </h2>
+
+            <p className="mt-5 leading-7 text-slate-300">
+              {about.identityText}
+            </p>
+
+            <div className="mt-8 border-t border-slate-700 pt-6">
+              <p className="text-sm leading-7 text-slate-400">
+                {about.identityNote}
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      {/* FOUNDATIONS */}
+      <section className="bg-[#0e1628] py-20 sm:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto mb-14 max-w-3xl text-center">
+            <span className="text-sm uppercase tracking-[0.3em] text-yellow-400">
+              {about.foundationsLabel}
+            </span>
+
+            <h2 className="mt-4 font-serif text-3xl text-white sm:text-4xl">
+              {about.foundationsTitle}
+            </h2>
+
+            <p className="mt-4 leading-8 text-slate-300">
+              {about.foundationsIntro}
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            {foundations.map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={index}
+                  className="rounded-2xl border border-slate-700 bg-[#111827] p-8"
+                >
+                  <Icon className="h-7 w-7 text-yellow-400" />
+
+                  <h3 className="mt-5 font-serif text-2xl text-white">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-4 leading-7 text-slate-300">
+                    {item.text}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* TRAINING */}
-      <section className="border-t border-yellow-700/10 bg-[#10192c] px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl">
-          <p className="mb-3 text-xs uppercase tracking-[0.25em] text-yellow-400">
-            {t.about.trainingLabel}
-          </p>
+      <section className="bg-[#0b1220] py-20 sm:py-24">
+        <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+          <div>
+            <span className="text-sm uppercase tracking-[0.3em] text-yellow-400">
+              {about.trainingLabel}
+            </span>
 
-          <h2 className="mb-8 font-serif text-4xl font-light leading-snug text-white">
-            {t.about.trainingTitle}
-            <em className="block italic text-yellow-400">
-              {t.about.trainingTitleEm}
-            </em>
-          </h2>
+            <h2 className="mt-4 font-serif text-3xl text-white sm:text-4xl">
+              {about.trainingTitle}
+            </h2>
 
-          <div className="space-y-4 text-base font-light leading-relaxed text-slate-400">
-            <p dangerouslySetInnerHTML={{ __html: t.about.trainingPara1 }} />
-            <p dangerouslySetInnerHTML={{ __html: t.about.trainingPara2 }} />
-            <p dangerouslySetInnerHTML={{ __html: t.about.trainingPara3 }} />
+            <p className="mt-5 leading-8 text-slate-300">
+              {about.trainingIntro}
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-slate-700 bg-[#111827] p-8">
+            <ul className="space-y-5">
+              {training.map((item, index) => (
+                <li key={index} className="flex gap-4 text-slate-300">
+                  <span className="mt-1 text-yellow-400">→</span>
+                  <span className="leading-7">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* CLOSING */}
-      <section className="border-t border-yellow-700/10 bg-[#0b1220] px-4 py-18 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <blockquote className="mb-12 font-serif text-2xl font-light italic leading-relaxed text-white sm:text-3xl">
-        {t.about.closingQuote}
-          </blockquote>
+      {/* EXPERIENCE */}
+      <section className="bg-[#0e1628] py-20 sm:py-24">
+        <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+          <span className="text-sm uppercase tracking-[0.3em] text-yellow-400">
+            {about.experienceLabel}
+          </span>
 
-          <div className="space-y-6 text-base font-light leading-relaxed text-slate-400">
-           <p>
-          {t.about.closingText1}
+          <h2 className="mt-4 font-serif text-3xl text-white sm:text-4xl">
+            {about.experienceTitle}
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+            {about.experienceText}
           </p>
 
-            <p>
-          {t.about.closingText2}
+          <p className="mx-auto mt-5 max-w-3xl leading-8 text-slate-400">
+            {about.experienceText2}
           </p>
-          <p>
-           {t.about.closingText3}
-          </p>
-          <p>
-          {t.about.closingText4}
-          </p>
+        </div>
+      </section>
+
+      {/* SHORT STORY */}
+      <section className="bg-[#0b1220] py-20 sm:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto mb-14 max-w-3xl text-center">
+            <span className="text-sm uppercase tracking-[0.3em] text-yellow-400">
+              {about.storyLabel}
+            </span>
+
+            <h2 className="mt-4 font-serif text-3xl text-white sm:text-4xl">
+              {about.storyTitle}
+            </h2>
+
+            <p className="mt-4 leading-8 text-slate-300">
+              {about.storyIntro}
+            </p>
           </div>
 
-          <div className="mt-14 flex justify-center">
-            <button
-              onClick={() => setCurrentPage('/contact')}
-              className="rounded-full border border-yellow-500/30 px-8 py-3 text-sm tracking-wide text-yellow-100 transition-all hover:border-yellow-400 hover:bg-yellow-400 hover:text-slate-950"
-            >
-              {t.about.contactButton}
-            </button>
+          <div className="grid gap-8 md:grid-cols-3">
+            {story.map((item, index) => (
+              <div
+                key={index}
+                className="rounded-2xl border border-slate-700 bg-[#111827] p-8"
+              >
+                <h3 className="font-serif text-2xl text-white">
+                  {item.title}
+                </h3>
+
+                <p className="mt-4 leading-7 text-slate-300">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* FINAL */}
+      <section className="bg-[#10192c] py-20 sm:py-24">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <p className="font-serif text-2xl italic leading-relaxed text-slate-200 sm:text-3xl">
+            “{about.closingQuote}”
+          </p>
+
+          <button
+            onClick={() => setCurrentPage('/work')}
+            className="mt-10 inline-flex items-center gap-2 rounded-full bg-yellow-500 px-8 py-3 font-medium text-slate-950 transition hover:bg-yellow-400"
+          >
+            {about.closingButton}
+            <ArrowRight size={18} />
+          </button>
         </div>
       </section>
     </div>

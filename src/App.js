@@ -82,8 +82,8 @@ export default function App() {
           <Route path="/sr" element={<HomePage setCurrentPage={goToPage} t={translations.sr} language="sr" />} />
           <Route path="/en/tiha-psiha" element={<TihaPsihaPage setCurrentPage={goToPage} t={translations.en} language="en" />} />
           <Route path="/sr/tiha-psiha" element={<TihaPsihaPage setCurrentPage={goToPage} t={translations.sr} language="sr" />} /> 
-          <Route path="/en/about" element={<AboutPage setCurrentPage={goToPage} t={translations.en} />} />
-          <Route path="/sr/about" element={<AboutPage setCurrentPage={goToPage} t={translations.sr} />} />
+          <Route path="/en/about" element={<AboutPage setCurrentPage={goToPage} t={translations.en} language="en" />} />
+          <Route path="/sr/about" element={<AboutPage setCurrentPage={goToPage} t={translations.sr} language="sr" />} />
           <Route path="/en/work" element={<WorkPage setCurrentPage={goToPage} t={translations.en} />} />
           <Route path="/sr/work" element={<WorkPage setCurrentPage={goToPage} t={translations.sr} />} />
           <Route path="/en/events" element={<EventsPage setCurrentPage={goToPage} t={translations.en} />} />
