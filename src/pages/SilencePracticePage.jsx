@@ -11,22 +11,28 @@ export default function SilencePracticePage({ language = "en" }) {
   return (
     <>
       <SEO
-        title={
-          isSerbian
-            ? "Praksa tišine | Tiha Psiha"
-            : "The Practice of Silence | Tiha Psiha"
-        }
-        description={
-          isSerbian
-            ? "Istraživanje tišine, pažnje, stimulacije i nervnog sistema tokom pripreme za deset dana tišine."
-            : "A real-time exploration of silence, attention, stimulation and the nervous system during preparation for ten days of silence."
-        }
-        url={
-          isSerbian
-            ? "https://tihomira.info/sr/praksa-tisine"
-            : "https://tihomira.info/en/silence-practice"
-        }
-      />
+  title={
+    isSerbian
+      ? "Praksa tišine | Tiha Psiha"
+      : "The Practice of Silence | Tiha Psiha"
+  }
+  description={
+    isSerbian
+      ? "Istraživanje tišine, pažnje, stimulacije i nervnog sistema tokom pripreme za deset dana tišine."
+      : "A real-time exploration of silence, attention, stimulation and the nervous system during preparation for ten days of silence."
+  }
+  url={
+    isSerbian
+      ? "https://tihomira.info/sr/praksa-tisine"
+      : "https://tihomira.info/en/silence-practice"
+  }
+  language={lang}
+  alternateUrls={{
+    en: "https://tihomira.info/en/silence-practice",
+    sr: "https://tihomira.info/sr/praksa-tisine",
+    xDefault: "https://tihomira.info/en/silence-practice",
+  }}
+/>
 
       <main className="min-h-screen bg-[#1f1f1c] text-[#f3efe6]">
         <section className="min-h-screen flex items-center px-6 py-24">

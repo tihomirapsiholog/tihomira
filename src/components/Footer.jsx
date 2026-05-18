@@ -24,18 +24,26 @@ export default function Footer({ t, language }) {
             <span className="block font-serif text-lg text-yellow-400 group-hover:text-yellow-300">
               Zoom Maestra
             </span>
-
-            <span className="mt-2 block text-xs leading-relaxed text-slate-500 group-hover:text-slate-300">
-              Support for online group spaces and facilitators.
-            </span>
+          <span className="mt-2 block text-sm leading-relaxed text-slate-400 group-hover:text-slate-300">
+          {t.footer.zoomText}
+          </span>          
           </Link>
         </div>
-        <div className="mt-8">
+                <div className="mt-8 flex flex-wrap items-center justify-center gap-2 text-xs text-slate-500">
           <Link
             to={`/${language}/privacy-policy`}
-            className="text-xs text-slate-500 transition-colors hover:text-yellow-300"
+            className="transition-colors hover:text-yellow-300"
           >
             {language === 'sr' ? 'Politika privatnosti' : 'Privacy Policy'}
+          </Link>
+
+          <span>·</span>
+
+          <Link
+            to={`/${language}/terms`}
+            className="transition-colors hover:text-yellow-300"
+          >
+            {language === 'sr' ? 'Uslovi korišćenja' : 'Terms'}
           </Link>
         </div>
         <p className="mt-8 text-xs text-slate-600">

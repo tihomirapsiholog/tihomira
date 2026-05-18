@@ -67,15 +67,15 @@ export default function ContactPage({ t, language }) {
     <div className="mx-auto max-w-3xl bg-[#0b1220] px-4 py-20 sm:px-6 lg:px-8">
       <SEO
   title={
-    language === 'sr'
-      ? 'Kontakt | Tiha Psiha i Zoom Maestra'
-      : 'Contact | Tiha Psiha and Zoom Maestra'
-  }
-  description={
-    language === 'sr'
-      ? 'Kontaktirajte Tihomiru Stanojević za individualne susrete, radionice, zvučne kupke ili Zoom Maestra podršku za online događaje.'
-      : 'Contact Tihomira Stanojević about individual sessions, workshops, sound baths or Zoom Maestra online event support.'
-  }
+  language === 'sr'
+    ? 'Kontakt | Tiha Psiha'
+    : 'Contact | Tiha Psiha'
+}
+description={
+  language === 'sr'
+    ? 'Kontaktirajte Tihomiru Stanojević za individualne susrete, radionice, grupne procese i zvučna iskustva uživo.'
+    : 'Contact Tihomira Stanojević about individual sessions, workshops, group processes and in-person sound experiences.'
+}
   url={
     language === 'sr'
       ? 'https://tihomira.info/sr/contact'

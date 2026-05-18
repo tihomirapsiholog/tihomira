@@ -434,7 +434,11 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
         <div className="relative min-h-[320px] overflow-hidden">
           <img
             src="/silhouette.jpg"
-            alt="Silence Practice"
+            alt={
+             language === 'sr'
+             ? 'Praksa tišine i istraživanje pažnje'
+            : 'The Practice of Silence and attention exploration'
+            }
             className="absolute inset-0 h-full w-full object-cover"
           />
 

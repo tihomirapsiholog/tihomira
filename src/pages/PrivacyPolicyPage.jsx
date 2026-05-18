@@ -6,22 +6,28 @@ export default function PrivacyPolicyPage({ language = 'en' }) {
   return (
     <>
       <SEO
-        title={
-          isSerbian
-            ? 'Politika privatnosti | Tiha Psiha & Zoom Maestra'
-            : 'Privacy Policy | Tiha Psiha & Zoom Maestra'
-        }
-        description={
-          isSerbian
-            ? 'Politika privatnosti za tihomira.info, Tiha Psiha i Zoom Maestra.'
-            : 'Privacy Policy for tihomira.info, Tiha Psiha, and Zoom Maestra.'
-        }
-        url={
-          isSerbian
-            ? 'https://tihomira.info/sr/privacy-policy'
-            : 'https://tihomira.info/en/privacy-policy'
-        }
-      />
+  title={
+    isSerbian
+      ? 'Politika privatnosti | Tiha Psiha & Zoom Maestra'
+      : 'Privacy Policy | Tiha Psiha & Zoom Maestra'
+  }
+  description={
+    isSerbian
+      ? 'Politika privatnosti za tihomira.info, Tiha Psiha i Zoom Maestra.'
+      : 'Privacy Policy for tihomira.info, Tiha Psiha, and Zoom Maestra.'
+  }
+  url={
+    isSerbian
+      ? 'https://tihomira.info/sr/privacy-policy'
+      : 'https://tihomira.info/en/privacy-policy'
+  }
+  language={language}
+  alternateUrls={{
+    en: 'https://tihomira.info/en/privacy-policy',
+    sr: 'https://tihomira.info/sr/privacy-policy',
+    xDefault: 'https://tihomira.info/en/privacy-policy',
+  }}
+/>
 
       <main className="min-h-screen bg-[#f3eee4] px-6 py-20 text-[#182018] sm:px-8 lg:px-12">
         <article className="mx-auto max-w-3xl rounded-[2rem] bg-white/55 px-6 py-10 shadow-sm ring-1 ring-[#172018]/10 backdrop-blur sm:px-10 sm:py-12">

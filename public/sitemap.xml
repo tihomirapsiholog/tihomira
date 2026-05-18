@@ -1,57 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
   <url>
-    <loc>https://tihomira.info/en</loc>
+    <loc>https://tihomira.info/en/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://tihomira.info/en/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="sr"
+      href="https://tihomira.info/sr/"
+    />
   </url>
+
   <url>
-    <loc>https://tihomira.info/sr</loc>
+    <loc>https://tihomira.info/sr/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://tihomira.info/en/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="sr"
+      href="https://tihomira.info/sr/"
+    />
   </url>
+
   <url>
-    <loc>https://tihomira.info/en/tiha-psiha</loc>
+    <loc>https://tihomira.info/en/tiha-psiha/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://tihomira.info/sr/tiha-psiha</loc>
+    <loc>https://tihomira.info/sr/tiha-psiha/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://tihomira.info/en/about</loc>
+    <loc>https://tihomira.info/en/about/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://tihomira.info/sr/about</loc>
+    <loc>https://tihomira.info/sr/about/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://tihomira.info/en/work</loc>
+    <loc>https://tihomira.info/en/work/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://tihomira.info/sr/work</loc>
+    <loc>https://tihomira.info/sr/work/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://tihomira.info/en/events</loc>
+    <loc>https://tihomira.info/en/events/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://tihomira.info/sr/events</loc>
+    <loc>https://tihomira.info/sr/events/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://tihomira.info/en/zoom-maestra</loc>
+    <loc>https://tihomira.info/en/zoom-maestra/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://tihomira.info/sr/zoom-maestra</loc>
+    <loc>https://tihomira.info/sr/zoom-maestra/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://tihomira.info/en/contact</loc>
+    <loc>https://tihomira.info/en/contact/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://tihomira.info/sr/contact</loc>
+    <loc>https://tihomira.info/sr/contact/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://tihomira.info/en/silence-practice</loc>
+    <loc>https://tihomira.info/en/silence-practice/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://tihomira.info/sr/praksa-tisine</loc>
+    <loc>https://tihomira.info/sr/praksa-tisine/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://tihomira.info/en/privacy-policy</loc>
+    <loc>https://tihomira.info/en/privacy-policy/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
+
   <url>
-    <loc>https://tihomira.info/sr/privacy-policy</loc>
+    <loc>https://tihomira.info/sr/privacy-policy/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
+
+  <url>
+    <loc>https://tihomira.info/en/terms/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://tihomira.info/sr/terms/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>

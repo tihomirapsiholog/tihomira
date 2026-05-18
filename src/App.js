@@ -68,8 +68,7 @@ export default function App() {
   };
 
   const isContactPage = location.pathname.includes('/contact');
-const isZoomMaestraPage = location.pathname === `/${language}/zoom-maestra`;
-
+const isZoomMaestraPage = location.pathname.includes('/zoom-maestra');
 const scrollToZoomContact = () => {
   const formSection = document.getElementById('contact-zoom');
 

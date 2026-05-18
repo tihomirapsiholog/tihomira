@@ -52,8 +52,8 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
         dreamText:
           'Vođeni intervju sa snom, simbolom ili unutrašnjom slikom. Ovo nije klasično tumačenje sna. Cilj su praktični uvidi, unutrašnji odgovori i jasnije sagledavanje situacije u kojoj se nalaziš.',
         dreamPrice: '6.000 RSD',
-        buyForMyself: 'Kupi za sebe',
-        buyAsGift: 'Kupi kao poklon',
+        buyForMyself: 'Zakaži sesiju',
+        buyAsGift: 'Raspitaj se za poklon sesiju',
         dreamMessage:
           'Zanima me kupovina vođene sesije istraživanja sna za sebe.',
         dreamGiftMessage:
@@ -155,8 +155,8 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
         dreamText:
           'A guided interview with a dream, symbol or inner image. This is not classical dream interpretation. The aim is practical insight, inner answers and a clearer view of the situation you are in.',
         dreamPrice: '50 EUR',
-        buyForMyself: 'Buy for myself',
-        buyAsGift: 'Buy as a gift',
+        buyForMyself: 'Schedule session',
+        buyAsGift: 'Ask about gift session',
         dreamMessage:
           'I am interested in buying a Guided Dream Exploration Session for myself.',
         dreamGiftMessage:
@@ -229,6 +229,14 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
       };
 
   const getText = (key) => work[key] || fallback[key];
+    const calendlyLinks = {
+    freeSession: 'https://calendly.com/tihomira-psiholog/free-session',
+    dreamWork: 'https://calendly.com/tihomira-psiholog/60-min-dream-work',
+  };
+
+  const openExternal = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
 
   const availableOffers = [
     {
@@ -239,6 +247,8 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
       cta: getText('orientationCta'),
       icon: Mail,
       contactMessage: getText('orientationMessage'),
+      actionType: 'freeCalendly',
+      actionType: 'dreamCalendly',
     },
     {
       title: getText('dreamTitle'),
@@ -415,7 +425,19 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
 
                   <div className="mt-8 flex flex-col gap-3">
                     <button
-                      onClick={() => goToContact(offer.contactMessage)}
+                                            onClick={() => {
+                        if (offer.actionType === 'freeCalendly') {
+                          openExternal(calendlyLinks.freeSession);
+                          return;
+                        }
+
+                        if (offer.actionType === 'dreamCalendly') {
+                          openExternal(calendlyLinks.dreamWork);
+                          return;
+                        }
+
+                        goToContact(offer.contactMessage);
+                      }}
                       className="inline-flex items-center justify-center gap-2 rounded-full bg-yellow-500 px-5 py-3 text-sm font-medium text-slate-950 transition hover:bg-yellow-400"
                     >
                       {offer.cta}
