@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-const defaultImage = 'https://tihomira.info/portrait.jpg';
+const defaultImage = 'https://tihomira.info/og-image.jpg';
 
 function SEO({
   title,
