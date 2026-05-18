@@ -247,7 +247,6 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
       cta: getText('orientationCta'),
       icon: Mail,
       contactMessage: getText('orientationMessage'),
-      actionType: 'freeCalendly',
       actionType: 'dreamCalendly',
     },
     {
