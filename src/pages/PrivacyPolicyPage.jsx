@@ -114,10 +114,10 @@ export default function PrivacyPolicyPage({ language = 'en' }) {
                     Analitika
                   </h2>
                   <p>
-                    Sajt trenutno može biti pripremljen za buduću upotrebu
-                    analitike. Ako se analitika uvede, koristiće se za
-                    razumevanje opšte posete sajtu i poboljšanje sadržaja, bez
-                    namere da se identifikuju pojedinačni posetioci.
+                  Sajt koristi Google Analytics za razumevanje opšte posećenosti,
+                  načina korišćenja stranica i poboljšanje sadržaja. Podaci se
+                  koriste u zbirnom obliku i nisu namenjeni ličnoj identifikaciji
+                  pojedinačnih posetilaca.
                   </p>
                 </section>
 
@@ -221,11 +221,11 @@ export default function PrivacyPolicyPage({ language = 'en' }) {
                     Analytics
                   </h2>
                   <p>
-                    This website may be prepared for future analytics use. If
-                    analytics are added, they will be used to understand general
-                    website traffic and improve the content, not to personally
-                    identify individual visitors.
-                  </p>
+                   This website uses Google Analytics to understand general website
+                   traffic, how pages are used, and how the content can be improved.
+                   The data is used in aggregate form and is not intended to personally
+                   identify individual visitors.
+                    </p>
                 </section>
 
                 <section>
