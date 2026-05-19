@@ -8,17 +8,21 @@ const translations = {
       zoom: "Zoom Maestra",
       contact: 'Contact',
     },
-    home: {
+        home: {
       welcome: 'Welcome',
       seoIntroTiha:
-      'Tiha Psiha is a space for psychology, facilitation, individual sessions, workshops, and symbolic experiential work.',
+        'Tiha Psiha is a space for psychology, facilitation, individual sessions, workshops, and symbolic experiential work.',
       seoIntroZoom:
-      'Zoom Maestra offers online event support, Zoom support, and hybrid event coordination for facilitators, therapists, educators, and group leaders.',
-       tagline: "Not a new self. A different relationship to the same.",
-       intro:  "Tiha Psiha is a space for experiential exploration of inner life. Through individual and group work, it explores what becomes visible when experience is given attention, relationship, movement, or voice.",
+        'Zoom Maestra offers online event support, Zoom support, and hybrid event coordination for facilitators, therapists, educators, and group leaders.',
+
+      tagline: 'Not a new self. A different relationship to the same self.',
+      intro:
+        'Tiha Psiha is not a place where someone comes to be fixed. It is a space where inner life becomes safe enough to appear. Here, we do not rush toward an answer. We slow down enough for what is unclear, held back, quiet, or still without form to become visible.',
+
       howIWork: 'How I Work',
       workDescription:
         'My work integrates psychology, process facilitation, embodied practices, and symbolic awareness to create spaces where transformation can unfold naturally.',
+
       pillar1Title: 'Individual Sessions',
       pillar1Desc:
         'One-on-one work for personal transition, self-discovery, and finding clarity in moments of change.',
@@ -28,9 +32,14 @@ const translations = {
       pillar3Title: 'Immersive Sound Experiences',
       pillar3Desc:
         'Spaces combining sound, ritual elements, and embodied awareness for deeper integration.',
-      pillar1Question: 'Do you feel stuck in old patterns? Are you seeking clarity in a moment of change?',
-      pillar2Question: 'Is your community or team going through transformation? Are you looking for a space for collective exploration?',
-      pillar3Question: 'Do you feel that words are not enough? Are you seeking a deeper language — through body, sound, and symbol?',
+
+      pillar1Question:
+        'Do you feel stuck in old patterns? Are you seeking clarity in a moment of change?',
+      pillar2Question:
+        'Is your community or team going through transformation? Are you looking for a space for collective exploration?',
+      pillar3Question:
+        'Do you feel that words are not enough? Are you seeking a deeper language — through body, sound, and symbol?',
+
       offerings: 'Offerings',
       offering1: 'Individual Sessions',
       offering1Sub: 'Private transformational work',
@@ -40,118 +49,104 @@ const translations = {
       offering3Sub: 'Immersive embodied journeys',
       offering4: 'Custom Facilitation',
       offering4Sub: 'Tailored processes for organizations',
-      ready: 'Ready to explore?',
+
+      ready: 'When something in you is ready to be heard',
       inviteText:
-        "Whether you're at a crossroads, seeking clarity, or ready for transformation, there's a path forward. Let's explore it together.",
+        'You do not need to know exactly what you need before reaching out. It is enough to sense that something in you is asking for attention, space, and a more truthful relationship.',
+      cta: 'Write to me',
+
       subline: 'Individual work, group exploration, and sound-based experiences.',
       toolsTitle: 'Sound & Symbolic Tools',
       toolsText:
         'My practice incorporates instruments and symbolic objects that support the journey of transformation. Sound bowls, drums, and ritual elements create spaces where deeper awareness can emerge.',
+
       zoomTitle: 'For Facilitators',
-      zoomText: 'Zoom Maestra supports facilitators, educators, and therapists who want to work online with more ease, less technical stress, and a stronger sense of flow.',
+      zoomText:
+        'Zoom Maestra supports facilitators, educators, and therapists who want to work online with more ease, less technical stress, and a stronger sense of flow.',
       zoomButton: 'Explore Zoom Maestra',
+
       recognitionLabel: 'You may be here because...',
-
       recognitionItems: [
-       {
-    title: 'You are navigating a life transition',
-    text: 'and the old way of functioning no longer works.',
-      },
-       {
-       title: 'You have been holding too much for too long',
-     text: 'without enough space to truly pause.',
-      },
-       {
-    title: 'You are looking for a different relationship with yourself',
-    text: 'not another attempt to “fix” who you are.',
-       },
-     {
-    title: 'You want a space where you do not have to know immediately',
-    text: 'what comes next.',
-      },
-       {
-    title: 'You work with people',
-    text: 'and you feel the need for deeper contact with your own impulse, body and presence.',
-     },
-        ],
+        {
+          title: 'You are standing at an inner threshold',
+          text: 'and the old way of functioning no longer feels true.',
+        },
+        {
+          title: 'You have been holding too much for too long',
+          text: 'without enough space to pause, feel, and listen.',
+        },
+        {
+          title: 'You are looking for a different relationship with yourself',
+          text: 'not another attempt to fix who you are.',
+        },
+        {
+          title: 'You want a space where you do not have to know immediately',
+          text: 'what comes next.',
+        },
+        {
+          title: 'You feel that something inside you is asking for form',
+          text: 'a word, a gesture, a boundary, a voice, a path, or a more truthful place in your life.',
+        },
+      ],
 
-      encounterLabel: 'Encounter',
+      encounterLabel: 'At the threshold',
       encounterTitle1: 'Not a new self.',
       encounterTitle2: 'A different relationship to the same self.',
-      encounterBlock1Title: 'Some experiences become clearer only when we meet them.',
-      encounterBlock1Text: 'Not only through conversation, but through relationship, action, body, symbol and the presence of other people.',
-      encounterBlock2Title: 'Experience does not have to be explained immediately to be real.',
-      encounterBlock2Text: 'In this work, we pay attention to what forms between impulse, action, inner life and relationship with others.',
-      encounterBlock3Title: 'Sometimes a person notices their own impulse for the first time only when they see it enacted in front of them.',
-      methodLabel: 'How I work',
-      methodTitle: 'Psychology, action, body and group process.',
-      methodIntro: 'My work combines psychology, psychodramatic and action-based methods, the body, symbol, movement and experiential group work.',
+      encounterBlock1Title:
+        'Some experiences become clearer only when there is enough safety to meet them.',
+      encounterBlock1Text:
+        'Not only through conversation, but through relationship, action, body, symbol, silence, and the presence of another person or group.',
+      encounterBlock2Title:
+        'Experience does not have to be explained immediately to be real.',
+      encounterBlock2Text:
+        'In this work, we pay attention to what forms between impulse, action, inner life, body, image, and relationship with others.',
+      encounterBlock3Title:
+        'Sometimes a person first notices their own truth when it is given space, voice, movement, or form.',
+
+      methodLabel: 'How we work in this space',
+      methodTitle: 'Conversation, body, symbol, action and silence.',
+      methodIntro:
+        'The work in Tiha Psiha brings together psychological reflection, experiential methods, symbolic exploration, body awareness, movement, role, group process, and careful attention to what is actually present.',
+
       method1Title: 'Psychology',
-      method1Text: 'Inner life is not treated as a problem to be fixed quickly, but as a space that can become more readable.',
-      method2Title: 'Psychodramatic and action-based methods',
-      method2Text: 'Some experiences become clearer only when we see them, enact them or meet them from another perspective.',
+      method1Text:
+        'Inner life is not treated as a problem to be fixed quickly, but as a space that can slowly become more readable.',
+      method2Title: 'Action-based methods',
+      method2Text:
+        'Some experiences become clearer only when we see them, enact them, place them in space, or meet them from another perspective.',
       method3Title: 'Body and movement',
-      method3Text: 'The body often registers change before the mind can explain it.',
+      method3Text:
+        'The body often registers truth, tension, fear, longing, and change before the mind can explain them.',
       method4Title: 'Symbolic work',
-      method4Text: 'Images, roles, metaphors and inner scenes sometimes carry more information than explanation.',
+      method4Text:
+        'Images, roles, metaphors, dreams and inner scenes sometimes carry more information than explanation.',
       method5Title: 'Group process',
-      method5Text: 'Relationship with others often becomes the space where we first see our own patterns, impulses and boundaries.',
-      spacesLabel: 'Ways of working',
-      spacesTitle: 'Different formats for different stages of the process.',
+      method5Text:
+        'Relationship with others can become the place where we first notice our patterns, impulses, boundaries, and possibilities for something new.',
+
+      spacesLabel: 'Paths through the garden',
+      spacesTitle: 'Different ways of entering the work.',
       space1Title: 'Individual sessions',
-      space1Text1: 'One-on-one work through conversation, symbol, body and experiential exploration.',
-      space1Text2: 'For periods of transition, overwhelm, inner conflict or the need for clearer contact with yourself.',
+      space1Text1:
+        'One-on-one work through conversation, symbol, body awareness and experiential exploration.',
+      space1Text2:
+        'For periods of transition, overwhelm, inner conflict, decision-making, grief, longing, or the need for clearer contact with yourself.',
       space2Title: 'Workshops and group spaces',
-      space2Text:  'Online and in-person spaces where experience is explored through encounter, action, group process and symbolic work.',
+      space2Text:
+        'Online and in-person spaces where inner experience becomes visible through encounter, action, role, group process and symbolic work.',
       space3Title: 'The Practice of Silence',
-      space3Text:  'An exploration of attention, stimulation, the nervous system and the relationship to inner rhythm through writing, practice and experiential process.',
-      credibility:  "Master's degree in Psychology • 15+ years of group work experience • psychodrama • physical theatre • Tele'Drama • international online and in-person processes",
+      space3Text:
+        'An exploration of attention, stimulation, the nervous system and the relationship to inner rhythm through writing, practice and experiential process.',
+
+      credibility:
+        "Master's degree in Psychology • 15+ years of group work experience • psychodrama-informed practice • physical theatre • Tele'Drama • international online and in-person processes",
+
       silenceLabel: 'The Practice of Silence',
-      silenceTitle: 'A real-time exploration of silence, attention and the nervous system.',
-      silenceText: 'A three-month preparation process for ten days of silence — documented through field notes, embodiment and psychological observation.',
-      },
-      silencePractice: {
-  label: 'The Practice of Silence',
-  heroTitle: 'Silence is not the absence of sound.',
-  heroTitleEm: 'It is the presence of yourself.',
-  heroSubtitle:
-    'A real-time exploration of attention, embodiment, stimulation, and the nervous system — during three months of preparation for ten days of silence.',
-  cta: 'Read field notes',
-
-  experimentLabel: 'Real-Time Experiment',
-  experimentText1:
-    'I am preparing for ten days of silence.',
-  experimentText2:
-    'No phone. No speaking. No writing. No nicotine.',
-  experimentText3:
-    'This page documents what happens before that threshold is crossed.',
-
-  fieldNotesLabel: 'Field Notes',
-  fieldNotesTitle: 'Notes from the threshold.',
-
-  fieldNotes: [
-    {
-      number: '01',
-      title:
-        'The body reaches for stimulation faster than I thought.',
-      text:
-        'I notice how quickly silence becomes uncomfortable. Not dramatic silence. Just the absence of interruption.',
+      silenceTitle: 'A quiet path for attention, rhythm and the nervous system.',
+      silenceText:
+        'A real-time exploration of silence, attention and preparation for ten days of silence — documented through field notes, embodiment and psychological observation.',
+      silenceBlockButton: 'Enter the practice',
     },
-    {
-      number: '02',
-      title:
-        'Nicotine is not only addiction. It is rhythm.',
-      text:
-        'Certain moments of the day seem to collapse without it. The body keeps searching for punctuation.',
-    },
-    {
-      number: '03',
-      title: 'Attention has weight.',
-      text:
-        'What we repeatedly return to slowly becomes the architecture of the nervous system.',
-    },
-  ],
-},
    about: {
   eyebrow: 'About',
   heroTitle: 'I work with experience, not only with explanation.',
@@ -518,23 +513,38 @@ eventGroupValue: 'up to 15 participants',
       zoom: 'Zoom Maestra',
       contact: 'Kontakt',
     },
-    home: {
+        home: {
       welcome: 'Dobrodošli',
-      seoIntroTiha:'Tiha Psiha je prostor za psihologiju, facilitaciju, individualne susrete, radionice i simbolički iskustveni rad.',
-      seoIntroZoom:'Zoom Maestra pruža online event support, Zoom podršku i koordinaciju hibridnih događaja za facilitatore, terapeute, edukatore i voditelje grupa.',
-       tagline:"Ne novo ja. Drugačiji odnos prema istom ja.",
-      intro:"Tiha Psiha je prostor za iskustveno istraživanje unutrašnjeg života. Kroz individualni i grupni rad istražujemo ono što postaje vidljivo kada iskustvo dobije pažnju, odnos, pokret ili glas.",     howIWork: 'Kako radim',
+      seoIntroTiha:
+        'Tiha Psiha je prostor za psihologiju, facilitaciju, individualne susrete, radionice i simbolički iskustveni rad.',
+      seoIntroZoom:
+        'Zoom Maestra pruža online event support, Zoom podršku i koordinaciju hibridnih događaja za facilitatore, terapeute, edukatore i voditelje grupa.',
+
+      tagline: 'Ne novo ja. Drugačiji odnos prema istom ja.',
+      intro:
+        'Tiha Psiha nije mesto gde neko dolazi da bude popravljen. To je prostor u kome unutrašnji život postaje dovoljno bezbedan da se pokaže. Ovde se ne žuri ka odgovoru. Usporavamo dovoljno da ono što je mutno, zadržano, tiho ili još bez oblika može da postane vidljivo.',
+
+      howIWork: 'Kako radim',
       workDescription:
         'Moj rad integriše psihologiju, facilitaciju procesa, telesne prakse i simboličku svesnost kako bi se stvorio prostor u kome transformacija može prirodno da se odvija.',
+
       pillar1Title: 'Individualne sesije',
-      pillar1Desc: 'Rad jedan na jedan za lične prelaze, samootkrivanje i pronalaženje jasnoće u trenucima promene.',
+      pillar1Desc:
+        'Rad jedan na jedan za lične prelaze, samootkrivanje i pronalaženje jasnoće u trenucima promene.',
       pillar2Title: 'Grupni procesi',
-      pillar2Desc: 'Iskustvene radionice i grupna facilitacija, uključujući Soul Theater i transformativni grupni rad.',
+      pillar2Desc:
+        'Iskustvene radionice i grupna facilitacija, uključujući Soul Theater i transformativni grupni rad.',
       pillar3Title: 'Zvučna iskustva uživo',
-      pillar3Desc: 'Prostori koji spajaju zvuk, ritualne elemente i telesnu svesnost radi dublje integracije.',
-      pillar1Question: 'Da li osećaš da si zaglavljen/a u starim obrascima? Tražiš li jasnoću u trenutku promene?',
-      pillar2Question: 'Da li tvoja zajednica ili tim prolazi kroz transformaciju? Tražiš li prostor za kolektivno istraživanje?',
-      pillar3Question: 'Da li osećaš da reči nisu dovoljne? Tražiš li dublji jezik — kroz telo, zvuk i simbol?',
+      pillar3Desc:
+        'Prostori koji spajaju zvuk, ritualne elemente i telesnu svesnost radi dublje integracije.',
+
+      pillar1Question:
+        'Da li osećaš da si zaglavljen/a u starim obrascima? Tražiš li jasnoću u trenutku promene?',
+      pillar2Question:
+        'Da li tvoja zajednica ili tim prolazi kroz transformaciju? Tražiš li prostor za kolektivno istraživanje?',
+      pillar3Question:
+        'Da li osećaš da reči nisu dovoljne? Tražiš li dublji jezik — kroz telo, zvuk i simbol?',
+
       offerings: 'Ponuda',
       offering1: 'Individualne sesije',
       offering1Sub: 'Privatan transformativni rad',
@@ -544,114 +554,105 @@ eventGroupValue: 'up to 15 participants',
       offering3Sub: 'Imerzivna telesna putovanja',
       offering4: 'Prilagođena facilitacija',
       offering4Sub: 'Procesi prilagođeni organizacijama',
-      ready: 'Spremni za istraživanje?',
-      inviteText: 'Bilo da ste na raskršću, tražite jasnoću ili ste spremni za transformaciju, postoji put napred. Hajde da ga istražimo zajedno.',
+
+      ready: 'Kada je nešto u tebi spremno da bude saslušano',
+      inviteText:
+        'Ne moraš unapred da znaš tačno šta ti treba. Dovoljno je da postoji osećaj da nešto u tebi traži pažnju, prostor i istinitiji odnos.',
+      cta: 'Piši mi',
+
       subline: 'Individualni rad, grupno istraživanje i zvučna iskustva.',
       toolsTitle: 'Zvučni i simbolički alati',
-      toolsText: 'U svom radu koristim instrumente i simboličke objekte koji podržavaju proces transformacije. Zvučne činije, bubnjevi i ritualni elementi stvaraju prostor u kome može da se pojavi dublja svesnost.',
+      toolsText:
+        'U svom radu koristim instrumente i simboličke objekte koji podržavaju proces transformacije. Zvučne činije, bubnjevi i ritualni elementi stvaraju prostor u kome može da se pojavi dublja svesnost.',
+
       zoomTitle: 'Za voditelje grupa',
-      zoomText: 'Zoom Maestra podržava facilitatore, edukatore i terapeute koji žele da rade online sa više lakoće, manje tehničkog stresa i više osećaja toka.',
+      zoomText:
+        'Zoom Maestra podržava facilitatore, edukatore i terapeute koji žele da rade online sa više lakoće, manje tehničkog stresa i više osećaja toka.',
       zoomButton: 'Istraži Zoom Maestru',
       ctaSubject: 'Upit za Zoom Maestru',
+
       recognitionLabel: 'Možda ste ovde jer...',
       recognitionItems: [
-     {
-    title: 'Nalazite se u životnom prelazu',
-    text: 'i stari način funkcionisanja više ne radi.',
-     },
-      {
-    title: 'Osećate da držite previše toga predugo',
-    text: 'bez prostora da zaista stanete.',
-     },
-     {
-    title: 'Tražite drugačiji odnos prema sebi',
-    text: 'ne još jedan pokušaj da se „popravite“.',
-     },
-     {
-    title: 'Želite prostor u kome ne morate odmah da znate',
-    text: 'šta dalje.',
-      },
-      {
-    title: 'Radite sa ljudima',
-    text: 'i osećate da vam je potreban dublji kontakt sa sopstvenim impulsom, telom i prisustvom.',
-     },
-    ],
-  
-    encounterLabel: 'Encounter',
-    encounterTitle1: 'Ne novo ja.',
-    encounterTitle2: 'Drugačiji odnos prema istom ja.',
-    encounterBlock1Title: 'Neka iskustva postaju jasnija tek kada ih sretnemo.',
-    encounterBlock1Text: 'Ne samo kroz razgovor, već kroz odnos, akciju, telo, simbol i prisustvo drugih ljudi.',
-    encounterBlock2Title: 'Iskustvo ne mora odmah da bude objašnjeno da bi bilo stvarno.',
-    encounterBlock2Text: 'U radu obraćamo pažnju na ono što se formira između impulsa, akcije, unutrašnjeg života i odnosa sa drugima.',
-    encounterBlock3Title: 'Ponekad osoba prvi put primeti sopstveni impuls tek kada ga vidi odigranog ispred sebe.',
-    methodLabel: 'Kako radim',
-    methodTitle: 'Psihologija, akcija, telo i grupni proces.',
-    methodIntro: 'Moj rad kombinuje psihologiju, psihodramske i akcione metode, telo, simbol, pokret i iskustveni grupni rad.',
-    method1Title: 'Psihologija',
-    method1Text: 'Unutrašnji život ne posmatramo kao problem koji treba brzo rešiti, već kao prostor koji može postati čitljiviji.',
-    method2Title: 'Psihodramske i akcione metode',
-    method2Text: 'Neka iskustva postaju jasna tek kada ih vidimo, odigramo ili sretnemo iz druge perspektive.',
-    method3Title: 'Telo i pokret',
-    method3Text: 'Telo često registruje promenu pre nego što je um ume objasniti.',
-    method4Title: 'Simbolički rad',
-    method4Text: 'Slike, uloge, metafore i unutrašnje scene ponekad nose više informacija od objašnjenja.',
-    method5Title: 'Grupni proces',
-    method5Text: 'Odnos sa drugima često postaje prostor u kome prvi put vidimo sopstvene obrasce, impulse i granice.',
-    spacesLabel: 'Prostori rada',
-    spacesTitle: 'Različiti formati rada za različite faze procesa.',
-    space1Title: 'Individualni susreti',
-    space1Text1: 'Rad jedan na jedan kroz razgovor, simbol, telo i iskustveno istraživanje.',
-    space1Text2: 'Za periode tranzicije, preplavljenosti, unutrašnjih konflikata ili potrebe za jasnijim kontaktom sa sobom.',
-    space2Title: 'Radionice i grupni prostori',
-    space2Text: 'Online i uživo susreti u kojima se iskustvo istražuje kroz encounter, akciju, grupni proces i simbolički rad.',
-    space3Title: 'Praksa tišine',
-    space3Text:  'Istraživanje pažnje, stimulacije, nervnog sistema i odnosa prema unutrašnjem ritmu kroz pisanje, praksu i iskustvene procese.',
-    credibility: 'Master psihologije • 15+ godina iskustva u grupnom radu • psihodrama • fizički teatar • Tele\'Drama • međunarodni online i uživo procesi',
-    silenceLabel: 'Praksa tišine',
-    silenceTitle: 'Istraživanje tišine, pažnje i nervnog sistema u realnom vremenu.',
-    silenceText: 'Tromesečni proces pripreme za deset dana tišine — dokumentovan kroz beleške, telo i psihološko posmatranje.',
-},
-    silencePractice: {
-       label: 'Praksa tišine',
-      heroTitle: 'Tišina nije odsustvo zvuka.',
-      heroTitleEm: 'Već prisustvo sebe.',
-      heroSubtitle:
-    'Istraživanje pažnje, tela, stimulacije i nervnog sistema tokom tri meseca pripreme za deset dana tišine.',
-  cta: 'Čitaj zapise',
-  experimentLabel: 'Eksperiment u realnom vremenu',
-experimentText1:
-  'Pripremam se za deset dana tišine.',
-experimentText2:
-  'Bez telefona. Bez govora. Bez pisanja. Bez nikotina.',
-experimentText3:
-  'Ova stranica beleži šta se događa pre nego što se taj prag pređe.',
-  fieldNotesLabel: 'Zapisi iz procesa',
-fieldNotesTitle: 'Zapisi sa praga.',
+        {
+          title: 'Nalazite se na unutrašnjem pragu',
+          text: 'i stari način funkcionisanja više ne deluje istinito.',
+        },
+        {
+          title: 'Osećate da držite previše toga predugo',
+          text: 'bez dovoljno prostora da stanete, osetite i čujete sebe.',
+        },
+        {
+          title: 'Tražite drugačiji odnos prema sebi',
+          text: 'ne još jedan pokušaj da se popravite.',
+        },
+        {
+          title: 'Želite prostor u kome ne morate odmah da znate',
+          text: 'šta dalje.',
+        },
+        {
+          title: 'Osećate da nešto u vama traži oblik',
+          text: 'reč, gest, granicu, glas, pravac ili istinitije mesto u vašem životu.',
+        },
+      ],
 
-fieldNotes: [
-  {
-    number: '01',
-    title:
-      'Telo mnogo brže traži stimulaciju nego što sam mislila.',
-    text:
-      'Primećujem koliko brzo tišina postaje neprijatna. Ne dramatična tišina. Samo odsustvo prekida.',
-  },
-  {
-    number: '02',
-    title:
-      'Nikotin nije samo zavisnost. On je ritam.',
-    text:
-      'Određeni delovi dana kao da se raspadaju bez njega. Telo nastavlja da traži interpunkciju.',
-  },
-  {
-    number: '03',
-    title: 'Pažnja ima težinu.',
-    text:
-      'Ono čemu se stalno vraćamo polako postaje arhitektura nervnog sistema.',
-  },
-],
-},
+      encounterLabel: 'Na pragu',
+      encounterTitle1: 'Ne novo ja.',
+      encounterTitle2: 'Drugačiji odnos prema istom ja.',
+      encounterBlock1Title:
+        'Neka iskustva postaju jasnija tek kada postoji dovoljno sigurnosti da ih sretnemo.',
+      encounterBlock1Text:
+        'Ne samo kroz razgovor, već kroz odnos, akciju, telo, simbol, tišinu i prisustvo druge osobe ili grupe.',
+      encounterBlock2Title:
+        'Iskustvo ne mora odmah da bude objašnjeno da bi bilo stvarno.',
+      encounterBlock2Text:
+        'U radu obraćamo pažnju na ono što se formira između impulsa, akcije, unutrašnjeg života, tela, slike i odnosa sa drugima.',
+      encounterBlock3Title:
+        'Ponekad osoba prvi put primeti sopstvenu istinu tek kada ona dobije prostor, glas, pokret ili oblik.',
+
+      methodLabel: 'Kako radimo u ovom prostoru',
+      methodTitle: 'Razgovor, telo, simbol, akcija i tišina.',
+      methodIntro:
+        'Rad u Tihoj Psihi spaja psihološku refleksiju, iskustvene metode, simboličko istraživanje, telesnu svesnost, pokret, ulogu, grupni proces i pažljivo praćenje onoga što je stvarno prisutno.',
+
+      method1Title: 'Psihologija',
+      method1Text:
+        'Unutrašnji život ne posmatramo kao problem koji treba brzo rešiti, već kao prostor koji polako može postati čitljiviji.',
+      method2Title: 'Akcione metode',
+      method2Text:
+        'Neka iskustva postaju jasnija tek kada ih vidimo, odigramo, postavimo u prostor ili sretnemo iz druge perspektive.',
+      method3Title: 'Telo i pokret',
+      method3Text:
+        'Telo često registruje istinu, napetost, strah, čežnju i promenu pre nego što ih um ume objasniti.',
+      method4Title: 'Simbolički rad',
+      method4Text:
+        'Slike, uloge, metafore, snovi i unutrašnje scene ponekad nose više informacija od objašnjenja.',
+      method5Title: 'Grupni proces',
+      method5Text:
+        'Odnos sa drugima može postati mesto na kome prvi put primećujemo sopstvene obrasce, impulse, granice i mogućnosti za nešto novo.',
+
+      spacesLabel: 'Staze kroz vrt',
+      spacesTitle: 'Različiti načini ulaska u rad.',
+      space1Title: 'Individualni susreti',
+      space1Text1:
+        'Rad jedan na jedan kroz razgovor, simbol, telo i iskustveno istraživanje.',
+      space1Text2:
+        'Za periode tranzicije, preplavljenosti, unutrašnjih konflikata, odluka, tuge, čežnje ili potrebe za jasnijim kontaktom sa sobom.',
+      space2Title: 'Radionice i grupni prostori',
+      space2Text:
+        'Online i uživo prostori u kojima unutrašnje iskustvo postaje vidljivo kroz susret, akciju, ulogu, grupni proces i simbolički rad.',
+      space3Title: 'Praksa tišine',
+      space3Text:
+        'Istraživanje pažnje, stimulacije, nervnog sistema i odnosa prema unutrašnjem ritmu kroz pisanje, praksu i iskustvene procese.',
+
+      credibility:
+        'Master psihologije • 15+ godina iskustva u grupnom radu • psihodramski informisan rad • fizički teatar • Tele\'Drama • međunarodni online i uživo procesi',
+
+      silenceLabel: 'Praksa tišine',
+      silenceTitle: 'Tiha staza za pažnju, ritam i nervni sistem.',
+      silenceText:
+        'Istraživanje tišine, pažnje i pripreme za deset dana tišine u realnom vremenu — kroz beleške, telo i psihološko posmatranje.',
+      silenceBlockButton: 'Uđi u praksu',
+    },
     about: {
   eyebrow: 'O meni',
   heroTitle: 'Radim sa iskustvom, ne samo sa objašnjenjem.',

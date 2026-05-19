@@ -6,7 +6,82 @@ export default function SilencePracticePage({ language = "en" }) {
   const location = useLocation();
   const lang = location.pathname.startsWith("/sr") ? "sr" : language;
   const isSerbian = lang === "sr";
-  const content = translations[lang].silencePractice;
+
+  const fallbackContent = isSerbian
+    ? {
+        label: "Praksa tišine",
+        heroTitle: "Tišina nije odsustvo zvuka.",
+        heroTitleEm: "Već prisustvo sebe.",
+        heroSubtitle:
+          "Istraživanje pažnje, tela, stimulacije i nervnog sistema tokom pripreme za deset dana tišine.",
+        cta: "Čitaj zapise",
+        experimentLabel: "Eksperiment u realnom vremenu",
+        experimentText1: "Pripremam se za deset dana tišine.",
+        experimentText2: "Bez telefona. Bez govora. Bez pisanja. Bez nikotina.",
+        experimentText3:
+          "Ova stranica beleži šta se događa pre nego što se taj prag pređe.",
+        fieldNotesLabel: "Zapisi iz procesa",
+        fieldNotesTitle: "Zapisi sa praga.",
+        fieldNotes: [
+          {
+            number: "01",
+            title:
+              "Telo mnogo brže traži stimulaciju nego što sam mislila.",
+            text:
+              "Primećujem koliko brzo tišina postaje neprijatna. Ne dramatična tišina. Samo odsustvo prekida.",
+          },
+          {
+            number: "02",
+            title: "Nikotin nije samo zavisnost. On je ritam.",
+            text:
+              "Određeni delovi dana kao da se raspadaju bez njega. Telo nastavlja da traži interpunkciju.",
+          },
+          {
+            number: "03",
+            title: "Pažnja ima težinu.",
+            text:
+              "Ono čemu se stalno vraćamo polako postaje arhitektura nervnog sistema.",
+          },
+        ],
+      }
+    : {
+        label: "The Practice of Silence",
+        heroTitle: "Silence is not the absence of sound.",
+        heroTitleEm: "It is the presence of yourself.",
+        heroSubtitle:
+          "A real-time exploration of attention, embodiment, stimulation, and the nervous system during preparation for ten days of silence.",
+        cta: "Read field notes",
+        experimentLabel: "Real-Time Experiment",
+        experimentText1: "I am preparing for ten days of silence.",
+        experimentText2: "No phone. No speaking. No writing. No nicotine.",
+        experimentText3:
+          "This page documents what happens before that threshold is crossed.",
+        fieldNotesLabel: "Field Notes",
+        fieldNotesTitle: "Notes from the threshold.",
+        fieldNotes: [
+          {
+            number: "01",
+            title:
+              "The body reaches for stimulation faster than I thought.",
+            text:
+              "I notice how quickly silence becomes uncomfortable. Not dramatic silence. Just the absence of interruption.",
+          },
+          {
+            number: "02",
+            title: "Nicotine is not only addiction. It is rhythm.",
+            text:
+              "Certain moments of the day seem to collapse without it. The body keeps searching for punctuation.",
+          },
+          {
+            number: "03",
+            title: "Attention has weight.",
+            text:
+              "What we repeatedly return to slowly becomes the architecture of the nervous system.",
+          },
+        ],
+      };
+
+  const content = translations[lang]?.silencePractice || fallbackContent;
 
   return (
     <>
