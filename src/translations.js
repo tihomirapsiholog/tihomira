@@ -149,37 +149,37 @@ const translations = {
     },
    about: {
   eyebrow: 'About',
-  heroTitle: 'I work with experience, not only with explanation.',
+  heroTitle: 'I hold spaces where inner life can become visible without being forced.',
   heroIntro:
-    'My name is Tihomira Stanojević. I am a psychologist, facilitator and experiential practitioner working at the intersection of psychology, group process, psychodrama-informed methods, embodiment, symbolic exploration and sound.',
+    'My name is Tihomira Stanojević. I am a psychologist, facilitator and experiential practitioner. Tiha Psiha grew from psychology, group work, psychodrama-informed methods, body-based and symbolic exploration, sound, online spaces, and years of learning how people begin to appear more truthfully when they no longer have to be fixed.',
   heroIntro2:
-    'Through Tiha Psiha, I offer psychology-informed spaces for individual work, small experiential workshops and in-person sound experiences. The work is grounded, relational and attentive to what becomes visible when experience is given enough space.',
-  identityLabel: 'Professional identity',
-  identityTitle: 'Psychologist, facilitator, experiential practitioner.',
+    'I work with experience as it actually appears — through words, silence, body, image, role, rhythm, relationship and the small signals that often arrive before a clear explanation.',
+  identityLabel: 'Who holds the space',
+  identityTitle: 'Psychologist, facilitator, practitioner of experiential work.',
   identityText:
-    'I hold a master’s degree in psychology and have more than fifteen years of experience with group work, experiential learning and action-based methods. My work has developed through psychodrama, Psychodramatic Bodywork®, physical theatre, Tele’Drama, symbolic process, online facilitation and sound-based experiential spaces.',
+    'I hold a master’s degree in psychology and have more than fifteen years of experience with groups, experiential learning and action-based methods. My work has been shaped by psychodrama, Psychodramatic Bodywork®, physical theatre, Tele’Drama, symbolic process, online facilitation and sound-based spaces.',
   identityNote:
-    'I name my background honestly: psychodrama and related experiential methods deeply inform my work, while Tiha Psiha itself is not presented as psychotherapy or as a certified psychodrama practice.',
+    'I name my background honestly: psychodrama and related experiential methods deeply inform my work, while Tiha Psiha is not presented as psychotherapy or as a certified psychodrama practice.',
   foundationsLabel: 'What shapes the work',
-  foundationsTitle: 'A grounded experiential approach.',
+  foundationsTitle: 'A grounded space for experience, symbol and relationship.',
   foundationsIntro:
-    'The work brings together psychological reflection, action methods, body awareness, symbolic process and group intelligence.',
+    'The work often begins with words, but it does not stay only in words. Sometimes the body knows before the mind can explain. Sometimes an image, role, movement or relationship shows what a sentence cannot yet hold.',
   foundation1Title: 'Psychology',
   foundation1Text:
-    'Psychology gives the work a grounded frame: attention to inner life, patterns, relationships, developmental processes and the complexity of human experience.',
+    'Psychology gives the work a grounded frame: attention to inner life, patterns, relationships, development, boundaries, emotions and the complexity of human experience.',
   foundation2Title: 'Group process',
   foundation2Text:
-    'Groups have their own intelligence. I have spent years learning how to hold spaces where people can meet themselves through others, through witnessing, resonance and shared process.',
+    'Groups can reveal what remains hidden in isolation. Through witnessing, resonance and encounter, people often begin to see their own impulses, limits and possibilities more clearly.',
   foundation3Title: 'Body, sound and symbol',
   foundation3Text:
-    'Some experiences do not become clear through words alone. Movement, image, rhythm, sound and symbolic action often reveal what explanation cannot reach.',
-  foundation4Title: 'International and online spaces',
+    'Some experiences do not become clear through explanation alone. Movement, image, rhythm, sound and symbolic action can give form to what has been quiet, blurred or difficult to name.',
+  foundation4Title: 'Crossings and online spaces',
   foundation4Text:
-    'Living and working across different cultural contexts, and supporting international online groups, has shaped the way I understand belonging, transition, identity and presence.',
+    'Living across cultures and working with international online groups taught me to listen for belonging, dislocation, transition and the subtle ways people search for safety and presence.',
   trainingLabel: 'Training and experience',
-  trainingTitle: 'Formal grounding, honestly stated.',
+  trainingTitle: 'Formal grounding, clearly named.',
   trainingIntro:
-    'My professional background combines formal psychology education with long-term experiential training and many years of practice in group and online spaces.',
+    'The space is soft, but it is not vague. It is held by formal psychological education, long-term experiential training and years of work with groups, online processes and embodied practice.',
   trainingItem1:
     'Undergraduate and master studies in psychology at the University of Novi Sad.',
   trainingItem2:
@@ -193,28 +193,28 @@ const translations = {
   trainingItem6:
     'More than fifteen years of work with groups in educational, psychodramatic, creative, ecological, online and hybrid contexts.',
   experienceLabel: 'Lived experience',
-  experienceTitle: 'The work was shaped across places.',
+  experienceTitle: 'The work was shaped through thresholds.',
   experienceText:
-    'I have lived and worked across different cultural contexts, including Serbia, China, Ecuador, India, Malta, Slovenia, Russia and Spain. These crossings changed how I understand transition, belonging, identity and the body’s need for safety.',
+    'I have lived and worked across different cultural contexts, including Serbia, China, Ecuador, India, Malta, Slovenia, Russia and Spain. These crossings changed how I understand transition, belonging, identity, loss of familiar ground and the body’s need for safety.',
   experienceText2:
-    'Sound also entered gradually. Instruments gathered through different places became part of the way I work with attention, rhythm, atmosphere and embodied presence.',
+    'Sound entered gradually, through instruments gathered in different places and through the need to listen beyond language. It became part of the way I work with attention, rhythm, atmosphere and embodied presence.',
   storyLabel: 'A shorter story',
   storyTitle: 'Not a linear path.',
   storyIntro:
-    'The longer personal story belongs to another space. Here, I keep only the threads that directly shape the work.',
+    'The longer personal story belongs to another space. Here, I keep only the threads that directly shape the way I hold Tiha Psiha.',
   story1Title: 'Listening before speaking',
   story1Text:
-    'Volunteering at Centar Srce in Novi Sad taught me the discipline of listening before offering interpretation, advice or direction.',
+    'Volunteering at Centar Srce in Novi Sad taught me the discipline of listening before interpretation, advice or direction. It shaped my respect for what appears when someone is not interrupted.',
   story2Title: 'Online space became real space',
   story2Text:
-    'Through Tele’Drama and international online groups, I learned that online work can hold presence, action, intimacy and group process when the structure is clear.',
+    'Through Tele’Drama and international online groups, I learned that online work can hold presence, action, intimacy and group process when the structure is clear and the attention is real.',
   story3Title: 'Crossroads became practice',
   story3Text:
-    'Periods of relocation, return, loss, uncertainty and reinvention taught me that transition is not a problem to rush through, but a threshold that asks for presence.',
+    'Relocations, returns, uncertainty and reinvention taught me that transition is not something to rush through. It is a threshold that asks for attention, patience and a different relationship to oneself.',
   ctaWork: 'Work with me',
   ctaContact: 'Get in touch',
   closingQuote:
-    'I do not lead people to destinations. I help them find their path.',
+    'I do not lead people to destinations. I help them listen for the path that is already beginning to form.',
   closingButton: 'Explore ways of working',
 },
     work: {
@@ -655,37 +655,37 @@ eventGroupValue: 'up to 15 participants',
     },
     about: {
   eyebrow: 'O meni',
-  heroTitle: 'Radim sa iskustvom, ne samo sa objašnjenjem.',
+  heroTitle: 'Držim prostore u kojima unutrašnji život može da postane vidljiv bez pritiska i sile.',
   heroIntro:
-    'Zovem se Tihomira Stanojević. Master sam psihologije, facilitator i praktičarka iskustvenog rada na preseku psihologije, grupnog procesa, psihodramski informisanih metoda, embodimenta, simboličkog istraživanja i zvuka.',
+    'Zovem se Tihomira Stanojević. Master sam psihologije, facilitator i praktičarka iskustvenog rada. Tiha Psiha je nastala iz psihologije, grupnog rada, psihodramski informisanih metoda, telesnog i simboličkog istraživanja, zvuka, online prostora i godina učenja o tome kako se čovek pojavljuje istinitije kada više ne mora da bude popravljen.',
   heroIntro2:
-    'Kroz Tihu Psihu nudim psihološki utemeljene prostore za individualni rad, male iskustvene radionice i zvučna iskustva uživo. Rad je prizemljen, odnosan i usmeren na ono što postaje vidljivo kada iskustvo dobije dovoljno prostora.',
-  identityLabel: 'Profesionalni identitet',
+    'Radim sa iskustvom onako kako se ono zaista pojavljuje — kroz reči, tišinu, telo, sliku, ulogu, ritam, odnos i male signale koji često dođu pre jasnog objašnjenja.',
+  identityLabel: 'Ko drži prostor',
   identityTitle: 'Psiholog, facilitator, praktičarka iskustvenog rada.',
   identityText:
-    'Imam master diplomu iz psihologije i više od petnaest godina iskustva u grupnom radu, iskustvenom učenju i akcionim metodama. Moj rad se razvijao kroz psihodramu, Psychodramatic Bodywork®, fizički teatar, Tele’Dramu, simbolički proces, online facilitaciju i zvučne iskustvene prostore.',
+    'Imam master diplomu iz psihologije i više od petnaest godina iskustva u grupnom radu, iskustvenom učenju i akcionim metodama. Moj rad se oblikovao kroz psihodramu, Psychodramatic Bodywork®, fizički teatar, Tele’Dramu, simbolički proces, online facilitaciju i zvučne iskustvene prostore.',
   identityNote:
     'Svoju pozadinu navodim iskreno: psihodrama i srodne iskustvene metode duboko informišu moj rad, ali Tiha Psiha nije predstavljena kao psihoterapija niti kao sertifikovana psihodramska praksa.',
   foundationsLabel: 'Šta oblikuje rad',
-  foundationsTitle: 'Prizemljen iskustveni pristup.',
+  foundationsTitle: 'Prizemljen prostor za iskustvo, simbol i odnos.',
   foundationsIntro:
-    'Rad spaja psihološku refleksiju, akcione metode, telesnu svesnost, simbolički proces i grupnu inteligenciju.',
+    'Rad često počinje od reči, ali ne ostaje samo u rečima. Nekad telo zna pre nego što um ume da objasni. Nekad slika, uloga, pokret ili odnos pokažu ono što rečenica još ne može da nosi.',
   foundation1Title: 'Psihologija',
   foundation1Text:
-    'Psihologija daje radu stabilan okvir: pažnju prema unutrašnjem životu, obrascima, odnosima, razvojnim procesima i složenosti ljudskog iskustva.',
+    'Psihologija daje radu stabilan okvir: pažnju prema unutrašnjem životu, obrascima, odnosima, razvoju, granicama, emocijama i složenosti ljudskog iskustva.',
   foundation2Title: 'Grupni proces',
   foundation2Text:
-    'Grupe imaju sopstvenu inteligenciju. Godinama učim kako se drži prostor u kome ljudi mogu da sretnu sebe kroz druge, kroz svedočenje, rezonancu i zajednički proces.',
+    'Grupa može da pokaže ono što u samoći ostaje skriveno. Kroz svedočenje, rezonancu i susret, osoba često jasnije vidi sopstvene impulse, granice i mogućnosti.',
   foundation3Title: 'Telo, zvuk i simbol',
   foundation3Text:
-    'Neka iskustva se ne razjasne samo kroz reči. Pokret, slika, ritam, zvuk i simbolička akcija često pokažu ono do čega objašnjenje ne može da dopre.',
-  foundation4Title: 'Međunarodni i online prostori',
+    'Neka iskustva se ne razjasne samo kroz objašnjenje. Pokret, slika, ritam, zvuk i simbolička akcija mogu da daju oblik onome što je bilo tiho, mutno ili teško imenovati.',
+  foundation4Title: 'Prelazi i online prostori',
   foundation4Text:
-    'Život i rad u različitim kulturnim kontekstima, kao i podrška međunarodnim online grupama, oblikovali su moj odnos prema pripadanju, tranziciji, identitetu i prisustvu.',
+    'Život u različitim kulturama i rad sa međunarodnim online grupama naučili su me da slušam pripadanje, izmeštenost, tranziciju i suptilne načine na koje ljudi traže sigurnost i prisustvo.',
   trainingLabel: 'Obuka i iskustvo',
-  trainingTitle: 'Formalno utemeljenje, iskreno navedeno.',
+  trainingTitle: 'Formalno utemeljenje, jasno navedeno.',
   trainingIntro:
-    'Moja profesionalna pozadina spaja formalno psihološko obrazovanje, dugogodišnju iskustvenu obuku i višegodišnji rad u grupnim i online prostorima.',
+    'Prostor je mekan, ali nije nejasan. Drži ga formalno psihološko obrazovanje, dugogodišnja iskustvena obuka i godine rada sa grupama, online procesima i telesnom praksom.',
   trainingItem1:
     'Osnovne i master studije psihologije na Univerzitetu u Novom Sadu.',
   trainingItem2:
@@ -699,28 +699,28 @@ eventGroupValue: 'up to 15 participants',
   trainingItem6:
     'Više od petnaest godina rada sa grupama u edukativnim, psihodramskim, kreativnim, ekološkim, online i hibridnim kontekstima.',
   experienceLabel: 'Životno iskustvo',
-  experienceTitle: 'Rad se oblikovao kroz različita mesta.',
+  experienceTitle: 'Rad se oblikovao kroz pragove.',
   experienceText:
-    'Živela sam i radila u različitim kulturnim kontekstima, uključujući Srbiju, Kinu, Ekvador, Indiju, Maltu, Sloveniju, Rusiju i Španiju. Ti prelazi su promenili način na koji razumem tranziciju, pripadanje, identitet i potrebu tela za sigurnošću.',
+    'Živela sam i radila u različitim kulturnim kontekstima, uključujući Srbiju, Kinu, Ekvador, Indiju, Maltu, Sloveniju, Rusiju i Španiju. Ti prelazi su promenili način na koji razumem tranziciju, pripadanje, identitet, gubitak poznatog okvira i potrebu tela za sigurnošću.',
   experienceText2:
-    'Zvuk je u moj rad ušao postepeno. Instrumenti sakupljeni kroz različita mesta postali su deo načina na koji radim sa pažnjom, ritmom, atmosferom i telesnim prisustvom.',
+    'Zvuk je ušao postepeno, kroz instrumente sakupljene na različitim mestima i kroz potrebu da se sluša dublje od jezika. Postao je deo načina na koji radim sa pažnjom, ritmom, atmosferom i telesnim prisustvom.',
   storyLabel: 'Kraća priča',
   storyTitle: 'Put nije bio linearan.',
   storyIntro:
-    'Duža lična priča pripada drugom prostoru. Ovde ostavljam samo niti koje direktno oblikuju rad.',
+    'Duža lična priča pripada drugom prostoru. Ovde ostavljam samo niti koje direktno oblikuju način na koji držim Tihu Psihu.',
   story1Title: 'Slušanje pre govora',
   story1Text:
-    'Volontiranje u Centru Srce u Novom Sadu naučilo me je disciplini slušanja pre interpretacije, saveta ili usmeravanja.',
+    'Volontiranje u Centru Srce u Novom Sadu naučilo me je disciplini slušanja pre interpretacije, saveta ili usmeravanja. Oblikovalo je moje poštovanje prema onome što se pojavi kada osoba nije prekinuta.',
   story2Title: 'Online prostor je postao stvaran prostor',
   story2Text:
-    'Kroz Tele’Dramu i međunarodne online grupe naučila sam da online rad može da nosi prisustvo, akciju, bliskost i grupni proces kada je struktura jasna.',
+    'Kroz Tele’Dramu i međunarodne online grupe naučila sam da online rad može da nosi prisustvo, akciju, bliskost i grupni proces kada je struktura jasna, a pažnja stvarna.',
   story3Title: 'Raskršća su postala praksa',
   story3Text:
-    'Periodi selidbi, povrataka, gubitaka, neizvesnosti i ponovnog stvaranja naučili su me da tranzicija nije problem koji treba pretrčati, već prag koji traži prisustvo.',
+    'Selidbe, povratci, neizvesnost i ponovno stvaranje naučili su me da tranzicija nije nešto što treba pretrčati. To je prag koji traži pažnju, strpljenje i drugačiji odnos prema sebi.',
   ctaWork: 'Rad sa mnom',
   ctaContact: 'Javi se',
   closingQuote:
-    'Ne vodim ljude ka destinacijama. Pomažem im da pronađu svoj put.',
+    'Ne vodim ljude ka destinacijama. Pomažem im da oslušnu put koji već počinje da se oblikuje.',
   closingButton: 'Istraži načine rada',
 },
 
