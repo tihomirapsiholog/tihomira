@@ -152,11 +152,12 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
     },
   ];
 
- const goToSilencePractice = () => {
-  window.location.href =
-    language === 'sr'
-      ? '/sr/praksa-tisine'
-      : '/en/silence-practice';
+const goToSilencePractice = () => {
+  const isSerbianPage = window.location.pathname.startsWith('/sr');
+
+  window.location.href = isSerbianPage
+    ? '/sr/praksa-tisine'
+    : '/en/silence-practice';
 };
 
   return (
