@@ -102,6 +102,11 @@ export default function PrivacyPolicyPage({ language = 'en' }) {
                     od neželjenih poruka, uključujući honeypot polje koje nije
                     vidljivo korisnicima.
                   </p>
+                  <p className="mt-4">
+                  Poruke poslate kroz kontakt formu mogu biti obrađene putem
+                  pouzdanih servisa treće strane koji služe za bezbednu
+                  isporuku formi i komunikaciju.
+                  </p>
                 </section>
 
                 <section>
@@ -131,8 +136,9 @@ export default function PrivacyPolicyPage({ language = 'en' }) {
                     Kontakt
                   </h2>
                   <p>
-                    Za pitanja u vezi sa privatnošću možete me kontaktirati
-                    putem kontakt forme na sajtu.
+                   Za pitanja u vezi sa privatnošću možete me kontaktirati
+                    putem kontakt forme na sajtu ili putem email adrese
+                    tihomira.psiholog@gmail.com.
                   </p>
                 </section>
 
@@ -203,6 +209,11 @@ export default function PrivacyPolicyPage({ language = 'en' }) {
                     measures, including a honeypot field that is not visible to
                     users.
                   </p>
+                  <p className="mt-4">
+                  Messages sent through the contact form may be processed
+                  through trusted third-party services used for secure form
+                  delivery and communication.
+                  </p>
                 </section>
 
                 <section>
@@ -233,7 +244,8 @@ export default function PrivacyPolicyPage({ language = 'en' }) {
                   </h2>
                   <p>
                     For privacy-related questions, you can contact me through
-                    the contact form on this website.
+                    the contact form on this website or via email at
+                      tihomira.psiholog@gmail.com.
                   </p>
                 </section>
 
