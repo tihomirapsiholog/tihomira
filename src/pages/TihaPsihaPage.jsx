@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
   const [scrollY, setScrollY] = useState(0);
 
-  const fadeUpStyle = `
+  const gardenStyle = `
     .reveal {
       opacity: 0;
       transform: translateY(24px);
@@ -23,11 +23,11 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
       pointer-events: none;
       background: radial-gradient(
         620px circle at var(--x, 50%) var(--y, 50%),
-        rgba(215, 181, 109, 0.16),
+        rgba(244, 205, 126, 0.18),
         transparent 62%
       );
       transition: background 0.18s ease;
-      z-index: 1;
+      z-index: 2;
     }
 
     @keyframes softFade {
@@ -54,17 +54,216 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
 
     @keyframes gardenBreath {
       0%, 100% {
-        opacity: 0.35;
+        opacity: 0.45;
         transform: scaleX(1);
       }
       50% {
-        opacity: 0.85;
-        transform: scaleX(1.12);
+        opacity: 0.9;
+        transform: scaleX(1.08);
       }
     }
 
-    .garden-divider {
-      animation: gardenBreath 5s ease-in-out infinite;
+    .engraved-divider {
+      position: relative;
+      height: 1px;
+      width: 190px;
+      margin-left: auto;
+      margin-right: auto;
+      background: linear-gradient(90deg, transparent, rgba(244, 205, 126, 0.74), transparent);
+      animation: gardenBreath 5.6s ease-in-out infinite;
+    }
+
+    .engraved-divider::before,
+    .engraved-divider::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 7px;
+      height: 7px;
+      border: 1px solid rgba(244, 205, 126, 0.58);
+      transform: translateY(-50%) rotate(45deg);
+      background: rgba(11, 18, 32, 0.86);
+    }
+
+    .engraved-divider::before {
+      left: 33px;
+    }
+
+    .engraved-divider::after {
+      right: 33px;
+    }
+
+    .garden-atmosphere {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(244, 205, 126, 0.12), transparent 28%),
+        radial-gradient(circle at 83% 18%, rgba(114, 142, 72, 0.20), transparent 34%),
+        radial-gradient(circle at 18% 76%, rgba(154, 82, 66, 0.10), transparent 28%),
+        radial-gradient(circle at 78% 82%, rgba(56, 97, 67, 0.22), transparent 32%);
+    }
+
+    .garden-texture {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.10;
+      mix-blend-mode: overlay;
+      background-image:
+        radial-gradient(circle at 1px 1px, rgba(255, 244, 214, 0.65) 1px, transparent 0),
+        linear-gradient(120deg, transparent 0%, rgba(244, 205, 126, 0.12) 1px, transparent 2px);
+      background-size: 18px 18px, 42px 42px;
+    }
+
+    .leaf-shadow {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.16;
+      mix-blend-mode: screen;
+      background:
+        radial-gradient(ellipse at 22% 16%, rgba(137, 163, 90, 0.28), transparent 18%),
+        radial-gradient(ellipse at 31% 22%, rgba(137, 163, 90, 0.22), transparent 14%),
+        radial-gradient(ellipse at 72% 12%, rgba(137, 163, 90, 0.24), transparent 18%),
+        radial-gradient(ellipse at 84% 35%, rgba(137, 163, 90, 0.20), transparent 16%),
+        radial-gradient(ellipse at 18% 82%, rgba(137, 163, 90, 0.22), transparent 18%),
+        radial-gradient(ellipse at 78% 78%, rgba(137, 163, 90, 0.25), transparent 20%);
+      filter: blur(1px);
+    }
+
+    .candle-halo {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 9999px;
+      pointer-events: none;
+      background:
+        radial-gradient(circle, rgba(244, 205, 126, 0.18) 0%, rgba(215, 181, 109, 0.08) 34%, transparent 68%);
+      filter: blur(12px);
+      opacity: 0.74;
+    }
+
+    .botanical-corner {
+      position: absolute;
+      width: 145px;
+      height: 145px;
+      pointer-events: none;
+      opacity: 0.20;
+      background:
+        radial-gradient(ellipse at center, transparent 38%, rgba(215, 181, 109, 0.22) 39%, transparent 42%),
+        linear-gradient(135deg, transparent 44%, rgba(215, 181, 109, 0.28) 45%, transparent 47%);
+      mask-image: radial-gradient(circle at center, black 0%, transparent 72%);
+    }
+
+    .botanical-corner::before,
+    .botanical-corner::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(215, 181, 109, 0.55);
+      border-left: 0;
+      border-bottom: 0;
+      border-radius: 999px 999px 0 0;
+      transform: rotate(-35deg);
+    }
+
+    .botanical-corner::before {
+      width: 68px;
+      height: 34px;
+      top: 38px;
+      left: 28px;
+    }
+
+    .botanical-corner::after {
+      width: 46px;
+      height: 24px;
+      top: 68px;
+      left: 60px;
+      opacity: 0.75;
+    }
+
+    .etched-panel {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .etched-panel::before {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border: 1px solid rgba(244, 205, 126, 0.14);
+      border-radius: inherit;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .etched-panel::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(244, 205, 126, 0.085), transparent 24%),
+        radial-gradient(circle at 84% 88%, rgba(95, 113, 80, 0.12), transparent 28%),
+        linear-gradient(135deg, rgba(255,255,255,0.035), transparent 42%);
+      opacity: 0.95;
+      z-index: 0;
+    }
+
+    .etched-panel > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .stone-path {
+      position: absolute;
+      left: 50%;
+      bottom: -5%;
+      width: 620px;
+      height: 220px;
+      transform: translateX(-50%);
+      pointer-events: none;
+      opacity: 0.18;
+      background:
+        radial-gradient(ellipse at 50% 82%, rgba(214, 199, 151, 0.28), transparent 58%),
+        radial-gradient(ellipse at 42% 58%, rgba(244, 205, 126, 0.18), transparent 13%),
+        radial-gradient(ellipse at 56% 50%, rgba(244, 205, 126, 0.16), transparent 12%),
+        radial-gradient(ellipse at 48% 32%, rgba(244, 205, 126, 0.14), transparent 10%),
+        radial-gradient(ellipse at 54% 20%, rgba(244, 205, 126, 0.12), transparent 9%);
+      filter: blur(0.2px);
+    }
+
+    .water-glimmer {
+      position: absolute;
+      width: 340px;
+      height: 120px;
+      border-radius: 9999px;
+      pointer-events: none;
+      opacity: 0.20;
+      background:
+        linear-gradient(90deg, transparent, rgba(184, 211, 191, 0.28), transparent),
+        radial-gradient(ellipse, rgba(121, 163, 139, 0.34), transparent 64%);
+      filter: blur(7px);
+    }
+
+    .rose-glow {
+      position: absolute;
+      width: 170px;
+      height: 170px;
+      border-radius: 9999px;
+      pointer-events: none;
+      opacity: 0.17;
+      background: radial-gradient(circle, rgba(196, 118, 101, 0.34), transparent 62%);
+      filter: blur(9px);
+    }
+
+    .section-label {
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(250, 204, 21, 0.78);
+      font-size: 0.78rem;
     }
   `;
 
@@ -152,13 +351,33 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
     },
   ];
 
-const goToSilencePractice = () => {
-  const isSerbianPage = window.location.pathname.startsWith('/sr');
+  const goToSilencePractice = () => {
+    const isSerbianPage = window.location.pathname.startsWith('/sr');
 
-  window.location.href = isSerbianPage
-    ? '/sr/praksa-tisine'
-    : '/en/silence-practice';
-};
+    window.location.href = isSerbianPage
+      ? '/sr/praksa-tisine'
+      : '/en/silence-practice';
+  };
+
+  const DecorativeDivider = ({ className = '' }) => (
+    <div className={`engraved-divider ${className}`} />
+  );
+
+  const GardenAtmosphere = ({ children }) => (
+    <>
+      <div className="garden-atmosphere" />
+      <div className="leaf-shadow" />
+      <div className="garden-texture" />
+      {children}
+    </>
+  );
+
+  const BotanicalCorners = () => (
+    <>
+      <div className="botanical-corner left-4 top-4 rotate-[-8deg]" />
+      <div className="botanical-corner bottom-4 right-4 rotate-180" />
+    </>
+  );
 
   return (
     <>
@@ -186,9 +405,9 @@ const goToSilencePractice = () => {
         }}
       />
 
-      <style>{fadeUpStyle}</style>
+      <style>{gardenStyle}</style>
 
-      <div className="overflow-x-hidden bg-[#0b1220] font-sans text-slate-100">
+      <div className="overflow-x-hidden bg-[#07100d] font-sans text-slate-100">
         {/* HERO / FIRST BREATH */}
         <section className="reveal relative flex min-h-[88vh] items-center justify-center overflow-hidden px-6 pt-20 md:pt-16">
           <div className="absolute inset-0">
@@ -204,11 +423,18 @@ const goToSilencePractice = () => {
             />
           </div>
 
+          <div className="absolute inset-0 bg-gradient-to-r from-[#07100d]/90 via-[#0b1220]/38 to-[#07100d]/92" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/72 via-black/16 to-[#07100d]" />
           <div className="hero-light" />
+          <GardenAtmosphere />
+          <div className="candle-halo left-[10%] top-[16%]" />
+          <div className="candle-halo bottom-[7%] right-[9%]" />
+          <div className="stone-path" />
+          <div className="water-glimmer bottom-[12%] left-[9%]" />
+          <div className="rose-glow bottom-[22%] right-[14%]" />
+          <BotanicalCorners />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#07100d]/85 via-[#0b1220]/45 to-[#07100d]/85" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/20 to-[#0b1220]" />
-          <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#0b1220] via-[#0b1220]/70 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-[#07100d] via-[#07100d]/76 to-transparent" />
 
           <div className="relative z-10 mx-auto max-w-4xl py-14 text-center">
             <p className="animate-[softFade_1000ms_ease-out_both] mb-6 text-xs uppercase tracking-[0.38em] text-yellow-200/75">
@@ -223,7 +449,7 @@ const goToSilencePractice = () => {
               {t.home.tagline}
             </p>
 
-            <div className="garden-divider mx-auto my-9 h-px w-40 bg-gradient-to-r from-transparent via-yellow-300/70 to-transparent" />
+            <DecorativeDivider className="my-9" />
 
             <p className="mx-auto max-w-[62ch] animate-[softFade_1400ms_ease-out_300ms_both] text-[1rem] font-light leading-[1.9] text-slate-100/90 sm:text-[1.16rem] sm:leading-[2]">
               {t.home.intro}
@@ -232,24 +458,25 @@ const goToSilencePractice = () => {
         </section>
 
         {/* THRESHOLD */}
-        <section className="relative overflow-hidden bg-[#0b1220] px-6 py-24 md:py-32">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(215,181,109,0.10),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(95,113,80,0.12),transparent_32%)]" />
+        <section className="relative overflow-hidden bg-[#07100d] px-6 py-24 md:py-32">
+          <GardenAtmosphere>
+            <div className="candle-halo right-[8%] top-[8%]" />
+            <div className="water-glimmer bottom-[8%] left-[12%]" />
+          </GardenAtmosphere>
 
           <div className="reveal relative mx-auto max-w-5xl">
-            <p className="mb-6 text-sm uppercase tracking-[0.28em] text-yellow-400/80">
-              {t.home.encounterLabel}
-            </p>
+            <p className="section-label mb-6">{t.home.encounterLabel}</p>
 
             <h2 className="max-w-3xl font-serif text-3xl leading-tight text-yellow-50 md:text-5xl">
               {t.home.encounterTitle1}
               <br />
-              <span className="text-yellow-100/80">
+              <span className="text-yellow-100/78">
                 {t.home.encounterTitle2}
               </span>
             </h2>
 
             <div className="mt-14 grid gap-8 lg:grid-cols-3">
-              <div className="rounded-[2rem] border border-yellow-700/20 bg-white/[0.035] p-7 shadow-[0_24px_80px_rgba(0,0,0,0.18)] backdrop-blur">
+              <div className="etched-panel rounded-[2rem] border border-yellow-700/20 bg-[#102019]/68 p-7 shadow-[0_24px_80px_rgba(0,0,0,0.22)] backdrop-blur">
                 <p className="font-serif text-2xl leading-tight text-yellow-50">
                   {t.home.encounterBlock1Title}
                 </p>
@@ -259,7 +486,7 @@ const goToSilencePractice = () => {
                 </p>
               </div>
 
-              <div className="rounded-[2rem] border border-yellow-700/20 bg-white/[0.035] p-7 shadow-[0_24px_80px_rgba(0,0,0,0.18)] backdrop-blur">
+              <div className="etched-panel rounded-[2rem] border border-yellow-700/20 bg-[#102019]/68 p-7 shadow-[0_24px_80px_rgba(0,0,0,0.22)] backdrop-blur">
                 <p className="font-serif text-2xl leading-tight text-yellow-50">
                   {t.home.encounterBlock2Title}
                 </p>
@@ -269,7 +496,7 @@ const goToSilencePractice = () => {
                 </p>
               </div>
 
-              <div className="rounded-[2rem] border border-yellow-700/20 bg-white/[0.035] p-7 shadow-[0_24px_80px_rgba(0,0,0,0.18)] backdrop-blur">
+              <div className="etched-panel rounded-[2rem] border border-yellow-700/20 bg-[#102019]/68 p-7 shadow-[0_24px_80px_rgba(0,0,0,0.22)] backdrop-blur">
                 <p className="font-serif text-2xl leading-tight text-yellow-50">
                   {t.home.encounterBlock3Title}
                 </p>
@@ -279,19 +506,20 @@ const goToSilencePractice = () => {
         </section>
 
         {/* RECOGNITION */}
-        <section className="relative overflow-hidden bg-[#101b18] px-6 py-24 md:py-28">
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,18,32,0.88),rgba(16,27,24,0.95)),radial-gradient(circle_at_15%_30%,rgba(95,113,80,0.20),transparent_34%),radial-gradient(circle_at_85%_70%,rgba(215,181,109,0.10),transparent_32%)]" />
+        <section className="relative overflow-hidden bg-[#0d1b14] px-6 py-24 md:py-28">
+          <GardenAtmosphere>
+            <div className="rose-glow left-[7%] top-[26%]" />
+            <div className="candle-halo bottom-[4%] right-[16%]" />
+          </GardenAtmosphere>
 
           <div className="reveal relative mx-auto max-w-4xl">
-            <p className="mb-8 text-sm uppercase tracking-[0.28em] text-yellow-400/80">
-              {t.home.recognitionLabel}
-            </p>
+            <p className="section-label mb-8">{t.home.recognitionLabel}</p>
 
             <div className="space-y-6">
               {recognitionItems.map((item, index) => (
                 <div
                   key={index}
-                  className="rounded-[1.75rem] border border-yellow-700/15 bg-[#0b1220]/45 p-6 transition duration-300 hover:border-yellow-500/30 hover:bg-[#0b1220]/65 md:p-7"
+                  className="etched-panel rounded-[1.75rem] border border-yellow-700/15 bg-[#07100d]/55 p-6 transition duration-300 hover:border-yellow-500/30 hover:bg-[#102019]/74 md:p-7"
                 >
                   <h3 className="font-serif text-2xl leading-tight text-yellow-50 md:text-3xl">
                     {item.title}
@@ -307,20 +535,23 @@ const goToSilencePractice = () => {
         </section>
 
         {/* METHOD */}
-        <section className="relative overflow-hidden bg-[#0b1220] px-6 py-24 md:py-32">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(215,181,109,0.10),transparent_34%)]" />
+        <section className="relative overflow-hidden bg-[#07100d] px-6 py-24 md:py-32">
+          <GardenAtmosphere>
+            <div className="water-glimmer right-[8%] top-[14%]" />
+            <div className="candle-halo left-[10%] bottom-[8%]" />
+          </GardenAtmosphere>
 
           <div className="reveal relative mx-auto max-w-6xl">
             <div className="mx-auto max-w-3xl text-center">
-              <p className="mb-6 text-sm uppercase tracking-[0.28em] text-yellow-400/80">
-                {t.home.methodLabel}
-              </p>
+              <p className="section-label mb-6">{t.home.methodLabel}</p>
 
-              <h2 className="font-serif text-3xl leading-tight text-white md:text-5xl">
+              <h2 className="font-serif text-3xl leading-tight text-yellow-50 md:text-5xl">
                 {t.home.methodTitle}
               </h2>
 
-              <p className="mt-8 text-lg leading-8 text-slate-300">
+              <DecorativeDivider className="my-8" />
+
+              <p className="text-lg leading-8 text-slate-300">
                 {t.home.methodIntro}
               </p>
             </div>
@@ -329,7 +560,7 @@ const goToSilencePractice = () => {
               {methodItems.map((item, index) => (
                 <div
                   key={index}
-                  className={`rounded-[2rem] border border-yellow-700/15 bg-[#111827]/80 p-8 shadow-[0_20px_70px_rgba(0,0,0,0.20)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-yellow-400/35 ${
+                  className={`etched-panel rounded-[2rem] border border-yellow-700/15 bg-[#102019]/72 p-8 shadow-[0_20px_70px_rgba(0,0,0,0.24)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-yellow-400/35 ${
                     index === methodItems.length - 1 ? 'md:col-span-2' : ''
                   }`}
                 >
@@ -351,25 +582,28 @@ const goToSilencePractice = () => {
         </section>
 
         {/* SMALL BREATHING DIVIDER */}
-        <div className="bg-[#0b1220] px-6 py-10">
-          <div className="garden-divider mx-auto h-px w-44 bg-gradient-to-r from-transparent via-yellow-400/50 to-transparent" />
+        <div className="relative bg-[#07100d] px-6 py-10">
+          <GardenAtmosphere />
+          <DecorativeDivider />
           <img
             src="/psychodrama-divider.png"
             alt=""
-            className="mx-auto mt-8 w-14 object-contain opacity-20"
+            className="relative mx-auto mt-8 w-14 object-contain opacity-24"
           />
         </div>
 
         {/* PATHS THROUGH THE GARDEN */}
-        <section className="relative overflow-hidden bg-[#131f19] px-6 py-24 md:py-32">
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,18,32,0.75),rgba(19,31,25,0.96)),radial-gradient(circle_at_20%_20%,rgba(215,181,109,0.12),transparent_28%),radial-gradient(circle_at_80%_60%,rgba(95,113,80,0.22),transparent_34%)]" />
+        <section className="relative overflow-hidden bg-[#102019] px-6 py-24 md:py-32">
+          <GardenAtmosphere>
+            <div className="stone-path" />
+            <div className="water-glimmer bottom-[8%] left-[10%]" />
+            <div className="rose-glow top-[18%] right-[10%]" />
+          </GardenAtmosphere>
 
           <div className="reveal relative mx-auto max-w-6xl">
-            <p className="mb-6 text-sm uppercase tracking-[0.28em] text-yellow-400/80">
-              {t.home.spacesLabel}
-            </p>
+            <p className="section-label mb-6">{t.home.spacesLabel}</p>
 
-            <h2 className="max-w-3xl font-serif text-3xl leading-tight text-white md:text-5xl">
+            <h2 className="max-w-3xl font-serif text-3xl leading-tight text-yellow-50 md:text-5xl">
               {t.home.spacesTitle}
             </h2>
 
@@ -377,7 +611,7 @@ const goToSilencePractice = () => {
               {pathItems.map((item, index) => (
                 <div
                   key={index}
-                  className="group rounded-[2rem] border border-yellow-700/20 bg-[#0b1220]/55 p-7 shadow-[0_22px_70px_rgba(0,0,0,0.22)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-yellow-400/40"
+                  className="etched-panel group rounded-[2rem] border border-yellow-700/20 bg-[#07100d]/58 p-7 shadow-[0_22px_70px_rgba(0,0,0,0.24)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-yellow-400/40"
                 >
                   <p className="mb-6 text-xs uppercase tracking-[0.25em] text-yellow-400/55">
                     {language === 'sr' ? 'staza' : 'path'} {index + 1}
@@ -403,9 +637,11 @@ const goToSilencePractice = () => {
         </section>
 
         {/* CREDIBILITY */}
-        <section className="bg-[#0b1220] px-6 py-14">
-          <div className="reveal mx-auto max-w-5xl">
-            <div className="rounded-[2rem] border border-yellow-700/15 bg-white/[0.025] px-6 py-8">
+        <section className="relative bg-[#07100d] px-6 py-14">
+          <GardenAtmosphere />
+
+          <div className="reveal relative mx-auto max-w-5xl">
+            <div className="etched-panel rounded-[2rem] border border-yellow-700/15 bg-[#102019]/54 px-6 py-8">
               <p className="text-center text-sm leading-8 tracking-[0.02em] text-slate-400">
                 {t.home.credibility}
               </p>
@@ -414,18 +650,21 @@ const goToSilencePractice = () => {
         </section>
 
         {/* SILENCE PRACTICE */}
-        <section className="relative overflow-hidden bg-[#0e1628] px-4 py-24 md:py-28">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_10%,rgba(215,181,109,0.10),transparent_30%),radial-gradient(circle_at_90%_80%,rgba(95,113,80,0.16),transparent_34%)]" />
+        <section className="relative overflow-hidden bg-[#0d1b14] px-4 py-24 md:py-28">
+          <GardenAtmosphere>
+            <div className="candle-halo left-[8%] top-[12%]" />
+            <div className="water-glimmer bottom-[12%] right-[8%]" />
+          </GardenAtmosphere>
 
           <div className="relative mx-auto max-w-5xl">
-            <div className="reveal overflow-hidden rounded-[2.25rem] border border-yellow-700/20 bg-[#111827]/85 shadow-[0_28px_90px_rgba(0,0,0,0.28)] backdrop-blur">
+            <div className="reveal etched-panel overflow-hidden rounded-[2.25rem] border border-yellow-700/20 bg-[#07100d]/72 shadow-[0_28px_90px_rgba(0,0,0,0.30)] backdrop-blur">
               <div className="grid lg:grid-cols-2">
                 <div className="flex flex-col justify-center p-9 md:p-14">
                   <p className="mb-4 text-xs uppercase tracking-[0.35em] text-yellow-400/80">
                     {t.home.silenceLabel}
                   </p>
 
-                  <h2 className="mb-6 font-serif text-3xl leading-tight text-white md:text-4xl">
+                  <h2 className="mb-6 font-serif text-3xl leading-tight text-yellow-50 md:text-4xl">
                     {t.home.silenceTitle}
                   </h2>
 
@@ -453,7 +692,9 @@ const goToSilencePractice = () => {
                     className="absolute inset-0 h-full w-full object-cover"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#111827] via-[#111827]/35 to-transparent lg:bg-gradient-to-l" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#07100d] via-[#07100d]/40 to-transparent lg:bg-gradient-to-l" />
+                  <div className="leaf-shadow" />
+                  <div className="rose-glow bottom-[16%] right-[14%]" />
                 </div>
               </div>
             </div>
@@ -461,17 +702,22 @@ const goToSilencePractice = () => {
         </section>
 
         {/* FINAL INVITATION */}
-        <section className="relative overflow-hidden bg-[#0b1220] px-6 py-24 text-white md:py-32">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(215,181,109,0.12),transparent_32%),linear-gradient(180deg,#0b1220,#07100d)]" />
+        <section className="relative overflow-hidden bg-[#07100d] px-6 py-24 text-white md:py-32">
+          <GardenAtmosphere>
+            <div className="candle-halo left-[50%] top-[12%] -translate-x-1/2" />
+            <div className="stone-path" />
+          </GardenAtmosphere>
 
           <div className="reveal relative mx-auto max-w-3xl text-center">
             <p className="mb-5 text-xs uppercase tracking-[0.35em] text-yellow-400/75">
               Tiha Psiha
             </p>
 
-            <h2 className="mb-7 font-serif text-4xl leading-tight md:text-5xl">
+            <h2 className="mb-7 font-serif text-4xl leading-tight text-yellow-50 md:text-5xl">
               {t.home.ready}
             </h2>
+
+            <DecorativeDivider className="mb-9" />
 
             <p className="mx-auto mb-9 max-w-2xl text-lg leading-8 text-slate-300">
               {t.home.inviteText}
