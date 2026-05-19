@@ -52,10 +52,27 @@ export default function App() {
       [t.nav.contact, '/contact'],
     ];
 
-    const changeLanguage = (lang) => {
-    const pathWithoutLang = location.pathname.replace(/^\/(en|sr)/, "");
-    navigate(`/${lang}${pathWithoutLang || ""}`);
+      const changeLanguage = (lang) => {
+    const currentPath = location.pathname;
+
+    if (currentPath === '/en/silence-practice' && lang === 'sr') {
+      navigate('/sr/praksa-tisine');
+      setMenuOpen(false);
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    if (currentPath === '/sr/praksa-tisine' && lang === 'en') {
+      navigate('/en/silence-practice');
+      setMenuOpen(false);
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    const pathWithoutLang = currentPath.replace(/^\/(en|sr)/, '');
+    navigate(`/${lang}${pathWithoutLang || ''}`);
     setMenuOpen(false);
+    window.scrollTo(0, 0);
   };
 
   const isActive = (path) => {
