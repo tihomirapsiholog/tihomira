@@ -1,12 +1,13 @@
 import { ArrowRight, Gift, Mail, Sparkles } from 'lucide-react';
 import { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
   const location = useLocation();
+  const currentLanguage = location.pathname.startsWith('/sr') ? 'sr' : language;
   const work = t.work || {};
-  const isSerbian = language === 'sr';
+  const isSerbian = currentLanguage === 'sr';
 
   useEffect(() => {
     if (location.hash) {
@@ -229,7 +230,8 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
       };
 
   const getText = (key) => work[key] || fallback[key];
-    const calendlyLinks = {
+
+  const calendlyLinks = {
     freeSession: 'https://calendly.com/tihomira-psiholog/free-session',
     dreamWork: 'https://calendly.com/tihomira-psiholog/60-min-dream-work',
   };
@@ -322,7 +324,7 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
   };
 
   return (
-    <div className="bg-[#0b1220] text-slate-100">
+    <div className="overflow-hidden bg-[#0b1220] text-slate-100">
       <SEO
         title={
           isSerbian
@@ -339,7 +341,7 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
             ? 'https://tihomira.info/sr/work'
             : 'https://tihomira.info/en/work'
         }
-        language={language}
+        language={currentLanguage}
         alternateUrls={{
           en: 'https://tihomira.info/en/work',
           sr: 'https://tihomira.info/sr/work',
@@ -347,50 +349,58 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
         }}
       />
 
-      <section className="border-b border-white/5 bg-[#0b1220] py-24 sm:py-28">
-        <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
-          <span className="text-sm uppercase tracking-[0.3em] text-yellow-400">
+      {/* HERO */}
+      <section className="relative overflow-hidden border-b border-yellow-700/10 bg-[#0b1220] px-4 py-24 sm:px-6 sm:py-28 lg:px-8">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(215,181,109,0.13),transparent_30%),radial-gradient(circle_at_85%_15%,rgba(95,113,80,0.18),transparent_32%),linear-gradient(180deg,#0b1220,#101b18)]" />
+
+        <div className="relative mx-auto max-w-5xl text-center">
+          <span className="text-sm uppercase tracking-[0.34em] text-yellow-400/80">
             {getText('eyebrow')}
           </span>
 
-          <h1 className="mt-6 font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="mx-auto mt-6 max-w-4xl font-serif text-4xl leading-tight text-yellow-50 sm:text-5xl lg:text-6xl">
             {getText('title')}
           </h1>
 
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">
+          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-slate-200 sm:text-xl">
             {getText('intro')}
           </p>
 
-          <p className="mx-auto mt-4 max-w-3xl leading-8 text-slate-400">
+          <p className="mx-auto mt-5 max-w-3xl leading-8 text-slate-400">
             {getText('intro2')}
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-            <span className="rounded-full border border-slate-600 px-4 py-2 text-sm text-slate-200">
+          <div className="mx-auto my-10 h-px w-40 bg-gradient-to-r from-transparent via-yellow-400/50 to-transparent" />
+
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <span className="rounded-full border border-yellow-700/25 bg-white/[0.035] px-4 py-2 text-sm text-slate-200 backdrop-blur">
               {getText('heroBadge1')}
             </span>
-            <span className="rounded-full border border-slate-600 px-4 py-2 text-sm text-slate-200">
+            <span className="rounded-full border border-yellow-700/25 bg-white/[0.035] px-4 py-2 text-sm text-slate-200 backdrop-blur">
               {getText('heroBadge2')}
             </span>
-            <span className="rounded-full border border-slate-600 px-4 py-2 text-sm text-slate-200">
+            <span className="rounded-full border border-yellow-700/25 bg-white/[0.035] px-4 py-2 text-sm text-slate-200 backdrop-blur">
               {getText('heroBadge3')}
             </span>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#0e1628] py-20 sm:py-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      {/* AVAILABLE */}
+      <section className="relative overflow-hidden bg-[#101b18] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_30%,rgba(95,113,80,0.22),transparent_34%),radial-gradient(circle_at_90%_65%,rgba(215,181,109,0.09),transparent_30%)]" />
+
+        <div className="relative mx-auto max-w-6xl">
           <div className="mx-auto mb-14 max-w-3xl text-center">
-            <span className="text-sm uppercase tracking-[0.3em] text-yellow-400">
+            <span className="text-sm uppercase tracking-[0.32em] text-yellow-400/80">
               {getText('availableLabel')}
             </span>
 
-            <h2 className="mt-4 font-serif text-3xl text-white sm:text-4xl">
+            <h2 className="mt-4 font-serif text-3xl leading-tight text-yellow-50 sm:text-4xl">
               {getText('availableTitle')}
             </h2>
 
-            <p className="mt-4 text-base leading-8 text-slate-300">
+            <p className="mt-5 text-base leading-8 text-slate-300">
               {getText('availableIntro')}
             </p>
           </div>
@@ -402,29 +412,31 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
               return (
                 <div
                   key={index}
-                  className="rounded-2xl border border-slate-700 bg-[#111827] p-8 transition hover:border-yellow-400/40 hover:shadow-xl hover:shadow-black/30"
+                  className="rounded-[2rem] border border-yellow-700/20 bg-[#0b1220]/60 p-8 shadow-[0_24px_80px_rgba(0,0,0,0.22)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-yellow-400/35"
                 >
-                  <Icon className="h-8 w-8 text-yellow-400" />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-yellow-700/20 bg-yellow-500/10">
+                    <Icon className="h-6 w-6 text-yellow-400" />
+                  </div>
 
-                  <p className="mt-5 text-sm uppercase tracking-[0.18em] text-yellow-300">
+                  <p className="mt-6 text-xs uppercase tracking-[0.22em] text-yellow-300/80">
                     {offer.meta}
                   </p>
 
-                  <h3 className="mt-3 font-serif text-3xl leading-snug text-white">
+                  <h3 className="mt-4 font-serif text-3xl leading-snug text-yellow-50">
                     {offer.title}
                   </h3>
 
-                  <p className="mt-5 text-base leading-8 text-slate-200">
+                  <p className="mt-5 text-base leading-8 text-slate-300">
                     {offer.text}
                   </p>
 
-                  <p className="mt-6 font-serif text-3xl text-yellow-300">
+                  <p className="mt-7 font-serif text-3xl text-yellow-300">
                     {offer.price}
                   </p>
 
                   <div className="mt-8 flex flex-col gap-3">
                     <button
-                                            onClick={() => {
+                      onClick={() => {
                         if (offer.actionType === 'freeCalendly') {
                           openExternal(calendlyLinks.freeSession);
                           return;
@@ -446,7 +458,7 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
                     {offer.giftCta && (
                       <button
                         onClick={() => goToContact(offer.giftMessage)}
-                        className="inline-flex items-center justify-center gap-2 rounded-full border border-yellow-400/40 px-5 py-3 text-sm font-medium text-yellow-300 transition hover:border-yellow-300 hover:text-white"
+                        className="inline-flex items-center justify-center gap-2 rounded-full border border-yellow-400/40 px-5 py-3 text-sm font-medium text-yellow-200 transition hover:border-yellow-300 hover:bg-yellow-400/10 hover:text-white"
                       >
                         {offer.giftCta}
                         <Gift size={16} />
@@ -460,18 +472,21 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
         </div>
       </section>
 
-      <section className="bg-[#0b1220] py-20 sm:py-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      {/* PRICING */}
+      <section className="relative overflow-hidden bg-[#0b1220] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(215,181,109,0.10),transparent_32%)]" />
+
+        <div className="relative mx-auto max-w-6xl">
           <div className="mx-auto mb-12 max-w-3xl text-center">
-            <span className="text-sm uppercase tracking-[0.3em] text-yellow-400">
+            <span className="text-sm uppercase tracking-[0.32em] text-yellow-400/80">
               {getText('pricingLabel')}
             </span>
 
-            <h2 className="mt-4 font-serif text-3xl text-white sm:text-4xl">
+            <h2 className="mt-4 font-serif text-3xl text-yellow-50 sm:text-4xl">
               {getText('pricingTitle')}
             </h2>
 
-            <p className="mt-4 text-base leading-8 text-slate-300">
+            <p className="mt-5 text-base leading-8 text-slate-300">
               {getText('pricingIntro')}
             </p>
           </div>
@@ -480,9 +495,13 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
             {packages.map((item, index) => (
               <div
                 key={index}
-                className="rounded-2xl border border-slate-700 bg-[#111827] p-6"
+                className="rounded-[1.75rem] border border-yellow-700/15 bg-[#111827]/75 p-6 shadow-[0_18px_60px_rgba(0,0,0,0.18)]"
               >
-                <h3 className="font-serif text-2xl text-white">
+                <p className="mb-5 text-xs uppercase tracking-[0.22em] text-yellow-400/55">
+                  {String(index + 1).padStart(2, '0')}
+                </p>
+
+                <h3 className="font-serif text-2xl text-yellow-50">
                   {item.title}
                 </h3>
 
@@ -497,30 +516,36 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
             ))}
           </div>
 
-          <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-7 text-slate-400">
-            {getText('termsNotice')}{' '}
-            <Link
-              to={`/${language}/terms`}
-              className="text-yellow-300 underline-offset-4 hover:underline"
-            >
-              {getText('termsLink')}
-            </Link>
-          </p>
+          <p className="mx-auto mt-9 max-w-3xl text-center text-sm leading-7 text-slate-400">
+  {getText('termsNotice')}{' '}
+  <button
+    type="button"
+    onClick={() => {
+      window.location.href = isSerbian ? '/sr/terms' : '/en/terms';
+    }}
+    className="text-yellow-300 underline-offset-4 hover:underline"
+  >
+    {getText('termsLink')}
+  </button>
+</p>
         </div>
       </section>
 
-      <section className="bg-[#0e1628] py-20 sm:py-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      {/* BY INVITATION */}
+      <section className="relative overflow-hidden bg-[#131f19] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,18,32,0.55),rgba(19,31,25,0.96)),radial-gradient(circle_at_18%_15%,rgba(215,181,109,0.10),transparent_28%),radial-gradient(circle_at_80%_70%,rgba(95,113,80,0.22),transparent_34%)]" />
+
+        <div className="relative mx-auto max-w-6xl">
           <div className="mx-auto mb-12 max-w-3xl text-center">
-            <span className="text-sm uppercase tracking-[0.3em] text-yellow-400">
+            <span className="text-sm uppercase tracking-[0.32em] text-yellow-400/80">
               {getText('invitationLabel')}
             </span>
 
-            <h2 className="mt-4 font-serif text-3xl text-white sm:text-4xl">
+            <h2 className="mt-4 font-serif text-3xl text-yellow-50 sm:text-4xl">
               {getText('invitationTitle')}
             </h2>
 
-            <p className="mt-4 text-base leading-8 text-slate-300">
+            <p className="mt-5 text-base leading-8 text-slate-300">
               {getText('invitationIntro')}
             </p>
           </div>
@@ -529,13 +554,17 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
             {invitationFormats.map((item, index) => (
               <div
                 key={index}
-                className="rounded-2xl border border-slate-700 bg-[#111827] p-8"
+                className="rounded-[2rem] border border-yellow-700/20 bg-[#0b1220]/55 p-8 shadow-[0_22px_70px_rgba(0,0,0,0.22)] backdrop-blur"
               >
-                <h3 className="font-serif text-3xl leading-snug text-white">
+                <p className="mb-6 text-xs uppercase tracking-[0.24em] text-yellow-400/55">
+                  {isSerbian ? 'poziv' : 'invitation'} {index + 1}
+                </p>
+
+                <h3 className="font-serif text-3xl leading-snug text-yellow-50">
                   {item.title}
                 </h3>
 
-                <p className="mt-5 text-base leading-8 text-slate-200">
+                <p className="mt-5 text-base leading-8 text-slate-300">
                   {item.text}
                 </p>
               </div>
@@ -545,7 +574,7 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
           <div className="mt-10 text-center">
             <button
               onClick={() => goToContact(getText('invitationMessage'))}
-              className="inline-flex items-center gap-2 rounded-full border border-yellow-400/40 px-6 py-3 text-sm font-medium text-yellow-300 transition hover:border-yellow-300 hover:text-white"
+              className="inline-flex items-center gap-2 rounded-full border border-yellow-400/40 px-6 py-3 text-sm font-medium text-yellow-200 transition hover:border-yellow-300 hover:bg-yellow-400/10 hover:text-white"
             >
               {getText('invitationCta')}
               <ArrowRight size={16} />
@@ -554,18 +583,21 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
         </div>
       </section>
 
-      <section className="bg-[#0b1220] py-20 sm:py-24">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      {/* IN DEVELOPMENT */}
+      <section className="relative overflow-hidden bg-[#0b1220] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_0%,rgba(215,181,109,0.09),transparent_30%)]" />
+
+        <div className="relative mx-auto max-w-5xl">
           <div className="mx-auto mb-12 max-w-3xl text-center">
-            <span className="text-sm uppercase tracking-[0.3em] text-yellow-400">
+            <span className="text-sm uppercase tracking-[0.32em] text-yellow-400/80">
               {getText('developmentLabel')}
             </span>
 
-            <h2 className="mt-4 font-serif text-3xl text-white sm:text-4xl">
+            <h2 className="mt-4 font-serif text-3xl text-yellow-50 sm:text-4xl">
               {getText('developmentTitle')}
             </h2>
 
-            <p className="mt-4 text-base leading-8 text-slate-300">
+            <p className="mt-5 text-base leading-8 text-slate-300">
               {getText('developmentIntro')}
             </p>
           </div>
@@ -574,13 +606,13 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
             {inDevelopment.map((item, index) => (
               <div
                 key={index}
-                className="rounded-2xl border border-slate-700 bg-[#111827] p-8"
+                className="rounded-[2rem] border border-yellow-700/15 bg-[#111827]/70 p-8 shadow-[0_20px_70px_rgba(0,0,0,0.18)]"
               >
-                <h3 className="font-serif text-3xl leading-snug text-white">
+                <h3 className="font-serif text-3xl leading-snug text-yellow-50">
                   {item.title}
                 </h3>
 
-                <p className="mt-5 text-base leading-8 text-slate-200">
+                <p className="mt-5 text-base leading-8 text-slate-300">
                   {item.text}
                 </p>
               </div>
@@ -589,9 +621,12 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
         </div>
       </section>
 
-      <section className="bg-[#10192c] py-20 sm:py-24">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl text-white sm:text-4xl">
+      {/* FINAL */}
+      <section className="relative overflow-hidden bg-[#101b18] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(215,181,109,0.12),transparent_32%),linear-gradient(180deg,#101b18,#07100d)]" />
+
+        <div className="relative mx-auto max-w-4xl text-center">
+          <h2 className="font-serif text-3xl text-yellow-50 sm:text-4xl">
             {getText('questionsTitle')}
           </h2>
 
