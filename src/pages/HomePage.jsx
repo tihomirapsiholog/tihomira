@@ -160,23 +160,37 @@ export default function HomePage({ setCurrentPage, t, language = 'en' }) {
                 ].join(' ')}
                >
               <img
-               src={gate.closedImage}
-               alt=""
-               className={[
-              'absolute inset-0 h-full w-full object-contain mix-blend-multiply transition-all duration-500 ease-out',               ? 'scale-[1.02] opacity-0'
-               : 'scale-100 opacity-100 group-hover:scale-[1.02] group-hover:opacity-0',
-               ].join(' ')}
-                />
-                <img
-                  src={gate.halfImage}
-                  alt=""
-                  className={[
-                    'absolute inset-0 h-full w-full object-contain transition-all duration-500 ease-out',
-                    isActive
-                      ? 'scale-[1.04] opacity-0'
-                      : 'scale-[1.02] opacity-0 group-hover:opacity-100',
-                  ].join(' ')}
-                />
+  src={gate.closedImage}
+  alt=""
+  className={[
+    'absolute inset-0 h-full w-full object-contain transition-all duration-500 ease-out',
+    isActive
+      ? 'scale-[1.02] opacity-0'
+      : 'scale-100 opacity-100 group-hover:scale-[1.02] group-hover:opacity-0',
+  ].join(' ')}
+/>
+
+<img
+  src={gate.halfImage}
+  alt=""
+  className={[
+    'absolute inset-0 h-full w-full object-contain transition-all duration-500 ease-out',
+    isActive
+      ? 'scale-[1.04] opacity-0'
+      : 'scale-[1.02] opacity-0 group-hover:opacity-100',
+  ].join(' ')}
+/>
+
+<img
+  src={gate.openImage}
+  alt=""
+  className={[
+    'absolute inset-0 h-full w-full object-contain transition-all duration-700 ease-out',
+    isActive
+      ? 'scale-[1.06] opacity-100'
+      : 'scale-[1.03] opacity-0 group-hover:scale-[1.06] group-hover:opacity-100',
+  ].join(' ')}
+/>
 
                 <img
                   src={gate.openImage}
