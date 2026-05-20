@@ -116,10 +116,14 @@ export default function HomePage({ setCurrentPage, t, language = 'en' }) {
     xDefault: 'https://tihomira.info/en',
   }}
 />
-    <main className="min-h-screen overflow-hidden bg-[#f3eee4] text-[#182018]">
-      <section className="relative px-6 pb-20 pt-16 sm:px-8 lg:px-12">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(190,154,82,0.22),transparent_34%),linear-gradient(135deg,#f7f1e7_0%,#eef2ea_48%,#e7edf5_100%)]" />
-
+    <main className="relative min-h-screen overflow-hidden bg-[#ddd7c8] text-[#182018]">
+      <div className="pointer-events-none absolute inset-0">
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,#ddd7c8_0%,#d8d1c2_48%,#d3ccbc_100%)]" />
+      <div className="absolute inset-0 opacity-60 mix-blend-multiply bg-[radial-gradient(circle_at_18%_16%,rgba(255,255,255,0.42),transparent_28%),radial-gradient(circle_at_82%_22%,rgba(120,103,77,0.10),transparent_32%),radial-gradient(circle_at_24%_78%,rgba(115,98,73,0.08),transparent_36%),radial-gradient(circle_at_72%_72%,rgba(255,255,255,0.16),transparent_30%)]" />
+      <div className="absolute inset-0 opacity-[0.12] mix-blend-soft-light bg-[linear-gradient(115deg,rgba(255,255,255,0.55),transparent_22%,rgba(122,105,78,0.16)_46%,transparent_70%,rgba(255,255,255,0.28))]" />
+     </div>      
+     <section className="relative px-6 pb-20 pt-16 sm:px-8 lg:px-12">
+    <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_10%,rgba(255,255,255,0.30),transparent_24%),radial-gradient(circle_at_84%_18%,rgba(124,108,81,0.10),transparent_28%),radial-gradient(circle_at_50%_100%,rgba(118,101,76,0.08),transparent_30%)]" />
         <div className="mx-auto mb-12 max-w-4xl text-center">
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#6f6759]">
          tihomira.info
@@ -154,10 +158,10 @@ export default function HomePage({ setCurrentPage, t, language = 'en' }) {
                 onClick={() => handleGateClick(gate)}
                 onKeyDown={(event) => handleGateKeyDown(event, gate)}
                 className={[
-                'group relative min-h-[420px] cursor-pointer overflow-hidden rounded-[2rem] bg-[#e8dfcf] shadow-2xl outline-none ring-1 ring-[#7c6f56]/10 transition-all duration-500 ease-out sm:min-h-[520px] lg:min-h-[560px]',
-                'focus-visible:ring-4 focus-visible:ring-[#c7a65d] focus-visible:ring-offset-4',
-               isActive ? '-translate-y-1' : '',
-                ].join(' ')}
+            'group relative min-h-[420px] cursor-pointer overflow-hidden rounded-[2rem] bg-[#ddd7c8] shadow-[0_18px_40px_rgba(67,58,41,0.10)] outline-none ring-1 ring-[#7c6f56]/8 transition-all duration-500 ease-out sm:min-h-[520px] lg:min-h-[560px]',
+           'focus-visible:ring-4 focus-visible:ring-[#c7a65d] focus-visible:ring-offset-4',
+           isActive ? '-translate-y-1' : '',
+            ].join(' ')}
                >
               <img
   src={gate.closedImage}
@@ -235,8 +239,7 @@ export default function HomePage({ setCurrentPage, t, language = 'en' }) {
           })}
                </div>
 
-        <div className="mx-auto mt-12 max-w-3xl rounded-[1.5rem] bg-white/45 px-6 py-7 text-center shadow-sm ring-1 ring-[#172018]/10 backdrop-blur sm:px-8">
-          <p className="text-base leading-relaxed text-[#3f493d] sm:text-lg">
+          <div className="mx-auto mt-12 max-w-3xl rounded-[1.5rem] bg-[#e2dccf]/80 px-6 py-7 text-center shadow-[0_10px_30px_rgba(67,58,41,0.08)] ring-1 ring-[#7c6f56]/10 backdrop-blur sm:px-8">          <p className="text-base leading-relaxed text-[#3f493d] sm:text-lg">
             {t.home.seoIntroTiha}
           </p>
           <p className="mt-4 text-base leading-relaxed text-[#3f493d] sm:text-lg">
