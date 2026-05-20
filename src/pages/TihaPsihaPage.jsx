@@ -432,8 +432,7 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
 
           <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-[#07100d] via-[#07100d]/76 to-transparent" />
 
-          <div className="relative z-10 mx-auto max-w-4xl py-14 text-center">
-            <p className="animate-[softFade_1000ms_ease-out_both] mb-6 text-xs uppercase tracking-[0.38em] text-yellow-200/75">
+<div className="relative z-10 mx-auto max-w-4xl -translate-x-0 py-14 text-center md:-translate-x-12 lg:-translate-x-20">            <p className="animate-[softFade_1000ms_ease-out_both] mb-6 text-xs uppercase tracking-[0.38em] text-yellow-200/75">
               Tiha Psiha
             </p>
 
