@@ -154,18 +154,16 @@ export default function HomePage({ setCurrentPage, t, language = 'en' }) {
                 onClick={() => handleGateClick(gate)}
                 onKeyDown={(event) => handleGateKeyDown(event, gate)}
                 className={[
-                'group relative min-h-[420px] cursor-pointer overflow-hidden rounded-[2rem] shadow-2xl outline-none transition-all duration-500 ease-out sm:min-h-[520px] lg:min-h-[560px]',
+                'group relative min-h-[420px] cursor-pointer overflow-hidden rounded-[2rem] bg-[#e8dfcf] shadow-2xl outline-none ring-1 ring-[#7c6f56]/10 transition-all duration-500 ease-out sm:min-h-[520px] lg:min-h-[560px]',
                 'focus-visible:ring-4 focus-visible:ring-[#c7a65d] focus-visible:ring-offset-4',
-                 isActive ? '-translate-y-1' : '',
+               isActive ? '-translate-y-1' : '',
                 ].join(' ')}
                >
               <img
                src={gate.closedImage}
                alt=""
                className={[
-              'absolute inset-0 h-full w-full object-contain transition-all duration-500 ease-out',
-                isActive
-               ? 'scale-[1.02] opacity-0'
+              'absolute inset-0 h-full w-full object-contain mix-blend-multiply transition-all duration-500 ease-out',               ? 'scale-[1.02] opacity-0'
                : 'scale-100 opacity-100 group-hover:scale-[1.02] group-hover:opacity-0',
                ].join(' ')}
                 />
@@ -184,8 +182,7 @@ export default function HomePage({ setCurrentPage, t, language = 'en' }) {
                   src={gate.openImage}
                   alt=""
                   className={[
-                    'absolute inset-0 h-full w-full object-contain transition-all duration-700 ease-out',
-                    isActive
+                  'absolute inset-0 h-full w-full object-contain mix-blend-multiply transition-all duration-700 ease-out',                    isActive
                       ? 'scale-[1.06] opacity-100'
                       : 'scale-[1.03] opacity-0 group-hover:scale-[1.06] group-hover:opacity-100',
                   ].join(' ')}
