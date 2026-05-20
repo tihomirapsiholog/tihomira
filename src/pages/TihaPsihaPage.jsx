@@ -423,15 +423,11 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
             />
           </div>
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#07100d]/90 via-[#0b1220]/38 to-[#07100d]/92" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/72 via-black/16 to-[#07100d]" />
-          <div className="hero-light" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#07100d]/48 via-[#0b1220]/10 to-[#07100d]/58" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/18 via-black/0 to-[#07100d]/74" />          <div className="hero-light" />
+         <div className="opacity-45">
           <GardenAtmosphere />
-          <div className="candle-halo left-[10%] top-[16%]" />
-          <div className="candle-halo bottom-[7%] right-[9%]" />
-          <div className="stone-path" />
-          <div className="water-glimmer bottom-[12%] left-[9%]" />
-          <div className="rose-glow bottom-[22%] right-[14%]" />
+          </div>
           <BotanicalCorners />
 
           <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-[#07100d] via-[#07100d]/76 to-transparent" />
