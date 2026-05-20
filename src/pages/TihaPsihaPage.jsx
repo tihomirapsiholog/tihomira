@@ -412,7 +412,7 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
         <section className="reveal relative flex min-h-[88vh] items-center justify-center overflow-hidden px-6 pt-20 md:pt-16">
           <div className="absolute inset-0">
             <img
-              src="/images/hero/hero-garden.webp"
+              src="/images/hero/hero-garden.jpg"
               alt={
               language === 'sr'
                ? 'Tihomira u starom šumskom vrtu sa gongom, u prostoru tišine, susreta i unutrašnjeg rada'
@@ -593,49 +593,124 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
         </div>
 
         {/* PATHS THROUGH THE GARDEN */}
-        <section className="relative overflow-hidden bg-[#102019] px-6 py-24 md:py-32">
-          <GardenAtmosphere>
-            <div className="stone-path" />
-            <div className="water-glimmer bottom-[8%] left-[10%]" />
-            <div className="rose-glow top-[18%] right-[10%]" />
-          </GardenAtmosphere>
+<section className="relative overflow-hidden bg-[#102019] px-6 py-24 md:py-32">
+  <GardenAtmosphere>
+    <div className="stone-path" />
+    <div className="water-glimmer bottom-[8%] left-[10%]" />
+    <div className="rose-glow top-[18%] right-[10%]" />
+  </GardenAtmosphere>
 
-          <div className="reveal relative mx-auto max-w-6xl">
-            <p className="section-label mb-6">{t.home.spacesLabel}</p>
+  <div className="reveal relative mx-auto max-w-6xl">
+    <p className="section-label mb-6">{t.home.spacesLabel}</p>
 
-            <h2 className="max-w-3xl font-serif text-3xl leading-tight text-yellow-50 md:text-5xl">
-              {t.home.spacesTitle}
-            </h2>
+    <h2 className="max-w-3xl font-serif text-3xl leading-tight text-yellow-50 md:text-5xl">
+      {t.home.spacesTitle}
+    </h2>
 
-            <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              {pathItems.map((item, index) => (
-                <div
-                  key={index}
-                  className="etched-panel group rounded-[2rem] border border-yellow-700/20 bg-[#07100d]/58 p-7 shadow-[0_22px_70px_rgba(0,0,0,0.24)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-yellow-400/40"
-                >
-                  <p className="mb-6 text-xs uppercase tracking-[0.25em] text-yellow-400/55">
-                    {language === 'sr' ? 'staza' : 'path'} {index + 1}
-                  </p>
+    <div className="mt-12 overflow-hidden rounded-[2.25rem] border border-yellow-700/20 bg-[#07100d]/70 shadow-[0_28px_90px_rgba(0,0,0,0.30)]">
+      <div className="relative min-h-[280px] md:min-h-[420px]">
+        <img
+          src="/images/group/group-encounter-main.webp"
+          alt={
+            language === 'sr'
+              ? 'Grupni iskustveni rad u online prostoru, sa stvarnim ljudima u susretu'
+              : 'Group experiential work in an online space, with real people in encounter'
+          }
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="lazy"
+        />
 
-                  <h3 className="font-serif text-2xl leading-tight text-yellow-50">
-                    {item.title}
-                  </h3>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#07100d]/88 via-[#07100d]/35 to-[#07100d]/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#07100d]/72 via-transparent to-transparent" />
+        <div className="leaf-shadow" />
 
-                  <p className="mt-5 text-base leading-8 text-slate-300">
-                    {item.text}
-                  </p>
+        <div className="absolute bottom-0 left-0 max-w-2xl p-7 md:p-10">
+          <p className="mb-4 text-xs uppercase tracking-[0.32em] text-yellow-300/80">
+            {language === 'sr' ? 'živi susreti' : 'living encounters'}
+          </p>
 
-                  {item.note && (
-                    <p className="mt-4 text-sm leading-7 text-slate-400">
-                      {item.note}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+          <p className="font-serif text-2xl leading-tight text-yellow-50 md:text-4xl">
+            {language === 'sr'
+              ? 'Vrt nije samo unutrašnji. U njemu se ljudi stvarno sreću.'
+              : 'The garden is not only inner. People actually meet here.'}
+          </p>
+        </div>
+      </div>
+    </div>
 
+    <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {pathItems.map((item, index) => (
+        <div
+          key={index}
+          className="etched-panel group rounded-[2rem] border border-yellow-700/20 bg-[#07100d]/58 p-7 shadow-[0_22px_70px_rgba(0,0,0,0.24)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-yellow-400/40"
+        >
+          <p className="mb-6 text-xs uppercase tracking-[0.25em] text-yellow-400/55">
+            {language === 'sr' ? 'staza' : 'path'} {index + 1}
+          </p>
+
+          <h3 className="font-serif text-2xl leading-tight text-yellow-50">
+            {item.title}
+          </h3>
+
+          <p className="mt-5 text-base leading-8 text-slate-300">
+            {item.text}
+          </p>
+
+          {item.note && (
+            <p className="mt-4 text-sm leading-7 text-slate-400">
+              {item.note}
+            </p>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+{/* ACROSS DISTANCE */}
+<section className="relative overflow-hidden bg-[#07100d] px-6 py-20 md:py-28">
+  <GardenAtmosphere>
+    <div className="water-glimmer right-[8%] top-[14%]" />
+    <div className="candle-halo left-[8%] bottom-[6%]" />
+  </GardenAtmosphere>
+
+  <div className="reveal relative mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <div>
+      <p className="section-label mb-6">
+        {language === 'sr' ? 'preko distance' : 'across distance'}
+      </p>
+
+      <h2 className="font-serif text-3xl leading-tight text-yellow-50 md:text-5xl">
+        {language === 'sr'
+          ? 'Online prostor može da postane stvaran prostor susreta.'
+          : 'Online space can become a real space of encounter.'}
+      </h2>
+
+      <p className="mt-7 text-lg leading-8 text-slate-300">
+        {language === 'sr'
+          ? 'Kada je pažnja stvarna, a struktura dovoljno jasna, ljudi iz različitih mesta mogu da uđu u isti psihološki prostor — kroz sliku, glas, simbol, akciju i svedočenje.'
+          : 'When attention is real and the structure is clear enough, people from different places can enter the same psychological space — through image, voice, symbol, action and witnessing.'}
+      </p>
+    </div>
+
+    <div className="etched-panel overflow-hidden rounded-[2.25rem] border border-yellow-700/20 bg-[#102019]/62 shadow-[0_28px_90px_rgba(0,0,0,0.28)]">
+      <div className="relative min-h-[280px] md:min-h-[420px]">
+        <img
+          src="/images/group/group-encounter-map.webp"
+          alt={
+            language === 'sr'
+              ? 'Mapa međunarodne online grupe i ljudi povezani preko distance'
+              : 'Map of an international online group and people connected across distance'
+          }
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="lazy"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-[#07100d]/70 via-transparent to-[#07100d]/10" />
+        <div className="absolute inset-0 bg-[#07100d]/10" />
+      </div>
+    </div>
+  </div>
+</section>
         {/* CREDIBILITY */}
         <section className="relative bg-[#07100d] px-6 py-14">
           <GardenAtmosphere />
