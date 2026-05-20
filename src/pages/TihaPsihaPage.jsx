@@ -412,12 +412,12 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
         <section className="reveal relative flex min-h-[88vh] items-center justify-center overflow-hidden px-6 pt-20 md:pt-16">
           <div className="absolute inset-0">
             <img
-              src="/silhouette.jpg"
+              src="/images/hero/hero-garden.webp"
               alt={
-                language === 'sr'
-                  ? 'Silueta osobe u prostoru tišine i unutrašnjeg rada'
-                  : 'Silhouette of a person in a space of silence and inner work'
-              }
+              language === 'sr'
+               ? 'Tihomira u starom šumskom vrtu sa gongom, u prostoru tišine, susreta i unutrašnjeg rada'
+                : 'Tihomira in an old forest garden with a gong, in a space of silence, encounter and inner work'
+                }
               className="absolute inset-0 h-full w-full object-cover will-change-transform"
               style={{ transform: `translateY(${scrollY * 0.04}px)` }}
             />
