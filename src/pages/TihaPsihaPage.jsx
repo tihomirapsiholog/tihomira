@@ -716,21 +716,22 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
   </GardenAtmosphere>
 
   <div className="reveal relative mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
-    <div className="etched-panel overflow-hidden rounded-[2.25rem] border border-yellow-700/20 bg-[#07100d]/70 shadow-[0_28px_90px_rgba(0,0,0,0.30)]">
-      <div className="relative min-h-[280px] md:min-h-[420px]">
-       <img
-  src="/images/group/group-encounter-workshop.webp"
-     alt={
-      language === 'sr'
-      ? 'Online radionica u toku, sa grupom i konkretnim procesom rada'
-      : 'An online workshop in process, with a group and a concrete work moment'
-         }
-       className="absolute inset-0 z-0 h-full w-full object-cover opacity-90"
-       loading="lazy"
-    />
+    <div className="overflow-hidden rounded-[2.25rem] border border-yellow-700/20 bg-[#07100d]/70 shadow-[0_28px_90px_rgba(0,0,0,0.30)]">
+      <div className="relative overflow-hidden">
+        <img
+          src="/images/group/group-encounter-workshop.webp"
+          alt={
+            language === 'sr'
+              ? 'Online radionica u toku, sa grupom i konkretnim procesom rada'
+              : 'An online workshop in process, with a group and a concrete work moment'
+          }
+          className="block h-auto w-full object-cover opacity-90"
+          loading="lazy"
+        />
 
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#07100d]/56 via-[#07100d]/6 to-transparent" />
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-transparent via-transparent to-[#07100d]/20" />      </div>
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#07100d]/56 via-transparent to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#07100d]/18" />
+      </div>
     </div>
 
     <div>
