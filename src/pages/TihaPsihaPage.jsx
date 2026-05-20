@@ -418,8 +418,7 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
                ? 'Tihomira u starom šumskom vrtu sa gongom, u prostoru tišine, susreta i unutrašnjeg rada'
                 : 'Tihomira in an old forest garden with a gong, in a space of silence, encounter and inner work'
                 }
-              className="absolute inset-0 h-full w-full object-cover will-change-transform"
-              style={{ transform: `translateY(${scrollY * 0.04}px)` }}
+          className="absolute inset-0 h-full w-full object-cover object-[68%_center] will-change-transform md:object-center"              style={{ transform: `translateY(${scrollY * 0.04}px)` }}
             />
           </div>
 
@@ -611,8 +610,7 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
               ? 'Grupni iskustveni rad u online prostoru, sa stvarnim ljudima u susretu'
               : 'Group experiential work in an online space, with real people in encounter'
           }
-          className="absolute inset-0 h-full w-full object-cover"
-          loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover object-center md:object-center"          loading="lazy"
         />
 
         <div className="absolute inset-0 bg-gradient-to-r from-[#07100d]/88 via-[#07100d]/35 to-[#07100d]/10" />
@@ -696,8 +694,7 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
               ? 'Mapa međunarodne online grupe i ljudi povezani preko distance'
               : 'Map of an international online group and people connected across distance'
           }
-          className="absolute inset-0 h-full w-full object-cover"
-          loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover object-center md:object-center"          loading="lazy"
         />
 
         <div className="absolute inset-0 bg-gradient-to-t from-[#07100d]/70 via-transparent to-[#07100d]/10" />
@@ -724,8 +721,7 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
               ? 'Online radionica u toku, sa grupom i konkretnim procesom rada'
               : 'An online workshop in process, with a group and a concrete work moment'
           }
-          className="block h-auto w-full object-cover opacity-90"
-          loading="lazy"
+        className="block h-auto w-full object-cover object-center opacity-90"          loading="lazy"
         />
 
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#07100d]/56 via-transparent to-transparent" />
