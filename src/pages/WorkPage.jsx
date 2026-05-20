@@ -249,7 +249,7 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
       cta: getText('orientationCta'),
       icon: Mail,
       contactMessage: getText('orientationMessage'),
-      actionType: 'dreamCalendly',
+      actionType: 'freeCalendly',
     },
     {
       title: getText('dreamTitle'),
@@ -353,7 +353,6 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
 <section className="relative overflow-hidden border-b border-yellow-700/10 bg-[#07100d] px-4 py-24 sm:px-6 sm:py-28 lg:px-8">
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(215,181,109,0.14),transparent_30%),radial-gradient(circle_at_82%_22%,rgba(95,113,80,0.24),transparent_34%),radial-gradient(circle_at_50%_100%,rgba(56,97,67,0.20),transparent_38%),linear-gradient(180deg,#07100d,#101b18)]" />
 
-  <div className="absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle_at_1px_1px,rgba(255,244,214,0.7)_1px,transparent_0)] bg-[length:18px_18px]" />
 
   <div className="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
     <div className="text-left">
@@ -421,7 +420,6 @@ export default function WorkPage({ t, setCurrentPage, language = 'en' }) {
 <section className="relative overflow-hidden bg-[#101b18] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_30%,rgba(95,113,80,0.24),transparent_34%),radial-gradient(circle_at_88%_68%,rgba(215,181,109,0.10),transparent_30%),linear-gradient(180deg,#101b18,#07100d)]" />
 
-  <div className="absolute inset-0 opacity-[0.07] bg-[radial-gradient(circle_at_1px_1px,rgba(255,244,214,0.7)_1px,transparent_0)] bg-[length:18px_18px]" />
 
   <div className="relative mx-auto max-w-6xl">
     <div className="mb-14 max-w-3xl">

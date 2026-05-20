@@ -52,7 +52,14 @@ export default function AboutPage({ t, setCurrentPage, language = 'en' }) {
   ];
 
   return (
-    <div className="overflow-hidden bg-[#0b1220] text-slate-100">
+  <div className="relative overflow-hidden bg-[#07100d] text-slate-100">
+    <div className="pointer-events-none fixed inset-0 z-0 opacity-[0.18] mix-blend-soft-light">
+      <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,244,214,0.08),transparent_26%,rgba(74,93,67,0.10)_48%,transparent_72%,rgba(215,181,109,0.07))]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_18%,rgba(255,244,214,0.10),transparent_34%),radial-gradient(ellipse_at_78%_22%,rgba(88,114,82,0.12),transparent_38%),radial-gradient(ellipse_at_50%_82%,rgba(82,55,38,0.10),transparent_42%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,244,214,0.035),transparent),linear-gradient(0deg,rgba(0,0,0,0.08),transparent_22%,rgba(255,244,214,0.035)_48%,transparent_74%,rgba(0,0,0,0.10))]" />
+    </div>
+    <div className="relative z-10">
+
       <SEO
         title={
           language === 'sr'
@@ -311,7 +318,8 @@ export default function AboutPage({ t, setCurrentPage, language = 'en' }) {
             <ArrowRight size={18} />
           </button>
         </div>
-      </section>
+            </section>
     </div>
+  </div>
   );
 }
