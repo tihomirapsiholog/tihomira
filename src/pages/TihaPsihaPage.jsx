@@ -711,6 +711,52 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
     </div>
   </div>
 </section>
+
+          {/* PROCESS IN ACTION */}
+<section className="relative overflow-hidden bg-[#0d1b14] px-6 py-20 md:py-28">
+  <GardenAtmosphere>
+    <div className="rose-glow right-[10%] top-[18%]" />
+    <div className="water-glimmer bottom-[10%] left-[12%]" />
+  </GardenAtmosphere>
+
+  <div className="reveal relative mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+    <div className="etched-panel overflow-hidden rounded-[2.25rem] border border-yellow-700/20 bg-[#07100d]/70 shadow-[0_28px_90px_rgba(0,0,0,0.30)]">
+      <div className="relative min-h-[280px] md:min-h-[420px]">
+        <img
+          src="/images/group/group-encounter-workshop.webp"
+          alt={
+            language === 'sr'
+              ? 'Online radionica u toku, sa grupom i konkretnim procesom rada'
+              : 'An online workshop in process, with a group and a concrete work moment'
+          }
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="lazy"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-[#07100d]/76 via-[#07100d]/12 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#07100d]/35" />
+      </div>
+    </div>
+
+    <div>
+      <p className="section-label mb-6">
+        {language === 'sr' ? 'proces u toku' : 'process in action'}
+      </p>
+
+      <h2 className="font-serif text-3xl leading-tight text-yellow-50 md:text-5xl">
+        {language === 'sr'
+          ? 'Rad nije samo razgovor. Ponekad prostor počne da se pomera.'
+          : 'The work is not only conversation. Sometimes the space begins to move.'}
+      </h2>
+
+      <p className="mt-7 text-lg leading-8 text-slate-300">
+        {language === 'sr'
+          ? 'U grupnom radu koristimo reč, sliku, ulogu, telo, akciju, humor, tišinu i ono što se neočekivano pojavi između ljudi. Online prostor ostaje stvaran kada u njemu ima pažnje, strukture i živog odgovora.'
+          : 'In group work, we use words, images, roles, body, action, humour, silence and what unexpectedly appears between people. Online space remains real when it holds attention, structure and living response.'}
+      </p>
+    </div>
+  </div>
+</section>
         {/* CREDIBILITY */}
         <section className="relative bg-[#07100d] px-6 py-14">
           <GardenAtmosphere />
