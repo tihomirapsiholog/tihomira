@@ -424,8 +424,9 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
 
           <div className="absolute inset-0 bg-gradient-to-r from-[#07100d]/48 via-[#0b1220]/10 to-[#07100d]/58" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/18 via-black/0 to-[#07100d]/74" />          <div className="hero-light" />
-         <div className="opacity-45">
-          <GardenAtmosphere />
+         <div className="opacity-35">
+         <div className="garden-atmosphere" />
+          <div className="leaf-shadow" />
           </div>
           <BotanicalCorners />
 
