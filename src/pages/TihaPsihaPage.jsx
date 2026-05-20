@@ -610,8 +610,7 @@ export default function TihaPsihaPage({ setCurrentPage, t, language = 'en' }) {
               ? 'Grupni iskustveni rad u online prostoru, sa stvarnim ljudima u susretu'
               : 'Group experiential work in an online space, with real people in encounter'
           }
-        className="absolute inset-0 h-full w-full object-cover object-center md:object-center"          loading="lazy"
-        />
+        className="absolute inset-0 h-full w-full object-cover object-[42%_center] md:object-center"        />
 
         <div className="absolute inset-0 bg-gradient-to-r from-[#07100d]/88 via-[#07100d]/35 to-[#07100d]/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#07100d]/72 via-transparent to-transparent" />
