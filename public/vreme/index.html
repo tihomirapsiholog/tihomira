@@ -564,9 +564,8 @@ async function callAI(messages) {
 
 async function saveToSheet(entry) {
   try {
-    await fetch('https://script.google.com/macros/s/AKfycbxatPiM5MgqbIoienXrRpXQ-z3FvUlclvv3mapeqOq5wJtbpRJqOpjhu3S23uwarbCp/exec', {
+    await fetch('/api/sheets', {
       method: 'POST',
-      mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         Datum: entry.Datum || todayKey,
