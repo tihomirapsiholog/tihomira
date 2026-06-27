@@ -47,13 +47,13 @@
 
   .card { background: var(--surface); border: 0.5px solid var(--border); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; }
   .card-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
-  .card-body { font-size: 15px; line-height: 1.7; color: var(--text); font-family: Georgia, 'Times New Roman', serif; }
+  .card-body { font-size: 16px; line-height: 1.7; color: var(--text); font-family: Georgia, 'Times New Roman', serif; }
 
   .nawal-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-bg); border: 0.5px solid var(--border-accent); border-radius: 20px; padding: 5px 12px; font-size: 13px; color: var(--accent-text); font-weight: 500; margin-bottom: 10px; }
 
   .question-card { background: var(--surface); border-left: 2px solid var(--accent); border-radius: 0 12px 12px 0; padding: 16px; margin-bottom: 10px; }
   .question-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
-  .question-text { font-size: 16px; line-height: 1.65; color: var(--text); font-family: Georgia, serif; font-style: italic; }
+  .question-text { font-size: 17px; line-height: 1.65; color: var(--text); font-family: Georgia, serif; font-style: italic; }
 
   .seed-card { background: var(--gold-bg); border: 0.5px solid var(--gold-border); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; }
   .seed-label { font-size: 10px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; opacity: 0.8; }
@@ -69,7 +69,7 @@
   .btn-gold { background: var(--gold-bg); border: 0.5px solid var(--gold-border); color: var(--gold); }
 
   .chat-area { margin-bottom: 10px; }
-  .bubble { padding: 12px 15px; border-radius: 12px; margin-bottom: 8px; font-size: 15px; line-height: 1.65; font-family: Georgia, serif; }
+  .bubble { padding: 12px 15px; border-radius: 12px; margin-bottom: 8px; font-size: 16px; line-height: 1.65; font-family: Georgia, serif; }
   .bubble-ai { background: var(--surface); border: 0.5px solid var(--border); color: var(--text); border-radius: 2px 12px 12px 12px; }
   .bubble-user { background: var(--accent-bg); border: 0.5px solid var(--border-accent); color: var(--text); border-radius: 12px 2px 12px 12px; font-style: italic; }
 
@@ -387,7 +387,7 @@ function renderEveningChat() {
   html += '<div class="chat-area">';
   for (const m of eveningMessages) {
     const cls = m.role === 'assistant' ? 'bubble-ai' : 'bubble-user';
-    html += `<div class="bubble ${cls}">${m.content}</div>`;
+    html += `<div class="bubble ${cls}">${mdToHtml(m.content)}</div>`;
   }
   html += '</div>';
 
@@ -473,7 +473,7 @@ function renderEveningWithPlan(cache) {
   html += '<div class="chat-area">';
   for (const m of eveningMessages) {
     const cls = m.role === 'assistant' ? 'bubble-ai' : 'bubble-user';
-    html += `<div class="bubble ${cls}">${m.content}</div>`;
+    html += `<div class="bubble ${cls}">${mdToHtml(m.content)}</div>`;
   }
   html += '</div>';
 
@@ -510,7 +510,18 @@ function renderEveningDone(cache) {
     ${cache.Vece_naucila ? `<div class="card"><div class="card-label">Šta sam naučila</div><div class="card-body">${cache.Vece_naucila}</div></div>` : ''}
     ${cache.Priprema_za_sutra ? `<div class="tomorrow-card"><div class="tomorrow-label">Priprema za sutra — ${tzTomorrow.num} ${tzTomorrow.day}</div><div class="card-body">${cache.Priprema_za_sutra}</div></div>` : ''}
     ${cache.Plan_za_sutra ? `<div class="card"><div class="card-label">Plan za sutra</div><div class="card-body" style="font-style:italic">${cache.Plan_za_sutra}</div></div>` : ''}
+    <button class="btn btn-outline" onclick="reopenEvening()" style="margin-top:8px">Uredi večer</button>
   `;
+}
+
+function reopenEvening() {
+  const cache = getLocal(todayKey);
+  cache.Priprema_za_sutra = '';
+  cache.Plan_za_sutra = '';
+  setLocal(todayKey, cache);
+  eveningMessages = [];
+  eveningPhase = 'ask';
+  initEvening();
 }
 
 // ── DNEVNIK ────────────────────────────────────────────
