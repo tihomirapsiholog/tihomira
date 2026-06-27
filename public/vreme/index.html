@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0d1117">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Vreme">
+<title>Razgovor sa vremenom</title>
+<link rel="manifest" href="/vreme/manifest.json">
+<link rel="apple-touch-icon" href="/vreme/icon-192.png">
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #1c2230;
+    --border: rgba(255,255,255,0.08);
+    --border-accent: rgba(139,110,255,0.4);
+    --text: #e6edf3;
+    --muted: #7d8590;
+    --accent: #8b6eff;
+    --accent-bg: rgba(139,110,255,0.1);
+    --accent-text: #b39dff;
+    --gold: #c9a84c;
+    --gold-bg: rgba(201,168,76,0.1);
+    --success: #3fb950;
+    --radius: 10px;
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html, body { height: 100%; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; overscroll-behavior: none; }
+  body { display: flex; flex-direction: column; min-height: 100dvh; }
+
+  .app { flex: 1; display: flex; flex-direction: column; max-width: 480px; margin: 0 auto; width: 100%; padding: calc(var(--safe-top) + 12px) 16px calc(var(--safe-bottom) + 80px); }
+
+  .header { text-align: center; padding: 20px 0 16px; }
+  .header-title { font-size: 13px; font-weight: 500; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+  .header-date { font-size: 15px; color: var(--text); margin-top: 4px; }
+
+  .tab-bar { position: fixed; bottom: 0; left: 0; right: 0; display: flex; background: var(--surface); border-top: 0.5px solid var(--border); padding-bottom: var(--safe-bottom); z-index: 10; }
+  .tab { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 0 8px; font-size: 11px; color: var(--muted); border: none; background: none; cursor: pointer; }
+  .tab svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+  .tab.active { color: var(--accent-text); }
+
+  .card { background: var(--surface); border: 0.5px solid var(--border); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; }
+  .card-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+  .card-body { font-size: 15px; line-height: 1.65; color: var(--text); }
+  .card-body.italic { font-style: italic; }
+
+  .nawal-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-bg); border: 0.5px solid var(--border-accent); border-radius: 20px; padding: 5px 12px; font-size: 13px; color: var(--accent-text); font-weight: 500; margin-bottom: 10px; }
+
+  .question-card { background: var(--surface); border: 0.5px solid var(--border-accent); border-radius: 12px; padding: 16px; margin-bottom: 10px; }
+  .question-text { font-size: 16px; line-height: 1.6; color: var(--text); font-style: italic; }
+
+  textarea { width: 100%; background: var(--surface2); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 12px 14px; font-size: 15px; color: var(--text); resize: none; line-height: 1.6; font-family: inherit; min-height: 72px; }
+  textarea:focus { outline: none; border-color: var(--border-accent); }
+  textarea::placeholder { color: var(--muted); }
+
+  .btn { width: 100%; padding: 13px; border-radius: var(--radius); font-size: 15px; font-weight: 500; cursor: pointer; border: none; margin-top: 8px; transition: opacity 0.15s; }
+  .btn:active { opacity: 0.75; }
+  .btn-accent { background: var(--accent); color: #fff; }
+  .btn-outline { background: transparent; border: 0.5px solid var(--border); color: var(--text); }
+  .btn-gold { background: var(--gold-bg); border: 0.5px solid rgba(201,168,76,0.3); color: var(--gold); }
+
+  .loading { text-align: center; padding: 48px 16px; color: var(--muted); }
+  .loading-text { font-size: 14px; margin-bottom: 16px; }
+  .spinner { width: 28px; height: 28px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .notif-banner { background: var(--gold-bg); border: 0.5px solid rgba(201,168,76,0.3); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 10px; display: flex; gap: 10px; align-items: flex-start; }
+  .notif-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .notif-text { font-size: 13px; color: var(--gold); line-height: 1.5; }
+  .notif-text strong { display: block; margin-bottom: 2px; }
+
+  .save-msg { font-size: 12px; color: var(--success); text-align: center; margin-top: 6px; height: 16px; }
+
+  .evening-seed { font-size: 15px; color: var(--accent-text); font-style: italic; line-height: 1.6; }
+
+  .view { display: none; }
+  .view.active { display: block; }
+
+  .cycle-info { font-size: 13px; color: var(--muted); text-align: center; padding: 8px 0 0; }
+
+  .history-entry { background: var(--surface); border: 0.5px solid var(--border); border-radius: 12px; padding: 14px 16px; margin-bottom: 8px; }
+  .history-date { font-size: 11px; color: var(--muted); margin-bottom: 6px; }
+  .history-nawal { font-size: 13px; color: var(--accent-text); margin-bottom: 4px; }
+  .history-seed { font-size: 14px; color: var(--text); font-style: italic; }
+
+  .empty { text-align: center; padding: 48px 16px; color: var(--muted); font-size: 14px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .spinner { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="app">
+  <div class="header">
+    <div class="header-title">Razgovor sa vremenom</div>
+    <div class="header-date" id="hdr-date">—</div>
+  </div>
+
+  <!-- JUTRO -->
+  <div class="view active" id="view-morning">
+    <div id="morning-content">
+      <div class="loading">
+        <div class="loading-text">Čitam energiju dana…</div>
+        <div class="spinner"></div>
+      </div>
+    </div>
+    <div id="seed-section" style="display:none">
+      <div class="card">
+        <div class="card-label">Seme dana — tvoja jedna rečenica</div>
+        <textarea id="seed-input" placeholder="Šta nosiš u ovaj dan?" rows="2"></textarea>
+        <button class="btn btn-accent" onclick="saveSeed()">Sačuvaj seme</button>
+        <div class="save-msg" id="seed-msg"></div>
+      </div>
+      <div id="notif-section"></div>
+    </div>
+  </div>
+
+  <!-- VEČER -->
+  <div class="view" id="view-evening">
+    <div class="card">
+      <div class="card-label">Seme koje si posejala jutros</div>
+      <div class="evening-seed" id="eve-seed-display">—</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Šta se stvarno dogodilo</div>
+      <textarea id="eve-happened" placeholder="Bez filtera — šta je bilo?" rows="3"></textarea>
+    </div>
+    <div class="card">
+      <div class="card-label">Šta sam naučila</div>
+      <textarea id="eve-learned" placeholder="Jedna stvar, ili više…" rows="2"></textarea>
+    </div>
+    <div class="card">
+      <div class="card-label">Da li se simbolika pokazala?</div>
+      <textarea id="eve-symbol" placeholder="Da / Ne / Neočekivano…" rows="2"></textarea>
+    </div>
+    <button class="btn btn-accent" onclick="saveEvening()">Zatvori dan</button>
+    <div class="save-msg" id="eve-msg"></div>
+  </div>
+
+  <!-- ISTORIJA -->
+  <div class="view" id="view-history">
+    <div id="history-list"></div>
+  </div>
+</div>
+
+<!-- TAB BAR -->
+<nav class="tab-bar">
+  <button class="tab active" id="tab-morning" onclick="switchTab('morning')">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    Jutro
+  </button>
+  <button class="tab" id="tab-evening" onclick="switchTab('evening')">
+    <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    Večer
+  </button>
+  <button class="tab" id="tab-history" onclick="switchTab('history')">
+    <svg viewBox="0 0 24 24"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg>
+    Dnevnik
+  </button>
+</nav>
+
+<script>
+const KIN_NAMES = ['Imox','Iq\'','Aq\'ab\'al','K\'at','Kan','Kame','Kej','Q\'anil','Toj','Tz\'i\'','B\'atz\'','E','Aj','I\'x','Tz\'ikin','Ajmaq','No\'j','Tijax','Kawok','Ajpu'];
+const TZOLKIN_START = new Date(Date.UTC(2024, 0, 1));
+
+function getTzolkin(date) {
+  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+  const diff = Math.floor((d - TZOLKIN_START) / 86400000);
+  const pos = ((diff % 260) + 260) % 260;
+  return { num: (pos % 13) + 1, day: KIN_NAMES[pos % 20], pos };
+}
+
+const today = new Date();
+const tz = getTzolkin(today);
+const DAYS = ['nedjelja','ponedeljak','utorak','sreda','četvrtak','petak','subota'];
+const MONTHS = ['januar','februar','mart','april','maj','jun','jul','avgust','septembar','oktobar','novembar','decembar'];
+const todayKey = today.toISOString().slice(0, 10);
+
+document.getElementById('hdr-date').textContent =
+  `${DAYS[today.getDay()]}, ${today.getDate()}. ${MONTHS[today.getMonth()]}`;
+
+function getStore(key) {
+  try { return JSON.parse(localStorage.getItem(key) || '{}'); } catch { return {}; }
+}
+function setStore(key, data) {
+  localStorage.setItem(key, JSON.stringify(data));
+}
+
+function switchTab(tab) {
+  ['morning','evening','history'].forEach(t => {
+    document.getElementById('view-' + t).classList.toggle('active', t === tab);
+    document.getElementById('tab-' + t).classList.toggle('active', t === tab);
+  });
+  if (tab === 'evening') loadEvening();
+  if (tab === 'history') loadHistory();
+}
+
+function saveSeed() {
+  const val = document.getElementById('seed-input').value.trim();
+  if (!val) return;
+  const d = getStore(todayKey);
+  d.seed = val;
+  setStore(todayKey, d);
+  showMsg('seed-msg', 'Sačuvano ✓');
+}
+
+function saveEvening() {
+  const d = getStore(todayKey);
+  d.happened = document.getElementById('eve-happened').value;
+  d.learned = document.getElementById('eve-learned').value;
+  d.symbol = document.getElementById('eve-symbol').value;
+  setStore(todayKey, d);
+  showMsg('eve-msg', 'Dan zatvoren ✓');
+}
+
+function showMsg(id, text) {
+  const el = document.getElementById(id);
+  el.textContent = text;
+  setTimeout(() => { el.textContent = ''; }, 2500);
+}
+
+function loadEvening() {
+  const d = getStore(todayKey);
+  document.getElementById('eve-seed-display').textContent = d.seed || '(nije zapisano jutros)';
+  if (d.happened) document.getElementById('eve-happened').value = d.happened;
+  if (d.learned) document.getElementById('eve-learned').value = d.learned;
+  if (d.symbol) document.getElementById('eve-symbol').value = d.symbol;
+}
+
+function loadHistory() {
+  const keys = Object.keys(localStorage)
+    .filter(k => /^\d{4}-\d{2}-\d{2}$/.test(k))
+    .sort().reverse().slice(0, 30);
+
+  const el = document.getElementById('history-list');
+  if (!keys.length) {
+    el.innerHTML = '<div class="empty">Još nema zapisa.<br>Počni jutros.</div>';
+    return;
+  }
+  el.innerHTML = keys.map(k => {
+    const d = getStore(k);
+    const dt = new Date(k + 'T00:00:00');
+    const tz2 = getTzolkin(dt);
+    return `<div class="history-entry">
+      <div class="history-date">${dt.getDate()}. ${MONTHS[dt.getMonth()]} ${dt.getFullYear()}</div>
+      <div class="history-nawal">${tz2.num} ${tz2.day}</div>
+      ${d.seed ? `<div class="history-seed">"${d.seed}"</div>` : '<div style="font-size:13px;color:var(--muted);">bez semena</div>'}
+    </div>`;
+  }).join('');
+}
+
+async function loadMorning() {
+  const cached = getStore(todayKey);
+  if (cached.morning) {
+    renderMorning(cached.morning);
+    return;
+  }
+
+  const prompt = `Ti si majanski mudrac koji razgovara sa osobom čiji je nawal 9 Tz'ikin (Deveta Ptica Neba).
+
+Današnji dan u Tzolkin kalendaru: ${tz.num} ${tz.day} (pozicija ${tz.pos + 1}/260 u ciklusu).
+
+Napiši jutarnje otvaranje dana u TAČNO ovom formatu:
+[NAWAL]${tz.num} ${tz.day}
+[ENERGIJA]Jedna do dve rečenice o kvalitetu energije ovog nawala danas.
+[DIJALOG]Kako ovaj nawal razgovara sa 9 Tz'ikin — gde se susreću ili taru (2-3 rečenice).
+[PRICA]Kratka poetska slika ili priča iz majanske simbolike vezana za danas (3-4 rečenice).
+[PITANJE]Jedno konkretno pitanje za ovaj dan — vezano za nawal, ne opšte.
+
+Piši na srpskom. Toplo, poetski, bez uvodnih fraza i bez objašnjenja formata.`;
+
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 1000,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+    const data = await resp.json();
+    const text = data.content?.[0]?.text || '';
+    const store = getStore(todayKey);
+    store.morning = text;
+    setStore(todayKey, store);
+    renderMorning(text);
+  } catch {
+    document.getElementById('morning-content').innerHTML =
+      '<div class="loading"><div class="loading-text">Greška pri učitavanju.<br>Provjeri internet i osvježi.</div></div>';
+  }
+}
+
+function parse(text, tag) {
+  const m = text.match(new RegExp(`\\[${tag}\\]([\\s\\S]*?)(?=\\[|$)`));
+  return m ? m[1].trim() : '';
+}
+
+function renderMorning(text) {
+  const nawal = parse(text, 'NAWAL') || `${tz.num} ${tz.day}`;
+  const energija = parse(text, 'ENERGIJA');
+  const dijalog = parse(text, 'DIJALOG');
+  const prica = parse(text, 'PRICA');
+  const pitanje = parse(text, 'PITANJE');
+
+  document.getElementById('morning-content').innerHTML = `
+    <div class="card">
+      <div class="nawal-pill">✦ ${nawal}</div>
+      ${energija ? `<div class="card-body">${energija}</div>` : ''}
+    </div>
+    ${dijalog ? `<div class="card">
+      <div class="card-label">Tvoj 9 Tz'ikin danas</div>
+      <div class="card-body italic">${dijalog}</div>
+    </div>` : ''}
+    ${prica ? `<div class="card">
+      <div class="card-label">Slika dana</div>
+      <div class="card-body">${prica}</div>
+    </div>` : ''}
+    ${pitanje ? `<div class="question-card">
+      <div class="card-label">Pitanje za danas</div>
+      <div class="question-text">${pitanje}</div>
+    </div>` : ''}
+  `;
+  document.getElementById('seed-section').style.display = '';
+  maybeShowNotifBanner();
+}
+
+function maybeShowNotifBanner() {
+  if (!('Notification' in window) || !('serviceWorker' in navigator)) return;
+  if (Notification.permission === 'granted') return;
+  document.getElementById('notif-section').innerHTML = `
+    <div class="notif-banner">
+      <div class="notif-icon">🔔</div>
+      <div>
+        <div class="notif-text"><strong>Uključi podsetnik</strong>Dobijaj jutarnji nawal u 7h i večernji poziv u 20h.</div>
+        <button class="btn btn-gold" style="margin-top:8px" onclick="requestNotif()">Uključi obaveštenja</button>
+      </div>
+    </div>`;
+}
+
+async function requestNotif() {
+  const perm = await Notification.requestPermission();
+  if (perm === 'granted') {
+    document.getElementById('notif-section').innerHTML =
+      '<div class="save-msg" style="height:auto;padding:8px 0;">Obaveštenja uključena ✓</div>';
+    scheduleLocalNotifs();
+  } else {
+    document.getElementById('notif-section').innerHTML =
+      '<div class="save-msg" style="height:auto;color:var(--muted);padding:8px 0;">Dozvola odbijena — možeš promeniti u podešavanjima telefona.</div>';
+  }
+}
+
+function scheduleLocalNotifs() {
+  // Na Androidu u Chrome-u, service worker može da prikazuje notifikacije
+  // ali scheduling zahteva server (push) ili periodic background sync
+  // Ovde postavljamo flag da korisnik želi notifikacije
+  localStorage.setItem('notif_enabled', '1');
+  // Prikazujemo trenutnu test notifikaciju
+  if (navigator.serviceWorker.controller) {
+    navigator.serviceWorker.controller.postMessage({ type: 'TEST_NOTIF' });
+  }
+}
+
+// Service worker registracija
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/vreme/sw.js').catch(() => {});
+}
+
+loadMorning();
+</script>
+</body>
+</html>
