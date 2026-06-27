@@ -6,10 +6,11 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).end();
 
-  const response = await fetch('https://script.google.com/macros/s/AKfycbxatPiM5MgqbIoienXrRpXQ-z3FvUlclvv3mapeqOq5wJtbpRJqOpjhu3S23uwarbCp/exec', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(req.body),
+  const url = new URL('https://script.google.com/macros/s/AKfycbyOiese7jUrss-xxMHL5CxQ01RBrwxOO2dc7DVhJBkk3FNOe5QVT2-9Kkr204Zo4zYb/exec');
+  url.searchParams.set('data', JSON.stringify(req.body));
+
+  const response = await fetch(url.toString(), {
+    method: 'GET',
     redirect: 'follow'
   });
 
