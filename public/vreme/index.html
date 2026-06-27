@@ -288,6 +288,13 @@ function parse(text, tag) {
   return m ? m[1].trim() : '';
 }
 
+function mdToHtml(text) {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+    .replace(/---/g, '—');
+}
+
 function renderMorning(text) {
   const nawal = parse(text, 'NAWAL') || `${tz.num} ${tz.day}`;
   const prica = parse(text, 'PRICA');
@@ -299,21 +306,21 @@ function renderMorning(text) {
   document.getElementById('morning-content').innerHTML = `
     <div class="card">
       <div class="nawal-pill">✦ ${nawal}</div>
-      ${prica ? `<div class="card-body">${prica}</div>` : ''}
+      ${prica ? `<div class="card-body">${mdToHtml(prica)}</div>` : ''}
     </div>
     ${dijalog ? `<div class="card">
       <div class="card-label">Tvoj 9 Tz'ikin danas</div>
-      <div class="card-body" style="font-style:italic">${dijalog}</div>
+      <div class="card-body" style="font-style:italic">${mdToHtml(dijalog)}</div>
     </div>` : ''}
     ${ciklus ? `<div class="card">
       <div class="card-label">Veliki ciklus</div>
-      <div class="card-body">${ciklus}</div>
+      <div class="card-body">${mdToHtml(ciklus)}</div>
     </div>` : ''}
     ${pitanje ? `<div class="question-card">
       <div class="question-label">Pitanje za danas</div>
-      <div class="question-text">${pitanje}</div>
+      <div class="question-text">${mdToHtml(pitanje)}</div>
     </div>` : ''}
-    ${seme_predlog ? `<div style="font-size:12px;color:var(--muted);text-align:center;padding:4px 0 8px;font-style:italic;font-family:Georgia,serif;">${seme_predlog}</div>` : ''}
+    ${seme_predlog ? `<div style="font-size:12px;color:var(--muted);text-align:center;padding:4px 0 8px;font-style:italic;font-family:Georgia,serif;">${mdToHtml(seme_predlog)}</div>` : ''}
   `;
   document.getElementById('seed-section').style.display = '';
 
