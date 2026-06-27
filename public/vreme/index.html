@@ -159,13 +159,17 @@ const WEBHOOK = 'https://hook.eu1.make.com/p76x2lmpfkptuabkasi1363ynx9p2e5a';
 const SHEET_ID = '167ng9G4DsipZHPyXf089cb9ESQH9bc3ZuaiLVvMbGBk';
 
 const KIN_NAMES = ['Imox',"Iq'","Aq'ab'al","K'at",'Kan','Kame','Kej',"Q'anil",'Toj',"Tz'i'","B'atz'",'E','Aj',"I'x","Tz'ikin","Ajmaq","No'j",'Tijax','Kawok','Ajpu'];
-const TZOLKIN_START = new Date(Date.UTC(2024, 0, 1));
-
+const GMT = 584283;
+function dateToJDN(date) {
+  const y=date.getFullYear(), m=date.getMonth()+1, d=date.getDate();
+  const a=Math.floor((14-m)/12), yr=y+4800-a, mo=m+12*a-3;
+  return d+Math.floor((153*mo+2)/5)+365*yr+Math.floor(yr/4)-Math.floor(yr/100)+Math.floor(yr/400)-32045;
+}
 function getTzolkin(date) {
-  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
-  const diff = Math.floor((d - TZOLKIN_START) / 86400000);
-  const pos = ((diff % 260) + 260) % 260;
-  return { num: (pos % 13) + 1, day: KIN_NAMES[pos % 20], pos };
+  const days = dateToJDN(date) - GMT;
+  const tone = ((days + 3) % 13) + 1;
+  const nawal = KIN_NAMES[(((days + 19) % 20) + 20) % 20];
+  return { num: tone, day: nawal, days };
 }
 
 const today = new Date();
